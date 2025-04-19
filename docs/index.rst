@@ -575,6 +575,298 @@ To fuse medical images:
 
 This workflow allows you to combine complementary information from different imaging sources into a single comprehensive visualization for improved analysis and interpretation.
 
+Image Registration for AutoPET
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Image registration is a crucial step in medical image analysis, especially for multimodal imaging like PET/CT. This example demonstrates how to register PET and CT images from AutoPET datasets.
+
+How It Works
+^^^^^^^^^^
+
+1. **Image Reader Module (Fixed Image)**: Load the CT image as the fixed (reference) image
+
+   * Configure the reader to point to your CT data source
+   * CT scans typically provide detailed anatomical information
+
+2. **Image Reader Module (Moving Image)**: Load the PET image as the moving image to be aligned
+
+   * Configure the reader to point to your PET data source
+   * PET scans provide functional or metabolic information
+
+3. **Image Registration Module**: Align the PET (moving) image to the CT (fixed) image
+
+   * **Rigid Registration**: Maintains shape and size, only allows rotation and translation
+     
+     * Number of Histogram Bins: Controls the granularity of intensity matching
+     * Sampling Method: Determines how points are sampled during registration
+     * Learning Rate: Controls the optimization step size
+     * Number of Iterations: Sets the maximum number of optimization steps
+     * Interpolation: Method used for interpolating between voxels
+   
+   * **Non-Rigid Registration**: Allows local deformations for better alignment of soft tissues
+     
+     * Transform Type: Typically BSplineTransform for PET/CT registration
+     * Number of Iterations: Controls the optimization process
+     * Final Grid Spacing: Determines the density of the deformation field
+
+4. **Writer Module**: Save the registered PET image
+
+   * Select output location and format
+   * The registered image will be aligned to the anatomical reference of the CT image
+
+Workflow Integration
+^^^^^^^^^^^^^^^^^
+
+To register AutoPET images:
+
+1. Add an Image Reader module for the fixed (CT) image
+2. Configure the first Image Reader to load your CT image
+3. Add a second Image Reader module for the moving (PET) image
+4. Configure the second Image Reader to load your PET image
+5. Add an Image Registration module to your workflow
+6. Connect the output port of the CT Image Reader to the "fix image" input port of the Image Registration module
+7. Connect the output port of the PET Image Reader to the "moving image" input port of the Image Registration module
+8. Select the appropriate registration type and parameters based on your data
+9. Add a Writer module to your workflow
+10. Connect the output port of the Image Registration module to the input port of the Writer
+11. Configure the Writer with your desired output location and format
+12. Run the workflow to perform the registration and save the results
+
+This registration workflow enables accurate spatial alignment of functional PET data with anatomical CT data, which is essential for proper localization and quantification of metabolic activity in cancer studies.
+
+PET/CT Registration and Fusion
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This advanced workflow combines both registration and fusion techniques to create comprehensive visualizations from multimodal AutoPET data. The workflow aligns PET images to CT images and then fuses them to combine functional and anatomical information.
+
+How It Works
+^^^^^^^^^^
+
+1. **Image Reader Module (CT)**: Load the CT image which serves dual purposes:
+
+   * Acts as the fixed (reference) image for registration
+   * Provides anatomical information for the fusion process (Image 2)
+
+2. **Image Reader Module (PET)**: Load the PET image as the moving image to be aligned
+
+   * The PET data contains functional/metabolic information
+   * Will be spatially registered to match the CT reference frame
+
+3. **Image Registration Module**: Align the PET image to the CT reference
+
+   * Uses either rigid or non-rigid registration depending on requirements
+   * Produces a spatially aligned PET image that matches the CT coordinate system
+
+4. **Image Fusion Module**: Combine the registered PET with the original CT
+
+   * **Input 1**: Registered PET image (from registration module)
+   * **Input 2**: Original CT image (directly from CT Image Reader)
+   * Creates a single composite image highlighting both structure and function
+
+5. **Writer Module**: Save the fused image for further analysis
+
+   * Preserves both anatomical context and metabolic information
+   * Can be saved in various formats for use in clinical or research contexts
+
+Workflow Integration
+^^^^^^^^^^^^^^^^^
+
+To implement this PET/CT registration and fusion pipeline:
+
+1. Add two Image Reader modules to your workflow:
+   
+   * One for the CT image
+   * One for the PET image
+
+2. Configure both Image Readers to load the appropriate data
+
+3. Add an Image Registration module and connect:
+   
+   * CT Image Reader output → "fix image" input
+   * PET Image Reader output → "moving image" input
+
+4. Configure registration parameters appropriate for PET/CT alignment:
+   
+   * For most applications, rigid registration with appropriate histogram bins
+   * For soft tissue focus, consider non-rigid registration
+
+5. Add an Image Fusion module and connect:
+   
+   * Registration module output → "Image 1" input 
+   * CT Image Reader output → "Image 2" input
+
+6. Configure fusion parameters:
+   
+   * For clinical viewing, weighted fusion with customized color maps
+   * For feature analysis, consider PCA or wavelet fusion
+
+7. Add a Writer module and connect:
+   
+   * Fusion module output → Writer input
+
+8. Configure the Writer with your desired output location and format
+
+9. Run the workflow to register, fuse, and save the results
+
+This integrated workflow creates comprehensive visualizations that preserve the metabolic sensitivity of PET while maintaining the anatomical detail of CT, which is particularly valuable for tumor localization, treatment planning, and response assessment in oncology applications.
+
+PET/CT Registration and Filtering
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This workflow combines registration and filtering techniques to enhance specific features in multimodal AutoPET data. The workflow first aligns PET images to CT images and then applies filters to enhance particular features of interest in the registered images.
+
+How It Works
+^^^^^^^^^^
+
+1. **Image Reader Module (CT)**: Load the CT image as the fixed (reference) image
+
+   * Provides the anatomical reference frame
+   * CT scans offer detailed structural information
+
+2. **Image Reader Module (PET)**: Load the PET image as the moving image
+
+   * Contains functional/metabolic information
+   * Will be spatially aligned to match the CT reference frame
+
+3. **Image Registration Module**: Align the PET image to the CT reference
+
+   * Uses either rigid or non-rigid registration depending on requirements
+   * Ensures the metabolic activity is precisely localized to anatomical structures
+
+4. **Image Filter Module**: Apply selected filters to the registered PET image
+
+   * Enhances specific features of interest
+   * Reduces noise or highlights particular characteristics
+   * Available filters include Gabor, Wavelet, Threshold, Gradient, and Smoothing
+
+5. **Writer Module**: Save the filtered registered image
+
+   * Preserves the spatial alignment with anatomical structures
+   * Enhanced features are ready for further analysis
+
+Workflow Integration
+^^^^^^^^^^^^^^^^^
+
+To implement this PET/CT registration and filtering pipeline:
+
+1. Add two Image Reader modules to your workflow:
+   
+   * One for the CT image
+   * One for the PET image
+
+2. Configure both Image Readers to load the appropriate data
+
+3. Add an Image Registration module and connect:
+   
+   * CT Image Reader output → "fix image" input
+   * PET Image Reader output → "moving image" input
+
+4. Configure registration parameters appropriate for PET/CT alignment:
+   
+   * For most applications, rigid registration is sufficient
+   * For areas with tissue deformation, consider non-rigid registration
+
+5. Add an Image Filter module and connect:
+   
+   * Registration module output → Filter input
+
+6. Configure filter parameters based on your analysis goals:
+   
+   * For texture analysis: Gabor or Wavelet filters
+   * For edge detection: Gradient filters
+   * For noise reduction: Smoothing filters
+   * For segmentation preparation: Threshold filters
+
+7. Add a Writer module and connect:
+   
+   * Filter module output → Writer input
+
+8. Configure the Writer with your desired output location and format
+
+9. Run the workflow to register, filter, and save the results
+
+This workflow is particularly useful for enhancing specific features in registered PET images while maintaining accurate spatial alignment with anatomical structures. It's valuable for improved lesion detection, feature extraction preparation, and preprocessing for advanced analysis like radiomics or AI-based detection.
+
+PET Filtering and Radiomics Analysis
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This workflow demonstrates how to enhance PET images using filters before extracting radiomic features from regions of interest. By preprocessing images with appropriate filters, you can improve feature quality and highlight specific characteristics relevant to your analysis.
+
+How It Works
+^^^^^^^^^^
+
+1. **Image Reader Module (PET)**: Load the PET image for analysis
+
+   * Contains functional/metabolic information
+   * Source data for feature extraction
+
+2. **Image Reader Module (Segmentation)**: Load the segmentation mask
+
+   * Defines regions of interest (ROIs) such as tumors or specific tissues
+   * Can be derived from manual segmentation or automated methods
+
+3. **Image Filter Module**: Apply selected filters to the PET image
+
+   * Enhances specific features or reduces noise
+   * Improves the quality of subsequently extracted radiomic features
+   * Different filters can highlight different image characteristics
+
+4. **Radiomic Feature Generator**: Extract quantitative features from the filtered image
+
+   * Takes the filtered PET image as the image input
+   * Takes the segmentation mask to define ROIs
+   * Calculates a wide range of standardized radiomic features from the filtered image within the defined regions
+
+5. **Writer Module**: Save the extracted radiomic features
+
+   * Typically exports as tabular data (CSV, Excel)
+   * Preserves all calculated features with appropriate labeling
+
+Workflow Integration
+^^^^^^^^^^^^^^^^^
+
+To implement this PET filtering and radiomics pipeline:
+
+1. Add an Image Reader module for the PET image
+   
+   * Configure to load your PET dataset
+
+2. Add an Image Reader module for the segmentation mask
+   
+   * Configure to load your segmentation masks that define the regions of interest
+
+3. Add an Image Filter module and connect:
+   
+   * PET Image Reader output → Filter input
+
+4. Configure filter parameters based on your analysis goals:
+   
+   * For texture enhancement: Gabor or Wavelet filters
+   * For noise reduction: Smoothing filters
+   * For edge enhancement: Gradient filters
+   * For intensity normalization: Threshold filters
+
+5. Add a Radiomic Feature Generator module and connect:
+   
+   * Filter module output → "Image" input of the Radiomic Feature Generator
+   * Segmentation Image Reader output → "Mask" input of the Radiomic Feature Generator
+
+6. Configure the Radiomic Feature Generator:
+   
+   * Select appropriate feature categories (first-order, shape, texture)
+   * Set discretization parameters
+   * Configure any preprocessing options
+
+7. Add a Writer module and connect:
+   
+   * Radiomic Feature Generator output → Writer input
+
+8. Configure the Writer to save results in your preferred format (typically CSV or Excel)
+
+9. Run the workflow to filter the image, extract features, and save the results
+
+This workflow is valuable for enhancing specific image characteristics before radiomics analysis, which can improve the discriminatory power of extracted features. It's particularly useful in oncology research, where filtered PET images may reveal subtle tumor characteristics not readily apparent in unprocessed images.
+
 Radiomic Feature Extraction
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
