@@ -1,113 +1,12 @@
-Welcome to ViSERA Documentation
-=============================
-
-ViSERA - Visualized & Standardized Environment for Radiomics Analysis is a powerful workflow generator for standardized radiomics analysis and medical image visualization. It provides a free, open-source platform specialized for visualization, processing, segmentation, registration, fusion, and analysis of medical/biomedical images, including radiomics and machine learning capabilities.
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
-
-   overview
-   key_features
-   visual_node_system
-   workflow_modules
-   examples
-   installation
-   module_documentation
-
-Overview
---------
-
-ViSERA is a Python-based desktop software designed to improve usability, reusability, and reproducibility in medical imaging and healthcare research. As a major, entirely-revamped upgrade to the original SERA (MATLAB-based), ViSERA enables standardized and reproducible radiomic feature extraction in compliance with the Image Biomarker Standardization Initiative (IBSI 1.0).
-
-The platform employs numerous popular image processing algorithms to create end-to-end standardized workflows, making it an ideal development platform for reproducible research by connecting different tools.
-
-Key Features
------------
-
-* **Standardized Radiomics Analysis**: Compliant with IBSI 1.0 standards
-* **Advanced Image Filtering**: Standardized against IBSI 2.0 with multiple filter options
-* **End-to-End Workflows**: Connect various imaging and analysis tools
-* **Collaborative Research Support**: Ensures consistency across different studies
-* **User-Friendly Interface**: Designed for various expertise levels including:
-
-  * Radiation oncologists
-  * Radiologists
-  * Medical physicists
-  * Data scientists
-
-* **Comprehensive Machine Learning Tools**: Built-in classification, regression, and clustering modules
-
-Visual Node-Based Workflow System
--------------------------------
-
-ViSERA uses a visual programming approach where modules are represented as nodes that can be connected to create complete data processing pipelines. This intuitive interface allows users with minimal programming experience to build sophisticated workflows.
-
-Creating Workflows
-~~~~~~~~~~~~~~~~
-
-1. **Adding Modules**: Double-click on a module from the module palette to add it to the workspace
-2. **Configuring Modules**: Double-click on a module node to open its configuration dialog
-3. **Connecting Modules**: Click and drag from an output port to an input port to create connections
-4. **Running Workflows**: Click the "Run" button on a node to execute it and all its prerequisite nodes
-5. **Stopping Execution**: Click the "Stop" button to halt execution of a running workflow
-
-Module Compatibility
-~~~~~~~~~~~~~~~~~~
-
-Each module explicitly defines which other modules can connect to its inputs and outputs, ensuring that only valid connections can be made:
-
-* **Image Reader**: Outputs to Image Convertor, Filter, Fusion, and Registration modules
-* **RT Struct Reader**: Outputs to Radiomic Feature Generator and Image Writer modules
-* **Image Filter**: Takes image input, outputs to multiple imaging modules
-* **Radiomic Feature Generator**: Takes image and mask inputs, outputs to data analysis modules
-* **Preprocessing**: Takes feature data, connects to machine learning modules
-* **Classification/Regression/Clustering**: Take preprocessed data as input, connect to visualization
-
-Example Workflows
-~~~~~~~~~~~~~~~
-
-**Basic Radiomics Analysis Pipeline:**
-
-1. Image Reader → Load medical images
-2. RT Struct Reader → Load region of interest segmentations
-3. Radiomic Feature Generator → Extract quantitative features
-4. Preprocessing → Prepare features for analysis
-5. Classification → Analyze features for diagnostic/prognostic models
-
-**Image Processing Pipeline:**
-
-1. Image Reader → Load reference image
-2. Image Reader → Load secondary image
-3. Image Registration → Align images spatially
-4. Image Fusion → Combine aligned images
-5. Image Filter → Enhance features of interest
-6. Image Writer → Save processed results
-
-Workflow Controls
-~~~~~~~~~~~~~~~
-
-* **Layout Management**: Automatically arrange nodes with the "Align Modules" function
-* **Module Search**: Quickly find modules using the search function (Tab key)
-* **Copy/Paste**: Duplicate node configurations to create similar processing steps
-* **Save/Load**: Save entire workflows and reload them for future use
-
-Keyboard Shortcuts
-~~~~~~~~~~~~~~~~
-
-* **Tab**: Open module search
-* **Ctrl+C / Cmd+C**: Copy selected nodes
-* **Ctrl+V / Cmd+V**: Paste nodes
-* **Delete**: Remove selected nodes
-* **D**: Lock/Unlock nodes
-
 Workflow Modules
---------------
+===============
 
 ViSERA offers a comprehensive set of modules that can be connected to create end-to-end research workflows. These modules cover the entire radiomics pipeline from image input to statistical analysis.
 
+.. contents:: :local:
+
 Image Viewer
-~~~~~~~~~~~
+-----------
 
 The Medical Image Viewer is a comprehensive module designed for advanced medical image visualization and analysis, providing tools for detailed examination, segmentation, and analysis of medical imaging data.
 
@@ -155,7 +54,7 @@ Toolbar Functions
 * **Layout Control**: Reset to standard four-panel layout
 
 Image Reader
-~~~~~~~~~~~
+-----------
 
 A flexible module for importing various medical image formats into the ViSERA workflow.
 
@@ -181,7 +80,7 @@ Workflow Integration
 * Outputs to Image Registration
 
 RT Struct Reader
-~~~~~~~~~~~~~~
+---------------
 
 Specialized module for importing radiotherapy structure sets, supporting the standardized DICOM-RT format used in radiation oncology.
 
@@ -206,7 +105,7 @@ Workflow Integration
 * Outputs to Image Viewer
 
 Table Reader/Writer
-~~~~~~~~~~~~~~~~~
+------------------
 
 Modules for importing and exporting tabular data in various formats.
 
@@ -231,7 +130,7 @@ Supported Formats
 * Structured data exports from analysis modules
 
 Image Registration
-~~~~~~~~~~~~~~~~
+----------------
 
 Tools for spatial alignment of images from different modalities or time points.
 
@@ -264,18 +163,18 @@ Key Parameters
 * **Auto-Scale**: Automatic scaling during registration
 
 Workflow Integration
-^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^
 
 * Takes fixed and moving images as inputs
 * Outputs transformed image aligned to reference
 
 Image Filter
-~~~~~~~~~~~
+-----------
 
 Comprehensive set of image filtering options for enhancing features, reducing noise, and preparing images for feature extraction.
 
 Filter Types
-^^^^^^^^^^
+^^^^^^^^^^^
 
 * **Gabor Filter**: Texture and edge detection
 * **Wavelet Filter**: Multi-scale analysis
@@ -294,3 +193,97 @@ Key Parameters
 * **Step**: Increment value for filter application
 * **Response**: Type of filter response
 * **Rotation**: Enable/disable rotation invariance
+* **Pooling Method**: Method for combining filter responses
+
+**Wavelet Filter**
+
+* **Dimension**: 2D or 3D processing
+* **Boundary Condition**: Handling of image boundaries
+* **Filter Configuration**: Specific filter settings
+* **Filter Size**: Size of the wavelet kernel
+* **Decomposition Level**: Number of wavelet transform levels
+* **Wavelet Family**: Type of wavelet (Haar, Daubechies, etc.)
+* **Wavelet Type**: Specific wavelet implementation
+
+Workflow Integration
+^^^^^^^^^^^^^^^^^^
+
+* Takes image input
+* Applies selected filtering techniques
+* Outputs filtered image for further processing
+
+Image Fusion
+-----------
+
+Advanced capabilities for combining information from multiple imaging modalities.
+
+Fusion Methods
+^^^^^^^^^^^^
+
+* **Weighted Fusion**: Linear combination of input images
+* **Wavelet Fusion**: Multi-resolution decomposition and fusion
+* **PCA Fusion**: Principal Component Analysis based fusion
+
+Key Parameters
+^^^^^^^^^^^^
+
+**Weighted Fusion**
+
+* **Weight 1**: Weight for first input image (0-1)
+* **Weight 2**: Weight for second input image (0-1)
+* **Interpolation**: Method for interpolating between images (Linear, Cubic, etc.)
+
+**Wavelet Fusion**
+
+* **Fusion Method**: Algorithm for combining wavelet coefficients (Max, Min, Mean)
+* **Level**: Decomposition level for wavelet transform
+* **Mode**: Signal extrapolation mode
+* **Wavelet**: Wavelet family to use (Haar, etc.)
+
+**PCA Fusion**
+
+* **Number of Components**: Components to use in reconstruction
+* **SVD Solver**: Algorithm for Singular Value Decomposition
+* **Components**: Number of principal components
+
+Workflow Integration
+^^^^^^^^^^^^^^^^^^
+
+* Takes two input images
+* Combines information according to selected method
+* Outputs a single fused image
+
+Radiomic Feature Generator
+------------------------
+
+Core module for extracting standardized quantitative features from medical images following IBSI guidelines.
+
+Feature Types
+^^^^^^^^^^^
+
+* **First-order Statistics**: Intensity-based features
+* **Shape-based Features**: Morphological characteristics
+* **Texture Features**: Spatial patterns (GLCM, GLRLM, etc.)
+* **Wavelet Features**: Multi-resolution analysis
+
+Key Parameters
+^^^^^^^^^^^^
+
+* **Data Type**: Modality type (MR, CT, PET, etc.)
+* **Discretization Type**: Method for binning intensity values
+* **Bin Size**: Size of intensity bins for feature calculation
+* **Image Interpolation**: Method for resampling images
+* **ROI Interpolation**: Method for resampling masks
+* **Isotropic Voxel Size**: Size for resampling to isotropic voxels
+* **Intensity Rounding**: Option to round intensity values
+* **Segmentation Range**: Option to limit intensity range
+* **Outlier Filtering**: Methods for handling outliers
+* **Quantization Method**: Approach for discretizing intensities
+* **Maximum ROIs**: Number of regions to analyze per image
+
+Workflow Integration
+^^^^^^^^^^^^^^^^^^
+
+* Takes both image and mask inputs
+* Extracts features according to standardized definitions
+* Outputs tabular data with all calculated features 

@@ -1,0 +1,385 @@
+Examples
+========
+
+This section provides step-by-step guides for common tasks in ViSERA to help users get started quickly.
+
+.. contents:: :local:
+
+Image Conversion
+--------------
+
+The Image Conversion functionality allows users to easily convert medical images between different file formats, making it simple to work with various imaging systems and software.
+
+How It Works
+^^^^^^^^^^^
+
+1. **Image Reader Module**: First, use the Image Reader to load your source images
+
+   * Supports reading from individual files or entire folders
+   * Compatible with NIFTI (.nii, .nii.gz), NRRD, and DICOM formats
+   * Handles both single images and multi-file image series
+
+2. **Writer Module**: Then, connect the Writer module to convert and save the images
+
+   * Specify your desired output location
+   * Choose the target format for conversion
+   * Process individual files or batch convert entire directories
+
+Workflow Integration
+^^^^^^^^^^^^^^^^^^
+
+To convert images:
+
+1. Add an Image Reader module to your workflow
+2. Configure the Image Reader to load your source image(s)
+3. Add a Writer module to your workflow 
+4. Connect the output port of the Image Reader to the input port of the Writer
+5. Configure the Writer with your desired output format and location
+6. Run the workflow to perform the conversion
+
+This simple two-step process allows for easy conversion of medical images between supported formats without specialized knowledge of file formats or conversion tools.
+
+RT Struct Processing
+------------------
+
+RT Structure Sets are critical for radiation therapy planning and analysis. ViSERA provides a straightforward workflow for importing and processing these specialized files.
+
+How It Works
+^^^^^^^^^^^
+
+1. **RT Struct Reader Module**: Begin by loading your radiation therapy structure set
+
+   * Requires both a main image and corresponding structure set labels
+   * RT Label Directory: Path to the RT structure set file
+   * RT Main Image Directory: Path to the corresponding image data
+   * Automatically extracts contours and segmentation information
+
+2. **Writer Module**: Connect to the Writer module to save processed RT structures
+
+   * Choose your desired output location
+   * Select appropriate format for saving segmentation data
+   * Preserve the relationship between images and their associated structures
+
+Workflow Integration
+^^^^^^^^^^^^^^^^^^
+
+To process RT Struct files:
+
+1. Add an RT Struct Reader module to your workflow
+2. Configure the RT Struct Reader with paths to both your main image and structure set labels
+3. Add a Writer module to your workflow
+4. Connect the output port of the RT Struct Reader to the input port of the Writer
+5. Configure the Writer with your desired output location and format
+6. Run the workflow to complete the processing
+
+This workflow enables efficient handling of radiation therapy planning data while maintaining the integrity of structure sets and their associated imaging.
+
+Image Filtering
+-------------
+
+Image filtering is essential for enhancing specific features, reducing noise, and preparing images for analysis. ViSERA provides several standardized filters that comply with IBSI guidelines.
+
+How It Works
+^^^^^^^^^^^
+
+1. **Image Reader Module**: Start by loading the medical image you want to filter
+
+   * Select your source image file or directory
+   * The module supports NIFTI, NRRD, and DICOM formats
+
+2. **Filter Module**: Apply one or more filters to the input image
+
+   * **Mean Filter**: Smooths images by replacing each pixel with the average of its neighborhood
+   * **LoG (Laplacian of Gaussian)**: Highlights edges and regions of rapid intensity change
+   * **Laws Filter**: Extracts texture features using small convolution kernels
+   * **Gabor Filter**: Identifies texture and directional features at various scales
+   * **Wavelet Filter**: Performs multi-resolution analysis for feature extraction
+
+3. **Writer Module**: Save the filtered image to your desired location
+
+   * Select output location and format
+   * Preserve metadata from the original image
+
+Customizable Parameters
+^^^^^^^^^^^^^^^^^^^^^
+
+Each filter provides adjustable parameters to fine-tune the results:
+
+* **Mean Filter**: Kernel size, boundary handling
+* **LoG Filter**: Sigma value, kernel size
+* **Laws Filter**: Kernel type, window size
+* **Gabor Filter**: Frequency, orientation, bandwidth
+* **Wavelet Filter**: Wavelet family, decomposition level, boundary handling
+
+Workflow Integration
+^^^^^^^^^^^^^^^^^^
+
+To filter medical images:
+
+1. Add an Image Reader module to your workflow
+2. Configure the Image Reader to load your source image
+3. Add a Filter module to your workflow
+4. Connect the output port of the Image Reader to the input port of the Filter
+5. Select the desired filter type and adjust parameters
+6. Add a Writer module to your workflow
+7. Connect the output port of the Filter to the input port of the Writer
+8. Configure the Writer with your desired output location and format
+9. Run the workflow to apply the filter and save the results
+
+.. image:: images/Screenshot_2025-04-26_at_19.22.48.png
+   :alt: Image Filtering Workflow
+   :width: 600px
+
+This workflow enables precise control over image enhancement techniques while maintaining compatibility with downstream analysis modules.
+
+Image Fusion
+----------
+
+Image fusion combines information from multiple images into a single composite image, preserving the most important visual information from each source. This is particularly useful for integrating complementary data from different imaging modalities or acquisition times.
+
+How It Works
+^^^^^^^^^^^
+
+1. **Image Reader Module**: Load the images you want to fuse
+
+   * You'll need two separate Image Reader modules, one for each input image
+   * Both images should have compatible dimensions for proper fusion
+
+2. **Image Fusion Module**: Combine the images using one of three fusion methods
+
+   * **Weighted Fusion**: Linear combination of input images
+     * Weight 1: Contribution of first image (0-1)
+     * Weight 2: Contribution of second image (0-1)
+     * Interpolation: Method for combining images (Linear, Cubic, etc.)
+   
+   * **Wavelet Fusion**: Multi-resolution decomposition and fusion
+     * Fusion Method: Algorithm for combining wavelet coefficients (Max, Min, Mean)
+     * Level: Decomposition level for wavelet transform
+     * Mode: Signal extrapolation mode
+     * Wavelet: Wavelet family to use (Haar, etc.)
+   
+   * **PCA Fusion**: Principal Component Analysis based fusion
+     * Number of Components: Components to use in reconstruction
+     * SVD Solver: Algorithm for Singular Value Decomposition
+     * Components: Number of principal components
+
+3. **Writer Module**: Save the fused image to your desired location
+
+   * Select output location and format
+   * Preserve metadata from the original images
+
+Workflow Integration
+^^^^^^^^^^^^^^^^^^
+
+To fuse medical images:
+
+1. Add two Image Reader modules to your workflow
+2. Configure each Image Reader to load one of your source images
+3. Add an Image Fusion module to your workflow
+4. Connect the output ports of both Image Readers to the input ports of the Image Fusion module
+5. Select the desired fusion method and adjust its parameters
+6. Add a Writer module to your workflow
+7. Connect the output port of the Image Fusion module to the input port of the Writer
+8. Configure the Writer with your desired output location and format
+9. Run the workflow to perform the fusion and save the results
+
+.. image:: images/Screenshot_2025-04-26_at_19.30.27.png
+   :alt: Image Fusion Workflow
+   :width: 600px
+
+This workflow allows you to combine complementary information from different imaging sources into a single comprehensive visualization for improved analysis and interpretation.
+
+Image Registration for AutoPET
+----------------------------
+
+Image registration is a crucial step in medical image analysis, especially for multimodal imaging like PET/CT. This example demonstrates how to register PET and CT images from AutoPET datasets.
+
+How It Works
+^^^^^^^^^^^
+
+1. **Image Reader Module (Fixed Image)**: Load the CT image as the fixed (reference) image
+
+   * Configure the reader to point to your CT data source
+   * CT scans typically provide detailed anatomical information
+
+2. **Image Reader Module (Moving Image)**: Load the PET image as the moving image to be aligned
+
+   * Configure the reader to point to your PET data source
+   * PET scans provide functional or metabolic information
+
+3. **Image Registration Module**: Align the PET (moving) image to the CT (fixed) image
+
+   * **Rigid Registration**: Maintains shape and size, only allows rotation and translation
+     * Number of Histogram Bins: Controls the granularity of intensity matching
+     * Sampling Method: Determines how points are sampled during registration
+     * Learning Rate: Controls the optimization step size
+     * Number of Iterations: Sets the maximum number of optimization steps
+     * Interpolation: Method used for interpolating between voxels
+   
+   * **Non-Rigid Registration**: Allows local deformations for better alignment of soft tissues
+     * Transform Type: Typically BSplineTransform for PET/CT registration
+     * Number of Iterations: Controls the optimization process
+     * Final Grid Spacing: Determines the density of the deformation field
+
+4. **Writer Module**: Save the registered PET image
+
+   * Select output location and format
+   * The registered image will be aligned to the anatomical reference of the CT image
+
+Workflow Integration
+^^^^^^^^^^^^^^^^^^
+
+.. image:: images/Screenshot_2025-04-26_at_19.59.03.png
+   :alt: Image Registration for AutoPET Workflow
+   :width: 600px
+
+To register AutoPET images:
+
+1. Add an Image Reader module for the fixed (CT) image
+2. Configure the first Image Reader to load your CT image
+3. Add a second Image Reader module for the moving (PET) image
+4. Configure the second Image Reader to load your PET image
+5. Add an Image Registration module to your workflow
+6. Connect the output port of the CT Image Reader to the "fix image" input port of the Image Registration module
+7. Connect the output port of the PET Image Reader to the "moving image" input port of the Image Registration module
+8. Select the appropriate registration type and parameters based on your data
+9. Add a Writer module to your workflow
+10. Connect the output port of the Image Registration module to the input port of the Writer
+11. Configure the Writer with your desired output location and format
+12. Run the workflow to perform the registration and save the results
+
+This registration workflow enables accurate spatial alignment of functional PET data with anatomical CT data, which is essential for proper localization and quantification of metabolic activity in cancer studies.
+
+PET/CT Registration and Fusion
+----------------------------
+
+This advanced workflow combines both registration and fusion techniques to create comprehensive visualizations from multimodal AutoPET data. The workflow aligns PET images to CT images and then fuses them to combine functional and anatomical information.
+
+How It Works
+^^^^^^^^^^^
+
+1. **Image Reader Module (CT)**: Load the CT image which serves dual purposes:
+
+   * Acts as the fixed (reference) image for registration
+   * Provides anatomical information for the fusion process (Image 2)
+
+2. **Image Reader Module (PET)**: Load the PET image as the moving image to be aligned
+
+   * The PET data contains functional/metabolic information
+   * Will be spatially registered to match the CT reference frame
+
+3. **Image Registration Module**: Align the PET image to the CT reference
+
+   * Uses either rigid or non-rigid registration depending on requirements
+   * Produces a spatially aligned PET image that matches the CT coordinate system
+
+4. **Image Fusion Module**: Combine the registered PET with the original CT
+
+   * **Input 1**: Registered PET image (from registration module)
+   * **Input 2**: Original CT image (directly from CT Image Reader)
+   * Creates a single composite image highlighting both structure and function
+
+5. **Writer Module**: Save the fused image for further analysis
+
+   * Preserves both anatomical context and metabolic information
+   * Can be saved in various formats for use in clinical or research contexts
+
+Workflow Integration
+^^^^^^^^^^^^^^^^^^
+
+.. image:: images/Screenshot_2025-04-26_at_19.13.43.png
+   :alt: PET/CT Registration and Fusion Workflow
+   :width: 600px
+
+To implement this PET/CT registration and fusion pipeline:
+
+1. Add two Image Reader modules to your workflow:
+   * One for the CT image
+   * One for the PET image
+
+2. Configure both Image Readers to load the appropriate data
+
+3. Add an Image Registration module and connect:
+   * CT Image Reader output → "fix image" input
+   * PET Image Reader output → "moving image" input
+
+4. Configure registration parameters appropriate for PET/CT alignment:
+   * For most applications, rigid registration with appropriate histogram bins
+   * For soft tissue focus, consider non-rigid registration
+
+5. Add an Image Fusion module and connect:
+   * Registration module output → "Image 1" input 
+   * CT Image Reader output → "Image 2" input
+
+6. Configure fusion parameters:
+   * For clinical viewing, weighted fusion with customized color maps
+   * For feature analysis, consider PCA or wavelet fusion
+
+7. Add a Writer module and connect:
+   * Fusion module output → Writer input
+
+8. Configure the Writer with your desired output location and format
+
+9. Run the workflow to register, fuse, and save the results
+
+This integrated workflow creates comprehensive visualizations that preserve the metabolic sensitivity of PET while maintaining the anatomical detail of CT, which is particularly valuable for tumor localization, treatment planning, and response assessment in oncology applications.
+
+PET/CT Registration and Filtering
+-------------------------------
+
+This workflow combines registration and filtering techniques to enhance specific features in multimodal AutoPET data. The workflow first aligns PET images to CT images and then applies filters to enhance particular features of interest in the registered images.
+
+How It Works
+^^^^^^^^^^^
+
+1. **Image Reader Module (CT)**: Load the CT image as the fixed (reference) image
+
+   * Provides the anatomical reference frame
+   * CT scans offer detailed structural information
+
+2. **Image Reader Module (PET)**: Load the PET image as the moving image
+
+   * Contains functional/metabolic information
+   * Will be spatially aligned to match the CT reference frame
+
+3. **Image Registration Module**: Align the PET image to the CT reference
+
+   * Uses either rigid or non-rigid registration depending on requirements
+   * Ensures the metabolic activity is precisely localized to anatomical structures
+
+4. **Image Filter Module**: Apply selected filters to the registered PET image
+
+   * Enhances specific features of interest
+   * Reduces noise or highlights particular characteristics
+   * Available filters include Gabor, Wavelet, Threshold, Gradient, and Smoothing
+
+5. **Writer Module**: Save the filtered registered image
+
+   * Preserves the spatial alignment with anatomical structures
+   * Enhanced features are ready for further analysis
+
+Workflow Integration
+^^^^^^^^^^^^^^^^^^
+
+.. image:: images/Screenshot_2025-04-26_at_20.00.20.png
+   :alt: PET/CT Registration and Filtering Workflow
+   :width: 600px
+
+To implement this PET/CT registration and filtering pipeline:
+
+1. Add two Image Reader modules to your workflow:
+   * One for the CT image
+   * One for the PET image
+
+2. Configure both Image Readers to load the appropriate data
+
+3. Add an Image Registration module and connect:
+   * CT Image Reader output → "fix image" input
+   * PET Image Reader output → "moving image" input
+
+4. Configure registration parameters appropriate for PET/CT alignment:
+   * For most applications, rigid registration is sufficient
+   * For areas with tissue deformation, consider non-rigid registration
+
+5. Add an Image Filter module and connect:
+   * Registration module output → Filter input 
