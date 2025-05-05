@@ -3,12 +3,6 @@ Examples
 
 This section provides step-by-step guides for common tasks in ViSERA to help users get started quickly.
 
-Test file: :download:`test.txt </_static/test.txt>`
-
-.. raw:: html
-
-   <img src="_static/images/image_filtering.png" alt="Test Image" width="600px">
-
 .. contents:: :local:
 
 Image Conversion
@@ -132,11 +126,9 @@ To filter medical images:
 8. Configure the Writer with your desired output location and format
 9. Run the workflow to apply the filter and save the results
 
-.. figure:: _static/images/image_filtering.png
+.. image:: images/Screenshot_2025-04-26_at_19.22.48.png
    :alt: Image Filtering Workflow
    :width: 600px
-   
-   Image filtering workflow showing the Reader, Filter, and Writer modules
 
 This workflow enables precise control over image enhancement techniques while maintaining compatibility with downstream analysis modules.
 
@@ -191,7 +183,7 @@ To fuse medical images:
 8. Configure the Writer with your desired output location and format
 9. Run the workflow to perform the fusion and save the results
 
-.. image:: /_static/images/Screenshot_2025-04-26_at_19.30.27.png
+.. image:: images/Screenshot_2025-04-26_at_19.30.27.png
    :alt: Image Fusion Workflow
    :width: 600px
 
@@ -237,7 +229,7 @@ How It Works
 Workflow Integration
 ^^^^^^^^^^^^^^^^^^
 
-.. image:: /_static/images/Screenshot_2025-04-26_at_19.59.03.png
+.. image:: images/Screenshot_2025-04-26_at_19.59.03.png
    :alt: Image Registration for AutoPET Workflow
    :width: 600px
 
@@ -295,7 +287,7 @@ How It Works
 Workflow Integration
 ^^^^^^^^^^^^^^^^^^
 
-.. image:: _static/images/image_reg_fusion.png
+.. image:: images/Screenshot_2025-04-26_at_19.13.43.png
    :alt: PET/CT Registration and Fusion Workflow
    :width: 600px
 
@@ -369,7 +361,7 @@ How It Works
 Workflow Integration
 ^^^^^^^^^^^^^^^^^^
 
-.. image:: /_static/images/Screenshot_2025-04-26_at_20.00.20.png
+.. image:: images/Screenshot_2025-04-26_at_20.00.20.png
    :alt: PET/CT Registration and Filtering Workflow
    :width: 600px
 

@@ -12,7 +12,7 @@ source_suffix = {
 }
 
 # Add configuration for static files
-html_static_path = ['_static']
+html_static_path = ['_static', 'images']
 
 # Set the master document
 master_doc = 'index'
