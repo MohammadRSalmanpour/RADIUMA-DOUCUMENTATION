@@ -9,3 +9,6 @@ source_suffix = {
     '.rst': 'restructuredtext',
     '.md': 'markdown',
 }
+
+# Add configuration for static files
+html_static_path = ['_static']
