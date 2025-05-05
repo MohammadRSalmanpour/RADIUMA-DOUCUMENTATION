@@ -1,20 +1,17 @@
-********************
 Examples
-********************
+========
 
 This section provides step-by-step guides for common tasks in ViSERA to help users get started quickly.
 
 .. contents:: :local:
 
-=================
 Image Conversion
-=================
+----------------
 
 The Image Conversion functionality allows users to easily convert medical images between different file formats, making it simple to work with various imaging systems and software.
 
------------
 How It Works
------------
+^^^^^^^^^^^
 
 1. **Image Reader Module**: First, use the Image Reader to load your source images
 
@@ -28,9 +25,8 @@ How It Works
    * Choose the target format for conversion
    * Process individual files or batch convert entire directories
 
--------------------
 Workflow Integration
--------------------
+^^^^^^^^^^^^^^^^^^
 
 To convert images:
 
@@ -43,15 +39,13 @@ To convert images:
 
 This simple two-step process allows for easy conversion of medical images between supported formats without specialized knowledge of file formats or conversion tools.
 
-=====================
 RT Struct Processing
-=====================
+-------------------
 
 RT Structure Sets are critical for radiation therapy planning and analysis. ViSERA provides a straightforward workflow for importing and processing these specialized files.
 
------------
 How It Works
------------
+^^^^^^^^^^^
 
 1. **RT Struct Reader Module**: Begin by loading your radiation therapy structure set
 
@@ -66,9 +60,8 @@ How It Works
    * Select appropriate format for saving segmentation data
    * Preserve the relationship between images and their associated structures
 
--------------------
 Workflow Integration
--------------------
+^^^^^^^^^^^^^^^^^^
 
 To process RT Struct files:
 
@@ -82,12 +75,12 @@ To process RT Struct files:
 This workflow enables efficient handling of radiation therapy planning data while maintaining the integrity of structure sets and their associated imaging.
 
 Image Filtering
-=============
+--------------
 
 Image filtering is essential for enhancing specific features, reducing noise, and preparing images for analysis. ViSERA provides several standardized filters that comply with IBSI guidelines.
 
 How It Works
------------
+^^^^^^^^^^^
 
 1. **Image Reader Module**: Start by loading the medical image you want to filter
 
@@ -108,7 +101,7 @@ How It Works
    * Preserve metadata from the original image
 
 Customizable Parameters
----------------------
+^^^^^^^^^^^^^^^^^^^^^
 
 Each filter provides adjustable parameters to fine-tune the results:
 
@@ -119,7 +112,7 @@ Each filter provides adjustable parameters to fine-tune the results:
 * **Wavelet Filter**: Wavelet family, decomposition level, boundary handling
 
 Workflow Integration
-------------------
+^^^^^^^^^^^^^^^^^^
 
 To filter medical images:
 
@@ -140,12 +133,12 @@ To filter medical images:
 This workflow enables precise control over image enhancement techniques while maintaining compatibility with downstream analysis modules.
 
 Image Fusion
-===========
+-----------
 
 Image fusion combines information from multiple images into a single composite image, preserving the most important visual information from each source. This is particularly useful for integrating complementary data from different imaging modalities or acquisition times.
 
 How It Works
------------
+^^^^^^^^^^^
 
 1. **Image Reader Module**: Load the images you want to fuse
 
@@ -176,7 +169,7 @@ How It Works
    * Preserve metadata from the original images
 
 Workflow Integration
-------------------
+^^^^^^^^^^^^^^^^^^
 
 To fuse medical images:
 
@@ -197,12 +190,12 @@ To fuse medical images:
 This workflow allows you to combine complementary information from different imaging sources into a single comprehensive visualization for improved analysis and interpretation.
 
 Image Registration for AutoPET
-============================
+-----------------------------
 
 Image registration is a crucial step in medical image analysis, especially for multimodal imaging like PET/CT. This example demonstrates how to register PET and CT images from AutoPET datasets.
 
 How It Works
------------
+^^^^^^^^^^^
 
 1. **Image Reader Module (Fixed Image)**: Load the CT image as the fixed (reference) image
 
@@ -234,7 +227,7 @@ How It Works
    * The registered image will be aligned to the anatomical reference of the CT image
 
 Workflow Integration
-------------------
+^^^^^^^^^^^^^^^^^^
 
 .. image:: images/Screenshot_2025-04-26_at_19.59.03.png
    :alt: Image Registration for AutoPET Workflow
@@ -258,12 +251,12 @@ To register AutoPET images:
 This registration workflow enables accurate spatial alignment of functional PET data with anatomical CT data, which is essential for proper localization and quantification of metabolic activity in cancer studies.
 
 PET/CT Registration and Fusion
-============================
+-----------------------------
 
 This advanced workflow combines both registration and fusion techniques to create comprehensive visualizations from multimodal AutoPET data. The workflow aligns PET images to CT images and then fuses them to combine functional and anatomical information.
 
 How It Works
------------
+^^^^^^^^^^^
 
 1. **Image Reader Module (CT)**: Load the CT image which serves dual purposes:
 
@@ -292,7 +285,7 @@ How It Works
    * Can be saved in various formats for use in clinical or research contexts
 
 Workflow Integration
-------------------
+^^^^^^^^^^^^^^^^^^
 
 .. image:: images/Screenshot_2025-04-26_at_19.13.43.png
    :alt: PET/CT Registration and Fusion Workflow
@@ -307,23 +300,23 @@ To implement this PET/CT registration and fusion pipeline:
 2. Configure both Image Readers to load the appropriate data
 
 3. Add an Image Registration module and connect:
-   * CT Image Reader output -> "fix image" input
-   * PET Image Reader output -> "moving image" input
+   * CT Image Reader output → "fix image" input
+   * PET Image Reader output → "moving image" input
 
 4. Configure registration parameters appropriate for PET/CT alignment:
    * For most applications, rigid registration with appropriate histogram bins
    * For soft tissue focus, consider non-rigid registration
 
 5. Add an Image Fusion module and connect:
-   * Registration module output -> "Image 1" input 
-   * CT Image Reader output -> "Image 2" input
+   * Registration module output → "Image 1" input 
+   * CT Image Reader output → "Image 2" input
 
 6. Configure fusion parameters:
    * For clinical viewing, weighted fusion with customized color maps
    * For feature analysis, consider PCA or wavelet fusion
 
 7. Add a Writer module and connect:
-   * Fusion module output -> Writer input
+   * Fusion module output → Writer input
 
 8. Configure the Writer with your desired output location and format
 
@@ -332,12 +325,12 @@ To implement this PET/CT registration and fusion pipeline:
 This integrated workflow creates comprehensive visualizations that preserve the metabolic sensitivity of PET while maintaining the anatomical detail of CT, which is particularly valuable for tumor localization, treatment planning, and response assessment in oncology applications.
 
 PET/CT Registration and Filtering
-===============================
+--------------------------------
 
 This workflow combines registration and filtering techniques to enhance specific features in multimodal AutoPET data. The workflow first aligns PET images to CT images and then applies filters to enhance particular features of interest in the registered images.
 
 How It Works
------------
+^^^^^^^^^^^
 
 1. **Image Reader Module (CT)**: Load the CT image as the fixed (reference) image
 
@@ -366,7 +359,7 @@ How It Works
    * Enhanced features are ready for further analysis
 
 Workflow Integration
-------------------
+^^^^^^^^^^^^^^^^^^
 
 .. image:: images/Screenshot_2025-04-26_at_20.00.20.png
    :alt: PET/CT Registration and Filtering Workflow
@@ -381,12 +374,12 @@ To implement this PET/CT registration and filtering pipeline:
 2. Configure both Image Readers to load the appropriate data
 
 3. Add an Image Registration module and connect:
-   * CT Image Reader output -> "fix image" input
-   * PET Image Reader output -> "moving image" input
+   * CT Image Reader output → "fix image" input
+   * PET Image Reader output → "moving image" input
 
 4. Configure registration parameters appropriate for PET/CT alignment:
    * For most applications, rigid registration is sufficient
    * For areas with tissue deformation, consider non-rigid registration
 
 5. Add an Image Filter module and connect:
-   * Registration module output -> Filter input 
+   * Registration module output → Filter input 
