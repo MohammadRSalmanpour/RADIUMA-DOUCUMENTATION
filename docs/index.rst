@@ -14,6 +14,7 @@ ViSERA - Visualized & Standardized Environment for Radiomics Analysis is a power
    examples
    installation
    module_documentation
+   test
 
 Overview
 --------
