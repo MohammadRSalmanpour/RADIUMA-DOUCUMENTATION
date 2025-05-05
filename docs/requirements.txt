@@ -1,3 +1,5 @@
-sphinx
-sphinx_rtd_theme
-myst-parser
+sphinx>=4.0.0
+sphinx_rtd_theme>=1.0.0
+myst-parser>=0.18.0
+Pillow
+sphinx-copybutton

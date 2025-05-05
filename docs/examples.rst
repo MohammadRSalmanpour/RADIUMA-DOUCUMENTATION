@@ -3,6 +3,12 @@ Examples
 
 This section provides step-by-step guides for common tasks in ViSERA to help users get started quickly.
 
+Test file: :download:`test.txt </_static/test.txt>`
+
+.. raw:: html
+
+   <img src="_static/images/image_filtering.png" alt="Test Image" width="600px">
+
 .. contents:: :local:
 
 Image Conversion
@@ -126,9 +132,11 @@ To filter medical images:
 8. Configure the Writer with your desired output location and format
 9. Run the workflow to apply the filter and save the results
 
-.. image:: _static/images/image_filtering.png
+.. figure:: _static/images/image_filtering.png
    :alt: Image Filtering Workflow
    :width: 600px
+   
+   Image filtering workflow showing the Reader, Filter, and Writer modules
 
 This workflow enables precise control over image enhancement techniques while maintaining compatibility with downstream analysis modules.
 
