@@ -6,7 +6,7 @@ This section provides step-by-step guides for common tasks in ViSERA to help use
 .. contents:: :local:
 
 Image Conversion
-----------------
+---------------
 
 The Image Conversion functionality allows users to easily convert medical images between different file formats, making it simple to work with various imaging systems and software.
 
@@ -25,8 +25,12 @@ How It Works
    * Choose the target format for conversion
    * Process individual files or batch convert entire directories
 
+.. image:: images/Screenshot_2025-04-26_at_19.22.48.png
+   :alt: Image Filtering Workflow
+   :width: 600px
+
 Workflow Integration
-^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^
 
 To convert images:
 
@@ -61,7 +65,7 @@ How It Works
    * Preserve the relationship between images and their associated structures
 
 Workflow Integration
-^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^
 
 To process RT Struct files:
 
@@ -101,7 +105,7 @@ How It Works
    * Preserve metadata from the original image
 
 Customizable Parameters
-^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^
 
 Each filter provides adjustable parameters to fine-tune the results:
 
@@ -112,7 +116,7 @@ Each filter provides adjustable parameters to fine-tune the results:
 * **Wavelet Filter**: Wavelet family, decomposition level, boundary handling
 
 Workflow Integration
-^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^
 
 To filter medical images:
 
@@ -169,7 +173,7 @@ How It Works
    * Preserve metadata from the original images
 
 Workflow Integration
-^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^
 
 To fuse medical images:
 
@@ -190,7 +194,7 @@ To fuse medical images:
 This workflow allows you to combine complementary information from different imaging sources into a single comprehensive visualization for improved analysis and interpretation.
 
 Image Registration for AutoPET
------------------------------
+----------------------------
 
 Image registration is a crucial step in medical image analysis, especially for multimodal imaging like PET/CT. This example demonstrates how to register PET and CT images from AutoPET datasets.
 
@@ -227,7 +231,7 @@ How It Works
    * The registered image will be aligned to the anatomical reference of the CT image
 
 Workflow Integration
-^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^
 
 .. image:: images/Screenshot_2025-04-26_at_19.59.03.png
    :alt: Image Registration for AutoPET Workflow
@@ -285,7 +289,7 @@ How It Works
    * Can be saved in various formats for use in clinical or research contexts
 
 Workflow Integration
-^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^
 
 .. image:: images/Screenshot_2025-04-26_at_19.13.43.png
    :alt: PET/CT Registration and Fusion Workflow
@@ -359,7 +363,7 @@ How It Works
    * Enhanced features are ready for further analysis
 
 Workflow Integration
-^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^
 
 .. image:: images/Screenshot_2025-04-26_at_20.00.20.png
    :alt: PET/CT Registration and Filtering Workflow
