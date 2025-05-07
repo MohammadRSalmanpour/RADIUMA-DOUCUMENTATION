@@ -1,5 +1,5 @@
 Workflow Modules
-===============
+================
 
 ViSERA offers a comprehensive set of modules that can be connected to create end-to-end research workflows. These modules cover the entire radiomics pipeline from image input to statistical analysis.
 
@@ -30,7 +30,7 @@ File Support
 * Segmentation Files: Import/export of segmentation data
 
 Toolbar Functions
-^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^
 
 **Image Navigation & Information**
 
@@ -59,20 +59,20 @@ Image Reader
 A flexible module for importing various medical image formats into the ViSERA workflow.
 
 Key Parameters
-^^^^^^^^^^^^
+^^^^^^^^^^^^^
 
 * **Source Type**: Choose between folder or single file import
 * **Path**: Location of the medical image file(s) to import
 
 Supported Input Formats
-^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^
 
 * DICOM Files and Directories
 * NIFTI Files (.nii, .nii.gz)
 * Various other medical image formats
 
 Workflow Integration
-^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^
 
 * Outputs to Image Convertor
 * Outputs to Image Filter
@@ -85,20 +85,20 @@ RT Struct Reader
 Specialized module for importing radiotherapy structure sets, supporting the standardized DICOM-RT format used in radiation oncology.
 
 Key Parameters
-^^^^^^^^^^^^
+^^^^^^^^^^^^^
 
 * **RT Label Directory**: Path to the RT structure set file
 * **RT Main Image Directory**: Path to the corresponding image data
 
 Functionality
-^^^^^^^^^^^
+^^^^^^^^^^^^
 
 * Imports DICOM-RT structure sets along with their associated images
 * Extracts contours and segmentation information
 * Provides labeled structures for further analysis
 
 Workflow Integration
-^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^
 
 * Outputs to Radiomic Feature Generator
 * Outputs to Image Writer
@@ -110,39 +110,39 @@ Table Reader/Writer
 Modules for importing and exporting tabular data in various formats.
 
 Reader Parameters
-^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^
 
 * **File Path**: Location of the input data file
 * **Format Detection**: Automatic detection of file format
 
 Writer Parameters
-^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^
 
 * **Path**: Destination for saving the output data
 * **File Format**: Choice of output format (.xlsx, .csv, .dcm, .nii.gz, .nrrd)
 * **Single/Multi File**: Option to save as single file or multiple files
 
 Supported Formats
-^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^
 
 * CSV files
 * Excel spreadsheets
 * Structured data exports from analysis modules
 
 Image Registration
-----------------
+-----------------
 
 Tools for spatial alignment of images from different modalities or time points.
 
 Registration Types
-^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^
 
 * **Rigid Registration**: Maintains shape and size, only allows rotation and translation
 * **Non-Rigid Registration**: Allows local deformations for better alignment
 * **Simple Non-Rigid**: Simplified version of non-rigid registration for faster processing
 
 Key Parameters
-^^^^^^^^^^^^
+^^^^^^^^^^^^^
 
 **Rigid Registration**
 
@@ -163,7 +163,7 @@ Key Parameters
 * **Auto-Scale**: Automatic scaling during registration
 
 Workflow Integration
-^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^
 
 * Takes fixed and moving images as inputs
 * Outputs transformed image aligned to reference
@@ -183,7 +183,7 @@ Filter Types
 * **Smoothing Filter**: Noise reduction
 
 Key Parameters
-^^^^^^^^^^^^
+^^^^^^^^^^^^^
 
 **Gabor Filter**
 
@@ -206,7 +206,7 @@ Key Parameters
 * **Wavelet Type**: Specific wavelet implementation
 
 Workflow Integration
-^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^
 
 * Takes image input
 * Applies selected filtering techniques
@@ -218,14 +218,14 @@ Image Fusion
 Advanced capabilities for combining information from multiple imaging modalities.
 
 Fusion Methods
-^^^^^^^^^^^^
+^^^^^^^^^^^^^^
 
 * **Weighted Fusion**: Linear combination of input images
 * **Wavelet Fusion**: Multi-resolution decomposition and fusion
 * **PCA Fusion**: Principal Component Analysis based fusion
 
 Key Parameters
-^^^^^^^^^^^^
+^^^^^^^^^^^^^^
 
 **Weighted Fusion**
 
@@ -247,7 +247,7 @@ Key Parameters
 * **Components**: Number of principal components
 
 Workflow Integration
-^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^
 
 * Takes two input images
 * Combines information according to selected method
@@ -259,7 +259,7 @@ Radiomic Feature Generator
 Core module for extracting standardized quantitative features from medical images following IBSI guidelines.
 
 Feature Types
-^^^^^^^^^^^
+^^^^^^^^^^^^
 
 * **First-order Statistics**: Intensity-based features
 * **Shape-based Features**: Morphological characteristics
@@ -267,7 +267,7 @@ Feature Types
 * **Wavelet Features**: Multi-resolution analysis
 
 Key Parameters
-^^^^^^^^^^^^
+^^^^^^^^^^^^^^
 
 * **Data Type**: Modality type (MR, CT, PET, etc.)
 * **Discretization Type**: Method for binning intensity values
@@ -282,7 +282,7 @@ Key Parameters
 * **Maximum ROIs**: Number of regions to analyze per image
 
 Workflow Integration
-^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^
 
 * Takes both image and mask inputs
 * Extracts features according to standardized definitions

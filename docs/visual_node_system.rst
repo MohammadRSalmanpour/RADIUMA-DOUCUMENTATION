@@ -1,5 +1,5 @@
 Visual Node-Based Workflow System
-==============================
+=================================
 
 ViSERA uses a visual programming approach where modules are represented as nodes that can be connected to create complete data processing pipelines. This intuitive interface allows users with minimal programming experience to build sophisticated workflows.
 

@@ -12,7 +12,7 @@ Overview
 The preprocessing module provides essential data preparation capabilities before applying machine learning algorithms. Proper preprocessing is crucial for achieving optimal model performance.
 
 Supported Preprocessing Techniques
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Data Encoding**
 
@@ -33,7 +33,7 @@ Supported Preprocessing Techniques
 * **Dimensionality Reduction**: PCA, t-SNE, and other techniques
 
 Key Preprocessing Algorithms
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * **Principal Component Analysis (PCA)**: Linear dimensionality reduction using SVD
 * **Kernel PCA**: Non-linear dimensionality reduction 
@@ -41,7 +41,7 @@ Key Preprocessing Algorithms
 * **Fast ICA**: Independent Component Analysis
 
 Workflow Integration
-^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^
 
 1. Data Loading
 2. Encoding
@@ -52,7 +52,7 @@ Workflow Integration
 7. Model Training
 
 Best Practices
-^^^^^^^^^^^^
+^^^^^^^^^^^^^^^
 
 1. Always encode categorical variables
 2. Handle missing values appropriately
@@ -63,7 +63,7 @@ Best Practices
 7. Reserve test data until final evaluation
 
 Classification
-------------
+-------------
 
 Overview
 ^^^^^^^^
@@ -71,7 +71,7 @@ Overview
 The Classification module provides multiple algorithms for data analysis with customizable parameters through an intuitive user interface.
 
 Supported Algorithms
-^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^
 
 **1. Logistic Regression Classifier**
 
@@ -144,7 +144,7 @@ Ensemble using base classifiers on random data subsets.
 Applies Bayes' theorem with feature independence assumption.
 
 Classification Workflow
-^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 1. Select and configure algorithms
 2. Apply preprocessing steps
@@ -153,7 +153,7 @@ Classification Workflow
 5. Compare algorithm performance
 
 Regression
----------
+----------
 
 Overview
 ^^^^^^^^
@@ -161,7 +161,7 @@ Overview
 The Regression module provides multiple algorithms for predicting continuous target variables.
 
 Supported Algorithms
-^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^
 
 **1. Linear Regression**
 
@@ -228,7 +228,7 @@ Ensemble method aggregating predictions from multiple models.
 * Sample and Feature ratios
 
 Evaluation Metrics
-^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^
 
 * Mean Absolute Error (MAE)
 * Root Mean Squared Error (RMSE)
@@ -244,7 +244,7 @@ Overview
 The Clustering module provides algorithms for grouping similar data points without labeled training data.
 
 Supported Algorithms
-^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^
 
 **1. K-Means Clustering**
 
