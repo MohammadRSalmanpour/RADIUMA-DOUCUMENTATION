@@ -1,5 +1,5 @@
 Key Features
-===========
+============
 
 * **Standardized Radiomics Analysis**: Compliant with IBSI 1.0 standards
 * **Advanced Image Filtering**: Standardized against IBSI 2.0 with multiple filter options

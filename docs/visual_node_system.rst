@@ -4,7 +4,7 @@ Visual Node-Based Workflow System
 ViSERA uses a visual programming approach where modules are represented as nodes that can be connected to create complete data processing pipelines. This intuitive interface allows users with minimal programming experience to build sophisticated workflows.
 
 Creating Workflows
------------------
+------------------
 
 1. **Adding Modules**: Double-click on a module from the module palette to add it to the workspace
 2. **Configuring Modules**: Double-click on a module node to open its configuration dialog
@@ -13,7 +13,7 @@ Creating Workflows
 5. **Stopping Execution**: Click the "Stop" button to halt execution of a running workflow
 
 Module Compatibility
--------------------
+--------------------
 
 Each module explicitly defines which other modules can connect to its inputs and outputs, ensuring that only valid connections can be made:
 
@@ -25,7 +25,7 @@ Each module explicitly defines which other modules can connect to its inputs and
 * **Classification/Regression/Clustering**: Take preprocessed data as input, connect to visualization
 
 Example Workflows
-----------------
+-----------------
 
 **Basic Radiomics Analysis Pipeline:**
 
@@ -45,7 +45,7 @@ Example Workflows
 6. Image Writer → Save processed results
 
 Workflow Controls
-----------------
+-----------------
 
 * **Layout Management**: Automatically arrange nodes with the "Align Modules" function
 * **Module Search**: Quickly find modules using the search function (Tab key)
@@ -53,7 +53,7 @@ Workflow Controls
 * **Save/Load**: Save entire workflows and reload them for future use
 
 Keyboard Shortcuts
------------------
+------------------
 
 * **Tab**: Open module search
 * **Ctrl+C / Cmd+C**: Copy selected nodes

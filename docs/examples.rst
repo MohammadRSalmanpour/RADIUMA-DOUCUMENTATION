@@ -6,12 +6,12 @@ This section provides step-by-step guides for common tasks in ViSERA to help use
 .. contents:: :local:
 
 Image Conversion
----------------
+----------------
 
 The Image Conversion functionality allows users to easily convert medical images between different file formats, making it simple to work with various imaging systems and software.
 
 How It Works
-^^^^^^^^^^^
+^^^^^^^^^^^^
 
 1. **Image Reader Module**: First, use the Image Reader to load your source images
 
@@ -30,7 +30,7 @@ How It Works
    :width: 600px
 
 Workflow Integration
-^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^
 
 To convert images:
 
@@ -44,12 +44,12 @@ To convert images:
 This simple two-step process allows for easy conversion of medical images between supported formats without specialized knowledge of file formats or conversion tools.
 
 RT Struct Processing
--------------------
+--------------------
 
 RT Structure Sets are critical for radiation therapy planning and analysis. ViSERA provides a straightforward workflow for importing and processing these specialized files.
 
 How It Works
-^^^^^^^^^^^
+^^^^^^^^^^^^
 
 1. **RT Struct Reader Module**: Begin by loading your radiation therapy structure set
 
@@ -65,7 +65,7 @@ How It Works
    * Preserve the relationship between images and their associated structures
 
 Workflow Integration
-^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^
 
 To process RT Struct files:
 
@@ -79,12 +79,12 @@ To process RT Struct files:
 This workflow enables efficient handling of radiation therapy planning data while maintaining the integrity of structure sets and their associated imaging.
 
 Image Filtering
---------------
+---------------
 
 Image filtering is essential for enhancing specific features, reducing noise, and preparing images for analysis. ViSERA provides several standardized filters that comply with IBSI guidelines.
 
 How It Works
-^^^^^^^^^^^
+^^^^^^^^^^^^
 
 1. **Image Reader Module**: Start by loading the medical image you want to filter
 
@@ -105,7 +105,7 @@ How It Works
    * Preserve metadata from the original image
 
 Customizable Parameters
-^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^
 
 Each filter provides adjustable parameters to fine-tune the results:
 
@@ -116,7 +116,7 @@ Each filter provides adjustable parameters to fine-tune the results:
 * **Wavelet Filter**: Wavelet family, decomposition level, boundary handling
 
 Workflow Integration
-^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^
 
 To filter medical images:
 
@@ -137,12 +137,12 @@ To filter medical images:
 This workflow enables precise control over image enhancement techniques while maintaining compatibility with downstream analysis modules.
 
 Image Fusion
------------
+------------
 
 Image fusion combines information from multiple images into a single composite image, preserving the most important visual information from each source. This is particularly useful for integrating complementary data from different imaging modalities or acquisition times.
 
 How It Works
-^^^^^^^^^^^
+^^^^^^^^^^^^
 
 1. **Image Reader Module**: Load the images you want to fuse
 
@@ -173,7 +173,7 @@ How It Works
    * Preserve metadata from the original images
 
 Workflow Integration
-^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^
 
 To fuse medical images:
 
@@ -194,12 +194,12 @@ To fuse medical images:
 This workflow allows you to combine complementary information from different imaging sources into a single comprehensive visualization for improved analysis and interpretation.
 
 Image Registration for AutoPET
-----------------------------
+------------------------------
 
 Image registration is a crucial step in medical image analysis, especially for multimodal imaging like PET/CT. This example demonstrates how to register PET and CT images from AutoPET datasets.
 
 How It Works
-^^^^^^^^^^^
+^^^^^^^^^^^^
 
 1. **Image Reader Module (Fixed Image)**: Load the CT image as the fixed (reference) image
 

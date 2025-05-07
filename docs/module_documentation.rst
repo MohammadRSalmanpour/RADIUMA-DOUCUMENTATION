@@ -63,7 +63,7 @@ Best Practices
 7. Reserve test data until final evaluation
 
 Classification
--------------
+--------------
 
 Overview
 ^^^^^^^^
@@ -71,7 +71,7 @@ Overview
 The Classification module provides multiple algorithms for data analysis with customizable parameters through an intuitive user interface.
 
 Supported Algorithms
-^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^
 
 **1. Logistic Regression Classifier**
 
@@ -144,7 +144,7 @@ Ensemble using base classifiers on random data subsets.
 Applies Bayes' theorem with feature independence assumption.
 
 Classification Workflow
-^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 1. Select and configure algorithms
 2. Apply preprocessing steps
@@ -161,7 +161,7 @@ Overview
 The Regression module provides multiple algorithms for predicting continuous target variables.
 
 Supported Algorithms
-^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^
 
 **1. Linear Regression**
 
@@ -228,7 +228,7 @@ Ensemble method aggregating predictions from multiple models.
 * Sample and Feature ratios
 
 Evaluation Metrics
-^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^
 
 * Mean Absolute Error (MAE)
 * Root Mean Squared Error (RMSE)
@@ -236,7 +236,7 @@ Evaluation Metrics
 * Median Absolute Error
 
 Clustering
----------
+----------
 
 Overview
 ^^^^^^^^
@@ -244,7 +244,7 @@ Overview
 The Clustering module provides algorithms for grouping similar data points without labeled training data.
 
 Supported Algorithms
-^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^
 
 **1. K-Means Clustering**
 

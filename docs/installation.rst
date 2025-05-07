@@ -2,7 +2,7 @@ Installation
 ============
 
 Prerequisites
-------------
+-------------
 * Python 3.11 or below
 
 Download
@@ -23,7 +23,7 @@ Setup
    pip install ./dependencies/NodeGraphPySide6/
 
 Running ViSERA
--------------
+--------------
 
 .. code-block:: shell
 
