@@ -23,7 +23,7 @@ ViSERA is a Python-based desktop software designed to improve usability, reusabi
 The platform employs numerous popular image processing algorithms to create end-to-end standardized workflows, making it an ideal development platform for reproducible research by connecting different tools.
 
 Key Features
------------
+------------
 
 * **Standardized Radiomics Analysis**: Compliant with IBSI 1.0 standards
 * **Advanced Image Filtering**: Standardized against IBSI 2.0 with multiple filter options
@@ -39,7 +39,7 @@ Key Features
 * **Comprehensive Machine Learning Tools**: Built-in classification, regression, and clustering modules
 
 Visual Node-Based Workflow System
--------------------------------
+--------------------------------
 
 ViSERA uses a visual programming approach where modules are represented as nodes that can be connected to create complete data processing pipelines. This intuitive interface allows users with minimal programming experience to build sophisticated workflows.
 
@@ -131,7 +131,7 @@ File Support
 * Segmentation Files: Import/export of segmentation data
 
 Toolbar Functions
-^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^
 
 **Image Navigation & Information**
 
@@ -160,20 +160,20 @@ Image Reader
 A flexible module for importing various medical image formats into the ViSERA workflow.
 
 Key Parameters
-^^^^^^^^^^^^^
+^^^^^^^^^^^^
 
 * **Source Type**: Choose between folder or single file import
 * **Path**: Location of the medical image file(s) to import
 
 Supported Input Formats
-^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^
 
 * DICOM Files and Directories
 * NIFTI Files (.nii, .nii.gz)
 * Various other medical image formats
 
 Workflow Integration
-^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^
 
 * Outputs to Image Convertor
 * Outputs to Image Filter
@@ -181,69 +181,69 @@ Workflow Integration
 * Outputs to Image Registration
 
 RT Struct Reader
-~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~
 
 Specialized module for importing radiotherapy structure sets, supporting the standardized DICOM-RT format used in radiation oncology.
 
 Key Parameters
-^^^^^^^^^^^^^
+^^^^^^^^^^^^
 
 * **RT Label Directory**: Path to the RT structure set file
 * **RT Main Image Directory**: Path to the corresponding image data
 
 Functionality
-^^^^^^^^^^^^
+^^^^^^^^^^^
 
 * Imports DICOM-RT structure sets along with their associated images
 * Extracts contours and segmentation information
 * Provides labeled structures for further analysis
 
 Workflow Integration
-^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^
 
 * Outputs to Radiomic Feature Generator
 * Outputs to Image Writer
 * Outputs to Image Viewer
 
 Table Reader/Writer
-~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~
 
 Modules for importing and exporting tabular data in various formats.
 
 Reader Parameters
-^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^
 
 * **File Path**: Location of the input data file
 * **Format Detection**: Automatic detection of file format
 
 Writer Parameters
-^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^
 
 * **Path**: Destination for saving the output data
 * **File Format**: Choice of output format (.xlsx, .csv, .dcm, .nii.gz, .nrrd)
 * **Single/Multi File**: Option to save as single file or multiple files
 
 Supported Formats
-^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^
 
 * CSV files
 * Excel spreadsheets
 * Structured data exports from analysis modules
 
 Image Registration
-~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~
 
 Tools for spatial alignment of images from different modalities or time points.
 
 Registration Types
-^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^
 
 * **Rigid Registration**: Maintains shape and size, only allows rotation and translation
 * **Non-Rigid Registration**: Allows local deformations for better alignment
 * **Simple Non-Rigid**: Simplified version of non-rigid registration for faster processing
 
 Key Parameters
-^^^^^^^^^^^^^
+^^^^^^^^^^^^
 
 **Rigid Registration**
 
@@ -264,18 +264,18 @@ Key Parameters
 * **Auto-Scale**: Automatic scaling during registration
 
 Workflow Integration
-^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^
 
 * Takes fixed and moving images as inputs
 * Outputs transformed image aligned to reference
 
 Image Filter
-~~~~~~~~~~~
+~~~~~~~~~~
 
 Comprehensive set of image filtering options for enhancing features, reducing noise, and preparing images for feature extraction.
 
 Filter Types
-^^^^^^^^^^^
+^^^^^^^^^^
 
 * **Gabor Filter**: Texture and edge detection
 * **Wavelet Filter**: Multi-scale analysis
@@ -284,7 +284,7 @@ Filter Types
 * **Smoothing Filter**: Noise reduction
 
 Key Parameters
-^^^^^^^^^^^^^
+^^^^^^^^^^^^
 
 **Gabor Filter**
 
