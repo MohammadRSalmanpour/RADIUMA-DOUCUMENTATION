@@ -231,7 +231,7 @@ How It Works
    * The registered image will be aligned to the anatomical reference of the CT image
 
 Workflow Integration
-^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^
 
 .. image:: images/Screenshot_2025-04-26_at_19.59.03.png
    :alt: Image Registration for AutoPET Workflow
@@ -255,12 +255,12 @@ To register AutoPET images:
 This registration workflow enables accurate spatial alignment of functional PET data with anatomical CT data, which is essential for proper localization and quantification of metabolic activity in cancer studies.
 
 PET/CT Registration and Fusion
------------------------------
+------------------------------
 
 This advanced workflow combines both registration and fusion techniques to create comprehensive visualizations from multimodal AutoPET data. The workflow aligns PET images to CT images and then fuses them to combine functional and anatomical information.
 
 How It Works
-^^^^^^^^^^^
+^^^^^^^^^^^^
 
 1. **Image Reader Module (CT)**: Load the CT image which serves dual purposes:
 
@@ -289,7 +289,7 @@ How It Works
    * Can be saved in various formats for use in clinical or research contexts
 
 Workflow Integration
-^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^
 
 .. image:: images/Screenshot_2025-04-26_at_19.13.43.png
    :alt: PET/CT Registration and Fusion Workflow
@@ -329,12 +329,12 @@ To implement this PET/CT registration and fusion pipeline:
 This integrated workflow creates comprehensive visualizations that preserve the metabolic sensitivity of PET while maintaining the anatomical detail of CT, which is particularly valuable for tumor localization, treatment planning, and response assessment in oncology applications.
 
 PET/CT Registration and Filtering
---------------------------------
+---------------------------------
 
 This workflow combines registration and filtering techniques to enhance specific features in multimodal AutoPET data. The workflow first aligns PET images to CT images and then applies filters to enhance particular features of interest in the registered images.
 
 How It Works
-^^^^^^^^^^^
+^^^^^^^^^^^^
 
 1. **Image Reader Module (CT)**: Load the CT image as the fixed (reference) image
 
@@ -363,7 +363,7 @@ How It Works
    * Enhanced features are ready for further analysis
 
 Workflow Integration
-^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^
 
 .. image:: images/Screenshot_2025-04-26_at_20.00.20.png
    :alt: PET/CT Registration and Filtering Workflow
