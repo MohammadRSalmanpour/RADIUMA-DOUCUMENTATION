@@ -1,10 +1,10 @@
-Welcome to ViSERA Documentation
-===============================
+Welcome to Radiuma Documentation
+=================================
 
-ViSERA - Visualized & Standardized Environment for Radiomics Analysis is a powerful workflow generator for standardized radiomics analysis and medical image visualization. It provides a free, open-source platform specialized for visualization, processing, segmentation, registration, fusion, and analysis of medical/biomedical images, including radiomics and machine learning capabilities.
+Radiuma - Visualized & Standardized Environment for Radiomics Analysis is a powerful workflow generator for standardized radiomics analysis and medical image visualization. It provides a free, open-source platform specialized for visualization, processing, segmentation, registration, fusion, and analysis of medical/biomedical images, including radiomics and machine learning capabilities.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :caption: Contents:
 
    overview
@@ -12,13 +12,12 @@ ViSERA - Visualized & Standardized Environment for Radiomics Analysis is a power
    visual_node_system
    workflow_modules
    examples
-   installation
    module_documentation
 
 Overview
 --------
 
-ViSERA is a Python-based desktop software designed to improve usability, reusability, and reproducibility in medical imaging and healthcare research. As a major, entirely-revamped upgrade to the original SERA (MATLAB-based), ViSERA enables standardized and reproducible radiomic feature extraction in compliance with the Image Biomarker Standardization Initiative (IBSI 1.0).
+Radiuma is a Python-based desktop software designed to improve usability, reusability, and reproducibility in medical image analysis. Our lightweight interface combines the simplicity of visual programming with the power of Python frameworks.
 
 The platform employs numerous popular image processing algorithms to create end-to-end standardized workflows, making it an ideal development platform for reproducible research by connecting different tools.
 
@@ -37,39 +36,13 @@ Key Features
   * Data scientists
 
 * **Comprehensive Machine Learning Tools**: Built-in classification, regression, and clustering modules
-
-License
--------
-
-ViSERA is free and open-source for research purposes under the CC BY-NC-SA license. For more information, visit: https://creativecommons.org/licenses/by-nc-sa/4.0/
-
-Development Team
-----------------
-
-This software has been developed by the Quantitative Radiomolecular Imaging and Therapy (Qurit) lab & program (www.qurit.ca), at the BC Cancer Research Institute, Vancouver, BC, Canada, in collaboration with the Technological Virtual Collaboration (TECVICO CORP., www.tecvico.com).
-
-References
-----------
-
-1. https://github.com/oncoray/mirp
-2. Zwanenburg A, Leger S, Agolli L, Pilz K, Troost EG, Richter C, Löck S. Assessing robustness of radiomic features by image perturbation. Scientific reports. 2019 Jan 24;9(1):614.
-3. https://gist.github.com/pangyuteng/c6a075ba9aa00bb750468c30f13fc603
-4. https://github.com/mvallieres/radiomics
-5. http://insightsoftwareconsortium.github.io/SimpleITK-Notebooks/Python_html/60_Registration_Introduction.html
-6. https://simpleitk.readthedocs.io/en/master/registrationOverview.html
-7. Z. Yaniv, B. C. Lowekamp, H. J. Johnson, R. Beare, "SimpleITK Image-Analysis Notebooks: a Collaborative Environment for Education and Reproducible Research", J Digit Imaging., 31(3): 290-303, 2018, https://doi.org/10.1007/s10278-017-0037-8.
-8. N. Taxak, M. Scholar and et al, "A Review of Image Fusion Methods," International Journal of Innovative Science and Research Technology, vol. 3, no. 8, pp. 598-601, 2018.
-9. Q. Wang, Y. Shen and J. Jin, "Performance evaluation of image fusion techniques," Image Fusion, pp. 469-492, 2008.
-10. M. Salmanpour, G. Hajianfar and et al, "Multitask Outcome Prediction using Hybrid Machine Learning and PET-CT Fusion Radiomics," in Journal of Nuclear Medicine, 2021.
-11. https://theibsi.github.io/
-12. A. Zwanenburg, S. Leger et al, "The Image Biomarker Standardization Initiative: Standardized Quantitative Radiomics for High-Throughput Image-based Phenotyping," arXiv preprint arXiv:1612.07003, 2016.
-13. A. Zwanenburg, M. Vallières et al, "The Image Biomarker Standardization Initiative: Standardized Quantitative Radiomics for High-Throughput Image-based Phenotyping," Radiology, vol. 295, no. 2, pp. 328-338, 2020.
-14. M. Mcnitt-Gray, S. Napel et al, "Standardization in Quantitative Imaging: A Multicenter Comparison of Radiomic Features from Different Software Packages on Digital Reference Objects and Patient Data Sets," Tomography, vol. 6, no. 2, pp. 118-128, 2020.
+* **Multi-Tab Workflow Support**: Run multiple independent workflows simultaneously
+* **Workflow Control System**: Granular control over workflow execution with both node-level and global stopping capabilities
 
 Visual Node-Based Workflow System
-----------------------------------
+---------------------------------
 
-ViSERA uses a visual programming approach where modules are represented as nodes that can be connected to create complete data processing pipelines. This intuitive interface allows users with minimal programming experience to build sophisticated workflows.
+Radiuma uses a visual programming approach where modules are represented as nodes that can be connected to create complete data processing pipelines. This intuitive interface allows users with minimal programming experience to build sophisticated workflows.
 
 Creating Workflows
 ~~~~~~~~~~~~~~~~~~
@@ -78,7 +51,18 @@ Creating Workflows
 2. **Configuring Modules**: Double-click on a module node to open its configuration dialog
 3. **Connecting Modules**: Click and drag from an output port to an input port to create connections
 4. **Running Workflows**: Click the "Run" button on a node to execute it and all its prerequisite nodes
-5. **Stopping Execution**: Click the "Stop" button to halt execution of a running workflow
+5. **Stopping Execution**: Click the "Stop" button on a running node or use the global "Stop Workflow" button in the log bar to halt execution
+
+Multi-Tab Workflow Support
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Radiuma allows you to work with multiple workflows simultaneously through its tab-based interface:
+
+1. **Creating New Tabs**: Click the "+" button on the tab bar or use the context menu to add a new workflow tab
+2. **Renaming Tabs**: Right-click on a tab and select "Rename" to give your workflow a descriptive name
+3. **Tab Management**: Each tab maintains its own independent workflow state and execution
+4. **Importing Workflows**: When you import a saved workflow, it opens in a new tab automatically
+5. **Drag and Drop**: You can drag .radioma files directly onto the application to open them in new tabs
 
 Module Compatibility
 ~~~~~~~~~~~~~~~~~~~~
@@ -93,7 +77,7 @@ Each module explicitly defines which other modules can connect to its inputs and
 * **Classification/Regression/Clustering**: Take preprocessed data as input, connect to visualization
 
 Example Workflows
-~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~
 
 **Basic Radiomics Analysis Pipeline:**
 
@@ -113,12 +97,15 @@ Example Workflows
 6. Image Writer → Save processed results
 
 Workflow Controls
-~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~
 
 * **Layout Management**: Automatically arrange nodes with the "Align Modules" function
 * **Module Search**: Quickly find modules using the search function (Tab key)
 * **Copy/Paste**: Duplicate node configurations to create similar processing steps
 * **Save/Load**: Save entire workflows and reload them for future use
+* **Workflow Stopping**: Two ways to stop a running workflow:
+   * **Node-level Stop**: Click the stop button on an individual running node
+   * **Global Stop**: Use the "Stop Workflow" button in the log bar to terminate all running tasks
 
 Keyboard Shortcuts
 ~~~~~~~~~~~~~~~~~~
@@ -132,7 +119,7 @@ Keyboard Shortcuts
 Workflow Modules
 ----------------
 
-ViSERA offers a comprehensive set of modules that can be connected to create end-to-end research workflows. These modules cover the entire radiomics pipeline from image input to statistical analysis.
+Radiuma offers a comprehensive set of modules that can be connected to create end-to-end research workflows. These modules cover the entire radiomics pipeline from image input to statistical analysis.
 
 Image Viewer
 ~~~~~~~~~~~~
@@ -151,7 +138,7 @@ View Types
   * Mask View: Visualization of segmentation results
 
 File Support
-^^^^^^^^^^^^^
+^^^^^^^^^^^^
 
 * NIFTI Files: Support for Neuroimaging Informatics Technology Initiative format
 * DICOM Files: Individual DICOM image support
@@ -185,7 +172,7 @@ Toolbar Functions
 Image Reader
 ~~~~~~~~~~~~
 
-A flexible module for importing various medical image formats into the ViSERA workflow.
+A flexible module for importing various medical image formats into the Radiuma workflow.
 
 Key Parameters
 ^^^^^^^^^^^^^^
@@ -209,7 +196,7 @@ Workflow Integration
 * Outputs to Image Registration
 
 RT Struct Reader
-~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~
 
 Specialized module for importing radiotherapy structure sets, supporting the standardized DICOM-RT format used in radiation oncology.
 
@@ -220,7 +207,7 @@ Key Parameters
 * **RT Main Image Directory**: Path to the corresponding image data
 
 Functionality
-^^^^^^^^^^^^^^
+^^^^^^^^^^^^^
 
 * Imports DICOM-RT structure sets along with their associated images
 * Extracts contours and segmentation information
@@ -259,12 +246,12 @@ Supported Formats
 * Structured data exports from analysis modules
 
 Image Registration
-~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~
 
 Tools for spatial alignment of images from different modalities or time points.
 
 Registration Types
-^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^
 
 * **Rigid Registration**: Maintains shape and size, only allows rotation and translation
 * **Non-Rigid Registration**: Allows local deformations for better alignment

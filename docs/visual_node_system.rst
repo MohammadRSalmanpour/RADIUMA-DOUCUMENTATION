@@ -1,34 +1,30 @@
 Visual Node-Based Workflow System
 =================================
 
-ViSERA uses a visual programming approach where modules are represented as nodes that can be connected to create complete data processing pipelines. This intuitive interface allows users with minimal programming experience to build sophisticated workflows.
-
-Workspace Overview
-------------------
-
-The main workspace provides a comprehensive suite of tools for medical image analysis and data processing. The software supports four primary image formats: Nifti, Nrrd, Single File Dicom, and Multi File Dicom, allowing users to read and convert between these formats seamlessly.
-
-Navigation Features
-^^^^^^^^^^^^^^^^^^^
-
-* **Module Search**: Find desired tools quickly using the search box (press Tab to activate)
-* **Drag and Drop**: Add tools to the workspace by dragging them from the module palette
-* **Module States**: Each tool changes color from brown (untuned) to light blue (configured) after parameter setup
-* **Parameter Configuration**: Double-click on any module to set its parameters
-* **Execution Control**: Click the "Run" button on top of each tool to perform its function
-* **Parallel Execution**: Run multiple modules simultaneously for efficient workflows
+Radiuma uses a visual programming approach where modules are represented as nodes that can be connected to create complete data processing pipelines. This intuitive interface allows users with minimal programming experience to build sophisticated workflows.
 
 Creating Workflows
-------------------
+-----------------
 
 1. **Adding Modules**: Double-click on a module from the module palette to add it to the workspace
 2. **Configuring Modules**: Double-click on a module node to open its configuration dialog
 3. **Connecting Modules**: Click and drag from an output port to an input port to create connections
 4. **Running Workflows**: Click the "Run" button on a node to execute it and all its prerequisite nodes
-5. **Stopping Execution**: Click the "Stop" button to halt execution of a running workflow
+5. **Stopping Execution**: Click the "Stop" button on a running node or use the global "Stop Workflow" button in the log bar to halt execution
+
+Multi-Tab Workflow Support
+-------------------------
+
+Radiuma allows you to work with multiple workflows simultaneously through its tab-based interface:
+
+1. **Creating New Tabs**: Click the "+" button on the tab bar or use the context menu to add a new workflow tab
+2. **Renaming Tabs**: Right-click on a tab and select "Rename" to give your workflow a descriptive name
+3. **Tab Management**: Each tab maintains its own independent workflow state and execution
+4. **Importing Workflows**: When you import a saved workflow, it opens in a new tab automatically
+5. **Drag and Drop**: You can drag .radioma files directly onto the application to open them in new tabs
 
 Module Compatibility
---------------------
+-------------------
 
 Each module explicitly defines which other modules can connect to its inputs and outputs, ensuring that only valid connections can be made:
 
@@ -40,7 +36,7 @@ Each module explicitly defines which other modules can connect to its inputs and
 * **Classification/Regression/Clustering**: Take preprocessed data as input, connect to visualization
 
 Example Workflows
------------------
+----------------
 
 **Basic Radiomics Analysis Pipeline:**
 
@@ -60,15 +56,18 @@ Example Workflows
 6. Image Writer → Save processed results
 
 Workflow Controls
------------------
+----------------
 
 * **Layout Management**: Automatically arrange nodes with the "Align Modules" function
 * **Module Search**: Quickly find modules using the search function (Tab key)
 * **Copy/Paste**: Duplicate node configurations to create similar processing steps
 * **Save/Load**: Save entire workflows and reload them for future use
+* **Workflow Stopping**: Two ways to stop a running workflow:
+   * **Node-level Stop**: Click the stop button on an individual running node
+   * **Global Stop**: Use the "Stop Workflow" button in the log bar to terminate all running tasks
 
 Keyboard Shortcuts
-------------------
+-----------------
 
 * **Tab**: Open module search
 * **Ctrl+C / Cmd+C**: Copy selected nodes

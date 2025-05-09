@@ -1,7 +1,7 @@
 Examples
 ========
 
-This section provides step-by-step guides for common tasks in ViSERA to help users get started quickly.
+This section provides step-by-step guides for common tasks in Radiuma to help users get started quickly.
 
 .. contents:: :local:
 
@@ -25,10 +25,6 @@ How It Works
    * Choose the target format for conversion
    * Process individual files or batch convert entire directories
 
-.. image:: images/Screenshot_2025-04-26_at_19.22.48.png
-   :alt: Image Filtering Workflow
-   :width: 600px
-
 Workflow Integration
 ^^^^^^^^^^^^^^^^^^^^
 
@@ -46,7 +42,7 @@ This simple two-step process allows for easy conversion of medical images betwee
 RT Struct Processing
 --------------------
 
-RT Structure Sets are critical for radiation therapy planning and analysis. ViSERA provides a straightforward workflow for importing and processing these specialized files.
+RT Structure Sets are critical for radiation therapy planning and analysis. Radiuma provides a straightforward workflow for importing and processing these specialized files.
 
 How It Works
 ^^^^^^^^^^^^
@@ -81,7 +77,7 @@ This workflow enables efficient handling of radiation therapy planning data whil
 Image Filtering
 ---------------
 
-Image filtering is essential for enhancing specific features, reducing noise, and preparing images for analysis. ViSERA provides several standardized filters that comply with IBSI guidelines.
+Image filtering is essential for enhancing specific features, reducing noise, and preparing images for analysis. Radiuma provides several standardized filters that comply with IBSI guidelines.
 
 How It Works
 ^^^^^^^^^^^^
@@ -387,3 +383,256 @@ To implement this PET/CT registration and filtering pipeline:
 
 5. Add an Image Filter module and connect:
    * Registration module output → Filter input 
+
+Reading a DICOM Series
+----------------------
+
+Medical images are often stored in the DICOM format, which can be easily imported into Radiuma for analysis:
+
+1. **Add Image Reader Module**
+   - Double-click on the "Image Reader" module in the left panel
+   - A new node will appear in the workspace
+
+2. **Configure Module**
+   - Double-click on the Image Reader node to open its configuration dialog
+   - Select "Folder" as the Source Type
+   - Click "Browse" and navigate to your DICOM directory
+   - Click "OK" to confirm
+
+3. **Run the Module**
+   - Click the "Run" button on the Image Reader node
+   - The module will process the DICOM files and make them available for other modules
+   - Status information appears in the log panel at the bottom
+
+4. **Visualize the Image**
+   - Add an "Image Viewer" module to the workspace
+   - Connect the output port of the Image Reader to the input port of the Image Viewer
+   - Run the Image Viewer module to display the images
+   - Use the viewer toolbox for panning, zooming, and adjusting window/level settings
+
+Radiomics and Classification
+----------------------------
+
+This workflow demonstrates how to extract radiomic features from medical images and use machine learning classification to analyze those features for diagnostic or prognostic purposes.
+
+How It Works
+^^^^^^^^^^^^
+
+1. **Image Reader Module**: Load the medical image containing regions of interest
+
+   * Configure the reader to load your source image (CT, MRI, PET, etc.)
+   * This image provides the intensity values for feature extraction
+
+2. **Image Filter Module**: Apply preprocessing filters to enhance features of interest
+
+   * Select appropriate filters based on the analysis goals
+   * Enhance specific image characteristics that may correlate with clinical outcomes
+   * Common options include Wavelet or LoG filters to highlight textural patterns
+
+3. **Radiomic Feature Generator**: Extract quantitative features from the filtered image
+
+   * Requires both the filtered image and a segmentation mask defining regions of interest
+   * Calculates a comprehensive set of standardized radiomic features
+   * Features can include first-order statistics, shape features, and texture metrics
+   * Configure appropriate discretization parameters based on your imaging modality
+
+4. **Classification Module**: Apply machine learning to analyze radiomic features
+
+   * Uses extracted features to train a classification model
+   * Supports multiple algorithm options:
+     * Logistic Regression: Linear model for probabilistic classification
+     * Support Vector Machines: Effective for high-dimensional feature spaces
+     * Random Forest: Ensemble method robust to overfitting
+     * Neural Networks: Deep learning approach for complex relationships
+   * Includes options for cross-validation and performance evaluation
+
+5. **Writer Module**: Save classification results and model performance metrics
+
+   * Export classification results in tabular format (CSV, Excel)
+   * Save performance metrics like accuracy, sensitivity, specificity, and AUC
+   * Option to export the trained model for future predictions
+
+Workflow Integration
+^^^^^^^^^^^^^^^^^^^^
+
+To implement this radiomics and classification pipeline:
+
+1. Add an Image Reader module to your workflow
+   * Configure it to load your medical image
+
+2. Add an Image Filter module and connect:
+   * Image Reader output → Filter input
+   * Configure appropriate filter parameters
+
+3. Add a Radiomic Feature Generator module and connect:
+   * Filter module output → "Image" input
+   * Connect a segmentation mask to the "Mask" input
+   * Configure feature extraction parameters 
+
+4. Add a Classification module and connect:
+   * Radiomic Feature Generator output → Classification input
+   * Select your preferred classification algorithm
+   * Configure training parameters and cross-validation options
+
+5. Add a Writer module and connect:
+   * Classification module output → Writer input
+   * Configure to save results in your preferred format
+
+6. Run the workflow to extract features, train the classifier, and save results
+
+This workflow enables quantitative image analysis for applications such as tumor classification, treatment response prediction, and outcome prognostication based on imaging biomarkers.
+
+Multi-Registration Regression Analysis
+--------------------------------------
+
+This workflow demonstrates how to combine multiple registration steps, image fusion, and radiomics analysis for building regression models that can predict continuous outcomes from medical images.
+
+How It Works
+^^^^^^^^^^^^
+
+1. **First Registration Step**: Align a primary image with an anatomical reference
+
+   * Requires two input images: fixed (reference) and first moving image
+   * Creates spatial alignment between different imaging series or timepoints
+   * Uses appropriate registration parameters for the specific imaging modalities
+
+2. **Second Registration Step**: Align a secondary image with the same reference
+
+   * Uses the same fixed reference image as the first registration
+   * Aligns a second moving image (e.g., different modality or timepoint)
+   * Ensures all images exist in the same spatial reference frame
+
+3. **Image Fusion Module**: Combine information from both registered images
+
+   * Fuses the two registered images into a single comprehensive visualization
+   * Preserves complementary information from each registered image
+   * Creates a multiparametric representation of the anatomy or pathology
+
+4. **Radiomic Feature Generator**: Extract quantitative features from the fused image
+
+   * Calculates standardized features from the fused image
+   * Uses appropriate segmentation mask to define regions of interest
+   * Extracts features that capture the combined information from both modalities
+
+5. **Regression Module**: Build predictive models for continuous outcomes
+
+   * Uses radiomic features as input variables
+   * Supports multiple regression algorithms:
+     * Linear Regression: For linear relationships
+     * Ridge/Lasso Regression: For models with regularization
+     * Support Vector Regression: For non-linear relationships
+     * Random Forest Regression: For complex feature interactions
+   * Includes options for model validation and performance metrics
+
+6. **Writer Module**: Save regression results and model performance
+
+   * Export prediction results and calculated features
+   * Save performance metrics like R-squared, MAE, and RMSE
+   * Option to export the trained model for future predictions
+
+Workflow Integration
+^^^^^^^^^^^^^^^^^^^^
+
+To implement this multi-registration regression pipeline:
+
+1. Add three Image Reader modules to your workflow:
+   * One for the fixed reference image
+   * One for the first moving image
+   * One for the second moving image
+
+2. Add the first Image Registration module and connect:
+   * Fixed reference image → "fix image" input
+   * First moving image → "moving image" input
+   * Configure appropriate registration parameters
+
+3. Add the second Image Registration module and connect:
+   * Same fixed reference image → "fix image" input
+   * Second moving image → "moving image" input
+   * Configure appropriate registration parameters
+
+4. Add an Image Fusion module and connect:
+   * First registration output → "Image 1" input
+   * Second registration output → "Image 2" input
+   * Configure fusion parameters appropriate for your analysis
+
+5. Add a Radiomic Feature Generator module and connect:
+   * Fusion module output → "Image" input
+   * Connect a segmentation mask to the "Mask" input
+   * Configure feature extraction parameters
+
+6. Add a Regression module and connect:
+   * Radiomic Feature Generator output → Regression input
+   * Select your preferred regression algorithm
+   * Configure model parameters and validation options
+
+7. Add a Writer module and connect:
+   * Regression module output → Writer input
+   * Configure to save results in your preferred format
+
+8. Run the workflow to perform registrations, fusion, feature extraction, and regression modeling
+
+This advanced workflow enables quantitative prediction of continuous outcomes such as survival time, treatment response measurements, or physiological parameters based on multimodal imaging biomarkers.
+
+Radiomics-Based Clustering
+--------------------------
+
+This workflow demonstrates how to use unsupervised clustering techniques to discover natural groupings within radiomic features extracted from medical images.
+
+How It Works
+^^^^^^^^^^^^
+
+1. **Image Registration Module**: Align images for consistent spatial reference
+
+   * Register images from different timepoints or modalities
+   * Ensures all subsequent analysis occurs in the same spatial reference frame
+   * Use appropriate registration parameters for your specific imaging modalities
+
+2. **Radiomic Feature Generator**: Extract quantitative features from registered images
+
+   * Calculates a comprehensive set of standardized radiomic features
+   * Features typically include intensity statistics, shape metrics, and texture patterns
+   * Uses appropriate segmentation mask to define regions of interest
+   * Configure parameters based on your specific imaging modality
+
+3. **Clustering Module**: Apply unsupervised learning to discover patterns
+
+   * Uses radiomic features as input variables
+   * Supports multiple clustering algorithms:
+     * K-Means: Partitions observations into k clusters with nearest mean
+     * Agglomerative Clustering: Hierarchical approach building nested clusters
+     * K-Mode Clustering: Specialized for categorical data
+     * Gaussian Mixture Model: Probabilistic model for distribution mixtures
+   * Includes options for determining optimal cluster numbers and visualization
+
+4. **Writer Module**: Save clustering results and visualizations
+
+   * Export cluster assignments and feature data
+   * Save cluster visualization plots and statistics
+   * Generate reports on cluster characteristics and distributions
+
+Workflow Integration
+^^^^^^^^^^^^^^^^^^^^
+
+To implement this radiomics-based clustering pipeline:
+
+1. Add an Image Registration module to your workflow
+   * Configure the module with appropriate fixed and moving images
+   * Set registration parameters based on your specific application
+
+2. Add a Radiomic Feature Generator module and connect:
+   * Registration module output → "Image" input
+   * Connect a segmentation mask to the "Mask" input
+   * Configure feature extraction parameters appropriate for your analysis
+
+3. Add a Clustering module and connect:
+   * Radiomic Feature Generator output → Clustering input
+   * Select your preferred clustering algorithm
+   * Configure algorithm parameters and evaluation metrics
+
+4. Add a Writer module and connect:
+   * Clustering module output → Writer input
+   * Configure to save results in your preferred format
+
+5. Run the workflow to perform registration, feature extraction, clustering analysis, and save results
+
+This workflow is valuable for discovering natural subgroups within imaging data, potentially identifying previously unknown disease subtypes, patient stratification groups, or distinct tissue characteristics that may have clinical significance.

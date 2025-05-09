@@ -1,17 +1,17 @@
 Workflow Modules
-================
+===============
 
-ViSERA offers a comprehensive set of modules that can be connected to create end-to-end research workflows. These modules cover the entire radiomics pipeline from image input to statistical analysis.
+Radiuma offers a comprehensive set of modules that can be connected to create end-to-end research workflows. These modules cover the entire radiomics pipeline from image input to statistical analysis.
 
 .. contents:: :local:
 
 Image Viewer
-------------
+-----------
 
 The Medical Image Viewer is a comprehensive module designed for advanced medical image visualization and analysis, providing tools for detailed examination, segmentation, and analysis of medical imaging data.
 
 View Types
-^^^^^^^^^^
+^^^^^^^^^
 
 * **Axial View**: Horizontal cross-sections (top-down view)
 * **Sagittal View**: Vertical cross-sections from side to side
@@ -22,7 +22,7 @@ View Types
   * Mask View: Visualization of segmentation results
 
 File Support
-^^^^^^^^^^^^
+^^^^^^^^^^^
 
 * NIFTI Files: Support for Neuroimaging Informatics Technology Initiative format
 * DICOM Files: Individual DICOM image support
@@ -30,7 +30,7 @@ File Support
 * Segmentation Files: Import/export of segmentation data
 
 Toolbar Functions
-^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^
 
 **Image Navigation & Information**
 
@@ -53,69 +53,26 @@ Toolbar Functions
 * **Screenshot**: Capture and save current view
 * **Layout Control**: Reset to standard four-panel layout
 
-Advanced Features
-^^^^^^^^^^^^^^^^
-
-**Segmentation Workflow**
-
-1. Open the image file in ViSERA
-2. Select the "Segmentation" tool from the toolbar
-3. Choose the segmentation method (Manual or Threshold)
-4. Define the area to segment and press OK or press "Enter"
-5. Add label types or create a new label
-6. Fine-tune the segmentation using tools like the "Eraser"
-7. Save the segmentation as a new image file
-
-**Label Management**
-
-* Edit and customize label colors through the "Labels" option
-* Apply multiple segments using the "Apply" button in the segmentation tools
-* Manage multiple segmentations simultaneously for complex structures
-
-**Image Transformation**
-
-1. Use the "Transforms" button in the toolbar
-2. Select transformation options (flipping, rotating, etc.)
-3. Reset transformations with the "Clear Transformation" button
-4. Access additional transformation options through the "Cursor" button
-
-**Image Information**
-
-* View detailed image metadata by clicking "more info"
-* Access acquisition parameters, dimensions, and other technical details
-
-**Contrast Adjustment**
-
-* Modify image contrast using the "Contrast" tool in the toolbar
-* Fine-tune visualization for optimal feature visibility
-* Apply presets or create custom window/level settings
-
-**Display Layout**
-
-* Switch between different view layouts (axial, sagittal, coronal, 3D)
-* Customize layout configuration for specific analysis needs
-* Toggle between single-view and multi-view layouts
-
 Image Reader
-------------
+-----------
 
-A flexible module for importing various medical image formats into the ViSERA workflow.
+A flexible module for importing various medical image formats into the Radiuma workflow.
 
 Key Parameters
-^^^^^^^^^^^^^^
+^^^^^^^^^^^^
 
 * **Source Type**: Choose between folder or single file import
 * **Path**: Location of the medical image file(s) to import
 
 Supported Input Formats
-^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^
 
 * DICOM Files and Directories
 * NIFTI Files (.nii, .nii.gz)
 * Various other medical image formats
 
 Workflow Integration
-^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^
 
 * Outputs to Image Convertor
 * Outputs to Image Filter
@@ -123,187 +80,180 @@ Workflow Integration
 * Outputs to Image Registration
 
 RT Struct Reader
-----------------
+---------------
 
 Specialized module for importing radiotherapy structure sets, supporting the standardized DICOM-RT format used in radiation oncology.
 
 Key Parameters
-^^^^^^^^^^^^^^
+^^^^^^^^^^^^
 
 * **RT Label Directory**: Path to the RT structure set file
 * **RT Main Image Directory**: Path to the corresponding image data
 
 Functionality
-^^^^^^^^^^^^^^
+^^^^^^^^^^^
 
 * Imports DICOM-RT structure sets along with their associated images
 * Extracts contours and segmentation information
 * Provides labeled structures for further analysis
 
 Workflow Integration
-^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^
 
 * Outputs to Radiomic Feature Generator
 * Outputs to Image Writer
 * Outputs to Image Viewer
 
 Table Reader/Writer
--------------------
+------------------
 
 Modules for importing and exporting tabular data in various formats.
 
 Reader Parameters
-^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^
 
 * **File Path**: Location of the input data file
 * **Format Detection**: Automatic detection of file format
 
 Writer Parameters
-^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^
 
 * **Path**: Destination for saving the output data
 * **File Format**: Choice of output format (.xlsx, .csv, .dcm, .nii.gz, .nrrd)
 * **Single/Multi File**: Option to save as single file or multiple files
 
 Supported Formats
-^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^
 
 * CSV files
 * Excel spreadsheets
 * Structured data exports from analysis modules
 
-Advanced Table Operations
-^^^^^^^^^^^^^^^^^^^^^^^^^
-
-The Table Reader module allows users to import, combine, and manipulate tabular data for further analysis. It supports merging tables either by rows (concatenation) or by columns, making it a versatile tool for integrating datasets.
-
-**Operation Types**
-
-* **Row Concatenation**: Combine tables by adding rows from one table below another
-* **Column Merge**: Combine tables by adding columns from one table alongside another
-
-**Row Concatenation Parameters**
-
-* **Ignore Index**: Check this box to reset the row index in the combined table
-* **How**: Choose the merge method (inner, outer, left, right)
-
-**Column Merge Parameters**
-
-* **Ignore Index**: Check this box to reset the row index in the combined table
-* **Indicator**: Add a column indicating the source of each row
-* **How**: Choose the merge method (inner, outer, left, right)
-
-Writer Module Capabilities
-^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-The Writer module allows you to export processed data, images, or analysis results into various file formats. This ensures that your work can be saved and shared in a format that suits your needs, whether for further analysis, reporting, or collaboration.
-
-**Supported Export Formats**
-
-* **.nii.gz**: Nifti format for medical imaging
-* **.nrrd**: Nrrd format for medical imaging
-* **.dcm (single dicom)**: Single DICOM file
-* **.dcm (multi dicom)**: Multiple DICOM files in a folder
-* **.xlsx**: Excel format for tabular data
-* **.csv**: Comma-separated values format for tabular data
-
 Image Registration
-------------------
+----------------
 
 Tools for spatial alignment of images from different modalities or time points.
 
 Registration Types
-^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^
 
 * **Rigid Registration**: Maintains shape and size, only allows rotation and translation
 * **Non-Rigid Registration**: Allows local deformations for better alignment
 * **Simple Non-Rigid**: Simplified version of non-rigid registration for faster processing
 
 Key Parameters
-^^^^^^^^^^^^^^
+^^^^^^^^^^^^
 
 **Rigid Registration**
 
-* **Number of Histogram Bins**: Value for intensity histograms (default: 10)
-* **Sampling Method**: Method for sampling points during registration
-* **Sampling Percentage**: Percentage of voxels to sample (default: 0.01)
-* **Learning Rate**: Step size for optimization (default: 0.01)
-* **Number of Iterations**: Maximum iterations for optimization (default: 5)
-* **Interpolation**: Method for interpolation (Linear, Nearest, etc.)
+* **Number of Histogram Bins** (registration_Num_bin): Value for intensity histograms (default: 10)
+* **Sampling Method** (registration_register_method): Method for sampling points during registration (None, Random, Regular)
+* **Sampling Percentage** (registration_Sampling_percentage): Percentage of voxels to sample (default: 0.01)
+* **Learning Rate** (registration_lRate): Step size for optimization (default: 0.01)
+* **Number of Iterations** (registration_num_Iterations): Maximum iterations for optimization (default: 5)
+* **Interpolation** (registration_interpolator): Method for interpolation (Linear, NearestNeighbor, BSpline, etc.)
 
 **Non-Rigid Registration**
 
-* **Number of Iterations**: Iterations for deformable registration
-* **Number of Resolutions**: Multi-resolution levels for optimization
-* **Final Grid Spacing**: Density of deformation field
-* **Transform Type**: B-Spline or other transformation types
-* **Auto-Transform**: Automatic adjustment of transform parameters
-* **Auto-Scale**: Automatic scaling during registration
+* **Number of Iterations** (num_iters): Iterations for deformable registration (default: 5)
+* **Number of Resolutions** (num_reso): Multi-resolution levels for optimization (default: 1)
+* **Final Grid Spacing** (fig_size): Density of deformation field (default: 1)
+* **Transform Type** (transform_combo): Transform method (BSplineTransform is default)
+* **Auto-Transform** (auto_transform): Automatic adjustment of transform parameters (True/False)
+* **Auto-Scale** (auto_scale): Automatic scaling during registration (True/False)
+
+**Simple Non-Rigid Registration**
+
+* **Enable Simple Registration** (Simple_check): Toggle simplified non-rigid registration
 
 Workflow Integration
-^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^
 
 * Takes fixed and moving images as inputs
 * Outputs transformed image aligned to reference
 
 Image Filter
-------------
+-----------
 
 Comprehensive set of image filtering options for enhancing features, reducing noise, and preparing images for feature extraction.
 
 Filter Types
-^^^^^^^^^^^^
+^^^^^^^^^^^
 
-* **Gabor Filter**: Texture and edge detection
-* **Wavelet Filter**: Multi-scale analysis
-* **Threshold Filter**: Simple intensity-based filtering
-* **Gradient Filter**: Edge enhancement
-* **Smoothing Filter**: Noise reduction
+* **Mean Filter**: Smooths images by reducing noise while preserving edges
+* **LoG (Laplacian of Gaussian) Filter**: Highlights edges and regions of rapid intensity change
+* **Laws Filter**: Extracts texture features using small convolution kernels
+* **Gabor Filter**: Texture and edge detection at various orientations and scales
+* **Wavelet Filter**: Multi-scale analysis for feature extraction
 
 Key Parameters
-^^^^^^^^^^^^^^
+^^^^^^^^^^^^
+
+**Common Parameters**
+* **Filter Type** (TOOLTYPE): Selection of filter algorithm (Mean, LoG, Laws, Gabor, Wavelet)
+* **Slice/Volume Processing** (mean_SliceOrVol, log_SliceOrVol, etc.): 2D or 3D filtering
+* **Boundary Condition** (mean_BoundaryCondition, log_BoundaryCondition, etc.): Handling of image boundaries (Nearest, Zero, etc.)
+
+**Mean Filter**
+* **Filter Size** (mean_FilterSize): Size of the kernel for mean calculation (default: 1)
+
+**LoG Filter**
+* **Sigma** (log_Sigma): Scale parameter for Gaussian (default: 1)
+* **Sigma Truncate** (log_SigmaTruncate): Truncation factor for Gaussian kernel (default: 1)
+* **Calculate Average** (log_CalculateAverage): Whether to calculate average in filter (default: False)
+* **Riesz Steered** (log_Riesz_Steered): Apply Riesz transform (default: False)
+* **Riesz Parameters** (log_Riesz): Parameters for Riesz transform (default: "1,0,2")
+
+**Laws Filter**
+* **Kernel** (laws_Kernel): Specific Laws kernel to apply (default: "L5S5E5")
+* **Calculate Energy** (laws_cal_energy): Calculate energy statistics (default: False)
+* **Delta** (laws_delta): Step size parameter (default: 1)
+* **Rotation Invariance** (laws_rotation_inver): Enable rotation invariance (default: False)
+* **Pooling Method** (laws_pooling_method): Method for combining filter responses (default: "Max")
 
 **Gabor Filter**
-
-* **Gamma**: Controls filter shape
-* **Lambda**: Wavelength of sinusoidal factor
-* **Theta**: Orientation of filter
-* **Step**: Increment value for filter application
-* **Response**: Type of filter response
-* **Rotation**: Enable/disable rotation invariance
-* **Pooling Method**: Method for combining filter responses
+* **Gamma** (gabor_gamma): Controls filter shape (default: 1)
+* **Lambda** (gabor_lambdaa): Wavelength of sinusoidal factor (default: 0.1)
+* **Theta Initial** (gabor_theta_initial): Starting orientation of filter (default: 0.1)
+* **Step** (gabor_step): Increment value for filter application (default: 0.001)
+* **Response** (gabor_response): Type of filter response (default: "Abs")
+* **Rotation Invariance** (gabor_rotation_inver): Enable rotation invariance (default: False)
+* **Pooling Method** (gabor_pooling_method): Method for combining filter responses (default: "Max")
+* **Sigma** (gabor_Sigma): Sigma value for Gabor kernel (default: 1)
+* **Sigma Truncate** (gabor_SigmaTruncate): Truncation factor for Gaussian kernel (default: 1)
 
 **Wavelet Filter**
-
-* **Dimension**: 2D or 3D processing
-* **Boundary Condition**: Handling of image boundaries
-* **Filter Configuration**: Specific filter settings
-* **Filter Size**: Size of the wavelet kernel
-* **Decomposition Level**: Number of wavelet transform levels
-* **Wavelet Family**: Type of wavelet (Haar, Daubechies, etc.)
-* **Wavelet Type**: Specific wavelet implementation
+* **Filter Configuration** (wavelet_filter_config): Specific wavelet decomposition level to use (default: "LL")
+* **Filter Size** (wavelet_filterSize): Size of the filter kernel (default: 1)
+* **Rotation Invariance** (wavelet_rotation_inver): Enable rotation invariance (default: False)
+* **Pooling Method** (wavelet_pooling_method): Method for combining filter responses (default: "Max")
+* **Decomposition Level** (wavelet_decomposition): Number of wavelet transform levels (default: 1)
+* **Wavelet Family** (wavelet_wavelet_family): Type of wavelet (default: "Db")
+* **Wavelet Type** (wavelet_wavelet_type): Specific wavelet implementation (default: "Db1")
+* **Riesz Steered** (wavelet_Riesz_Steered): Apply Riesz transform (default: False)
+* **Riesz Parameters** (wavelet_Riesz): Parameters for Riesz transform (default: "1,0,2")
 
 Workflow Integration
-^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^
 
 * Takes image input
 * Applies selected filtering techniques
 * Outputs filtered image for further processing
 
 Image Fusion
-------------
+-----------
 
 Advanced capabilities for combining information from multiple imaging modalities.
 
 Fusion Methods
-^^^^^^^^^^^^^^
+^^^^^^^^^^^^
 
 * **Weighted Fusion**: Linear combination of input images
 * **Wavelet Fusion**: Multi-resolution decomposition and fusion
 * **PCA Fusion**: Principal Component Analysis based fusion
 
 Key Parameters
-^^^^^^^^^^^^^^
+^^^^^^^^^^^^
 
 **Weighted Fusion**
 
@@ -325,33 +275,19 @@ Key Parameters
 * **Components**: Number of principal components
 
 Workflow Integration
-^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^
 
 * Takes two input images
 * Combines information according to selected method
 * Outputs a single fused image
 
-Benefits of Image Fusion
-^^^^^^^^^^^^^^^^^^^^^^^^
-
-Since different image modalities such as MRI, ultrasound, CT, SPECT, PET, and others include specific information (perspectives) of the same object, image fusion techniques enable users to:
-
-* Combine two or more images to enhance information content
-* Improve performance of object recognition systems by integrating many sources
-* Help in sharpening images
-* Improve geometric corrections
-* Enhance features not visible in either of the images
-* Replace defective data
-* Complement data sets for better decision making
-* Reduce ambiguity and enhance reliability of defect detection
-
 Radiomic Feature Generator
---------------------------
+------------------------
 
 Core module for extracting standardized quantitative features from medical images following IBSI guidelines.
 
 Feature Types
-^^^^^^^^^^^^^^
+^^^^^^^^^^^
 
 * **First-order Statistics**: Intensity-based features
 * **Shape-based Features**: Morphological characteristics
@@ -359,74 +295,33 @@ Feature Types
 * **Wavelet Features**: Multi-resolution analysis
 
 Key Parameters
-^^^^^^^^^^^^^^
+^^^^^^^^^^^^
 
-* **Data Type**: Modality type (MR, CT, PET, etc.)
-* **Discretization Type**: Method for binning intensity values
-* **Bin Size**: Size of intensity bins for feature calculation
-* **Image Interpolation**: Method for resampling images
-* **ROI Interpolation**: Method for resampling masks
-* **Isotropic Voxel Size**: Size for resampling to isotropic voxels
-* **Intensity Rounding**: Option to round intensity values
-* **Segmentation Range**: Option to limit intensity range
-* **Outlier Filtering**: Methods for handling outliers
-* **Quantization Method**: Approach for discretizing intensities
-* **Maximum ROIs**: Number of regions to analyze per image
+* **Data Type** (radiomics_DataType): Modality type (MR, CT, PET, OTHER)
+* **Discretization Type** (radiomics_DiscType): Method for binning intensity values (FBS, FBN)
+* **Bin Size** (radiomics_BinSize): Size of intensity bins for feature calculation
+* **Resampling Flag** (radiomics_isScale): Whether to perform scaling (0: disabled, 1: enabled)
+* **Image Interpolation** (radiomics_VoxInterp): Method for resampling images (Nearest, Linear, Cubic)
+* **ROI Interpolation** (radiomics_ROIInterp): Method for resampling masks (Nearest, Linear, Cubic)
+* **3D Isotropic Voxel Size** (radiomics_isotVoxSize): Size for resampling to isotropic voxels
+* **2D Isotropic Voxel Size** (radiomics_isotVoxSize2D): Size for 2D isotropic voxels
+* **Isotropic 2D Voxels Flag** (radiomics_isIsot2D): Whether to resample to 2D isotropic voxels
+* **Intensity Rounding** (radiomics_isGLround): Option to round intensity values (0: disabled, 1: enabled)
+* **Segmentation Range** (radiomics_isReSegRng): Option to limit intensity range (0: disabled, 1: enabled)
+* **Resegmentation Interval** (radiomics_ReSegIntrvl01, radiomics_ReSegIntrvl02): Min and max values for intensity range
+* **Outlier Filtering** (radiomics_isOutliers): Methods for handling outliers (0: disabled, 1: enabled)
+* **Quantization Method** (radiomics_qntz): Approach for discretizing intensities (Uniform, Lloyd)
+* **Intensity Volume Histogram Type** (radiomics_IVH_Type): Setting for IVH unit type
+* **IVH Discretization Type** (radiomics_IVH_DiscCont): Discrete or Continuous (1, 2, 3)
+* **IVH Bin Size** (radiomics_IVH_binSize): Bin size for IVH discretization
+* **Maximum ROIs** (radiomics_MaxROIsPerImg): Number of regions to analyze per image (Maximum or specific number)
+* **ROIs per Image** (radiomics_ROIsPerImg): Number of ROIs to process when not set to Maximum
+* **Combine ROIs** (radiomics_isROIsCombined): Whether to combine ROIs for analysis (0: disabled, 1: enabled)
+* **Features to Output** (radiomics_Feats2out): Which feature set to calculate (options from 487 total features)
 
 Workflow Integration
-^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^
 
 * Takes both image and mask inputs
 * Extracts features according to standardized definitions
 * Outputs tabular data with all calculated features 
-
-Comprehensive Feature Set
-^^^^^^^^^^^^^^^^^^^^^^^^^
-
-The Radiomic Feature Generator module (also known as PySERA) calculates 487 IBSI 1-standardized features, including:
-
-* 79 first-order features (morphology, statistical, histogram, and intensity-histogram features)
-* 272 higher-order 2D features
-* 136 3D features
-
-It can also calculate 10 moment invariant features not included in IBSI 1, bringing the total to 497 imaging features.
-
-Feature Categories
-^^^^^^^^^^^^^^^^^^
-
-* **Morphology**: 29 features
-* **Local Intensity**: 2 features
-* **Intensity-based Statistics**: 18 features
-* **Intensity Histogram**: 23 features
-* **Intensity-Volume Histogram**: 7 features
-* **Gray Level Co-occurrence Matrix (GLCM)**: 25 features per method (2D Averaged, 2D Slice-Merged, 2.5D Direction Merged, 2.5D All Merged, 3D Averaged, 3D Merged)
-* **Gray Level Run Length Matrix (GLRLM)**: 16 features per method (2D Averaged, 2D Slice-Merged, 2.5D Direction Merged, 2.5D All Merged, 3D Averaged, 3D Merged)
-* **Gray Level Size Zone Matrix (GLSZM)**: 16 features per method (2D, 2.5D, 3D)
-* **Gray Level Distance Zone Matrix (GLDZM)**: 16 features per method (2D, 2.5D, 3D)
-* **Neighborhood Grey Tone Difference Matrix (NGTDM)**: 5 features per method (2D, 2.5D, 3D)
-* **Neighboring Grey Level Dependence Matrix (NGLDM)**: 17 features per method (2D, 2.5D, 3D)
-* **Moment Invariants**: 10 features
-
-Extended Parameters
-^^^^^^^^^^^^^^^^^^^
-
-* **Image modality type**: PET, CT, or MR
-* **Discretization type**: FBN (fixed bin numbers) or FBS (fixed bin size/width)
-* **Bin size/width**: Number of bins or width of each bin
-* **Resampling flag**: Whether to perform scaling (1 to enable, 0 to use original voxel dimension)
-* **Isotropic 2D voxels flag**: Whether to resample to isotropic 2D voxels or 3D voxels
-* **Round voxel intensity value flag**: Whether to round intensity values to nearest integer
-* **Range resegmentation flag**: Whether to perform range re-segmentation
-* **Intensity outlier resegmentation flag**: Whether to filter outlier intensities
-* **Image quantization flag**: Whether to use quantized image for first-order features
-* **Resegmentation interval range**: Intensity range for resegmentation
-* **ROI partial volume threshold**: Threshold for ROI after resampling
-* **Quantization type**: Uniform or Lloyd
-* **IVH Type**: Setting for Intensity Volume Histogram unit type
-* **IVH discretization type**: Discrete or Continuous
-* **Type of output data**: Which set of features to return
-
-Standards Compliance
-^^^^^^^^^^^^^^^^^^^^
-
-The Radiomic Feature Generator is meticulously consistent with SERA and compliant with IBSI 1.0 standards while also being standardized against IBSI 2.0, ensuring reliability and reproducibility across research. 

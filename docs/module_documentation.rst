@@ -1,10 +1,10 @@
 Module Documentation
-====================
+===================
 
 .. contents:: :local:
 
 Preprocessing
--------------
+------------
 
 Overview
 ^^^^^^^^
@@ -12,7 +12,7 @@ Overview
 The preprocessing module provides essential data preparation capabilities before applying machine learning algorithms. Proper preprocessing is crucial for achieving optimal model performance.
 
 Supported Preprocessing Techniques
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Data Encoding**
 
@@ -33,7 +33,7 @@ Supported Preprocessing Techniques
 * **Dimensionality Reduction**: PCA, t-SNE, and other techniques
 
 Key Preprocessing Algorithms
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * **Principal Component Analysis (PCA)**: Linear dimensionality reduction using SVD
 * **Kernel PCA**: Non-linear dimensionality reduction 
@@ -41,7 +41,7 @@ Key Preprocessing Algorithms
 * **Fast ICA**: Independent Component Analysis
 
 Workflow Integration
-^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^
 
 1. Data Loading
 2. Encoding
@@ -52,7 +52,7 @@ Workflow Integration
 7. Model Training
 
 Best Practices
-^^^^^^^^^^^^^^^
+^^^^^^^^^^^^
 
 1. Always encode categorical variables
 2. Handle missing values appropriately
@@ -63,7 +63,7 @@ Best Practices
 7. Reserve test data until final evaluation
 
 Classification
---------------
+------------
 
 Overview
 ^^^^^^^^
@@ -71,7 +71,7 @@ Overview
 The Classification module provides multiple algorithms for data analysis with customizable parameters through an intuitive user interface.
 
 Supported Algorithms
-^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^
 
 **1. Logistic Regression Classifier**
 
@@ -79,10 +79,13 @@ A linear model for classification that predicts class probabilities.
 
 **Key Parameters:**
 
-* Penalty (L1, L2, Elasticnet, None)
-* Regularization Strength (C)
-* Solver (Lbfgs, Liblinear, etc.)
-* Multi-class Option
+* **Penalty**: Regularization type (L1, L2, Elasticnet, None)
+* **Regularization Strength (C)**: Inverse of regularization strength (default: 1.0)
+* **Solver**: Algorithm for optimization (lbfgs, liblinear, newton-cg, sag, saga)
+* **Multi-class Option**: How to handle multi-class data (auto, ovr, multinomial)
+* **Max Iterations**: Maximum iterations for solver (default: 100)
+* **Random State**: Seed for reproducibility (default: 43)
+* **Class Weight**: Balance classes by weights (None or 'balanced')
 
 **2. K-Nearest Neighbors Classifier**
 
@@ -90,10 +93,10 @@ Non-parametric method using closest training examples.
 
 **Key Parameters:**
 
-* Number of Neighbors
-* Weights (Uniform, Distance)
-* Distance Metric
-* Algorithm (Auto, Ball_tree, Kd_tree, Brute)
+* **Number of Neighbors**: K value for nearest neighbors
+* **Weights**: How to weight neighbors (Uniform, Distance)
+* **Distance Metric**: Method for calculating distances (euclidean, manhattan, etc.)
+* **Algorithm**: Search method (Auto, Ball_tree, Kd_tree, Brute)
 
 **3. Decision Tree Classifier**
 
@@ -101,10 +104,12 @@ Creates a model predicting targets by learning decision rules.
 
 **Key Parameters:**
 
-* Criterion (gini, entropy, log_loss)
-* Max Depth
-* Min Samples Split/Leaf
-* Class Weight
+* **Criterion**: Function to measure split quality (gini, entropy, log_loss)
+* **Max Depth**: Maximum depth of the tree
+* **Min Samples Split**: Minimum samples required to split node
+* **Min Samples Leaf**: Minimum samples required at leaf node
+* **Class Weight**: Class weights (None, 'balanced')
+* **Random State**: Seed for reproducibility (default: 43)
 
 **4. Support Vector Machines (SVM)**
 
@@ -112,10 +117,12 @@ Finds optimal hyperplane to separate classes.
 
 **Key Parameters:**
 
-* Kernel (linear, poly, rbf, sigmoid)
-* Regularization Parameter (C)
-* Gamma
-* Degree (for poly kernel)
+* **Kernel**: Kernel type (linear, poly, rbf, sigmoid)
+* **Regularization Parameter (C)**: Regularization strength (default: 1.0)
+* **Gamma**: Kernel coefficient for 'rbf', 'poly' and 'sigmoid' (scale, auto)
+* **Degree**: Degree for poly kernel
+* **Decision Function Shape**: Shape of decision function (ovr, ovo)
+* **Class Weight**: Class weights (None, 'balanced')
 
 **5. AdaBoost Classifier**
 
@@ -123,10 +130,11 @@ Ensemble method using weak classifiers on modified data versions.
 
 **Key Parameters:**
 
-* Base Estimator
-* Number of Estimators
-* Learning Rate
-* Algorithm (SAMME, SAMME.R)
+* **Base Estimator**: Base estimator type (DecisionTreeClassifier, SVC, etc.)
+* **Number of Estimators**: Boosting iterations (default: 50)
+* **Learning Rate**: Weight applied to each classifier (default: 1.0)
+* **Algorithm**: Boosting algorithm (SAMME, SAMME.R)
+* **Random State**: Seed for reproducibility
 
 **6. Bagging Classifier**
 
@@ -134,17 +142,19 @@ Ensemble using base classifiers on random data subsets.
 
 **Key Parameters:**
 
-* Base Estimator
-* Number of Estimators
-* Bootstrap option
-* Sample and Feature ratios
+* **Base Estimator**: Base estimator type (DecisionTreeClassifier, SVC, etc.)
+* **Number of Estimators**: Number of base estimators (default: 10)
+* **Max Samples**: Samples per base estimator (default: 1.0)
+* **Max Features**: Features per base estimator (default: 1.0)
+* **Bootstrap**: Whether to sample with replacement (True/False)
+* **Random State**: Seed for reproducibility
 
 **7. Naive Bayes (GaussianNB)**
 
 Applies Bayes' theorem with feature independence assumption.
 
 Classification Workflow
-^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^
 
 1. Select and configure algorithms
 2. Apply preprocessing steps
@@ -159,32 +169,32 @@ The Classification module guides you through a complete machine learning workflo
 
 **1. Data Splitting**
 
-* Shuffle: Enable shuffling to randomize the data before splitting
-* Split: Choose between percentage split or K-fold cross-validation
-* Percentage: Specify training data percentage (e.g., 80%)
-* K-fold: Set the number of folds for cross-validation
-* Perform Final Test: Option to reserve data for final testing
+* **Shuffle**: Enable shuffling to randomize the data before splitting
+* **Split**: Choose between percentage split or K-fold cross-validation
+* **Percentage**: Specify training data percentage (e.g., 80%)
+* **K-fold**: Set the number of folds for cross-validation
+* **Perform Final Test**: Option to reserve data for final testing
 
 **2. Imputation**
 
-* Continuous Missing Value: Strategy for handling missing numerical values
-* Categorical Missing Value: Strategy for handling missing categorical values
+* **Continuous Missing Value**: Strategy for handling missing numerical values
+* **Categorical Missing Value**: Strategy for handling missing categorical values
 
 **3. Scaling**
 
-* Standard Scaling: Normalize data to mean of 0 and standard deviation of 1
+* **Standard Scaling**: Normalize data to mean of 0 and standard deviation of 1
 
 **4. Feature Selection**
 
-* PCA: Reduce features using Principal Component Analysis
-* K Best (ANOVA): Select top K features based on statistical tests
+* **PCA**: Reduce features using Principal Component Analysis
+* **K Best (ANOVA)**: Select top K features based on statistical tests
 
 **5. Hyperparameter Tuning**
 
-* Grid Search: Exhaustively search parameter combinations
+* **Grid Search**: Exhaustively search parameter combinations
 
 Regression
-----------
+---------
 
 Overview
 ^^^^^^^^
@@ -192,7 +202,7 @@ Overview
 The Regression module provides multiple algorithms for predicting continuous target variables.
 
 Supported Algorithms
-^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^
 
 **1. Linear Regression**
 
@@ -200,8 +210,8 @@ Standard approach estimating linear relationships between variables.
 
 **Key Parameters:**
 
-* Fit Intercept
-* Positive Constraints
+* **Fit Intercept**: Whether to calculate the intercept (default: True)
+* **Positive**: Force coefficients to be positive (default: False)
 
 **2. Ridge Regression**
 
@@ -209,10 +219,12 @@ Linear model with L2 regularization to reduce overfitting.
 
 **Key Parameters:**
 
-* Alpha (regularization strength)
-* Solver
-* Fit Intercept
-* Max Iterations
+* **Alpha**: Regularization strength (default: 1.0)
+* **Solver**: Method for computation (auto, svd, cholesky, lsqr, sparse_cg, etc.)
+* **Fit Intercept**: Whether to calculate the intercept (default: True)
+* **Max Iterations**: Maximum iterations for solver (default: 500)
+* **Tolerance**: Precision of the solution (default: 0.0001)
+* **Random State**: Seed for reproducibility (default: 43)
 
 **3. Lasso Regression**
 
@@ -220,10 +232,12 @@ Linear model with L1 regularization promoting sparse coefficients.
 
 **Key Parameters:**
 
-* Alpha
-* Selection method (cyclic, random)
-* Max Iterations
-* Tolerance
+* **Alpha**: Regularization strength (default: 1.0)
+* **Fit Intercept**: Whether to calculate the intercept (default: True)
+* **Max Iterations**: Maximum iterations for solver (default: 1000)
+* **Tolerance**: Precision of the solution (default: 0.0001)
+* **Selection**: Feature selection method (cyclic, random)
+* **Random State**: Seed for reproducibility (default: 43)
 
 **4. Logistic Regression for Regression**
 
@@ -231,10 +245,12 @@ Adapts logistic regression for regression tasks.
 
 **Key Parameters:**
 
-* Penalty
-* Regularization Strength
-* Solver
-* L1 Ratio (for elasticnet)
+* **Penalty**: Regularization type (L1, L2, Elasticnet, None)
+* **Regularization Strength (C)**: Inverse of regularization strength (default: 1.0)
+* **Solver**: Algorithm for optimization (lbfgs, liblinear, newton-cg, sag, saga)
+* **Max Iterations**: Maximum iterations for solver (default: 100)
+* **L1 Ratio**: Mixing parameter for elasticnet penalty (default: 1.0)
+* **Random State**: Seed for reproducibility (default: 43)
 
 **5. AdaBoost Regression**
 
@@ -242,10 +258,11 @@ Ensemble method using weak regressors.
 
 **Key Parameters:**
 
-* Base Estimator
-* Loss function
-* Learning Rate
-* Number of Estimators
+* **Base Estimator**: Type of weak regressor (DecisionTreeRegressor, etc.)
+* **Number of Estimators**: Number of boosting stages (default: 50)
+* **Learning Rate**: Weight applied to each regressor (default: 1.0)
+* **Loss**: Loss function (linear, square, exponential)
+* **Random State**: Seed for reproducibility (default: 43)
 
 **6. Bagging Regression**
 
@@ -253,79 +270,46 @@ Ensemble method aggregating predictions from multiple models.
 
 **Key Parameters:**
 
-* Base Estimator
-* Number of Estimators
-* Bootstrap option
-* Sample and Feature ratios
+* **Base Estimator**: Base regressor type (DecisionTreeRegressor, SVR, etc.)
+* **Number of Estimators**: Number of base estimators (default: 10)
+* **Max Samples**: Samples per base estimator (default: 1.0)
+* **Max Features**: Features per base estimator (default: 1.0)
+* **Bootstrap**: Whether to sample with replacement (True/False)
+* **Random State**: Seed for reproducibility (default: 43)
 
 Evaluation Metrics
-^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^
 
-* Mean Absolute Error (MAE)
-* Root Mean Squared Error (RMSE)
-* R-squared Score
-* Median Absolute Error
+* **Mean Absolute Error (MAE)**: Average of absolute differences between predictions and actual values
+* **Root Mean Squared Error (RMSE)**: Square root of average squared differences
+* **R-squared Score**: Proportion of variance explained by the model
+* **Median Absolute Error**: Median of absolute differences between predictions and actual values
 
 Regression Pipeline
-^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^
 
-The Regression module follows the same comprehensive workflow as Classification:
+The Regression module guides you through a complete workflow:
 
-**1. Data Splitting**
+**1. Data Preprocessing**
 
-* Shuffle: Enable shuffling to randomize the data before splitting
-* Split: Choose between percentage split or K-fold cross-validation
-* Percentage: Specify training data percentage (e.g., 80%)
-* K-fold: Set the number of folds for cross-validation
-* Perform Final Test: Option to reserve data for final testing
+* **Train/Test Split**: Divide data into training and testing sets
+* **Feature Scaling**: Standardize or normalize feature ranges
+* **Missing Value Handling**: Impute missing values with means, medians, or constants
 
-**2. Imputation**
+**2. Model Selection**
 
-* Continuous Missing Value: Strategy for handling missing numerical values
-* Categorical Missing Value: Strategy for handling missing categorical values
+* **Model Comparison**: Compare performance of different regression algorithms
+* **Hyperparameter Tuning**: Find optimal parameter values
+* **Cross-Validation**: Evaluate model performance on multiple data splits
 
-**3. Scaling**
+**3. Model Evaluation**
 
-* Standard Scaling: Normalize data to mean of 0 and standard deviation of 1
-
-**4. Feature Selection**
-
-* PCA: Reduce features using Principal Component Analysis
-* K Best (ANOVA): Select top K features based on statistical tests
-
-**5. Hyperparameter Tuning**
-
-* Grid Search: Exhaustively search parameter combinations
-
-**6. Parameter Details**
-
-**Logistic Regression**
-* Penalty: Regularization type (L1, L2)
-* Regularization Strength (C): Controls regularization strength (default: 1.00)
-* Max Iteration: Maximum iterations for convergence (default: 100)
-* Class Weight: Adjust weights for imbalanced classes
-* Random State: Seed for reproducibility (default: 43)
-* Solver: Optimization algorithm
-* Multi-class Option: Strategy for multi-class classification
-
-**Bagging Regression**
-* Estimator: Base estimator (e.g., DecisionTreeRegressor)
-* Bootstrap: Whether to use bootstrap samples (default: True)
-* Maximum Features: Maximum fraction of features to consider for splitting
-* Number of Estimators: Number of base estimators (default: 10)
-* Maximum Samples: Maximum fraction of samples to train each base estimator
-* Random State: Seed for reproducibility (default: 43)
-
-**Ridge Regression**
-* Solver: Solver for optimization
-* Alpha: Regularization strength (default: 1.00)
-* Fit Intercept: Whether to calculate the intercept (default: True)
-* Tolerance: Tolerance for optimization
-* Max Iterations: Maximum iterations for convergence (default: 500)
-* Random State: Seed for reproducibility (default: 43)
+* **Performance Metrics**: Calculate accuracy metrics on test data
+* **Residual Analysis**: Analyze prediction errors and identify patterns
+* **Feature Importance**: Evaluate contribution of each feature
 
 Clustering
-----------
+---------
 
 Overview
 ^^^^^^^^
@@ -333,7 +317,7 @@ Overview
 The Clustering module provides algorithms for grouping similar data points without labeled training data.
 
 Supported Algorithms
-^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^
 
 **1. K-Means Clustering**
 
@@ -341,10 +325,11 @@ Partitions observations into k clusters with nearest mean.
 
 **Key Parameters:**
 
-* Number of Clusters
-* Initialization Method
-* Number of Initializations
-* Max Iterations
+* **Number of Clusters**: Number of clusters to form (default: 8)
+* **Initialization Method**: Method for initialization (k-means++, random)
+* **Number of Initializations**: Number of times to run with different initializations (default: 10)
+* **Max Iterations**: Maximum iterations for a single run (default: 300)
+* **Random State**: Seed for reproducible results (default: 42)
 
 **2. Agglomerative Clustering**
 
@@ -352,10 +337,10 @@ Hierarchical approach building nested clusters.
 
 **Key Parameters:**
 
-* Number of Clusters
-* Linkage criterion
-* Distance Metric
-* Compute Distances option
+* **Number of Clusters**: Number of clusters to find (default: 2)
+* **Linkage**: Method for calculating distances between clusters (ward, complete, average, single)
+* **Distance Metric**: Metric for calculating distances (euclidean, manhattan, etc.)
+* **Compute Distances**: Whether to compute distances for visualization (default: False)
 
 **3. K-Mode Clustering**
 
@@ -363,10 +348,11 @@ Specialized for categorical data.
 
 **Key Parameters:**
 
-* Number of Clusters
-* Initialization Method
-* Number of Initializations
-* Max Iterations
+* **Number of Clusters**: Number of clusters to form (default: 8)
+* **Initialization Method**: Method for initial centroids (cao, random, Huang)
+* **Number of Initializations**: Number of times to run with different initializations (default: 10)
+* **Max Iterations**: Maximum iterations for a single run (default: 100)
+* **Random State**: Seed for reproducible results (default: 42)
 
 **4. Gaussian Mixture Model**
 
@@ -374,90 +360,74 @@ Probabilistic model assuming data from Gaussian distributions mixture.
 
 **Key Parameters:**
 
-* Number of Components
-* Covariance Type
-* Initialization Parameters
-* Tolerance 
+* **Number of Components**: Number of mixture components (default: 1)
+* **Covariance Type**: Type of covariance parameters (full, tied, diag, spherical)
+* **Number of Initializations**: Number of times to run with different initializations (default: 1)
+* **Max Iterations**: Maximum number of EM iterations (default: 100)
+* **Initialization Parameters**: Method for initialization (kmeans, random)
+* **Tolerance**: Convergence threshold (default: 0.01)
+* **Random State**: Seed for reproducible results (default: 42)
 
-Clustering Algorithms
-^^^^^^^^^^^^^^^^^^^^^^
+**5. Spectral Clustering**
 
-The Clustering module provides several advanced algorithms with customizable parameters:
+Uses eigenvalues of similarity matrix to reduce dimensions before clustering.
 
-**K-Means Clustering**
+**Key Parameters:**
 
-Partitions observations into k clusters with nearest mean.
+* **Number of Clusters**: Number of clusters to form (default: 8)
+* **Eigen Solver**: Method for computing eigenvectors (arpack, lobpcg, amg)
+* **Number of Components**: Number of eigenvectors to use
+* **Number of Initializations**: Number of times k-means will be run (default: 10)
+* **Gamma**: Kernel coefficient for rbf kernel
+* **Number of Neighbors**: Number of neighbors for nearest neighbors graph
+* **Assign Labels**: Method for assigning labels (kmeans, discretize)
 
-* **Number of Clusters**: The number of clusters to form (default: 8)
-* **Number of Initializations**: Number of times the algorithm is run with different centroid seeds (default: 10)
-* **Random State**: Seed for random number generation (default: 43)
-* **Initialization Method**: Method for initializing centroids (e.g., K-means++)
-* **Max Iterations**: Maximum number of iterations for convergence (default: 300)
+**6. Mean Shift**
 
-**K-Mode Clustering**
+Non-parametric technique that finds dense areas of data points.
 
-Specialized clustering for categorical data.
+**Key Parameters:**
 
-* **Number of Clusters**: The number of clusters to form (default: 8)
-* **Initialization Method**: Method for initializing centroids (e.g., cao)
-* **Number of Initializations**: Number of times the algorithm is run with different seeds (default: 10)
-* **Max Iterations**: Maximum number of iterations for convergence (default: 100)
-* **Random State**: Seed for random number generation (default: 43)
+* **Max Iterations**: Maximum number of iterations (default: 300)
 
-**K-Medoids Clustering**
+**7. Affinity Propagation**
 
-More robust to noise and outliers than K-means.
+Finds clusters by passing messages between data points.
 
-* **Number of Clusters**: The number of clusters to form (default: 8)
-* **Method**: Optimization method (e.g., alternate)
-* **Maximum Iterations**: Maximum number of iterations for convergence (default: 99)
-* **Metric**: Distance metric (e.g., euclidean)
-* **Initialization Method**: Method for initializing centroids (e.g., heuristic)
-* **Random State**: Seed for random number generation (default: 43)
+**Key Parameters:**
 
-**Gaussian Mixture Clustering**
+* **Damping**: Damping factor to avoid numerical oscillations (default: 0.5)
+* **Convergence Iterations**: Number of iterations with no change before convergence (default: 15)
+* **Max Iterations**: Maximum number of iterations (default: 200)
+* **Affinity**: Metric used to compute affinity between points (euclidean, precomputed)
 
-Probabilistic model assuming data was generated from a mixture of Gaussian distributions.
+Clustering Evaluation Metrics
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-* **Number of Components**: The number of mixture components (default: 1)
-* **Initialization Parameters**: Method for initializing parameters (e.g., kmeans)
-* **Maximum Iterations**: Maximum number of iterations for convergence (default: 100)
-* **Random State**: Seed for random number generation (default: 43)
-* **Covariance Type**: Type of covariance parameters (e.g., full)
-* **Number of Initializations**: Number of initializations to perform (default: 1)
-* **Tolerance**: Convergence threshold (default: 0.01) 
+* **Silhouette Score**: Measure of how similar objects are to their own cluster compared to other clusters
+* **Davies-Bouldin Index**: Average similarity of each cluster with its most similar cluster
+* **Calinski-Harabasz Index**: Ratio of between-cluster dispersion to within-cluster dispersion
+* **Inertia**: Sum of squared distances of samples to their closest cluster center
 
-Advanced Workflow Features
---------------------------
+Clustering Pipeline
+^^^^^^^^^^^^^^^^^
 
-Parallel Execution
-^^^^^^^^^^^^^^^^^^
+The Clustering module guides you through a complete workflow:
 
-ViSERA supports parallel execution of multiple modules, significantly improving workflow efficiency. This feature allows users to:
+**1. Data Preprocessing**
 
-* Run independent modules simultaneously
-* Process multiple datasets at once
-* Execute different analysis pipelines in parallel
+* **Feature Scaling**: Standardize features to equal scale
+* **Dimensionality Reduction**: Apply PCA or t-SNE before clustering
+* **Categorical Encoding**: Convert categorical variables for distance-based algorithms
 
-To utilize parallel execution:
+**2. Model Selection**
 
-1. Add multiple instances of the same or different modules to the workspace
-2. Configure each module with its specific parameters
-3. Click the "Run" button on each module that should execute independently
+* **Algorithm Selection**: Choose appropriate clustering method based on data type
+* **Parameter Tuning**: Optimize key parameters like number of clusters
+* **Initialization Method**: Choose how to initialize cluster centers
 
-Connected Workflows
-^^^^^^^^^^^^^^^^^^^
+**3. Cluster Evaluation**
 
-For sequential processing that depends on previous steps, ViSERA enables connected workflows where:
-
-* The output of one module serves as the input for another
-* Multiple modules can be chained together to create complex analysis pipelines
-* Results flow automatically through the workflow
-
-To create connected workflows:
-
-1. Add the required modules to the workspace
-2. Connect modules by dragging from output ports to compatible input ports
-3. Run the final module in the chain, which will automatically execute all prerequisite modules
-
-These advanced workflow capabilities make ViSERA exceptionally flexible for complex medical imaging research, allowing both independent parallel execution and sophisticated connected processing pipelines. 
+* **Visualization**: Plot clusters in 2D/3D space
+* **Validation**: Assess cluster quality using internal and stability metrics
+* **Interpretation**: Analyze cluster characteristics and distributions 
