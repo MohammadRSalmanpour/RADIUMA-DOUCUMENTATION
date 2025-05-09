@@ -38,6 +38,34 @@ Key Features
 
 * **Comprehensive Machine Learning Tools**: Built-in classification, regression, and clustering modules
 
+License
+-------
+
+ViSERA is free and open-source for research purposes under the CC BY-NC-SA license. For more information, visit: https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+Development Team
+----------------
+
+This software has been developed by the Quantitative Radiomolecular Imaging and Therapy (Qurit) lab & program (www.qurit.ca), at the BC Cancer Research Institute, Vancouver, BC, Canada, in collaboration with the Technological Virtual Collaboration (TECVICO CORP., www.tecvico.com).
+
+References
+----------
+
+1. https://github.com/oncoray/mirp
+2. Zwanenburg A, Leger S, Agolli L, Pilz K, Troost EG, Richter C, Löck S. Assessing robustness of radiomic features by image perturbation. Scientific reports. 2019 Jan 24;9(1):614.
+3. https://gist.github.com/pangyuteng/c6a075ba9aa00bb750468c30f13fc603
+4. https://github.com/mvallieres/radiomics
+5. http://insightsoftwareconsortium.github.io/SimpleITK-Notebooks/Python_html/60_Registration_Introduction.html
+6. https://simpleitk.readthedocs.io/en/master/registrationOverview.html
+7. Z. Yaniv, B. C. Lowekamp, H. J. Johnson, R. Beare, "SimpleITK Image-Analysis Notebooks: a Collaborative Environment for Education and Reproducible Research", J Digit Imaging., 31(3): 290-303, 2018, https://doi.org/10.1007/s10278-017-0037-8.
+8. N. Taxak, M. Scholar and et al, "A Review of Image Fusion Methods," International Journal of Innovative Science and Research Technology, vol. 3, no. 8, pp. 598-601, 2018.
+9. Q. Wang, Y. Shen and J. Jin, "Performance evaluation of image fusion techniques," Image Fusion, pp. 469-492, 2008.
+10. M. Salmanpour, G. Hajianfar and et al, "Multitask Outcome Prediction using Hybrid Machine Learning and PET-CT Fusion Radiomics," in Journal of Nuclear Medicine, 2021.
+11. https://theibsi.github.io/
+12. A. Zwanenburg, S. Leger et al, "The Image Biomarker Standardization Initiative: Standardized Quantitative Radiomics for High-Throughput Image-based Phenotyping," arXiv preprint arXiv:1612.07003, 2016.
+13. A. Zwanenburg, M. Vallières et al, "The Image Biomarker Standardization Initiative: Standardized Quantitative Radiomics for High-Throughput Image-based Phenotyping," Radiology, vol. 295, no. 2, pp. 328-338, 2020.
+14. M. Mcnitt-Gray, S. Napel et al, "Standardization in Quantitative Imaging: A Multicenter Comparison of Radiomic Features from Different Software Packages on Digital Reference Objects and Patient Data Sets," Tomography, vol. 6, no. 2, pp. 118-128, 2020.
+
 Visual Node-Based Workflow System
 ----------------------------------
 

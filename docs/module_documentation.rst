@@ -152,6 +152,37 @@ Classification Workflow
 4. Evaluate using standard metrics
 5. Compare algorithm performance
 
+Classification Pipeline
+^^^^^^^^^^^^^^^^^^^^^^^
+
+The Classification module guides you through a complete machine learning workflow:
+
+**1. Data Splitting**
+
+* Shuffle: Enable shuffling to randomize the data before splitting
+* Split: Choose between percentage split or K-fold cross-validation
+* Percentage: Specify training data percentage (e.g., 80%)
+* K-fold: Set the number of folds for cross-validation
+* Perform Final Test: Option to reserve data for final testing
+
+**2. Imputation**
+
+* Continuous Missing Value: Strategy for handling missing numerical values
+* Categorical Missing Value: Strategy for handling missing categorical values
+
+**3. Scaling**
+
+* Standard Scaling: Normalize data to mean of 0 and standard deviation of 1
+
+**4. Feature Selection**
+
+* PCA: Reduce features using Principal Component Analysis
+* K Best (ANOVA): Select top K features based on statistical tests
+
+**5. Hyperparameter Tuning**
+
+* Grid Search: Exhaustively search parameter combinations
+
 Regression
 ----------
 
@@ -235,6 +266,64 @@ Evaluation Metrics
 * R-squared Score
 * Median Absolute Error
 
+Regression Pipeline
+^^^^^^^^^^^^^^^^^^^
+
+The Regression module follows the same comprehensive workflow as Classification:
+
+**1. Data Splitting**
+
+* Shuffle: Enable shuffling to randomize the data before splitting
+* Split: Choose between percentage split or K-fold cross-validation
+* Percentage: Specify training data percentage (e.g., 80%)
+* K-fold: Set the number of folds for cross-validation
+* Perform Final Test: Option to reserve data for final testing
+
+**2. Imputation**
+
+* Continuous Missing Value: Strategy for handling missing numerical values
+* Categorical Missing Value: Strategy for handling missing categorical values
+
+**3. Scaling**
+
+* Standard Scaling: Normalize data to mean of 0 and standard deviation of 1
+
+**4. Feature Selection**
+
+* PCA: Reduce features using Principal Component Analysis
+* K Best (ANOVA): Select top K features based on statistical tests
+
+**5. Hyperparameter Tuning**
+
+* Grid Search: Exhaustively search parameter combinations
+
+**6. Parameter Details**
+
+**Logistic Regression**
+* Penalty: Regularization type (L1, L2)
+* Regularization Strength (C): Controls regularization strength (default: 1.00)
+* Max Iteration: Maximum iterations for convergence (default: 100)
+* Class Weight: Adjust weights for imbalanced classes
+* Random State: Seed for reproducibility (default: 43)
+* Solver: Optimization algorithm
+* Multi-class Option: Strategy for multi-class classification
+
+**Bagging Regression**
+* Estimator: Base estimator (e.g., DecisionTreeRegressor)
+* Bootstrap: Whether to use bootstrap samples (default: True)
+* Maximum Features: Maximum fraction of features to consider for splitting
+* Number of Estimators: Number of base estimators (default: 10)
+* Maximum Samples: Maximum fraction of samples to train each base estimator
+* Random State: Seed for reproducibility (default: 43)
+
+**Ridge Regression**
+* Solver: Solver for optimization
+* Alpha: Regularization strength (default: 1.00)
+* Fit Intercept: Whether to calculate the intercept (default: True)
+* Tolerance: Tolerance for optimization
+* Max Iterations: Maximum iterations for convergence (default: 500)
+* Random State: Seed for reproducibility (default: 43)
+
 Clustering
 ----------
 
@@ -289,3 +378,86 @@ Probabilistic model assuming data from Gaussian distributions mixture.
 * Covariance Type
 * Initialization Parameters
 * Tolerance 
+
+Clustering Algorithms
+^^^^^^^^^^^^^^^^^^^^^^
+
+The Clustering module provides several advanced algorithms with customizable parameters:
+
+**K-Means Clustering**
+
+Partitions observations into k clusters with nearest mean.
+
+* **Number of Clusters**: The number of clusters to form (default: 8)
+* **Number of Initializations**: Number of times the algorithm is run with different centroid seeds (default: 10)
+* **Random State**: Seed for random number generation (default: 43)
+* **Initialization Method**: Method for initializing centroids (e.g., K-means++)
+* **Max Iterations**: Maximum number of iterations for convergence (default: 300)
+
+**K-Mode Clustering**
+
+Specialized clustering for categorical data.
+
+* **Number of Clusters**: The number of clusters to form (default: 8)
+* **Initialization Method**: Method for initializing centroids (e.g., cao)
+* **Number of Initializations**: Number of times the algorithm is run with different seeds (default: 10)
+* **Max Iterations**: Maximum number of iterations for convergence (default: 100)
+* **Random State**: Seed for random number generation (default: 43)
+
+**K-Medoids Clustering**
+
+More robust to noise and outliers than K-means.
+
+* **Number of Clusters**: The number of clusters to form (default: 8)
+* **Method**: Optimization method (e.g., alternate)
+* **Maximum Iterations**: Maximum number of iterations for convergence (default: 99)
+* **Metric**: Distance metric (e.g., euclidean)
+* **Initialization Method**: Method for initializing centroids (e.g., heuristic)
+* **Random State**: Seed for random number generation (default: 43)
+
+**Gaussian Mixture Clustering**
+
+Probabilistic model assuming data was generated from a mixture of Gaussian distributions.
+
+* **Number of Components**: The number of mixture components (default: 1)
+* **Initialization Parameters**: Method for initializing parameters (e.g., kmeans)
+* **Maximum Iterations**: Maximum number of iterations for convergence (default: 100)
+* **Random State**: Seed for random number generation (default: 43)
+* **Covariance Type**: Type of covariance parameters (e.g., full)
+* **Number of Initializations**: Number of initializations to perform (default: 1)
+* **Tolerance**: Convergence threshold (default: 0.01) 
+
+Advanced Workflow Features
+--------------------------
+
+Parallel Execution
+^^^^^^^^^^^^^^^^^^
+
+ViSERA supports parallel execution of multiple modules, significantly improving workflow efficiency. This feature allows users to:
+
+* Run independent modules simultaneously
+* Process multiple datasets at once
+* Execute different analysis pipelines in parallel
+
+To utilize parallel execution:
+
+1. Add multiple instances of the same or different modules to the workspace
+2. Configure each module with its specific parameters
+3. Click the "Run" button on each module that should execute independently
+
+Connected Workflows
+^^^^^^^^^^^^^^^^^^^
+
+For sequential processing that depends on previous steps, ViSERA enables connected workflows where:
+
+* The output of one module serves as the input for another
+* Multiple modules can be chained together to create complex analysis pipelines
+* Results flow automatically through the workflow
+
+To create connected workflows:
+
+1. Add the required modules to the workspace
+2. Connect modules by dragging from output ports to compatible input ports
+3. Run the final module in the chain, which will automatically execute all prerequisite modules
+
+These advanced workflow capabilities make ViSERA exceptionally flexible for complex medical imaging research, allowing both independent parallel execution and sophisticated connected processing pipelines. 

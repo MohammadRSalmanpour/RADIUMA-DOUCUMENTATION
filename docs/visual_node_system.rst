@@ -3,6 +3,21 @@ Visual Node-Based Workflow System
 
 ViSERA uses a visual programming approach where modules are represented as nodes that can be connected to create complete data processing pipelines. This intuitive interface allows users with minimal programming experience to build sophisticated workflows.
 
+Workspace Overview
+------------------
+
+The main workspace provides a comprehensive suite of tools for medical image analysis and data processing. The software supports four primary image formats: Nifti, Nrrd, Single File Dicom, and Multi File Dicom, allowing users to read and convert between these formats seamlessly.
+
+Navigation Features
+^^^^^^^^^^^^^^^^^^^
+
+* **Module Search**: Find desired tools quickly using the search box (press Tab to activate)
+* **Drag and Drop**: Add tools to the workspace by dragging them from the module palette
+* **Module States**: Each tool changes color from brown (untuned) to light blue (configured) after parameter setup
+* **Parameter Configuration**: Double-click on any module to set its parameters
+* **Execution Control**: Click the "Run" button on top of each tool to perform its function
+* **Parallel Execution**: Run multiple modules simultaneously for efficient workflows
+
 Creating Workflows
 ------------------
 
