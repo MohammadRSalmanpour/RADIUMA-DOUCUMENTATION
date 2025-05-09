@@ -196,7 +196,7 @@ Workflow Integration
 * Outputs to Image Registration
 
 RT Struct Reader
-~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~
 
 Specialized module for importing radiotherapy structure sets, supporting the standardized DICOM-RT format used in radiation oncology.
 

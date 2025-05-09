@@ -1,10 +1,10 @@
 Module Documentation
-===================
+====================
 
 .. contents:: :local:
 
 Preprocessing
-------------
+-------------
 
 Overview
 ^^^^^^^^
@@ -12,7 +12,7 @@ Overview
 The preprocessing module provides essential data preparation capabilities before applying machine learning algorithms. Proper preprocessing is crucial for achieving optimal model performance.
 
 Supported Preprocessing Techniques
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Data Encoding**
 
@@ -63,7 +63,7 @@ Best Practices
 7. Reserve test data until final evaluation
 
 Classification
-------------
+--------------
 
 Overview
 ^^^^^^^^
@@ -71,7 +71,7 @@ Overview
 The Classification module provides multiple algorithms for data analysis with customizable parameters through an intuitive user interface.
 
 Supported Algorithms
-^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^
 
 **1. Logistic Regression Classifier**
 
@@ -154,7 +154,7 @@ Ensemble using base classifiers on random data subsets.
 Applies Bayes' theorem with feature independence assumption.
 
 Classification Workflow
-^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^
 
 1. Select and configure algorithms
 2. Apply preprocessing steps
@@ -202,7 +202,7 @@ Overview
 The Regression module provides multiple algorithms for predicting continuous target variables.
 
 Supported Algorithms
-^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^
 
 **1. Linear Regression**
 
@@ -278,7 +278,7 @@ Ensemble method aggregating predictions from multiple models.
 * **Random State**: Seed for reproducibility (default: 43)
 
 Evaluation Metrics
-^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^
 
 * **Mean Absolute Error (MAE)**: Average of absolute differences between predictions and actual values
 * **Root Mean Squared Error (RMSE)**: Square root of average squared differences
@@ -286,7 +286,7 @@ Evaluation Metrics
 * **Median Absolute Error**: Median of absolute differences between predictions and actual values
 
 Regression Pipeline
-^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^
 
 The Regression module guides you through a complete workflow:
 
@@ -309,7 +309,7 @@ The Regression module guides you through a complete workflow:
 * **Feature Importance**: Evaluate contribution of each feature
 
 Clustering
----------
+----------
 
 Overview
 ^^^^^^^^
@@ -317,7 +317,7 @@ Overview
 The Clustering module provides algorithms for grouping similar data points without labeled training data.
 
 Supported Algorithms
-^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^
 
 **1. K-Means Clustering**
 
@@ -402,7 +402,7 @@ Finds clusters by passing messages between data points.
 * **Affinity**: Metric used to compute affinity between points (euclidean, precomputed)
 
 Clustering Evaluation Metrics
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * **Silhouette Score**: Measure of how similar objects are to their own cluster compared to other clusters
 * **Davies-Bouldin Index**: Average similarity of each cluster with its most similar cluster
@@ -410,7 +410,7 @@ Clustering Evaluation Metrics
 * **Inertia**: Sum of squared distances of samples to their closest cluster center
 
 Clustering Pipeline
-^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^
 
 The Clustering module guides you through a complete workflow:
 
