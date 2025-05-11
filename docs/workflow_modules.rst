@@ -337,7 +337,7 @@ Workflow Integration
 Radiomic Feature Generator
 ------------------------
 
-.. image:: images/13.radiomic_feature_generator.png
+.. image:: images/13.radiomic.png
    :alt: Radiomic Feature Generator
    :width: 100%
 
