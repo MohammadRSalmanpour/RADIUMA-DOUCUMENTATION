@@ -1,10 +1,18 @@
 Visual Node-Based Workflow System
 =================================
 
+.. image:: images/2.workflow.png
+   :alt: Workflows
+   :width: 100%
+
 Radiuma uses a visual programming approach where modules are represented as nodes that can be connected to create complete data processing pipelines. This intuitive interface allows users with minimal programming experience to build sophisticated workflows.
 
 Creating Workflows
 ------------------
+
+.. image:: images/3.run.png
+   :alt: Run Workflow
+   :width: 100%
 
 1. **Adding Modules**: Double-click on a module from the module palette to add it to the workspace
 2. **Configuring Modules**: Double-click on a module node to open its configuration dialog
@@ -15,6 +23,10 @@ Creating Workflows
 Multi-Tab Workflow Support
 --------------------------
 
+.. image:: images/4.tab.png
+   :alt: Multi-Tab
+   :width: 100%
+   
 Radiuma allows you to work with multiple workflows simultaneously through its tab-based interface:
 
 1. **Creating New Tabs**: Click the "+" button on the tab bar or use the context menu to add a new workflow tab

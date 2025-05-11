@@ -8,6 +8,10 @@ Radiuma offers a comprehensive set of modules that can be connected to create en
 Image Viewer
 ------------
 
+.. image:: images/5.image_viewer.png
+   :alt: Image Viewer
+   :width: 100%
+
 The Medical Image Viewer is a comprehensive module designed for advanced medical image visualization and analysis, providing tools for detailed examination, segmentation, and analysis of medical imaging data.
 
 View Types
@@ -56,6 +60,10 @@ Toolbar Functions
 Image Reader
 ------------
 
+.. image:: images/6.image_reader.png
+   :alt: Image Reader
+   :width: 100%
+
 A flexible module for importing various medical image formats into the Radiuma workflow.
 
 Key Parameters
@@ -82,6 +90,10 @@ Workflow Integration
 RT Struct Reader
 ----------------
 
+.. image:: images/7.rt_struct_reader.png
+   :alt: RT Struct Reader
+   :width: 100%
+
 Specialized module for importing radiotherapy structure sets, supporting the standardized DICOM-RT format used in radiation oncology.
 
 Key Parameters
@@ -104,16 +116,42 @@ Workflow Integration
 * Outputs to Image Writer
 * Outputs to Image Viewer
 
-Table Reader/Writer
--------------------
+Table Reader
+------------
 
-Modules for importing and exporting tabular data in various formats.
+.. image:: images/8.table_reader.png
+   :alt: Table Reader
+   :width: 100%
+
+Modules for importing tabular data in various formats.
 
 Reader Parameters
 ^^^^^^^^^^^^^^^^^
 
 * **File Path**: Location of the input data file
 * **Format Detection**: Automatic detection of file format
+
+Supported Formats
+^^^^^^^^^^^^^^^^^
+
+* CSV files
+* Excel spreadsheets
+* Structured data exports from analysis modules
+
+Image/Table Writer
+------------------
+
+.. image:: images/9.writer.png
+   :alt: Writer
+   :width: 100%
+
+Modules for exporting tabular and image data in various formats.
+
+Writer Parameters
+^^^^^^^^^^^^^^^^^
+
+* **File or Folder Path**: Location of the input data file or folder
+* **Format**: Choice of output format (.xlsx, .csv, single/multiple .dcm, .nii.gz, .nrrd)
 
 Writer Parameters
 ^^^^^^^^^^^^^^^^^
@@ -128,9 +166,16 @@ Supported Formats
 * CSV files
 * Excel spreadsheets
 * Structured data exports from analysis modules
+* DICOM files
+* NIFTI files
+* NRRD files
 
 Image Registration
 ------------------
+
+.. image:: images/10.image_registration.png
+   :alt: Image Registration
+   :width: 100%
 
 Tools for spatial alignment of images from different modalities or time points.
 
@@ -174,6 +219,10 @@ Workflow Integration
 
 Image Filter
 ------------
+
+.. image:: images/11.image_filter.png
+   :alt: Image Filter
+   :width: 100%
 
 Comprehensive set of image filtering options for enhancing features, reducing noise, and preparing images for feature extraction.
 
@@ -243,6 +292,10 @@ Workflow Integration
 Image Fusion
 ------------
 
+.. image:: images/12.image_fusion.png
+   :alt: Image Fusion
+   :width: 100%
+
 Advanced capabilities for combining information from multiple imaging modalities.
 
 Fusion Methods
@@ -283,6 +336,10 @@ Workflow Integration
 
 Radiomic Feature Generator
 ------------------------
+
+.. image:: images/13.radiomic_feature_generator.png
+   :alt: Radiomic Feature Generator
+   :width: 100%
 
 Core module for extracting standardized quantitative features from medical images following IBSI guidelines.
 

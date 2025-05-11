@@ -1,4 +1,4 @@
-Module Documentation
+ML Algorithms
 ====================
 
 .. contents:: :local:
@@ -67,6 +67,10 @@ Classification
 
 Overview
 ^^^^^^^^
+
+.. image:: images/14.classification.png
+   :alt: Classification
+   :width: 100%
 
 The Classification module provides multiple algorithms for data analysis with customizable parameters through an intuitive user interface.
 
@@ -199,6 +203,10 @@ Regression
 Overview
 ^^^^^^^^
 
+.. image:: images/15.regression.png
+   :alt: Regression
+   :width: 100%
+
 The Regression module provides multiple algorithms for predicting continuous target variables.
 
 Supported Algorithms
@@ -313,6 +321,10 @@ Clustering
 
 Overview
 ^^^^^^^^
+
+.. image:: images/16.clustering.png
+   :alt: Clustering
+   :width: 100%
 
 The Clustering module provides algorithms for grouping similar data points without labeled training data.
 
