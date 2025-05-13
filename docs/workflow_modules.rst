@@ -29,8 +29,8 @@ View Types
 File Support
 ^^^^^^^^^^^^
 
-* NIFTI Files: Support for Neuroimaging Informatics Technology Initiative format
-* DICOM Files: Individual DICOM image support
+* NIFTI Files: Support for Neuroimaging Informatics Technology Initiative format (Nifti)
+* DICOM Files: Individual Digital Imaging and Communications in Medicine (DICOM) image support
 * DICOM Directories: Support for complete DICOM studies/series
 * Segmentation Files: Import/export of segmentation data
 
