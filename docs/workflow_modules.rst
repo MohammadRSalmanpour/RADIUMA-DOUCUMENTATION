@@ -1,7 +1,8 @@
 Workflow Modules
 ===============
 
-Radiuma offers a comprehensive set of modules that can be connected to create end-to-end research workflows. These modules cover the entire radiomics pipeline from image input to statistical analysis.
+Radiuma offers a comprehensive set of modular components that can be seamlessly connected to build end-to-end research workflows. These modules span the entire pipeline of advanced image processing and machine learning.
+
 
 .. contents:: :local:
 
