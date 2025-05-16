@@ -12,6 +12,6 @@ Key Features
   * Medical physicists
   * Data scientists
 
-* **Comprehensive Machine Learning Tools**: Built-in classification, regression, and clustering modules 
+* **Comprehensive Machine Learning Tools**: Built-in classification, regression, and clustering tools
 * **Multi-Tab Workflow Support**: Run multiple independent workflows simultaneously
 * **Workflow Control System**: Granular control over workflow execution with both node-level and global workflow stopping capabilities 

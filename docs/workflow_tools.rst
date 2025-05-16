@@ -1,7 +1,7 @@
-Workflow Modules
+Workflow Tools
 ===============
 
-Radiuma offers a comprehensive set of modular components that can be seamlessly connected to build end-to-end research workflows. These modules span the entire pipeline of advanced image processing and machine learning.
+Radiuma offers a comprehensive set of modular components that can be seamlessly connected to build end-to-end research workflows. These tools span the entire pipeline of advanced image processing and machine learning.
 
 
 .. contents:: :local:
@@ -13,7 +13,7 @@ Image Viewer
    :alt: Image Viewer
    :width: 100%
 
-The Medical Image Viewer is a comprehensive module designed for advanced medical image visualization and analysis, providing tools for detailed examination, segmentation, and analysis of medical imaging data.
+The Medical Image Viewer is a comprehensive tool designed for advanced medical image visualization and analysis, providing tools for detailed examination, segmentation, and analysis of medical imaging data.
 
 View Types
 ^^^^^^^^^^
@@ -74,7 +74,7 @@ Image Reader
    :alt: Image Reader
    :width: 100%
 
-A flexible module for importing various medical image formats into the Radiuma workflow.
+A flexible tool for importing various medical image formats into the Radiuma workflow.
 
 Key Parameters
 ^^^^^^^^^^^^^^
@@ -105,7 +105,7 @@ RT Struct Reader
    :alt: RT Struct Reader
    :width: 100%
 
-Specialized module for importing radiotherapy structure sets, supporting the standardized DICOM-RT format used in radiation oncology.
+Specialized tool for importing radiotherapy structure sets, supporting the standardized DICOM-RT format used in radiation oncology.
 
 Key Parameters
 ^^^^^^^^^^^^^^
@@ -134,7 +134,7 @@ Table Reader
    :alt: Table Reader
    :width: 100%
 
-Modules for importing tabular data in various formats.
+Tools for importing tabular data in various formats.
 
 Reader Parameters
 ^^^^^^^^^^^^^^^^^
@@ -147,7 +147,7 @@ Supported Formats
 
 * CSV files
 * Excel spreadsheets
-* Structured data exports from analysis modules
+* Structured data exports from analysis tools
 
 Image/Table Writer
 ------------------
@@ -156,7 +156,7 @@ Image/Table Writer
    :alt: Writer
    :width: 100%
 
-Modules for exporting tabular and image data in various formats.
+Tools for exporting tabular and image data in various formats.
 
 Writer Parameters
 ^^^^^^^^^^^^^^^^^
@@ -176,7 +176,7 @@ Supported Formats
 
 * CSV files
 * Excel spreadsheets
-* Structured data exports from analysis modules
+* Structured data exports from analysis tools
 * DICOM files
 * NIFTI files
 * NRRD files
@@ -359,7 +359,7 @@ Radiomic Feature Generator
    :alt: Radiomic Feature Generator
    :width: 100%
 
-Core module for extracting standardized quantitative features from medical images following IBSI guidelines.
+Core tool for extracting standardized quantitative features from medical images following IBSI guidelines.
 
 Feature Types
 ^^^^^^^^^^^^^

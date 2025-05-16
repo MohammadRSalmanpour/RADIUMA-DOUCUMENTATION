@@ -5,7 +5,7 @@ Visual Node-Based Workflow System
    :alt: Workflows
    :width: 100%
 
-Radiuma uses a visual programming approach where modules are represented as nodes that can be connected to create complete data processing pipelines. This intuitive interface allows users with minimal programming experience to build sophisticated workflows.
+Radiuma uses a visual programming approach where tools are represented as nodes that can be connected to create complete data processing pipelines. This intuitive interface allows users with minimal programming experience to build sophisticated workflows.
 
 Creating Workflows
 ------------------
@@ -14,9 +14,9 @@ Creating Workflows
    :alt: Run Workflow
    :width: 100%
 
-1. **Adding Modules**: Double-click on a module from the module palette to add it to the workspace
-2. **Configuring Modules**: Double-click on a module node to open its configuration dialog
-3. **Connecting Modules**: Click and drag from an output port to an input port to create connections
+1. **Adding Tools**: Double-click on a tool from the tool palette to add it to the workspace
+2. **Configuring Tools**: Double-click on a tool node to open its configuration dialog
+3. **Connecting Tools**: Click and drag from an output port to an input port to create connections
 4. **Running Workflows**: Click the "Run" button on a node to execute it and all its prerequisite nodes
 5. **Stopping Execution**: Click the "Stop" button on a running node or use the global "Stop Workflow" button in the log bar to halt execution
 
@@ -35,16 +35,16 @@ Radiuma allows you to work with multiple workflows simultaneously through its ta
 4. **Importing Workflows**: When you import a saved workflow, it opens in a new tab automatically
 5. **Drag and Drop**: You can drag .radioma files directly onto the application to open them in new tabs
 
-Module Compatibility
+Tool Compatibility
 -------------------
 
-Each module explicitly defines which other modules can connect to its inputs and outputs, ensuring that only valid connections can be made:
+Each tool explicitly defines which other tools can connect to its inputs and outputs, ensuring that only valid connections can be made:
 
-* **Image Reader**: Outputs to Image Convertor, Filter, Fusion, and Registration modules
-* **RT Struct Reader**: Outputs to Radiomic Feature Generator and Image Writer modules
-* **Image Filter**: Takes image input, outputs to multiple imaging modules
-* **Radiomic Feature Generator**: Takes image and mask inputs, outputs to data analysis modules
-* **Preprocessing**: Takes feature data, connects to machine learning modules
+* **Image Reader**: Outputs to Image Convertor, Filter, Fusion, and Registration tools
+* **RT Struct Reader**: Outputs to Radiomic Feature Generator and Image Writer tools
+* **Image Filter**: Takes image input, outputs to multiple imaging tools
+* **Radiomic Feature Generator**: Takes image and mask inputs, outputs to data analysis tools
+* **Preprocessing**: Takes feature data, connects to machine learning tools
 * **Classification/Regression/Clustering**: Take preprocessed data as input, connect to visualization
 
 Example Workflows
@@ -70,8 +70,8 @@ Example Workflows
 Workflow Controls
 -----------------
 
-* **Layout Management**: Automatically arrange nodes with the "Align Modules" function
-* **Module Search**: Quickly find modules using the search function (Tab key)
+* **Layout Management**: Automatically arrange nodes with the "Align Tools" function
+* **Tool Search**: Quickly find tools using the search function (Tab key)
 * **Copy/Paste**: Duplicate node configurations to create similar processing steps
 * **Save/Load**: Save entire workflows and reload them for future use
 * **Workflow Stopping**: Two ways to stop a running workflow:
@@ -81,7 +81,7 @@ Workflow Controls
 Keyboard Shortcuts
 ------------------
 
-* **Tab**: Open module search
+* **Tab**: Open tool search
 * **Ctrl+C / Cmd+C**: Copy selected nodes
 * **Ctrl+V / Cmd+V**: Paste nodes
 * **Delete**: Remove selected nodes

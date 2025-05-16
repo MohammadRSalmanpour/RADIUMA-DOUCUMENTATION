@@ -14,6 +14,5 @@ Radiuma - Visualized & Standardized Environment for Radiomics Analysis is a powe
    overview
    key_features
    visual_node_system
-   workflow_modules
+   workflow_tools
    examples
-   module_documentation

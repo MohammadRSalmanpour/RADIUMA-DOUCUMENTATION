@@ -9,7 +9,7 @@ Preprocessing
 Overview
 ^^^^^^^^
 
-The preprocessing module provides essential data preparation capabilities before applying machine learning algorithms. Proper preprocessing is crucial for achieving optimal model performance.
+The preprocessing tool provides essential data preparation capabilities before applying machine learning algorithms. Proper preprocessing is crucial for achieving optimal model performance.
 
 Supported Preprocessing Techniques
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -72,7 +72,7 @@ Overview
    :alt: Classification
    :width: 100%
 
-The Classification module provides multiple algorithms for data analysis with customizable parameters through an intuitive user interface.
+The Classification tool provides multiple algorithms for data analysis with customizable parameters through an intuitive user interface.
 
 Supported Algorithms
 ^^^^^^^^^^^^^^^^^^^^
@@ -169,7 +169,7 @@ Classification Workflow
 Classification Pipeline
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-The Classification module guides you through a complete machine learning workflow:
+The Classification tool guides you through a complete machine learning workflow:
 
 **1. Data Splitting**
 
@@ -207,7 +207,7 @@ Overview
    :alt: Regression
    :width: 100%
 
-The Regression module provides multiple algorithms for predicting continuous target variables.
+The Regression tool provides multiple algorithms for predicting continuous target variables.
 
 Supported Algorithms
 ^^^^^^^^^^^^^^^^^^^^
@@ -296,7 +296,7 @@ Evaluation Metrics
 Regression Pipeline
 ^^^^^^^^^^^^^^^^^^^
 
-The Regression module guides you through a complete workflow:
+The Regression tool guides you through a complete workflow:
 
 **1. Data Preprocessing**
 
@@ -326,7 +326,7 @@ Overview
    :alt: Clustering
    :width: 100%
 
-The Clustering module provides algorithms for grouping similar data points without labeled training data.
+The Clustering tool provides algorithms for grouping similar data points without labeled training data.
 
 Supported Algorithms
 ^^^^^^^^^^^^^^^^^^^^
@@ -424,7 +424,7 @@ Clustering Evaluation Metrics
 Clustering Pipeline
 ^^^^^^^^^^^^^^^^^^^
 
-The Clustering module guides you through a complete workflow:
+The Clustering tool guides you through a complete workflow:
 
 **1. Data Preprocessing**
 

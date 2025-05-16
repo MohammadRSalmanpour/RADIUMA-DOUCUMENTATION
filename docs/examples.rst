@@ -13,13 +13,13 @@ The Image Conversion functionality allows users to easily convert medical images
 How It Works
 ^^^^^^^^^^^^
 
-1. **Image Reader Module**: First, use the Image Reader to load your source images
+1. **Image Reader Tool**: First, use the Image Reader to load your source images
 
    * Supports reading from individual files or entire folders
    * Compatible with NIFTI (.nii, .nii.gz), NRRD, and DICOM formats
    * Handles both single images and multi-file image series
 
-2. **Writer Module**: Then, connect the Writer module to convert and save the images
+2. **Writer Tool**: Then, connect the Writer tool to convert and save the images
 
    * Specify your desired output location
    * Choose the target format for conversion
@@ -30,9 +30,9 @@ Workflow Integration
 
 To convert images:
 
-1. Add an Image Reader module to your workflow
+1. Add an Image Reader tool to your workflow
 2. Configure the Image Reader to load your source image(s)
-3. Add a Writer module to your workflow 
+3. Add a Writer tool to your workflow
 4. Connect the output port of the Image Reader to the input port of the Writer
 5. Configure the Writer with your desired output format and location
 6. Run the workflow to perform the conversion
@@ -47,14 +47,14 @@ RT Structure Sets are critical for radiation therapy planning and analysis. Radi
 How It Works
 ^^^^^^^^^^^^
 
-1. **RT Struct Reader Module**: Begin by loading your radiation therapy structure set
+1. **RT Struct Reader Tool**: Begin by loading your radiation therapy structure set
 
    * Requires both a main image and corresponding structure set labels
    * RT Label Directory: Path to the RT structure set file
    * RT Main Image Directory: Path to the corresponding image data
    * Automatically extracts contours and segmentation information
 
-2. **Writer Module**: Connect to the Writer module to save processed RT structures
+2. **Writer Tool**: Connect to the Writer tool to save processed RT structures
 
    * Choose your desired output location
    * Select appropriate format for saving segmentation data
@@ -65,9 +65,9 @@ Workflow Integration
 
 To process RT Struct files:
 
-1. Add an RT Struct Reader module to your workflow
+1. Add an RT Struct Reader tool to your workflow
 2. Configure the RT Struct Reader with paths to both your main image and structure set labels
-3. Add a Writer module to your workflow
+3. Add a Writer tool to your workflow
 4. Connect the output port of the RT Struct Reader to the input port of the Writer
 5. Configure the Writer with your desired output location and format
 6. Run the workflow to complete the processing
@@ -82,12 +82,12 @@ Image filtering is essential for enhancing specific features, reducing noise, an
 How It Works
 ^^^^^^^^^^^^
 
-1. **Image Reader Module**: Start by loading the medical image you want to filter
+1. **Image Reader Tool**: Start by loading the medical image you want to filter
 
    * Select your source image file or directory
-   * The module supports NIFTI, NRRD, and DICOM formats
+   * The tool supports NIFTI, NRRD, and DICOM formats
 
-2. **Filter Module**: Apply one or more filters to the input image
+2. **Filter Tool**: Apply one or more filters to the input image
 
    * **Mean Filter**: Smooths images by replacing each pixel with the average of its neighborhood
    * **LoG (Laplacian of Gaussian)**: Highlights edges and regions of rapid intensity change
@@ -95,7 +95,7 @@ How It Works
    * **Gabor Filter**: Identifies texture and directional features at various scales
    * **Wavelet Filter**: Performs multi-resolution analysis for feature extraction
 
-3. **Writer Module**: Save the filtered image to your desired location
+3. **Writer Tool**: Save the filtered image to your desired location
 
    * Select output location and format
    * Preserve metadata from the original image
@@ -116,12 +116,12 @@ Workflow Integration
 
 To filter medical images:
 
-1. Add an Image Reader module to your workflow
+1. Add an Image Reader tool to your workflow
 2. Configure the Image Reader to load your source image
-3. Add a Filter module to your workflow
+3. Add a Filter tool to your workflow
 4. Connect the output port of the Image Reader to the input port of the Filter
 5. Select the desired filter type and adjust parameters
-6. Add a Writer module to your workflow
+6. Add a Writer tool to your workflow
 7. Connect the output port of the Filter to the input port of the Writer
 8. Configure the Writer with your desired output location and format
 9. Run the workflow to apply the filter and save the results
@@ -130,7 +130,7 @@ To filter medical images:
    :alt: Image Filtering Workflow
    :width: 600px
 
-This workflow enables precise control over image enhancement techniques while maintaining compatibility with downstream analysis modules.
+This workflow enables precise control over image enhancement techniques while maintaining compatibility with downstream analysis tools.
 
 Image Fusion
 ------------
@@ -140,12 +140,12 @@ Image fusion combines information from multiple images into a single composite i
 How It Works
 ^^^^^^^^^^^^
 
-1. **Image Reader Module**: Load the images you want to fuse
+1. **Image Reader Tool**: Load the images you want to fuse
 
-   * You'll need two separate Image Reader modules, one for each input image
+   * You'll need two separate Image Reader tools, one for each input image
    * Both images should have compatible dimensions for proper fusion
 
-2. **Image Fusion Module**: Combine the images using one of three fusion methods
+2. **Image Fusion Tool**: Combine the images using one of three fusion methods
 
    * **Weighted Fusion**: Linear combination of input images
      * Weight 1: Contribution of first image (0-1)
@@ -163,7 +163,7 @@ How It Works
      * SVD Solver: Algorithm for Singular Value Decomposition
      * Components: Number of principal components
 
-3. **Writer Module**: Save the fused image to your desired location
+3. **Writer Tool**: Save the fused image to your desired location
 
    * Select output location and format
    * Preserve metadata from the original images
@@ -173,13 +173,13 @@ Workflow Integration
 
 To fuse medical images:
 
-1. Add two Image Reader modules to your workflow
+1. Add two Image Reader tools to your workflow
 2. Configure each Image Reader to load one of your source images
-3. Add an Image Fusion module to your workflow
-4. Connect the output ports of both Image Readers to the input ports of the Image Fusion module
+3. Add an Image Fusion tool to your workflow
+4. Connect the output ports of both Image Readers to the input ports of the Image Fusion tool
 5. Select the desired fusion method and adjust its parameters
-6. Add a Writer module to your workflow
-7. Connect the output port of the Image Fusion module to the input port of the Writer
+6. Add a Writer tool to your workflow
+7. Connect the output port of the Image Fusion tool to the input port of the Writer
 8. Configure the Writer with your desired output location and format
 9. Run the workflow to perform the fusion and save the results
 
@@ -197,17 +197,17 @@ Image registration is a crucial step in medical image analysis, especially for m
 How It Works
 ^^^^^^^^^^^^
 
-1. **Image Reader Module (Fixed Image)**: Load the CT image as the fixed (reference) image
+1. **Image Reader Tool (Fixed Image)**: Load the CT image as the fixed (reference) image
 
    * Configure the reader to point to your CT data source
    * CT scans typically provide detailed anatomical information
 
-2. **Image Reader Module (Moving Image)**: Load the PET image as the moving image to be aligned
+2. **Image Reader Tool (Moving Image)**: Load the PET image as the moving image to be aligned
 
    * Configure the reader to point to your PET data source
    * PET scans provide functional or metabolic information
 
-3. **Image Registration Module**: Align the PET (moving) image to the CT (fixed) image
+3. **Image Registration Tool**: Align the PET (moving) image to the CT (fixed) image
 
    * **Rigid Registration**: Maintains shape and size, only allows rotation and translation
      * Number of Histogram Bins: Controls the granularity of intensity matching
@@ -221,7 +221,7 @@ How It Works
      * Number of Iterations: Controls the optimization process
      * Final Grid Spacing: Determines the density of the deformation field
 
-4. **Writer Module**: Save the registered PET image
+4. **Writer Tool**: Save the registered PET image
 
    * Select output location and format
    * The registered image will be aligned to the anatomical reference of the CT image
@@ -235,16 +235,16 @@ Workflow Integration
 
 To register AutoPET images:
 
-1. Add an Image Reader module for the fixed (CT) image
+1. Add an Image Reader tool for the fixed (CT) image
 2. Configure the first Image Reader to load your CT image
-3. Add a second Image Reader module for the moving (PET) image
+3. Add a second Image Reader tool for the moving (PET) image
 4. Configure the second Image Reader to load your PET image
-5. Add an Image Registration module to your workflow
-6. Connect the output port of the CT Image Reader to the "fix image" input port of the Image Registration module
-7. Connect the output port of the PET Image Reader to the "moving image" input port of the Image Registration module
+5. Add an Image Registration tool to your workflow
+6. Connect the output port of the CT Image Reader to the "fix image" input port of the Image Registration tool
+7. Connect the output port of the PET Image Reader to the "moving image" input port of the Image Registration tool
 8. Select the appropriate registration type and parameters based on your data
-9. Add a Writer module to your workflow
-10. Connect the output port of the Image Registration module to the input port of the Writer
+9. Add a Writer tool to your workflow
+10. Connect the output port of the Image Registration tool to the input port of the Writer
 11. Configure the Writer with your desired output location and format
 12. Run the workflow to perform the registration and save the results
 
@@ -258,28 +258,28 @@ This advanced workflow combines both registration and fusion techniques to creat
 How It Works
 ^^^^^^^^^^^^
 
-1. **Image Reader Module (CT)**: Load the CT image which serves dual purposes:
+1. **Image Reader Tool (CT)**: Load the CT image which serves dual purposes:
 
    * Acts as the fixed (reference) image for registration
    * Provides anatomical information for the fusion process (Image 2)
 
-2. **Image Reader Module (PET)**: Load the PET image as the moving image to be aligned
+2. **Image Reader Tool (PET)**: Load the PET image as the moving image to be aligned
 
    * The PET data contains functional/metabolic information
    * Will be spatially registered to match the CT reference frame
 
-3. **Image Registration Module**: Align the PET image to the CT reference
+3. **Image Registration Tool**: Align the PET image to the CT reference
 
    * Uses either rigid or non-rigid registration depending on requirements
    * Produces a spatially aligned PET image that matches the CT coordinate system
 
-4. **Image Fusion Module**: Combine the registered PET with the original CT
+4. **Image Fusion Tool**: Combine the registered PET with the original CT
 
-   * **Input 1**: Registered PET image (from registration module)
+   * **Input 1**: Registered PET image (from registration tool)
    * **Input 2**: Original CT image (directly from CT Image Reader)
    * Creates a single composite image highlighting both structure and function
 
-5. **Writer Module**: Save the fused image for further analysis
+5. **Writer Tool**: Save the fused image for further analysis
 
    * Preserves both anatomical context and metabolic information
    * Can be saved in various formats for use in clinical or research contexts
@@ -293,13 +293,13 @@ Workflow Integration
 
 To implement this PET/CT registration and fusion pipeline:
 
-1. Add two Image Reader modules to your workflow:
+1. Add two Image Reader tools to your workflow:
    * One for the CT image
    * One for the PET image
 
 2. Configure both Image Readers to load the appropriate data
 
-3. Add an Image Registration module and connect:
+3. Add an Image Registration tool and connect:
    * CT Image Reader output → "fix image" input
    * PET Image Reader output → "moving image" input
 
@@ -307,16 +307,16 @@ To implement this PET/CT registration and fusion pipeline:
    * For most applications, rigid registration with appropriate histogram bins
    * For soft tissue focus, consider non-rigid registration
 
-5. Add an Image Fusion module and connect:
-   * Registration module output → "Image 1" input 
+5. Add an Image Fusion tool and connect:
+   * Registration tool output → "Image 1" input 
    * CT Image Reader output → "Image 2" input
 
 6. Configure fusion parameters:
    * For clinical viewing, weighted fusion with customized color maps
    * For feature analysis, consider PCA or wavelet fusion
 
-7. Add a Writer module and connect:
-   * Fusion module output → Writer input
+7. Add a Writer tool and connect:
+   * Fusion tool output → Writer input
 
 8. Configure the Writer with your desired output location and format
 
@@ -332,28 +332,28 @@ This workflow combines registration and filtering techniques to enhance specific
 How It Works
 ^^^^^^^^^^^^
 
-1. **Image Reader Module (CT)**: Load the CT image as the fixed (reference) image
+1. **Image Reader Tool (CT)**: Load the CT image as the fixed (reference) image
 
    * Provides the anatomical reference frame
    * CT scans offer detailed structural information
 
-2. **Image Reader Module (PET)**: Load the PET image as the moving image
+2. **Image Reader Tool (PET)**: Load the PET image as the moving image
 
    * Contains functional/metabolic information
    * Will be spatially aligned to match the CT reference frame
 
-3. **Image Registration Module**: Align the PET image to the CT reference
+3. **Image Registration Tool**: Align the PET image to the CT reference
 
    * Uses either rigid or non-rigid registration depending on requirements
    * Ensures the metabolic activity is precisely localized to anatomical structures
 
-4. **Image Filter Module**: Apply selected filters to the registered PET image
+4. **Image Filter Tool**: Apply selected filters to the registered PET image
 
    * Enhances specific features of interest
    * Reduces noise or highlights particular characteristics
    * Available filters include Gabor, Wavelet, Threshold, Gradient, and Smoothing
 
-5. **Writer Module**: Save the filtered registered image
+5. **Writer Tool**: Save the filtered registered image
 
    * Preserves the spatial alignment with anatomical structures
    * Enhanced features are ready for further analysis
@@ -367,13 +367,13 @@ Workflow Integration
 
 To implement this PET/CT registration and filtering pipeline:
 
-1. Add two Image Reader modules to your workflow:
+1. Add two Image Reader tools to your workflow:
    * One for the CT image
    * One for the PET image
 
 2. Configure both Image Readers to load the appropriate data
 
-3. Add an Image Registration module and connect:
+3. Add an Image Registration tool and connect:
    * CT Image Reader output → "fix image" input
    * PET Image Reader output → "moving image" input
 
@@ -381,33 +381,33 @@ To implement this PET/CT registration and filtering pipeline:
    * For most applications, rigid registration is sufficient
    * For areas with tissue deformation, consider non-rigid registration
 
-5. Add an Image Filter module and connect:
-   * Registration module output → Filter input 
+5. Add an Image Filter tool and connect:
+   * Registration tool output → Filter input 
 
 Reading a DICOM Series
 ----------------------
 
 Medical images are often stored in the DICOM format, which can be easily imported into Radiuma for analysis:
 
-1. **Add Image Reader Module**
-   - Double-click on the "Image Reader" module in the left panel
+1. **Add Image Reader Tool**
+   - Double-click on the "Image Reader" tool in the left panel
    - A new node will appear in the workspace
 
-2. **Configure Module**
+2. **Configure Tool**
    - Double-click on the Image Reader node to open its configuration dialog
    - Select "Folder" as the Source Type
    - Click "Browse" and navigate to your DICOM directory
    - Click "OK" to confirm
 
-3. **Run the Module**
+3. **Run the Tool**
    - Click the "Run" button on the Image Reader node
-   - The module will process the DICOM files and make them available for other modules
+   - The tool will process the DICOM files and make them available for other tools
    - Status information appears in the log panel at the bottom
 
 4. **Visualize the Image**
-   - Add an "Image Viewer" module to the workspace
+   - Add an "Image Viewer" tool to the workspace
    - Connect the output port of the Image Reader to the input port of the Image Viewer
-   - Run the Image Viewer module to display the images
+   - Run the Image Viewer tool to display the images
    - Use the viewer toolbox for panning, zooming, and adjusting window/level settings
 
 Radiomics and Classification
@@ -418,12 +418,12 @@ This workflow demonstrates how to extract radiomic features from medical images 
 How It Works
 ^^^^^^^^^^^^
 
-1. **Image Reader Module**: Load the medical image containing regions of interest
+1. **Image Reader Tool**: Load the medical image containing regions of interest
 
    * Configure the reader to load your source image (CT, MRI, PET, etc.)
    * This image provides the intensity values for feature extraction
 
-2. **Image Filter Module**: Apply preprocessing filters to enhance features of interest
+2. **Image Filter Tool**: Apply preprocessing filters to enhance features of interest
 
    * Select appropriate filters based on the analysis goals
    * Enhance specific image characteristics that may correlate with clinical outcomes
@@ -436,7 +436,7 @@ How It Works
    * Features can include first-order statistics, shape features, and texture metrics
    * Configure appropriate discretization parameters based on your imaging modality
 
-4. **Classification Module**: Apply machine learning to analyze radiomic features
+4. **Classification Tool**: Apply machine learning to analyze radiomic features
 
    * Uses extracted features to train a classification model
    * Supports multiple algorithm options:
@@ -446,7 +446,7 @@ How It Works
      * Neural Networks: Deep learning approach for complex relationships
    * Includes options for cross-validation and performance evaluation
 
-5. **Writer Module**: Save classification results and model performance metrics
+5. **Writer Tool**: Save classification results and model performance metrics
 
    * Export classification results in tabular format (CSV, Excel)
    * Save performance metrics like accuracy, sensitivity, specificity, and AUC
@@ -457,25 +457,25 @@ Workflow Integration
 
 To implement this radiomics and classification pipeline:
 
-1. Add an Image Reader module to your workflow
+1. Add an Image Reader tool to your workflow
    * Configure it to load your medical image
 
-2. Add an Image Filter module and connect:
+2. Add an Image Filter tool and connect:
    * Image Reader output → Filter input
    * Configure appropriate filter parameters
 
-3. Add a Radiomic Feature Generator module and connect:
-   * Filter module output → "Image" input
+3. Add a Radiomic Feature Generator tool and connect:
+   * Filter tool output → "Image" input
    * Connect a segmentation mask to the "Mask" input
    * Configure feature extraction parameters 
 
-4. Add a Classification module and connect:
+4. Add a Classification tool and connect:
    * Radiomic Feature Generator output → Classification input
    * Select your preferred classification algorithm
    * Configure training parameters and cross-validation options
 
-5. Add a Writer module and connect:
-   * Classification module output → Writer input
+5. Add a Writer tool and connect:
+   * Classification tool output → Writer input
    * Configure to save results in your preferred format
 
 6. Run the workflow to extract features, train the classifier, and save results
@@ -502,7 +502,7 @@ How It Works
    * Aligns a second moving image (e.g., different modality or timepoint)
    * Ensures all images exist in the same spatial reference frame
 
-3. **Image Fusion Module**: Combine information from both registered images
+3. **Image Fusion Tool**: Combine information from both registered images
 
    * Fuses the two registered images into a single comprehensive visualization
    * Preserves complementary information from each registered image
@@ -514,7 +514,7 @@ How It Works
    * Uses appropriate segmentation mask to define regions of interest
    * Extracts features that capture the combined information from both modalities
 
-5. **Regression Module**: Build predictive models for continuous outcomes
+5. **Regression Tool**: Build predictive models for continuous outcomes
 
    * Uses radiomic features as input variables
    * Supports multiple regression algorithms:
@@ -524,7 +524,7 @@ How It Works
      * Random Forest Regression: For complex feature interactions
    * Includes options for model validation and performance metrics
 
-6. **Writer Module**: Save regression results and model performance
+6. **Writer Tool**: Save regression results and model performance
 
    * Export prediction results and calculated features
    * Save performance metrics like R-squared, MAE, and RMSE
@@ -535,38 +535,38 @@ Workflow Integration
 
 To implement this multi-registration regression pipeline:
 
-1. Add three Image Reader modules to your workflow:
+1. Add three Image Reader tools to your workflow:
    * One for the fixed reference image
    * One for the first moving image
    * One for the second moving image
 
-2. Add the first Image Registration module and connect:
+2. Add the first Image Registration tool and connect:
    * Fixed reference image → "fix image" input
    * First moving image → "moving image" input
    * Configure appropriate registration parameters
 
-3. Add the second Image Registration module and connect:
+3. Add the second Image Registration tool and connect:
    * Same fixed reference image → "fix image" input
    * Second moving image → "moving image" input
    * Configure appropriate registration parameters
 
-4. Add an Image Fusion module and connect:
+4. Add an Image Fusion tool and connect:
    * First registration output → "Image 1" input
    * Second registration output → "Image 2" input
    * Configure fusion parameters appropriate for your analysis
 
-5. Add a Radiomic Feature Generator module and connect:
-   * Fusion module output → "Image" input
+5. Add a Radiomic Feature Generator tool and connect:
+   * Fusion tool output → "Image" input
    * Connect a segmentation mask to the "Mask" input
    * Configure feature extraction parameters
 
-6. Add a Regression module and connect:
+6. Add a Regression tool and connect:
    * Radiomic Feature Generator output → Regression input
    * Select your preferred regression algorithm
    * Configure model parameters and validation options
 
-7. Add a Writer module and connect:
-   * Regression module output → Writer input
+7. Add a Writer tool and connect:
+   * Regression tool output → Writer input
    * Configure to save results in your preferred format
 
 8. Run the workflow to perform registrations, fusion, feature extraction, and regression modeling
@@ -581,7 +581,7 @@ This workflow demonstrates how to use unsupervised clustering techniques to disc
 How It Works
 ^^^^^^^^^^^^
 
-1. **Image Registration Module**: Align images for consistent spatial reference
+1. **Image Registration Tool**: Align images for consistent spatial reference
 
    * Register images from different timepoints or modalities
    * Ensures all subsequent analysis occurs in the same spatial reference frame
@@ -594,7 +594,7 @@ How It Works
    * Uses appropriate segmentation mask to define regions of interest
    * Configure parameters based on your specific imaging modality
 
-3. **Clustering Module**: Apply unsupervised learning to discover patterns
+3. **Clustering Tool**: Apply unsupervised learning to discover patterns
 
    * Uses radiomic features as input variables
    * Supports multiple clustering algorithms:
@@ -604,7 +604,7 @@ How It Works
      * Gaussian Mixture Model: Probabilistic model for distribution mixtures
    * Includes options for determining optimal cluster numbers and visualization
 
-4. **Writer Module**: Save clustering results and visualizations
+4. **Writer Tool**: Save clustering results and visualizations
 
    * Export cluster assignments and feature data
    * Save cluster visualization plots and statistics
@@ -615,22 +615,22 @@ Workflow Integration
 
 To implement this radiomics-based clustering pipeline:
 
-1. Add an Image Registration module to your workflow
-   * Configure the module with appropriate fixed and moving images
+1. Add an Image Registration tool to your workflow
+   * Configure the tool with appropriate fixed and moving images
    * Set registration parameters based on your specific application
 
-2. Add a Radiomic Feature Generator module and connect:
-   * Registration module output → "Image" input
+2. Add a Radiomic Feature Generator tool and connect:
+   * Registration tool output → "Image" input
    * Connect a segmentation mask to the "Mask" input
    * Configure feature extraction parameters appropriate for your analysis
 
-3. Add a Clustering module and connect:
+3. Add a Clustering tool and connect:
    * Radiomic Feature Generator output → Clustering input
    * Select your preferred clustering algorithm
    * Configure algorithm parameters and evaluation metrics
 
-4. Add a Writer module and connect:
-   * Clustering module output → Writer input
+4. Add a Writer tool and connect:
+   * Clustering tool output → Writer input
    * Configure to save results in your preferred format
 
 5. Run the workflow to perform registration, feature extraction, clustering analysis, and save results
