@@ -5,6 +5,14 @@ Image Fusion
    :alt: Image Fusion
    :width: 100%
 
+.. image:: images/12.image_fusion_wavelet.png
+   :alt: Image Fusion Wavelet
+   :width: 100%
+
+.. image:: images/12.image_fusion_pca.png
+   :alt: Image Fusion PCA
+   :width: 100%
+
 Advanced capabilities for combining information from multiple imaging modalities.
 
 Fusion Methods

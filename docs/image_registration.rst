@@ -5,6 +5,14 @@ Image Registration
    :alt: Image Registration
    :width: 100%
 
+.. image:: images/10.image_registration_non_rigid.png
+   :alt: Image Registration Non Rigid
+   :width: 100%
+
+.. image:: images/10.image_registration_simple_non_rigid.png
+   :alt: Image Registration Simple Non Rigid
+   :width: 100%
+   
 Tools for spatial alignment of images from different modalities or time points.
 
 Registration Types

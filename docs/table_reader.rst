@@ -5,6 +5,10 @@ Table Reader
    :alt: Table Reader
    :width: 100%
 
+.. image:: images/8.table_reader_column.png
+   :alt: Table Reader Column
+   :width: 100%
+
 Tools for importing tabular data in various formats.
 
 Reader Parameters

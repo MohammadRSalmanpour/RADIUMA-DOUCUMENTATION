@@ -8,6 +8,26 @@ Overview
    :alt: Regression
    :width: 100%
 
+.. image:: images/15.regression_imputation.png
+   :alt: Regression Imputation
+   :width: 100%
+
+.. image:: images/15.regression_scaling.png
+   :alt: Regression Scaling
+   :width: 100%
+
+.. image:: images/15.regression_feature_selection.png
+   :alt: Regression Feature Selection
+   :width: 100%
+
+.. image:: images/15.regression_hyperparameter_tuning.png
+   :alt: Regression Hyperparameter Tuning
+   :width: 100%
+
+.. image:: images/regressor_alg.png
+   :alt: Regressor Alg
+   :width: 100%
+
 The Regression tool provides multiple algorithms for predicting continuous target variables.
 
 Supported Algorithms

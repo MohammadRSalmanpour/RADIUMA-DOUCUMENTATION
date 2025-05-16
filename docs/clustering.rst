@@ -8,6 +8,26 @@ Overview
    :alt: Clustering
    :width: 100%
 
+.. image:: images/16.clustering_imputation.png
+   :alt: Clustering Imputation
+   :width: 100%
+
+.. image:: images/16.clustering_scaling.png
+   :alt: Clustering Scaling
+   :width: 100%
+
+.. image:: images/16.clustering_feature_selection.png
+   :alt: Clustering Feature Selection
+   :width: 100%
+
+.. image:: images/16.clustering_hyperparameter_tuning.png
+   :alt: Clustering Hyperparameter Tuning
+   :width: 100%
+
+.. image:: images/clustering_alg.png
+   :alt: Clustering Alg
+   :width: 100%
+
 The Clustering tool provides algorithms for grouping similar data points without labeled training data.
 
 Supported Algorithms

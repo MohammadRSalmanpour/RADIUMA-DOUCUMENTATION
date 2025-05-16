@@ -8,6 +8,26 @@ Overview
    :alt: Classification
    :width: 100%
 
+.. image:: images/14.classification_imputation.png
+   :alt: Classification Imputation
+   :width: 100%
+
+.. image:: images/14.classification_scaling.png
+   :alt: Classification Scaling
+   :width: 100%
+
+.. image:: images/14.classification_feature_selection.png
+   :alt: Classification Feature Selection
+   :width: 100%
+
+.. image:: images/14.classification_hyperparameter_tuning.png
+   :alt: Classification Hyperparameter Tuning
+   :width: 100%
+
+.. image:: images/classifier_alg.png
+   :alt: Classifier Alg
+   :width: 100%
+
 The Classification tool provides multiple algorithms for data analysis with customizable parameters through an intuitive user interface.
 
 Supported Algorithms

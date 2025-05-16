@@ -5,6 +5,22 @@ Image Filter
    :alt: Image Filter
    :width: 100%
 
+.. image:: images/11.image_filter_log.png
+   :alt: Image Filter LoG
+   :width: 100%
+
+.. image:: images/11.image_filter_laws.png
+   :alt: Image Filter Laws
+   :width: 100%
+
+.. image:: images/11.image_filter_gabor.png
+   :alt: Image Filter Gabor
+   :width: 100%
+
+.. image:: images/11.image_filter_wavelet.png
+   :alt: Image Filter Wavelet
+   :width: 100%
+   
 Comprehensive set of image filtering options for enhancing features, reducing noise, and preparing images for feature extraction.
 
 Filter Types
