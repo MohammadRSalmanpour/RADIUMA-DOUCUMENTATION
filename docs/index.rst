@@ -14,5 +14,17 @@ Radiuma - Visualized & Standardized Environment for Radiomics Analysis is a powe
    overview
    key_features
    visual_node_system
-   workflow_tools
+   image_viewer
+   image_reader
+   rt_struct_reader
+   table_reader
+   image_table_writer
+   image_registration
+   image_filter
+   image_fusion
+   radiomic_feature_generator
+   preprocessing
+   classification
+   regression
+   clustering
    examples
