@@ -4,22 +4,27 @@ Image Registration
 .. image:: images/10.image_registration.png
    :alt: Image Registration
    :width: 100%
-
-.. image:: images/10.image_registration_non_rigid.png
-   :alt: Image Registration Non Rigid
-   :width: 100%
-
-.. image:: images/10.image_registration_simple_non_rigid.png
-   :alt: Image Registration Simple Non Rigid
-   :width: 100%
    
 Tools for spatial alignment of images from different modalities or time points.
 
 Registration Types
 ^^^^^^^^^^^^^^^^^^
+.. image:: images/10.image_registration.png
+   :alt: Image Registration
+   :width: 100%
 
 * **Rigid Registration**: Maintains shape and size, only allows rotation and translation
+
+.. image:: images/10.image_registration_non_rigid.png
+   :alt: Image Registration Non Rigid
+   :width: 100%
+
 * **Non-Rigid Registration**: Allows local deformations for better alignment
+
+.. image:: images/10.image_registration_simple_non_rigid.png
+   :alt: Image Registration Simple Non Rigid
+   :width: 100%
+   
 * **Simple Non-Rigid**: Simplified version of non-rigid registration for faster processing
 
 References

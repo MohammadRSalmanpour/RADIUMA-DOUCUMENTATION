@@ -4,32 +4,40 @@ Image Filter
 .. image:: images/11.image_filter.png
    :alt: Image Filter
    :width: 100%
-
-.. image:: images/11.image_filter_log.png
-   :alt: Image Filter LoG
-   :width: 100%
-
-.. image:: images/11.image_filter_laws.png
-   :alt: Image Filter Laws
-   :width: 100%
-
-.. image:: images/11.image_filter_gabor.png
-   :alt: Image Filter Gabor
-   :width: 100%
-
-.. image:: images/11.image_filter_wavelet.png
-   :alt: Image Filter Wavelet
-   :width: 100%
    
 Comprehensive set of image filtering options for enhancing features, reducing noise, and preparing images for feature extraction.
 
 Filter Types
 ^^^^^^^^^^^^
 
+.. image:: images/11.image_filter.png
+   :alt: Image Filter
+   :width: 100%
+
 * **Mean Filter**: Smooths images by reducing noise while preserving edges
+
+.. image:: images/11.image_filter_log.png
+   :alt: Image Filter LoG
+   :width: 100%
+
 * **LoG (Laplacian of Gaussian) Filter**: Highlights edges and regions of rapid intensity change
+
+.. image:: images/11.image_filter_laws.png
+   :alt: Image Filter Laws
+   :width: 100%
+
 * **Laws Filter**: Extracts texture features using small convolution kernels
+
+.. image:: images/11.image_filter_gabor.png
+   :alt: Image Filter Gabor
+   :width: 100%
+
 * **Gabor Filter**: Texture and edge detection at various orientations and scales
+
+.. image:: images/11.image_filter_wavelet.png
+   :alt: Image Filter Wavelet
+   :width: 100%
+   
 * **Wavelet Filter**: Multi-scale analysis for feature extraction
 
 Key Parameters

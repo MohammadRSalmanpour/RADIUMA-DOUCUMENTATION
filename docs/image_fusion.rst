@@ -5,21 +5,26 @@ Image Fusion
    :alt: Image Fusion
    :width: 100%
 
-.. image:: images/12.image_fusion_wavelet.png
-   :alt: Image Fusion Wavelet
-   :width: 100%
-
-.. image:: images/12.image_fusion_pca.png
-   :alt: Image Fusion PCA
-   :width: 100%
-
 Advanced capabilities for combining information from multiple imaging modalities.
 
 Fusion Methods
 ^^^^^^^^^^^^^^
+.. image:: images/12.image_fusion.png
+   :alt: Image Fusion
+   :width: 100%
 
 * **Weighted Fusion**: Linear combination of input images
+
+.. image:: images/12.image_fusion_wavelet.png
+   :alt: Image Fusion Wavelet
+   :width: 100%
+
 * **Wavelet Fusion**: Multi-resolution decomposition and fusion
+
+.. image:: images/12.image_fusion_pca.png
+   :alt: Image Fusion PCA
+   :width: 100%
+   
 * **PCA Fusion**: Principal Component Analysis based fusion
 
 Key Parameters

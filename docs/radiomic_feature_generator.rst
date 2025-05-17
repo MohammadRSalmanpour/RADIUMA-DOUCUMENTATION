@@ -5,11 +5,13 @@ Radiomic Feature Generator
    :alt: Radiomic Feature Generator
    :width: 100%
 
+Core tool for extracting standardized quantitative features from medical images following IBSI guidelines. 
+
 .. image:: images/13.radiomic_deep.png
    :alt: Radiomic Feature Generator Deep
    :width: 100%
-
-Core tool for extracting standardized quantitative features from medical images following IBSI guidelines.
+   
+This tool also has a deep learning mode that can be used to extract features from images.
 
 Feature Types
 ^^^^^^^^^^^^^

@@ -5,11 +5,13 @@ Table Reader
    :alt: Table Reader
    :width: 100%
 
+This tool is used for importing tabular data in various formats. The row concatenation feature allows users to combine multiple data tables vertically by appending rows from one table to another. This is particularly useful when merging data sets that share the same column structure.
+
 .. image:: images/8.table_reader_column.png
    :alt: Table Reader Column
    :width: 100%
 
-Tools for importing tabular data in various formats.
+The column merge capability enables combining tables horizontally by joining columns from different tables. This feature is essential when working with related data sets that need to be analyzed together, allowing users to create comprehensive views of their data.
 
 Reader Parameters
 ^^^^^^^^^^^^^^^^^
