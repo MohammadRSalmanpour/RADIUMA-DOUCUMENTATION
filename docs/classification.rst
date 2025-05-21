@@ -8,27 +8,37 @@ Overview
    :alt: Classification
    :width: 100%
 
+The Classification tool provides multiple algorithms for data analysis with customizable parameters through an intuitive user interface.
+
 .. image:: images/14.classification_imputation.png
    :alt: Classification Imputation
    :width: 100%
+
+The imputation step addresses missing values in your dataset by replacing them with calculated values. Options include mean, median, or mode imputation for categorical data, ensuring your classification models have complete datasets for accurate predictions.
 
 .. image:: images/14.classification_scaling.png
    :alt: Classification Scaling
    :width: 100%
 
+Feature scaling transforms your features to a common scale, which is essential for many classification algorithms that are sensitive to feature magnitudes. Methods like StandardScaler, MinMaxScaler, and RobustScaler help improve model convergence and performance.
+
 .. image:: images/14.classification_feature_selection.png
    :alt: Classification Feature Selection
    :width: 100%
+
+Feature selection identifies the most informative variables for your classification task, reducing dimensionality and computational complexity. This process helps eliminate noise, prevent overfitting, and improve model accuracy by focusing on truly relevant features.
 
 .. image:: images/14.classification_hyperparameter_tuning.png
    :alt: Classification Hyperparameter Tuning
    :width: 100%
 
+Hyperparameter tuning systematically searches for the optimal model configuration to maximize classification performance. Using methods like grid search or random search, this step fine-tunes algorithm-specific parameters that cannot be learned directly from the data.
+
 .. image:: images/classifier_alg.png
    :alt: Classifier Alg
    :width: 100%
 
-The Classification tool provides multiple algorithms for data analysis with customizable parameters through an intuitive user interface.
+The algorithm selection interface lets you choose and configure the most appropriate classification model for your data characteristics and prediction goals, with detailed options for each algorithm's parameters.
 
 Supported Algorithms
 ^^^^^^^^^^^^^^^^^^^^

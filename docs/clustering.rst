@@ -8,27 +8,37 @@ Overview
    :alt: Clustering
    :width: 100%
 
+The Clustering tool provides algorithms for grouping similar data points without labeled training data.
+
 .. image:: images/16.clustering_imputation.png
    :alt: Clustering Imputation
    :width: 100%
+
+The imputation step replaces missing values in your dataset with estimated values, ensuring clustering algorithms can process complete data. Methods include mean, median, or constant value imputation for numerical data and mode imputation for categorical variables.
 
 .. image:: images/16.clustering_scaling.png
    :alt: Clustering Scaling
    :width: 100%
 
+Feature scaling standardizes your data features to equivalent ranges, which is crucial for distance-based clustering algorithms. Techniques like StandardScaler, MinMaxScaler, and RobustScaler ensure features contribute equally to similarity calculations regardless of their original scales.
+
 .. image:: images/16.clustering_feature_selection.png
    :alt: Clustering Feature Selection
    :width: 100%
+
+Feature selection reduces dimensionality by identifying the most relevant attributes for cluster formation. This step improves computational efficiency, reduces noise, and enhances cluster definition by eliminating redundant or irrelevant variables that may obscure natural groupings.
 
 .. image:: images/16.clustering_hyperparameter_tuning.png
    :alt: Clustering Hyperparameter Tuning
    :width: 100%
 
+Hyperparameter tuning optimizes algorithm-specific parameters like number of clusters, convergence thresholds, or distance metrics. This systematic search identifies the configuration that produces the most coherent and well-separated clusters for your specific dataset.
+
 .. image:: images/clustering_alg.png
    :alt: Clustering Alg
    :width: 100%
 
-The Clustering tool provides algorithms for grouping similar data points without labeled training data.
+The algorithm selection interface allows you to choose from various clustering approaches based on your data characteristics and analytical goals. Each algorithm offers different strengths for discovering patterns in data with distinct distribution shapes, densities, and feature types.
 
 Supported Algorithms
 ^^^^^^^^^^^^^^^^^^^^

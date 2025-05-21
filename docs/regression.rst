@@ -8,27 +8,37 @@ Overview
    :alt: Regression
    :width: 100%
 
+The Regression tool provides multiple algorithms for predicting continuous target variables.
+
 .. image:: images/15.regression_imputation.png
    :alt: Regression Imputation
    :width: 100%
+
+The imputation step handles missing values in your dataset by replacing them with substituted values. Options include mean, median, or constant value imputation, ensuring your regression models can process complete datasets without gaps.
 
 .. image:: images/15.regression_scaling.png
    :alt: Regression Scaling
    :width: 100%
 
+Feature scaling normalizes your data features to a similar range, improving model convergence and performance. Available methods include StandardScaler, MinMaxScaler, and RobustScaler, each optimized for different data distributions.
+
 .. image:: images/15.regression_feature_selection.png
    :alt: Regression Feature Selection
    :width: 100%
+
+Feature selection identifies and retains the most relevant variables for your regression task. This reduces dimensionality, prevents overfitting, and improves model interpretability by eliminating redundant or irrelevant features.
 
 .. image:: images/15.regression_hyperparameter_tuning.png
    :alt: Regression Hyperparameter Tuning
    :width: 100%
 
+Hyperparameter tuning optimizes model parameters that cannot be learned from the data directly. Using techniques like grid search or random search, this process systematically identifies the best configuration for maximum predictive performance.
+
 .. image:: images/regressor_alg.png
    :alt: Regressor Alg
    :width: 100%
 
-The Regression tool provides multiple algorithms for predicting continuous target variables.
+The algorithm selection interface allows you to choose and configure the appropriate regression model for your specific data characteristics and predictive goals.
 
 Supported Algorithms
 ^^^^^^^^^^^^^^^^^^^^
