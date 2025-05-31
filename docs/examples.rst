@@ -126,8 +126,27 @@ To filter medical images:
 8. Configure the Writer with your desired output location and format
 9. Run the workflow to apply the filter and save the results
 
+
 .. image:: images/Screenshot_2025-04-26_at_19.22.48.png
    :alt: Image Filtering Workflow
+   :width: 600px
+
+For example, we can apply a Mean filter to the image to smooth the image. We set params to this:
+
+.. image:: images/filter_param.png
+   :alt: Image Filter Parameters
+   :width: 600px
+
+The image before filtering is:
+
+.. image:: images/filter_before.png
+   :alt: Image Before Filtering
+   :width: 600px
+
+The image after filtering is:
+
+.. image:: images/filter_after.png
+   :alt: Image After Filtering
    :width: 600px
 
 This workflow enables precise control over image enhancement techniques while maintaining compatibility with downstream analysis tools.
@@ -323,6 +342,24 @@ To implement this PET/CT registration and fusion pipeline:
 9. Run the workflow to register, fuse, and save the results
 
 This integrated workflow creates comprehensive visualizations that preserve the metabolic sensitivity of PET while maintaining the anatomical detail of CT, which is particularly valuable for tumor localization, treatment planning, and response assessment in oncology applications.
+
+This is the PET image:
+
+.. image:: images/filter_before.png
+   :alt: PET Image
+   :width: 600px
+
+This is the CT image:
+
+.. image:: images/ct.png
+   :alt: CT Image
+   :width: 600px
+
+This is the fusion of the Registered PET and CT images:
+
+.. image:: images/after_fusion.png
+   :alt: Image Fusion
+   :width: 600px
 
 PET/CT Registration and Filtering
 ---------------------------------
