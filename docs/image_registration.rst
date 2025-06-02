@@ -6,6 +6,7 @@ Image Registration
    :width: 100%
    
 Tools for spatial alignment of images from different modalities or time points.
+Note:
 
 Registration Types
 ^^^^^^^^^^^^^^^^^^
