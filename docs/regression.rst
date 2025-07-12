@@ -129,6 +129,8 @@ Regression Pipeline
 
 The Regression tool guides you through a complete workflow:
 
+** Data Requirement: The first column of both the input data and the target data must contain identical sample IDs
+
 **1. Data Preprocessing**
 
 * **Train/Test Split**: Divide data into training and testing sets
