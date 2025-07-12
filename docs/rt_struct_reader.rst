@@ -17,6 +17,7 @@ Important Notes
 ^^^^^^^^^^^^^^^^
 
 To ensure proper pairing between RTSTRUCT and image data:
+
 * If the RTSTRUCT is a **single DICOM file**, its **filename** must exactly match the **name of the corresponding image folder**.
 * Both RTSTRUCT and main image directories must follow a **single-level nested folder structure**, where each case is stored in its own folder or file (depending on the format).
 
