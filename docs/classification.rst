@@ -137,6 +137,8 @@ Classification Pipeline
 
 The Classification tool guides you through a complete machine learning workflow:
 
+**   Data Requirement: The first column of both the input data and the target data must contain identical sample IDs.
+
 **1. Data Splitting**
 
 * **Shuffle**: Enable shuffling to randomize the data before splitting
