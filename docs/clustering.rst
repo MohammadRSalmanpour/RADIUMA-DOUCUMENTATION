@@ -138,6 +138,8 @@ Clustering Pipeline
 
 The Clustering tool guides you through a complete workflow:
 
+**   Data Requirement: The first column of the input data must contain unique sample IDs.
+
 **1. Data Preprocessing**
 
 * **Feature Scaling**: Standardize features to equal scale
