@@ -21,7 +21,7 @@ View Types
 File Support
 ^^^^^^^^^^^^
 
-.. image:: images/file_support.png
+.. image:: images/file_support_image.png
    :alt: Image Viewer
    :width: 100%
 
