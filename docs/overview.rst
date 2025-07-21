@@ -1,7 +1,7 @@
 Overview
 ========
 
-.. image:: images/1.radiuma.png
+.. image:: images/1.radiuma_1.png
    :alt: Radiuma
    :width: 100%
    
