@@ -10,12 +10,15 @@ Supports 2D or 3D filtering modes with customizable boundary conditions (e.g., N
 
 Mean Filter
 ^^^^^^^^^^^^
-.. image:: images/11.image_filter_mean.png
-   :alt: Image Filter
+
+.. image:: images/11.image_filter.png
+   :alt: Mean Filter
    :width: 100%
 
-Smooths images by reducing noise while preserving edges
-* **Key Parameters**
+Smooths images by reducing noise while preserving edges.
+
+**Key Parameters**
+
 * **Filter Size**: Size of the kernel for mean calculation (default: 1)
 
 
