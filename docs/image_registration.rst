@@ -15,7 +15,7 @@ Rigid Registration
    :alt: Rigid Registration
    :width: 100%
 
-Maintains shape and size by applying only rotation and translation. Suitable for aligning anatomical regions with consistent size and shape.
+Rigid Registration maintains shape and size by applying only rotation and translation. Suitable for aligning anatomical regions with consistent size and shape.
 
 **Key Parameters**
 
@@ -33,7 +33,7 @@ Non-Rigid Registration
    :alt: Non-Rigid Registration
    :width: 100%
 
-Allows local deformations for more precise alignment, especially useful for soft tissue registration in follow-up or multimodal scans.
+Non-Rigid Registration allows local deformations for more precise alignment, especially useful for soft tissue registration in follow-up or multimodal scans.
 
 **Key Parameters**
 
@@ -51,7 +51,7 @@ Simple Non-Rigid Registration
    :alt: Simple Non-Rigid Registration
    :width: 100%
 
-A lightweight version of non-rigid registration optimized for speed and simplicity. Good for applications requiring fast processing with moderate accuracy.
+Simple Non-Rigid Registration is a lightweight version of non-rigid registration optimized for speed and simplicity. Good for applications requiring fast processing with moderate accuracy.
 
 **Key Parameters**
 
