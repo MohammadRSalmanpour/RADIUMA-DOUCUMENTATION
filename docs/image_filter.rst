@@ -5,67 +5,61 @@ Image Filter
    :alt: Image Filter
    :width: 100%
    
-Comprehensive set of image filtering options for enhancing features, reducing noise, and preparing images for feature extraction.
+Comprehensive set of image filtering options for enhancing features, reducing noise, and preparing images for feature extraction.  
+Supports 2D or 3D filtering modes with customizable boundary conditions (e.g., Nearest, Zero, etc.).
 
-Filter Types
+Mean Filter
 ^^^^^^^^^^^^
-
-.. image:: images/11.image_filter.png
+.. image:: images/11.image_filter_mean.png
    :alt: Image Filter
    :width: 100%
 
-* **Mean Filter**: Smooths images by reducing noise while preserving edges
+Smooths images by reducing noise while preserving edges
+**Key Parameters**
+* **Filter Size**: Size of the kernel for mean calculation (default: 1)
 
+
+LoG (Laplacian of Gaussian) Filter
+^^^^^^^^^^^^
 .. image:: images/11.image_filter_log.png
    :alt: Image Filter LoG
    :width: 100%
 
-* **LoG (Laplacian of Gaussian) Filter**: Highlights edges and regions of rapid intensity change
+Highlights edges and regions of rapid intensity change
 
-.. image:: images/11.image_filter_laws.png
-   :alt: Image Filter Laws
-   :width: 100%
-
-* **Laws Filter**: Extracts texture features using small convolution kernels
-
-.. image:: images/11.image_filter_gabor.png
-   :alt: Image Filter Gabor
-   :width: 100%
-
-* **Gabor Filter**: Texture and edge detection at various orientations and scales
-
-.. image:: images/11.image_filter_wavelet.png
-   :alt: Image Filter Wavelet
-   :width: 100%
-   
-* **Wavelet Filter**: Multi-scale analysis for feature extraction
-
-Key Parameters
-^^^^^^^^^^^^^^
-
-**Common Parameters**
-* **Filter Type**: Selection of filter algorithm (Mean, LoG, Laws, Gabor, Wavelet)
-* **Slice/Volume Processing**: 2D or 3D filtering
-* **Boundary Condition**: Handling of image boundaries (Nearest, Zero, etc.)
-
-**Mean Filter**
-* **Filter Size**: Size of the kernel for mean calculation (default: 1)
-
-**LoG Filter**
+**Key Parameters**
 * **Sigma**: Scale parameter for Gaussian (default: 1)
 * **Sigma Truncate**: Truncation factor for Gaussian kernel (default: 1)
 * **Calculate Average**: Whether to calculate average in filter (default: False)
 * **Riesz Steered**: Apply Riesz transform (default: False)
 * **Riesz Parameters**: Parameters for Riesz transform (default: "1,0,2")
 
-**Laws Filter**
+Laws Filter
+^^^^^^^^^^^^
+.. image:: images/11.image_filter_laws.png
+   :alt: Image Filter Laws
+   :width: 100%
+
+Extracts texture features using small convolution kernels
+
+**Key Parameters**
 * **Kernel**: Specific Laws kernel to apply (default: "L5S5E5")
 * **Calculate Energy**: Calculate energy statistics (default: False)
 * **Delta**: Step size parameter (default: 1)
 * **Rotation Invariance**: Enable rotation invariance (default: False)
 * **Pooling Method**: Method for combining filter responses (default: "Max")
 
-**Gabor Filter**
+
+Gabor Filter
+^^^^^^^^^^^^
+
+.. image:: images/11.image_filter_gabor.png
+   :alt: Image Filter Gabor
+   :width: 100%
+
+Texture and edge detection at various orientations and scales
+
+**Key Parameters**
 * **Gamma**: Controls filter shape (default: 1)
 * **Lambda**: Wavelength of sinusoidal factor (default: 0.1)
 * **Theta Initial**: Starting orientation of filter (default: 0.1)
@@ -76,7 +70,17 @@ Key Parameters
 * **Sigma**: Sigma value for Gabor kernel (default: 1)
 * **Sigma Truncate**: Truncation factor for Gaussian kernel (default: 1)
 
-**Wavelet Filter**
+
+Wavelet Filter
+^^^^^^^^^^^^
+
+.. image:: images/11.image_filter_wavelet.png
+   :alt: Image Filter Wavelet
+   :width: 100%
+   
+* **Wavelet Filter**: Multi-scale analysis for feature extraction
+
+**Key Parameters**
 * **Filter Configuration**: Specific wavelet decomposition level to use (default: "LL")
 * **Filter Size**: Size of the filter kernel (default: 1)
 * **Rotation Invariance**: Enable rotation invariance (default: False)
@@ -87,8 +91,20 @@ Key Parameters
 * **Riesz Steered**: Apply Riesz transform (default: False)
 * **Riesz Parameters**: Parameters for Riesz transform (default: "1,0,2")
 
+
+Common Parameters
+^^^^^^^^^^^^^^^^^^
+
+* **Slice/Volume Processing**: 2D or 3D filtering  
+* **Boundary Condition**: Handling of image boundaries (Nearest, Zero, etc.)
+
+
+
 Workflow Integration
 ^^^^^^^^^^^^^^^^^^^^
+.. image:: images/11.filter_workflow.png
+   :alt: Filter Workflow Integration
+   :width: 100%
 
 * Takes image input
 * Applies selected filtering techniques
