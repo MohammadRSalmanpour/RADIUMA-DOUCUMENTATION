@@ -11,7 +11,7 @@ Supports 2D or 3D filtering modes with customizable boundary conditions (e.g., N
 Mean Filter
 ^^^^^^^^^^^^
 
-.. image:: images/11.image_filter.png
+.. image:: images/11.image_filter_mean.png
    :alt: Mean Filter
    :width: 100%
 
