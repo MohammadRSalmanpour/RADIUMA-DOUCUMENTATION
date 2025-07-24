@@ -4,62 +4,69 @@ Image Registration
 .. image:: images/10.image_registration.png
    :alt: Image Registration
    :width: 100%
-   
-Tools for spatial alignment of images from different modalities or time points.
-Note:
 
-Registration Types
+Tools for spatial alignment of images from different modalities or time points.  
+Supports rigid and deformable registration techniques for anatomical consistency across time or modality.
+
+Rigid Registration
 ^^^^^^^^^^^^^^^^^^
+
 .. image:: images/10.image_registration.png
-   :alt: Image Registration
+   :alt: Rigid Registration
    :width: 100%
 
-* **Rigid Registration**: Maintains shape and size, only allows rotation and translation
+Maintains shape and size by applying only rotation and translation. Suitable for aligning anatomical regions with consistent size and shape.
+
+**Key Parameters**
+
+* **Number of Histogram Bins**: Value for intensity histograms (default: 10)  
+* **Sampling Method**: Method for sampling points during registration (`None`, `Random`, `Regular`)  
+* **Sampling Percentage**: Percentage of voxels to sample (default: 0.01)  
+* **Learning Rate**: Step size for optimization (default: 0.01)  
+* **Number of Iterations**: Maximum iterations for optimization (default: 5)  
+* **Interpolation**: Method for interpolation (`Linear`, `NearestNeighbor`, `BSpline`, etc.)
+
+Non-Rigid Registration
+^^^^^^^^^^^^^^^^^^^^^^
 
 .. image:: images/10.image_registration_non_rigid.png
-   :alt: Image Registration Non Rigid
+   :alt: Non-Rigid Registration
    :width: 100%
 
-* **Non-Rigid Registration**: Allows local deformations for better alignment
+Allows local deformations for more precise alignment, especially useful for soft tissue registration in follow-up or multimodal scans.
+
+**Key Parameters**
+
+* **Number of Iterations**: Iterations for deformable registration (default: 5)  
+* **Number of Resolutions**: Multi-resolution levels for optimization (default: 1)  
+* **Final Grid Spacing**: Density of deformation field (default: 1)  
+* **Transform Type**: Transform method (`BSplineTransform` is default)  
+* **Auto-Transform**: Automatic adjustment of transform parameters (`True`/`False`)  
+* **Auto-Scale**: Automatic scaling during registration (`True`/`False`)
+
+Simple Non-Rigid Registration
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. image:: images/10.image_registration_simple_non_rigid.png
-   :alt: Image Registration Simple Non Rigid
+   :alt: Simple Non-Rigid Registration
    :width: 100%
-   
-* **Simple Non-Rigid**: Simplified version of non-rigid registration for faster processing
 
+A lightweight version of non-rigid registration optimized for speed and simplicity. Good for applications requiring fast processing with moderate accuracy.
 
-Key Parameters
-^^^^^^^^^^^^^^
+**Key Parameters**
 
-**Rigid Registration**
-
-* **Number of Histogram Bins**: Value for intensity histograms (default: 10)
-* **Sampling Method**: Method for sampling points during registration (None, Random, Regular)
-* **Sampling Percentage**: Percentage of voxels to sample (default: 0.01)
-* **Learning Rate**: Step size for optimization (default: 0.01)
-* **Number of Iterations**: Maximum iterations for optimization (default: 5)
-* **Interpolation**: Method for interpolation (Linear, NearestNeighbor, BSpline, etc.)
-
-**Non-Rigid Registration**
-
-* **Number of Iterations**: Iterations for deformable registration (default: 5)
-* **Number of Resolutions**: Multi-resolution levels for optimization (default: 1)
-* **Final Grid Spacing**: Density of deformation field (default: 1)
-* **Transform Type**: Transform method (BSplineTransform is default)
-* **Auto-Transform**: Automatic adjustment of transform parameters (True/False)
-* **Auto-Scale**: Automatic scaling during registration (True/False)
-
-**Simple Non-Rigid Registration**
-
-* **Enable Simple Registration**: Toggle simplified non-rigid registration
+* **Enable Simple Registration**: Toggle simplified non-rigid registration (`True`/`False`)
 
 Workflow Integration
 ^^^^^^^^^^^^^^^^^^^^
 
-* Takes fixed and moving images as inputs
-* Outputs transformed image aligned to reference
+.. image:: images/11.filter_workflow.png
+   :alt: Filter Workflow Integration
+   :width: 100%
 
+* Takes fixed and moving images as inputs  
+* Applies selected registration technique  
+* Outputs transformed image aligned to reference
 
 References
 ^^^^^^^^^^
