@@ -7,47 +7,48 @@ Image Fusion
 
 Advanced capabilities for combining information from multiple imaging modalities.
 
-Fusion Methods
-^^^^^^^^^^^^^^
+Weighted Fusion
+^^^^^^^^^^^^^^^
+
 .. image:: images/12.image_fusion.png
-   :alt: Image Fusion
+   :alt: Weighted Fusion
    :width: 100%
 
-* **Weighted Fusion**: Linear combination of input images
+Combines input images using a linear weighted sum. Ideal for blending anatomical and functional images with controlled emphasis.
+
+**Key Parameters**
+* **Weight 1**: Weight for the first input image (range: 0–1)  
+* **Weight 2**: Weight for the second input image (range: 0–1)  
+* **Interpolation**: Method for interpolating between images (`Linear`, `Cubic`, etc.)
+
+Wavelet Fusion
+^^^^^^^^^^^^^^
 
 .. image:: images/12.image_fusion_wavelet.png
-   :alt: Image Fusion Wavelet
+   :alt: Wavelet Fusion
    :width: 100%
 
-* **Wavelet Fusion**: Multi-resolution decomposition and fusion
+Uses wavelet transform to perform multi-resolution decomposition and fusion of images, preserving fine details.
+
+**Key Parameters**
+* **Fusion Method**: Algorithm for combining wavelet coefficients (`Max`, `Min`, `Mean`)  
+* **Level**: Number of decomposition levels  
+* **Mode**: Signal extrapolation mode (e.g., `symmetric`, `periodic`, etc.)  
+* **Wavelet**: Wavelet family to use (e.g., `Haar`, `Db`, etc.)
+
+PCA Fusion
+^^^^^^^^^^
 
 .. image:: images/12.image_fusion_pca.png
-   :alt: Image Fusion PCA
+   :alt: PCA Fusion
    :width: 100%
-   
-* **PCA Fusion**: Principal Component Analysis based fusion
 
-Key Parameters
-^^^^^^^^^^^^^^
+Applies Principal Component Analysis to extract dominant patterns from multiple images and reconstruct a fused output.
 
-**Weighted Fusion**
-
-* **Weight 1**: Weight for first input image (0-1)
-* **Weight 2**: Weight for second input image (0-1)
-* **Interpolation**: Method for interpolating between images (Linear, Cubic, etc.)
-
-**Wavelet Fusion**
-
-* **Fusion Method**: Algorithm for combining wavelet coefficients (Max, Min, Mean)
-* **Level**: Decomposition level for wavelet transform
-* **Mode**: Signal extrapolation mode
-* **Wavelet**: Wavelet family to use (Haar, etc.)
-
-**PCA Fusion**
-
-* **Number of Components**: Components to use in reconstruction
-* **SVD Solver**: Algorithm for Singular Value Decomposition
-* **Components**: Number of principal components
+**Key Parameters**
+* **Number of Components**: Number of components used for image reconstruction  
+* **SVD Solver**: Algorithm used for Singular Value Decomposition  
+* **Components**: Number of principal components retained
 
 Workflow Integration
 ^^^^^^^^^^^^^^^^^^^^
