@@ -15,7 +15,7 @@ Mean Filter
    :width: 100%
 
 Smooths images by reducing noise while preserving edges
-**Key Parameters**
+* **Key Parameters**
 * **Filter Size**: Size of the kernel for mean calculation (default: 1)
 
 
@@ -27,7 +27,7 @@ LoG (Laplacian of Gaussian) Filter
 
 Highlights edges and regions of rapid intensity change
 
-**Key Parameters**
+* **Key Parameters**
 * **Sigma**: Scale parameter for Gaussian (default: 1)
 * **Sigma Truncate**: Truncation factor for Gaussian kernel (default: 1)
 * **Calculate Average**: Whether to calculate average in filter (default: False)
@@ -43,7 +43,7 @@ Laws Filter
 
 Extracts texture features using small convolution kernels.
 
-**Key Parameters**
+* **Key Parameters**
 * **Kernel**: Specific Laws kernel to apply (default: "L5S5E5")  
 * **Calculate Energy**: Calculate energy statistics (default: False)  
 * **Delta**: Step size parameter (default: 1)  
@@ -60,7 +60,7 @@ Gabor Filter
 
 Texture and edge detection at various orientations and scales
 
-**Key Parameters**
+* **Key Parameters**
 * **Gamma**: Controls filter shape (default: 1)
 * **Lambda**: Wavelength of sinusoidal factor (default: 0.1)
 * **Theta Initial**: Starting orientation of filter (default: 0.1)
