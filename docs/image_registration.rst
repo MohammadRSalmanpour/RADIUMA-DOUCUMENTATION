@@ -60,9 +60,6 @@ Simple Non-Rigid Registration is a lightweight version of non-rigid registration
 Workflow Integration
 ^^^^^^^^^^^^^^^^^^^^
 
-.. image:: images/11.filter_workflow.png
-   :alt: Filter Workflow Integration
-   :width: 100%
 
 * Takes fixed and moving images as inputs  
 * Applies selected registration technique  
