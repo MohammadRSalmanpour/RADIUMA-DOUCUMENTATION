@@ -15,7 +15,7 @@ Mean Filter
    :alt: Mean Filter
    :width: 100%
 
-Smooths images by reducing noise while preserving edges.
+Mean Filter Smooths images by reducing noise while preserving edges.
 
 **Key Parameters**
 
@@ -29,7 +29,7 @@ LoG (Laplacian of Gaussian) Filter
    :alt: LoG Filter
    :width: 100%
 
-Highlights edges and regions of rapid intensity change.
+LoG Filter Highlights edges and regions of rapid intensity change.
 
 **Key Parameters**
 
@@ -47,7 +47,7 @@ Laws Filter
    :alt: Laws Filter
    :width: 100%
 
-Extracts texture features using small convolution kernels.
+Laws Filter Extracts texture features using small convolution kernels.
 
 **Key Parameters**
 
@@ -65,7 +65,7 @@ Gabor Filter
    :alt: Gabor Filter
    :width: 100%
 
-Texture and edge detection at various orientations and scales.
+Gabor Filter Texture and edge detection at various orientations and scales.
 
 **Key Parameters**
 
@@ -86,7 +86,7 @@ Wavelet Filter
    :alt: Wavelet Filter
    :width: 100%
 
-Multi-scale analysis for feature extraction.
+Wavelet Filter Multi-scale analysis for feature extraction.
 
 **Key Parameters**
 
