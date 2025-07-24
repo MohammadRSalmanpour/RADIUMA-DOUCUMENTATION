@@ -17,6 +17,7 @@ Weighted Fusion
 Combines input images using a linear weighted sum. Ideal for blending anatomical and functional images with controlled emphasis.
 
 **Key Parameters**
+
 * **Weight 1**: Weight for the first input image (range: 0–1)  
 * **Weight 2**: Weight for the second input image (range: 0–1)  
 * **Interpolation**: Method for interpolating between images (`Linear`, `Cubic`, etc.)
@@ -31,6 +32,7 @@ Wavelet Fusion
 Uses wavelet transform to perform multi-resolution decomposition and fusion of images, preserving fine details.
 
 **Key Parameters**
+
 * **Fusion Method**: Algorithm for combining wavelet coefficients (`Max`, `Min`, `Mean`)  
 * **Level**: Number of decomposition levels  
 * **Mode**: Signal extrapolation mode (e.g., `symmetric`, `periodic`, etc.)  
@@ -46,6 +48,7 @@ PCA Fusion
 Applies Principal Component Analysis to extract dominant patterns from multiple images and reconstruct a fused output.
 
 **Key Parameters**
+
 * **Number of Components**: Number of components used for image reconstruction  
 * **SVD Solver**: Algorithm used for Singular Value Decomposition  
 * **Components**: Number of principal components retained
