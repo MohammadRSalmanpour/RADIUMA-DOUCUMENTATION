@@ -36,17 +36,18 @@ Highlights edges and regions of rapid intensity change
 
 Laws Filter
 ^^^^^^^^^^^^
+
 .. image:: images/11.image_filter_laws.png
-   :alt: Image Filter Laws
+   :alt: Laws Filter
    :width: 100%
 
-Extracts texture features using small convolution kernels
+Extracts texture features using small convolution kernels.
 
 **Key Parameters**
-* **Kernel**: Specific Laws kernel to apply (default: "L5S5E5")
-* **Calculate Energy**: Calculate energy statistics (default: False)
-* **Delta**: Step size parameter (default: 1)
-* **Rotation Invariance**: Enable rotation invariance (default: False)
+* **Kernel**: Specific Laws kernel to apply (default: "L5S5E5")  
+* **Calculate Energy**: Calculate energy statistics (default: False)  
+* **Delta**: Step size parameter (default: 1)  
+* **Rotation Invariance**: Enable rotation invariance (default: False)  
 * **Pooling Method**: Method for combining filter responses (default: "Max")
 
 
@@ -78,7 +79,7 @@ Wavelet Filter
    :alt: Image Filter Wavelet
    :width: 100%
    
-* **Wavelet Filter**: Multi-scale analysis for feature extraction
+Multi-scale analysis for feature extraction
 
 **Key Parameters**
 * **Filter Configuration**: Specific wavelet decomposition level to use (default: "LL")
