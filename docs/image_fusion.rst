@@ -10,7 +10,7 @@ Advanced capabilities for combining information from multiple imaging modalities
 Weighted Fusion
 ^^^^^^^^^^^^^^^
 
-.. image:: images/12.image_fusion.png
+.. image:: images/12.image_fusion_Weighted.png
    :alt: Weighted Fusion
    :width: 100%
 
