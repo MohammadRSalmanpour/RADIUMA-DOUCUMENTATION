@@ -1,7 +1,7 @@
 RT Struct Reader
 ----------------
 
-.. image:: images/7.rt_struct_reader.png
+.. image:: images/7.rt_struct_reader.png 
    :alt: RT Struct Reader
    :width: 100%
 
