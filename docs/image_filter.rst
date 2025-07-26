@@ -2,7 +2,7 @@ Image Filter
 ------------
 
 .. image:: images/11.image_filter.png
-   :alt: Image Filter
+   :alt: Image Filter 
    :width: 100%
    
 Comprehensive set of image filtering options for enhancing features, reducing noise, and preparing images for feature extraction.  
