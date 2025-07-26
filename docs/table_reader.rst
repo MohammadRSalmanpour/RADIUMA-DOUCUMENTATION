@@ -1,7 +1,7 @@
 Table Reader
 ------------
 
-.. image:: images/8.table_reader.png
+.. image:: images/8.table_reader.png 
    :alt: Table Reader
    :width: 100%
 
