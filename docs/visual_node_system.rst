@@ -68,7 +68,7 @@ Example Workflows
 6. Image Writer → Save processed results
 
 Workflow Controls
------------------
+----------------- 
 
 * **Layout Management**: Automatically arrange nodes with the "Align Tools" function
 * **Tool Search**: Quickly find tools using the search function (Tab key)
