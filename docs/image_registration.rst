@@ -47,7 +47,13 @@ Non-Rigid Registration allows local deformations for more precise alignment, esp
 * **Number of Iterations**: Iterations for deformable registration (default: 5)  
 * **Number of Resolutions**: Multi-resolution levels for optimization (default: 1)  
 * **Final Grid Spacing**: Density of deformation field (default: 1)  
-* **Transform Type**: Transform method (`BSplineTransform` is default)  
+* **Transform Type**: Type of transformation applied during registration:
+   * `BSplineTransform` (default)
+   * `EulerTransform`
+   * `AffineTransform`
+.. image:: images/10.image_registration_non_rigid_method.png
+   :alt: Non-Rigid Registration
+   :width: 100%
 * **Auto-Transform**: Automatic adjustment of transform parameters (`True`/`False`)  
 * **Auto-Scale**: Automatic scaling during registration (`True`/`False`)
 
