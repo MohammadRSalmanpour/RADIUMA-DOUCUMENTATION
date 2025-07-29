@@ -37,7 +37,12 @@ Uses wavelet transform to perform multi-resolution decomposition and fusion of i
 
 **Key Parameters**
 
-* **Fusion Method**: Algorithm for combining wavelet coefficients (`Max`, `Min`, `Mean`)  
+* **Fusion Method**: Algorithm for combining wavelet coefficients (`Max`, `Min`, `Mean`)  (default: `Max`).
+
+.. image:: images/12.image_fusion_wavelet_method.png
+   :alt: Wavelet Fusion
+   :width: 100%
+
 * **Level**: Number of decomposition levels  
 * **Mode**: Signal extrapolation mode (e.g., `Zero`,`Constant`,`symmetric`,`Reflect`,`Periodic`, `Smooth`, `Antisymmetric`,`Antireflect`,`Periodization`.)  (default:Zero)
 
