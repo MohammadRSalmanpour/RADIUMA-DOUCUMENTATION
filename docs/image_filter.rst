@@ -166,22 +166,39 @@ Wavelet Filter Multi-scale analysis for feature extraction.
 
 **Key Parameters**
 
-* **Filter Configuration**: Specific wavelet decomposition level to use (default: "LL")  
+* **Filter Configuration**: Specific wavelet decomposition level to use e.g "LL", "LH", "HL", "HH".(default: "LL").
+
+.. image:: images/11.image_filter_wavelet_fconfig.png
+   :alt: Wavelet Filter
+   :width: 100%
 * **Filter Size**: Size of the filter kernel (default: 1)  
 * **Rotation Invariance**: Enable rotation invariance (default: False)  
-* **Pooling Method**: Method for combining filter responses (default: "Max")  
+* **Pooling Method**: Method for combining filter responses e.g "Max" and "Mean". (default: "Max")  
 * **Decomposition Level**: Number of wavelet transform levels (default: 1)  
 * **Wavelet Family**: Type of wavelet (default: "Db")  
-* **Wavelet Type**: Specific wavelet implementation (default: "Db1")  
+
+.. image:: images/11.image_filter_wavelet_family.png
+   :alt: Wavelet Filter
+   :width: 100%
+* **Wavelet Type**: Specific wavelet implementation e.g "Db1", "Db2", "Db3", "Db4", "Db5", "Db6", "Db7", "Db8", "Db9", "Db10".(default: "Db1")  
+
+.. image:: images/11.image_filter_wavelet_type.png
+   :alt: Wavelet Filter
+   :width: 100%
+
 * **Riesz Steered**: Apply Riesz transform (default: False)  
 * **Riesz Parameters**: Parameters for Riesz transform (default: "1,0,2")
+
+.. image:: images/11.image_filter_wavelet_riesz.png
+   :alt: Wavelet Filter
+   :width: 100%
 
 
 Common Parameters
 ^^^^^^^^^^^^^^^^^^
 
 * **Slice/Volume Processing**: 2D or 3D filtering  
-* **Boundary Condition**: Handling of image boundaries (Nearest, Zero, etc.)
+* **Boundary Condition**: Handling of image boundaries (Zero, Mirror, Nearest, Reflect, Priodic).
 
 
 
