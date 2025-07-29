@@ -11,7 +11,7 @@ Supports rigid and deformable registration techniques for anatomical consistency
 Rigid Registration
 ^^^^^^^^^^^^^^^^^^
 
-.. image:: images/10.image_registration_rigid_sampling.png
+.. image:: images/10.image_registration.png
    :alt: Rigid Registration
    :width: 100%
 
@@ -20,7 +20,11 @@ Rigid Registration maintains shape and size by applying only rotation and transl
 **Key Parameters**
 
 * **Number of Histogram Bins**: Value for intensity histograms (default: 10)  
-* **Sampling Method**: Method for sampling points during registration (`None`, `Random`, `Regular`)  
+* **Sampling Method**: Method for sampling points during registration (`None`, `Random`, `Regular`)
+.. image:: images/10.image_registration_rigid_sampling.png
+   :alt: Rigid Registration
+   :width: 100%
+
 * **Sampling Percentage**: Percentage of voxels to sample (default: 0.01)  
 * **Learning Rate**: Step size for optimization (default: 0.01)  
 * **Number of Iterations**: Maximum iterations for optimization (default: 5)  
