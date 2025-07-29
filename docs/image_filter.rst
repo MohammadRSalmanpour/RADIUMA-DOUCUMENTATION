@@ -68,16 +68,27 @@ Laws Filter extracts texture features using small convolution kernels. Below are
       :width: 100%  
 
    **2D Kernels**:
+
    * `L5S5` (Level + Spot, default)
+
    * `L5E5` (Level + Edge)
+
    * `L5W5` (Level + Wave)
+
    * `L5R5` (Level + Ripple)
+
    * `E5S5` (Edge + Spot)
+
    * `E5L5` (Edge + Level)
+
    * `S5L5` (Spot + Level)
+
    * `S5e5` (Spot + Edge)
+
    * `R5L5` (Ripple + Level)
+
    * `W5E5` (Wave + Edge)
+
 
 
    .. image:: images/11.image_filter_laws_3d.png
