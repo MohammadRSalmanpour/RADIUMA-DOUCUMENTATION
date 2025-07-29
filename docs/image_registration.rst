@@ -10,7 +10,7 @@ Supports rigid and deformable registration techniques for anatomical consistency
 
 Rigid Registration
 ^^^^^^^^^^^^^^^^^^
-
+ 
 .. image:: images/10.image_registration.png
    :alt: Rigid Registration
    :width: 100%
