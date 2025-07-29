@@ -140,7 +140,11 @@ Gabor Filter Texture and edge detection at various orientations and scales.
 * **Lambda**: Wavelength of sinusoidal factor (default: 0.1)  
 * **Theta Initial**: Starting orientation of filter (default: 0.1)  
 * **Step**: Increment value for filter application (default: 0.001)  
-* **Response**: Type of filter response (default: "Abs")  
+* **Response**: Type of filter response (default: "Abs"). Available options: "Abs", "Modulus", "Magnitude" , "Angle", "Phase",  "Argument", "Real", "Imaginary".
+
+.. image:: images/11.image_filter_gabor_response.png
+   :alt: Gabor Filter
+   :width: 100%
 * **Rotation Invariance**: Enable rotation invariance (default: False)  
 * **Pooling Method**: Method for combining filter responses (default: "Max")  
 * **Sigma**: Sigma value for Gabor kernel (default: 1)  
