@@ -6,7 +6,7 @@ Image Filter
    :width: 100%
    
 Comprehensive set of image filtering options for enhancing features, reducing noise, and preparing images for feature extraction.  
-Supports 2D or 3D filtering modes with customizable boundary conditions (e.g., Nearest, Zero, Mirror, Reflect, Priodic).
+Supports 2D or 3D filtering modes with customizable boundary conditions (e.g.,  Zero, Mirror, Nearest, Reflect, Priodic).
 
 
 .. image:: images/11.image_filter_boundary.png
