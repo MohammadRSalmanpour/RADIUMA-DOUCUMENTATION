@@ -86,6 +86,9 @@ Applies Principal Component Analysis to extract dominant patterns from multiple 
 Workflow Integration
 ^^^^^^^^^^^^^^^^^^^^
 
+.. image:: images/12.image_fusion_workflow.png
+   :alt: Image Fusion
+   :width: 100%
 * Takes two input images
 * Combines information according to selected method
 * Outputs a single fused image
