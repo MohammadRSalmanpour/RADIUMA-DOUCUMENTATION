@@ -25,7 +25,7 @@ Combines input images using a linear weighted sum. Ideal for blending anatomical
 Wavelet Fusion
 ^^^^^^^^^^^^^^
 
-.. image:: images/12.image_fusion_wavelet.png
+.. image:: images/12.image_fusion_interpolation.png
    :alt: Wavelet Fusion
    :width: 100%
 
