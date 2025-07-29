@@ -146,7 +146,12 @@ Gabor Filter Texture and edge detection at various orientations and scales.
    :alt: Gabor Filter
    :width: 100%
 * **Rotation Invariance**: Enable rotation invariance (default: False)  
-* **Pooling Method**: Method for combining filter responses (default: "Max")  
+* **Pooling Method**: Method for combining filter responses as "MAx" and "Mean". (default: "Max")  
+
+.. image:: images/11.image_filter_gabor_pooling.png
+   :alt: Gabor Filter
+   :width: 100%
+
 * **Sigma**: Sigma value for Gabor kernel (default: 1)  
 * **Sigma Truncate**: Truncation factor for Gaussian kernel (default: 1)
 
