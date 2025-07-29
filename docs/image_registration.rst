@@ -28,7 +28,10 @@ Rigid Registration maintains shape and size by applying only rotation and transl
 * **Sampling Percentage**: Percentage of voxels to sample (default: 0.01)  
 * **Learning Rate**: Step size for optimization (default: 0.01)  
 * **Number of Iterations**: Maximum iterations for optimization (default: 5)  
-* **Interpolation**: Method for interpolation (`Linear`, `NearestNeighbor`, `BSpline`, etc.)
+* **Interpolation**: Method for interpolation (`Linear`, `NearestNeighbor`, `BSpline`,  `Gaussian` ,  `LableGaussian`.)
+.. image:: images/10.image_registration_rigid_interpolation.png
+   :alt: Rigid Registration
+   :width: 100%
 
 Non-Rigid Registration
 ^^^^^^^^^^^^^^^^^^^^^^
