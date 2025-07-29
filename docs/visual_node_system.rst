@@ -78,6 +78,22 @@ Workflow Controls
    * **Node-level Stop**: Click the stop button on an individual running node
    * **Global Stop**: Use the "Stop Workflow" button in the log bar to terminate all running tasks
 
+System Resource Management
+-------------------------
+
+Radiuma provides notifications when system resources are limited:
+
+* **Cache Warning** (When temporary storage is low):
+   ``Temporary storage space (cache) is insufficient.
+   Please choose a different location for storing temporary files,
+   or split the data into smaller batches.``
+
+* **Memory Warning** (When system memory is low):
+   ``Your system is low on memory.
+   Try closing unused programs to help the application run smoothly.``
+
+These warnings appear as notifications in the status bar and log panel when detected
+
 Keyboard Shortcuts
 ------------------
 
