@@ -45,6 +45,10 @@ LoG Filter Highlights edges and regions of rapid intensity change.
 * **Riesz Steered**: Apply Riesz transform (default: False)  
 * **Riesz Parameters**: Parameters for Riesz transform (default: "1,0,2")
 
+.. image:: images/11.image_filter_log_riesz.png
+   :alt: LoG Filter
+   :width: 100%
+
 
 Laws Filter
 ^^^^^^^^^^^^
