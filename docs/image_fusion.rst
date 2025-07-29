@@ -37,6 +37,12 @@ Uses wavelet transform to perform multi-resolution decomposition and fusion of i
 
 **Key Parameters**
 
+* **Wavelet**: Wavelet family to use (e.g., `Haar`, `Db`,`Sym`, `Coif`, `Bior`, `Rbio`, `Dmey`.)(default: `Haar`) 
+
+.. image:: images/12.image_fusion_wavelet_left.png
+   :alt: Wavelet Fusion
+   :width: 100%
+
 * **Fusion Method**: Algorithm for combining wavelet coefficients (`Max`, `Min`, `Mean`)  (default: `Max`).
 
 .. image:: images/12.image_fusion_wavelet_method.png
@@ -51,11 +57,7 @@ Uses wavelet transform to perform multi-resolution decomposition and fusion of i
    :alt: Wavelet Fusion
    :width: 100%
 
-* **Wavelet**: Wavelet family to use (e.g., `Haar`, `Db`,`Sym`, `Coif`, `Bior`, `Rbio`, `Dmey`.)(default: `Haar`) 
 
-.. image:: images/12.image_fusion_wavelet_left.png
-   :alt: Wavelet Fusion
-   :width: 100%
 
 PCA Fusion
 ^^^^^^^^^^
