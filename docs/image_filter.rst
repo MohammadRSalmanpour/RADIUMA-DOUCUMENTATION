@@ -64,7 +64,7 @@ Laws Filter extracts texture features using small convolution kernels. Below are
 * **Kernel**: Specific Laws kernel to apply (default: "L5S5")
 
    .. image:: images/11.image_filter_laws_2d.png
-      :alt: Laws 2D Filter Kernels
+      :alt:  Laws Filter
       :width: 100%  
 
    **2D Kernels**:
@@ -92,21 +92,33 @@ Laws Filter extracts texture features using small convolution kernels. Below are
 
 
    .. image:: images/11.image_filter_laws_3d.png
-      :alt: Laws 3D Filter Kernels
+      :alt:  Laws Filter
       :width: 100%
 
    **3D Kernels**:
+
    * `L5S5E5` (Level + Spot + Edge, default)
+
    * `E5L5S5` (Edge + Level + Spot)
+
    * `L3W5R5` (Level-3 + Wave + Ripple)
+
    * `L5E5S5` (Level + Edge + Spot)
+
    * `L3W5S5` (Level-3 + Wave + Spot)
+
    * `S5L5E5` (Spot + Level + Edge)
+
    * `E5S5L5` (Edge + Spot + Level )
+
    * `L5S5W5` (Level + Spot + Wave)
+
    * `L5E5R5` (Level + Edge + Ripple)
+
    * `L5E5W5` (Level + Edge + Wave)
+
    * `L5E5R5` (Level + Edge + Spot)
+
 * **Calculate Energy**: Calculate energy statistics (default: False)  
 * **Delta**: Step size parameter (default: 1)  
 * **Rotation Invariance**: Enable rotation invariance (default: False)  
