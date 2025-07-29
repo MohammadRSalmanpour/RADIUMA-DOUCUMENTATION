@@ -20,12 +20,16 @@ Combines input images using a linear weighted sum. Ideal for blending anatomical
 
 * **Weight 1**: Weight for the first input image (range: 0–1)  
 * **Weight 2**: Weight for the second input image (range: 0–1)  
-* **Interpolation**: Method for interpolating between images (`Linear`, `Cubic`, etc.)
+* **Interpolation**: Method for interpolating between images (`Linear`, `Area` ,`Nearest` , `Cubic`, `Lanzos`.)(default: `Nearest`) 
+
+.. image:: images/12.image_fusion_interpolation.png
+   :alt: Weighted Fusion
+   :width: 100%
 
 Wavelet Fusion
 ^^^^^^^^^^^^^^
 
-.. image:: images/12.image_fusion_interpolation.png
+.. image:: images/12.image_fusion_wavelet.png
    :alt: Wavelet Fusion
    :width: 100%
 
