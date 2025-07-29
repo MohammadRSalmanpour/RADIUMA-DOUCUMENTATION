@@ -39,8 +39,18 @@ Uses wavelet transform to perform multi-resolution decomposition and fusion of i
 
 * **Fusion Method**: Algorithm for combining wavelet coefficients (`Max`, `Min`, `Mean`)  
 * **Level**: Number of decomposition levels  
-* **Mode**: Signal extrapolation mode (e.g., `symmetric`, `periodic`, etc.)  
-* **Wavelet**: Wavelet family to use (e.g., `Haar`, `Db`, etc.)
+* **Mode**: Signal extrapolation mode (e.g., `Zero`,`Constant`,`symmetric`,`Reflect`,`Periodic`, `Smooth`, `Antisymmetric`,`Antireflect`,`Periodization`.)  (default:Zero)
+
+
+.. image:: images/12.image_fusion_wavelet_signal.png
+   :alt: Wavelet Fusion
+   :width: 100%
+
+* **Wavelet**: Wavelet family to use (e.g., `Haar`, `Db`,`Sym`, `Coif`, `Bior`, `Rbio`, `Dmey`.)(default: `Haar`) 
+
+.. image:: images/12.image_fusion_wavelet_left.png
+   :alt: Wavelet Fusion
+   :width: 100%
 
 PCA Fusion
 ^^^^^^^^^^
