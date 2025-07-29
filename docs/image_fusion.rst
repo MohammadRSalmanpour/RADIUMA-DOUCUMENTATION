@@ -49,7 +49,6 @@ Uses wavelet transform to perform multi-resolution decomposition and fusion of i
    :alt: Wavelet Fusion
    :width: 100%
 
-* **Level**: Number of decomposition levels  
 * **Mode**: Signal extrapolation mode (e.g., `Zero`,`Constant`,`symmetric`,`Reflect`,`Periodic`, `Smooth`, `Antisymmetric`,`Antireflect`,`Periodization`.)  (default:Zero)
 
 
@@ -57,7 +56,7 @@ Uses wavelet transform to perform multi-resolution decomposition and fusion of i
    :alt: Wavelet Fusion
    :width: 100%
 
-
+* **Level**: Number of decomposition levels  
 
 PCA Fusion
 ^^^^^^^^^^
