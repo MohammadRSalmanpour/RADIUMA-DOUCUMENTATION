@@ -63,7 +63,7 @@ Laws Filter extracts texture features using small convolution kernels. Below are
 
 * **Kernel**: Specific Laws kernel to apply (default: "L5S5")
 
-   .. image:: images/11.image_filter_laws_2d.png
+   .. image:: images/11.image_filter_laws_2D.png
       :alt:  Laws Filter
       :width: 100%  
 
@@ -91,7 +91,7 @@ Laws Filter extracts texture features using small convolution kernels. Below are
 
 
 
-   .. image:: images/11.image_filter_laws_3d.png
+   .. image:: images/11.image_filter_laws_3D.png
       :alt:  Laws Filter
       :width: 100%
 
