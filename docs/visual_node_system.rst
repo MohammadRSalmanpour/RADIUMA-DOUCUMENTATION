@@ -84,9 +84,9 @@ System Resource Management
 Radiuma provides notifications when system resources are limited:
 
 * **Cache Warning** (When temporary storage is low):
-   ``Temporary storage space (cache) is insufficient.
+   Temporary storage space (cache) is insufficient.
    Please choose a different location for storing temporary files,
-   or split the data into smaller batches.``
+   or split the data into smaller batches.
 
 * **Memory Warning** (When system memory is low):
    ``Your system is low on memory.
