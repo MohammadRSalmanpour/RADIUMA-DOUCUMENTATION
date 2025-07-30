@@ -89,8 +89,8 @@ Radiuma provides notifications when system resources are limited:
    or split the data into smaller batches.
 
 * **Memory Warning** (When system memory is low):
-   ``Your system is low on memory.
-   Try closing unused programs to help the application run smoothly.``
+   Your system is low on memory.
+   Try closing unused programs to help the application run smoothly.
 
 These warnings appear as notifications in the status bar and log panel when detected
 
