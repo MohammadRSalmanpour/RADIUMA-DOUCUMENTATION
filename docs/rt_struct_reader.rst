@@ -32,6 +32,10 @@ Functionality
 Workflow Integration
 ^^^^^^^^^^^^^^^^^^^^
 
+.. image:: images/7.rt_struct_reader_workflow.png 
+   :alt: RT Struct Reader
+   :width: 100%
+
 * Outputs to Radiomic Feature Generator
 * Outputs to Image Writer
 * Outputs to Image Viewer
