@@ -29,19 +29,21 @@ Radiuma supports importing images from multiple sources and modalities, allowing
      ```plaintext
      /CT
         /patient_01
-           patient_01_ct_001.dcm
-           patient_01_ct_002.dcm
+           001.dcm
+           002.dcm
+           003.dcm
         /patient_02
-           patient_02_ct_001.dcm
-           patient_02_ct_002.dcm
+           001.dcm
+           002.dcm
+           003.dcm
      ```
      In this case, Radiuma will process the DICOM files inside each patient's subfolder (e.g., `/patient_01/` and `/patient_02/`). If your data is structured like this, **select the main folder** (e.g., `/CT`) and Radiuma will automatically organize and import the files.
 
    **Important Note**:  
-   Radiuma **only supports DICOM images inside subfolders**. Each patient should have their own folder (e.g., `/patient_01/`) containing their corresponding DICOM files. The images cannot be stored in a flat structure; they must be within subfolders.
+   Radiuma **only supports DICOM images inside subfolders**. Each patient should have their own folder (e.g., `/patient_01/`) containing their corresponding DICOM files. 
 
 ### 3. **Importing NIFTI (.nii, .nii.gz) Files**
-   - NIFTI files are commonly used in medical imaging, particularly for brain and body scans. Radiuma supports **NIFTI** files such as `.nii` and `.nii.gz`. However, for **NIFTI imports**, the files need to be organized by **modality and sequence** into **subfolders** for easy identification.
+   - NIFTI files are commonly used in medical imaging. Radiuma supports **NIFTI** files such as `.nii` and `.nii.gz`. However, for **NIFTI imports**, the files need to be organized by **modality and sequence** into **subfolders** for easy identification.
    
    - **Correct Folder Structure for NIFTI Files**:
      - `/CT/` for CT images.
