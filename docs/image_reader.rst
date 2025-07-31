@@ -17,9 +17,9 @@ Key Parameters
 **How to Import Data**
 --------------------
 
-Radiuma supports importing images from multiple sources and modalities, allowing users to efficiently bring in medical data for further processing. Here's how to import your data, whether you have **DICOM** images, **NIFTI** files, or other formats.
+Radiuma supports importing images from multiple sources and modalities, allowing users to efficiently bring in medical data for further processing. Here's how to import your data, whether you have **DICOM images**, **NIFTI files**, or other formats.
 
- 1. **Selecting the Source Type**
+ #1. **Selecting the Source Type**
    - **Folder Import**: Choose **Folder** if you have multiple images, such as when organizing images by patient or modality (e.g., CT, MRI). You will select the main directory containing images and Radiuma will automatically find all the relevant files in subfolders.
    - **Single File Import**: Choose **Single File** if you are importing one image, like a specific `.nii`, `.dcm`, or `.nrrd` file.
 
