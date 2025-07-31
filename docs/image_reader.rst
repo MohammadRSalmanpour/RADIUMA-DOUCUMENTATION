@@ -55,17 +55,17 @@ Radiuma supports importing images from multiple sources and modalities, allowing
      ```plaintext
      /CT
         /patient_01
-           patient_01_ct_001.nii
+           patient_01_ct_001.nii,
            patient_01_ct_002.nii
      /MRI
         /T1
-           patient_01_t1_001.nii
+           patient_01_t1_001.nii,
            patient_01_t1_002.nii
         /T2
-           patient_01_t2_001.nii
+           patient_01_t2_001.nii,
            patient_01_t2_002.nii
         /DCE
-           patient_01_dce_001.nii
+           patient_01_dce_001.nii,
            patient_01_dce_002.nii
      ```
      **Important**: Radiuma **does not support importing NIFTI files** from a single directory. NIFTI files must be organized in specific **modality-based subfolders** like `/MRI/T1/` or `/MRI/T2/`.
@@ -77,13 +77,13 @@ Radiuma supports importing images from multiple sources and modalities, allowing
    ```plaintext
    /MRI
       /T1
-         patient_01_t1_001.nii
+         patient_01_t1_001.nii,
          patient_01_t1_002.nii
       /T2
-         patient_01_t2_001.nii
+         patient_01_t2_001.nii,
          patient_01_t2_002.nii
       /DCE
-         patient_01_dce_001.nii
+         patient_01_dce_001.nii,
          patient_01_dce_002.nii
      In this case, Radiuma will correctly identify and process NIFTI images from the **T1**, **T2**, or **DCE** subfolders.
 
@@ -105,17 +105,17 @@ Radiuma supports importing a variety of medical image formats, including:
 /data
     /CT
         /patient_01
-            patient_01_ct_001.dcm
+            patient_01_ct_001.dcm,
             patient_01_ct_002.dcm
         /patient_02
-            patient_02_ct_001.dcm
+            patient_02_ct_001.dcm,
             patient_02_ct_002.dcm
     /MRI
         /T1
-            patient_01_t1_001.nii
+            patient_01_t1_001.nii,
             patient_01_t1_002.nii
         /T2
-            patient_01_t2_001.nii
+            patient_01_t2_001.nii,
             patient_01_t2_002.nii
 
 
