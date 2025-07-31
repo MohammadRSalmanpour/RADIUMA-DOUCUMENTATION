@@ -24,7 +24,7 @@ You can import your images either from a **folder** containing multiple files or
 - **Folder Import**: Choose **Folder** if your data is organized in directories, such as when images are grouped by patient or modality (e.g., CT, MRI). You will select the main directory, and Radiuma will automatically detect and import all the relevant files from its subfolders.
 - **Single File Import**: Choose **Single File** if you're importing one image, like a specific `.nii`, `.dcm`, or `.nrrd` file.
 
-.. note::
+* .. note::
    For folder imports, Radiuma will recursively scan all subdirectories for compatible medical image files.
 
 ### 2. **Importing Multi-DICOM Images for Multiple Patients**
