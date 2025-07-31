@@ -29,12 +29,12 @@ Radiuma supports importing images from multiple sources and modalities, allowing
      ```plaintext
      /CT
         /patient_01
-           001.dcm
-           002.dcm
+           001.dcm,
+           002.dcm,
            003.dcm
         /patient_02
-           001.dcm
-           002.dcm
+           001.dcm,
+           002.dcm,
            003.dcm
      ```
      In this case, Radiuma will process the DICOM files inside each patient's subfolder (e.g., `/patient_01/` and `/patient_02/`). If your data is structured like this, **select the main folder** (e.g., `/CT`) and Radiuma will automatically organize and import the files.
