@@ -31,12 +31,13 @@ Key Parameters
 
 **Data Type: Modality type (MR, CT, PET, OTHER)**
 
-- Select the imaging modality for which radiomic features will be calculated.  
+ Select the imaging modality for which radiomic features will be calculated.  
+
 - **MR**: Magnetic Resonance images  
 - **CT**: Computed Tomography images  
 - **PET**: Positron Emission Tomography images  
 - **OTHER**: For modalities such as Ultrasound or X-ray  
-- This parameter ensures that modality-specific preprocessing and intensity interpretation are applied correctly before feature extraction.
+This parameter ensures that modality-specific preprocessing and intensity interpretation are applied correctly before feature extraction.
 
 
 Other Key Parameters
