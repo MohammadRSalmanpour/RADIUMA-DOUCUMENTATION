@@ -69,7 +69,12 @@ This parameter ensures that modality-specific preprocessing and intensity interp
 * **Outlier Filtering**: Methods for handling outliers (0: disabled, 1: enabled)
 * **Quantization Method**: Approach for discretizing intensities (Uniform, Lloyd)
 * **Intensity Volume Histogram Type**: Setting for IVH unit type
-* **IVH Discretization Type**: Discrete or Continuous (1, 2, 3)
+
+.. image:: images/13.radiomic_ivh.png
+   :alt: Radiomic Feature Generator
+   :width: 100%
+
+* **IVH Discretization Type**: Discrete or Continuous (0,1, 2, 3)
 * **IVH Bin Size**: Bin size for IVH discretization
 * **Maximum ROIs**: Number of regions to analyze per image (Maximum or specific number)
 * **ROIs per Image**: Number of ROIs to process when not set to Maximum
