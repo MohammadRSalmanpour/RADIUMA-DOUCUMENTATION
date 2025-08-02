@@ -15,7 +15,7 @@ This tool also has a deep learning mode that can be used to extract features fro
 
 Feature Types
 ^^^^^^^^^^^^^
-
+    
 * **First-order Statistics**: Intensity-based features
 * **Shape-based Features**: Morphological characteristics
 * **Texture Features**: Spatial patterns (GLCM, GLRLM, etc.)
