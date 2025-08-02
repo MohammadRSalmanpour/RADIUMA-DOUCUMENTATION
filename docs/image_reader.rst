@@ -14,7 +14,7 @@ Key Parameters
 * **Path**: Location of the medical image file(s) to import
 
 
-**How to Import Data**
+* **How to Import Data**
 --------------------
 
 Radiuma supports importing images from multiple sources and modalities, allowing users to efficiently bring in medical data for further processing. Here's how to import your data, whether you have **DICOM images**, **NIFTI files**, or other formats.
