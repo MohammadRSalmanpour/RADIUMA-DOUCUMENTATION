@@ -29,7 +29,18 @@ Key Parameters
    :alt: Radiomic Feature Generator
    :width: 100%
 
-* **Data Type**: Modality type (MR, CT, PET, OTHER)
+**Data Type: Modality type (MR, CT, PET, OTHER)**
+
+- Select the imaging modality for which radiomic features will be calculated.  
+- **MR**: Magnetic Resonance images  
+- **CT**: Computed Tomography images  
+- **PET**: Positron Emission Tomography images  
+- **OTHER**: For modalities such as Ultrasound or X-ray  
+- This parameter ensures that modality-specific preprocessing and intensity interpretation are applied correctly before feature extraction.
+
+
+Other Key Parameters
+^^^^^^^^^^^^^^^^^^^^
 * **Discretization Type**: Method for binning intensity values (FBS, FBN)
 * **Bin Size**: Size of intensity bins for feature calculation
 * **Resampling Flag**: Whether to perform scaling (0: disabled, 1: enabled)
