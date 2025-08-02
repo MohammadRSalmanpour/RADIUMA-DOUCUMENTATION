@@ -23,7 +23,18 @@ Radiuma supports importing images from multiple sources and modalities, allowing
 
 You can import your images either from a **folder** containing multiple files or a **single file**:
 
+.. image:: images/6.image_reader_folder.png
+   :alt: Image Reader
+   :width: 100%
+
+
 - **Folder Import**: Choose **Folder** if your data is organized in directories, such as when images are grouped by patient or modality (e.g., CT, MRI). You will select the main directory, and Radiuma will automatically detect and import all the relevant files from its subfolders.
+
+
+
+.. image:: images/6.image_reader_single.png
+   :alt: Image Reader
+   :width: 100%
 
 
 - **Single File Import**: Choose **Single File** if you're importing one image, like a specific `.nii`, `.dcm`, or `.nrrd` file.
