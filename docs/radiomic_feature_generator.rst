@@ -40,7 +40,7 @@ Key Parameters
 This parameter ensures that modality-specific preprocessing and intensity interpretation are applied correctly before feature extraction.
 
 
-.. image:: images/13.radiomic_Discretization.png
+.. image:: images/13.radiomic_discretization.png
    :alt: Radiomic Feature Generator
    :width: 100%
 
