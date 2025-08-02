@@ -14,8 +14,8 @@ Key Parameters
 * **Path**: Location of the medical image file(s) to import
 
 
-* **How to Import Data**
---------------------
+How to Import Data
+^^^^^^^^^^^^^^
 
 Radiuma supports importing images from multiple sources and modalities, allowing users to efficiently bring in medical data for further processing. Here's how to import your data, whether you have **DICOM images**, **NIFTI files**, or other formats.
 
@@ -104,7 +104,7 @@ Radiuma allows you to import **DICOM files** organized by **patient-specific sub
    - Modalities must not be mixed in the same folder - keep them in separate subfolders.
    - For multi-modal studies, process each modality separately through the workflow.
 
-**Supported Input Formats**
+Supported Input Formats
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 Radiuma supports importing a variety of medical image formats, including:
