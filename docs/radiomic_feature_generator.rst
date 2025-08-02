@@ -40,12 +40,25 @@ Key Parameters
 This parameter ensures that modality-specific preprocessing and intensity interpretation are applied correctly before feature extraction.
 
 
-Other Key Parameters
-^^^^^^^^^^^^^^^^^^^^
+.. image:: images/13.radiomic_Discretization.png
+   :alt: Radiomic Feature Generator
+   :width: 100%
+
 * **Discretization Type**: Method for binning intensity values (FBS, FBN)
+
 * **Bin Size**: Size of intensity bins for feature calculation
 * **Resampling Flag**: Whether to perform scaling (0: disabled, 1: enabled)
+
+.. image:: images/13.radiomic_interpolation.png
+   :alt: Radiomic Feature Generator
+   :width: 100%
+
 * **Image Interpolation**: Method for resampling images (Nearest, Linear, Cubic)
+
+.. image:: images/13.radiomic_roi.png
+   :alt: Radiomic Feature Generator
+   :width: 100%
+
 * **ROI Interpolation**: Method for resampling masks (Nearest, Linear, Cubic)
 * **3D Isotropic Voxel Size**: Size for resampling to isotropic voxels
 * **2D Isotropic Voxel Size**: Size for 2D isotropic voxels
