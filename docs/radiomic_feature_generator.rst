@@ -79,6 +79,10 @@ This parameter ensures that modality-specific preprocessing and intensity interp
 Workflow Integration
 ^^^^^^^^^^^^^^^^^^^^
 
+.. image:: images/13.radiomic_workflow.png
+   :alt: Radiomic Feature Generator
+   :width: 100%
+
 * Takes both image and mask inputs
 * Extracts features according to standardized definitions
 * Outputs tabular data with all calculated features
