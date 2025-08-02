@@ -18,6 +18,8 @@ To ensure proper pairing between RTSTRUCT and image data:
 .. image:: images/7.rt_struct_reader_data.png 
    :alt: RT Struct Reader
    :width: 100%
+   
+The name of RTSTRUCT single dicom file  must exactly match the name of the corresponding image folder.
 
 
 .. image:: images/7.rt_struct_reader_rt.png 
