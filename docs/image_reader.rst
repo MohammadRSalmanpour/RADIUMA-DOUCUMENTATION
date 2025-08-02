@@ -12,7 +12,7 @@ Key Parameters
 
 * **Source Type**: Choose between folder or single file import
 * **Path**: Location of the medical image file(s) to import
-
+   
 
 How to Import Data
 ^^^^^^^^^^^^^^
