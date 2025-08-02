@@ -21,8 +21,13 @@ Feature Types
 * **Texture Features**: Spatial patterns (GLCM, GLRLM, etc.)
 * **Wavelet Features**: Multi-resolution analysis
 
+
 Key Parameters
 ^^^^^^^^^^^^^^
+
+.. image:: images/13.radiomic_data.png
+   :alt: Radiomic Feature Generator
+   :width: 100%
 
 * **Data Type**: Modality type (MR, CT, PET, OTHER)
 * **Discretization Type**: Method for binning intensity values (FBS, FBN)
