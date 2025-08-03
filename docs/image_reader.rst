@@ -160,9 +160,8 @@ Radiuma supports importing a variety of medical image formats, including:
 **Important Notes**:
 
 - Ensure proper DICOM tags or NIFTI headers exist for correct processing.  
-- Proprietary or uncommon formats may require conversion.
+- Uncommon formats may require conversion.
 
----
 
 Workflow Integration
 ^^^^^^^^^^^^^^^^^^^^
