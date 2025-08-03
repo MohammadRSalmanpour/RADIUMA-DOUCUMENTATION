@@ -42,6 +42,7 @@ You can import your images either from a **folder** containing multiple files or
 
 
 2. **Importing Multi-DICOM Images for Multiple Patients**
+
 Radiuma allows you to import **DICOM files** organized by **patient-specific subfolders**. If you have images for multiple patients with various modalities, you can organize DICOM files into separate subfolders for each patient and modality.
 
 .. image:: images/6.image_reader_multi_dicom.png
