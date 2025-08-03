@@ -41,7 +41,7 @@ You can import your images either from a **folder** containing multiple files or
 
 
 
-### 2. **Importing Multi-DICOM Images for Multiple Patients**
+2. **Importing Multi-DICOM Images for Multiple Patients**
 Radiuma allows you to import **DICOM files** organized by **patient-specific subfolders**. If you have images for multiple patients with various modalities, you can organize DICOM files into separate subfolders for each patient and modality.
 
 .. image:: images/6.image_reader_multi_dicom.png
@@ -63,7 +63,7 @@ In this case, Radiuma will process the DICOM files inside each patient's subfold
 **Important Note**:  
 Radiuma supports DICOM images inside subfolders. Each patient should have their own folder (e.g., `/patient_01/`) containing their corresponding DICOM files. 
 
-### 3. **Importing NIFTI (.nii, .nii.gz) Files**
+3. **Importing NIFTI (.nii, .nii.gz) Files**
 
 NIFTI files are commonly used in medical imaging. Radiuma supports NIFTI files such as `.nii` and `.nii.gz`. However, for NIFTI imports, the files need to be organized by modality and sequence into subfolders for easy identification.
    
@@ -96,7 +96,7 @@ NIFTI files are commonly used in medical imaging. Radiuma supports NIFTI files s
 
 **Important Note**: NIFTI files must be organized in specific **modality-based subfolders** like `/MRI/T1/` or `/MRI/T2/`.
 
-### 4. **Handling Mixed Modalities in a Single Folder**
+4. **Handling Mixed Modalities in a Single Folder**
 
 Radiuma requires that each modality (e.g., CT,PET, MRI) has its own subfolder structure within the main folder.
 
