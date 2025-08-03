@@ -102,9 +102,10 @@ NIFTI files are commonly used in medical imaging. Radiuma supports NIFTI files s
 
 **Example Directory Structure for Mixed Modalities**:
 
-::
+   ```plaintext
 
    /data
+
        /CT
            /patient_01
                patient_01_ct_001.dcm
@@ -116,6 +117,8 @@ NIFTI files are commonly used in medical imaging. Radiuma supports NIFTI files s
                patient_01_t1_001.nii
            /T2
                patient_01_t2_001.nii
+
+    ```
 
 * **Note**::
 
