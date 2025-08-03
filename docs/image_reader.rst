@@ -61,11 +61,11 @@ Radiuma allows you to import **DICOM files** organized by **patient-specific sub
 In this case, Radiuma will process the DICOM files inside each patient's subfolder (e.g., `/patient_01/` and `/patient_02/`). If your data is structured like this, **select the main folder** (e.g., `/CT`) and Radiuma will automatically organize and import the files.
 
 **Important Note**:  
-Radiuma **only supports DICOM images inside subfolders**. Each patient should have their own folder (e.g., `/patient_01/`) containing their corresponding DICOM files. 
+Radiuma supports DICOM images inside subfolders. Each patient should have their own folder (e.g., `/patient_01/`) containing their corresponding DICOM files. 
 
 ### 3. **Importing NIFTI (.nii, .nii.gz) Files**
 
-NIFTI files are commonly used in medical imaging. Radiuma supports **NIFTI** files such as `.nii` and `.nii.gz`. However, for **NIFTI imports**, the files need to be organized by **modality and sequence** into **subfolders** for easy identification.
+NIFTI files are commonly used in medical imaging. Radiuma supports NIFTI files such as `.nii` and `.nii.gz`. However, for NIFTI imports, the files need to be organized by modality and sequence into subfolders for easy identification.
    
    - **Correct Folder Structure for NIFTI Files**:
      - `/CT/` for CT images.
@@ -94,7 +94,7 @@ NIFTI files are commonly used in medical imaging. Radiuma supports **NIFTI** fil
 
      ```
 
-**Important Note**: Radiuma **does not support importing NIFTI files** from a single directory. NIFTI files must be organized in specific **modality-based subfolders** like `/MRI/T1/` or `/MRI/T2/`.
+**Important Note**: NIFTI files must be organized in specific **modality-based subfolders** like `/MRI/T1/` or `/MRI/T2/`.
 
 ### 4. **Handling Mixed Modalities in a Single Folder**
 
@@ -137,6 +137,7 @@ Radiuma supports importing a variety of medical image formats, including:
 * **Various other medical image formats**: Radiuma can also handle other common medical image formats that may not be explicitly listed here.
 
 **Example Directory Structure**:
+
 ```plaintext
 /data
     /CT
