@@ -69,13 +69,13 @@ NIFTI files are commonly used in medical imaging. Radiuma supports NIFTI files s
    
 **Correct Folder Structure for NIFTI Files**:
 
-     - `/CT/` for CT images.
+  - `/CT/` for CT images.
 
-     - `/MRI/T1/` for T1-weighted MRI images.
+  - `/MRI/T1/` for T1-weighted MRI images.
 
-     - `/MRI/T2/` for T2-weighted MRI images.
+  - `/MRI/T2/` for T2-weighted MRI images.
 
-     - `/MRI/DCE/` for DCE (Dynamic Contrast Enhanced) MRI images.
+  - `/MRI/DCE/` for DCE (Dynamic Contrast Enhanced) MRI images.
    
 **Example Folder Structure** for NIFTI files:
 
@@ -98,7 +98,7 @@ NIFTI files are commonly used in medical imaging. Radiuma supports NIFTI files s
 
 ### 4. **Handling Mixed Modalities in a Single Folder**
 
-   Radiuma requires that each modality (e.g., CT,PET, MRI) has its own subfolder structure within the main folder.
+Radiuma requires that each modality (e.g., CT,PET, MRI) has its own subfolder structure within the main folder.
 
 **Example Directory Structure for Mixed Modalities**:
 
