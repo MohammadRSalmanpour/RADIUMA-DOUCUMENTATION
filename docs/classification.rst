@@ -70,7 +70,7 @@ Non-parametric method using closest training examples.
 
 **3. Decision Tree Classifier**
 
-Creates a model predicting targets by learning decision rules.
+Creates a model predicting targets by learning decision rules. 
 
 **Key Parameters:**
 
