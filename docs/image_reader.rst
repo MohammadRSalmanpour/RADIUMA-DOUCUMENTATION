@@ -49,7 +49,6 @@ Radiuma allows you to import **DICOM files** organized by **patient-specific sub
    :width: 100%
 
 **Example Folder Structure for DICOM images**:
-```plaintext
 
 /CT
     /patient_01
