@@ -50,6 +50,7 @@ Radiuma allows you to import **DICOM files** organized by **patient-specific sub
 
 **Example Folder Structure for DICOM images**:
 ```plaintext
+
 /CT
     /patient_01
         patient_01_ct_001.dcm
@@ -75,8 +76,6 @@ NIFTI files are commonly used in medical imaging. Radiuma supports NIFTI files s
    
 **Example Folder Structure** for NIFTI files:
 
-     ```plaintext
-
      /CT
         /patient_01
            patient_01_ct_001.nii,
@@ -92,8 +91,6 @@ NIFTI files are commonly used in medical imaging. Radiuma supports NIFTI files s
            patient_01_dce_001.nii,
            patient_01_dce_002.nii
 
-     ```
-
 **Important Note**: NIFTI files must be organized in specific **modality-based subfolders** like `/MRI/T1/` or `/MRI/T2/`.
 
 ### 4. **Handling Mixed Modalities in a Single Folder**
@@ -102,7 +99,6 @@ NIFTI files are commonly used in medical imaging. Radiuma supports NIFTI files s
 
 **Example Directory Structure for Mixed Modalities**:
 
-  
 
    /data
 
@@ -117,8 +113,6 @@ NIFTI files are commonly used in medical imaging. Radiuma supports NIFTI files s
                patient_01_t1_001.nii
            /T2
                patient_01_t2_001.nii
-
-   
 
 * **Note**::
 
