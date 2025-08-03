@@ -28,7 +28,7 @@ Feature scaling normalizes your data features to a similar range, improving mode
 
 Feature selection identifies and retains the most relevant variables for your regression task. This reduces dimensionality, prevents overfitting, and improves model interpretability by eliminating redundant or irrelevant features.
 
-.. image:: images/15.regression_hyperparameter_tuning.png
+.. image:: images/15.regression_hyper_parameter_tuning.png
    :alt: Regression Hyperparameter Tuning
    :width: 100%
 
