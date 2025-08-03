@@ -117,7 +117,7 @@ NIFTI files are commonly used in medical imaging. Radiuma supports **NIFTI** fil
            /T2
                patient_01_t2_001.nii
 
-* **.. Note::
+* Note::
 
    - Radiuma cannot process CT and PET images together in the same import operation.
    - Modalities must not be mixed in the same folder - keep them in separate subfolders.
