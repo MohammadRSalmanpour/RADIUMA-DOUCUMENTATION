@@ -75,20 +75,20 @@ NIFTI files are commonly used in medical imaging. Radiuma supports NIFTI files s
    
 **Example Folder Structure** for NIFTI files:
 
-     /CT
-        /patient_01
-           patient_01_ct_001.nii,
-           patient_01_ct_002.nii
-     /MRI
-        /T1
-           patient_01_t1_001.nii,
-           patient_01_t1_002.nii
-        /T2
-           patient_01_t2_001.nii,
-           patient_01_t2_002.nii
-        /DCE
-           patient_01_dce_001.nii,
-           patient_01_dce_002.nii
+  /CT
+     /patient_01
+        patient_01_ct_001.nii,
+        patient_01_ct_002.nii
+  /MRI
+     /T1
+        patient_01_t1_001.nii,
+        patient_01_t1_002.nii
+     /T2
+        patient_01_t2_001.nii,
+        patient_01_t2_002.nii
+     /DCE
+        patient_01_dce_001.nii,
+        patient_01_dce_002.nii
 
 **Important Note**: NIFTI files must be organized in specific **modality-based subfolders** like `/MRI/T1/` or `/MRI/T2/`.
 
@@ -99,19 +99,19 @@ NIFTI files are commonly used in medical imaging. Radiuma supports NIFTI files s
 **Example Directory Structure for Mixed Modalities**:
 
 
-   /data
+/data
 
-       /CT
-           /patient_01
-               patient_01_ct_001.dcm
-       /PET
-           /patient_01
-               patient_01_pet_001.nii
-       /MRI
-           /T1
-               patient_01_t1_001.nii
-           /T2
-               patient_01_t2_001.nii
+ /CT
+     /patient_01
+         patient_01_ct_001.dcm
+ /PET
+     /patient_01
+         patient_01_pet_001.nii
+ /MRI
+     /T1
+         patient_01_t1_001.nii
+     /T2
+         patient_01_t2_001.nii
 
 * **Note**::
 
@@ -134,22 +134,22 @@ Radiuma supports importing a variety of medical image formats, including:
 
 **Example Directory Structure**:
 
-```plaintext
+
 /data
-    /CT
-        /patient_01
-            patient_01_ct_001.dcm,
-            patient_01_ct_002.dcm
-        /patient_02
-            patient_02_ct_001.dcm,
-            patient_02_ct_002.dcm
-    /MRI
-        /T1
-            patient_01_t1_001.nii,
-            patient_01_t1_002.nii
-        /T2
-            patient_01_t2_001.nii,
-            patient_01_t2_002.nii
+ /CT
+     /patient_01
+         patient_01_ct_001.dcm,
+         patient_01_ct_002.dcm
+     /patient_02
+         patient_02_ct_001.dcm,
+         patient_02_ct_002.dcm
+ /MRI
+     /T1
+         patient_01_t1_001.nii,
+         patient_01_t1_002.nii
+     /T2
+         patient_01_t2_001.nii,
+         patient_01_t2_002.nii
 
 
 * **Important**::
