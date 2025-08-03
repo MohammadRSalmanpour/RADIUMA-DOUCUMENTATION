@@ -118,11 +118,13 @@ Radiuma requires that each modality (e.g., CT,PET, MRI) has its own subfolder st
      /T2
          patient_01_t2_001.nii
 
-* **Note**::
 
-   Radiuma cannot process CT and PET images together in the same import operation.
-   Modalities must not be mixed in the same folder - keep them in separate subfolders.
-   For multi-modal studies, process each modality separately through the workflow.
+**Note**:
+
+- Radiuma cannot process CT and PET images together in the same import operation.
+- Modalities must not be mixed in the same folder - keep them in separate subfolders.
+- For multi-modal studies, process each modality separately through the workflow.
+
 
 Supported Input Formats
 ^^^^^^^^^^^^^^^^^^^^^^^
