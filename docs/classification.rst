@@ -22,7 +22,7 @@ The imputation step addresses missing values in your dataset by replacing them w
 
 Feature scaling transforms your features to a common scale, which is essential for many classification algorithms that are sensitive to feature magnitudes. Methods like StandardScaler, MinMaxScaler, and RobustScaler help improve model convergence and performance.
 
-.. image:: images/14.classification_feature_selection.png
+.. image:: images/14.classification_dimention.png
    :alt: Classification Feature Selection
    :width: 100%
 
