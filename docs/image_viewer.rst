@@ -23,7 +23,7 @@ File Support
 
 .. image:: images/file_support_image.png
    :alt: Image Viewer
-   :width: 40%
+   :width: 30%
 
 * NIFTI Files: Support for Neuroimaging Informatics Technology Initiative format (Nifti)
 * DICOM Files: Individual Digital Imaging and Communications in Medicine (DICOM) image support
