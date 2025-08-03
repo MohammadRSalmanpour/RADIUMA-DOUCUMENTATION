@@ -67,28 +67,32 @@ Radiuma supports DICOM images inside subfolders. Each patient should have their 
 
 NIFTI files are commonly used in medical imaging. Radiuma supports NIFTI files such as `.nii` and `.nii.gz`. However, for NIFTI imports, the files need to be organized by modality and sequence into subfolders for easy identification.
    
-   - **Correct Folder Structure for NIFTI Files**:
+**Correct Folder Structure for NIFTI Files**:
+
      - `/CT/` for CT images.
+
      - `/MRI/T1/` for T1-weighted MRI images.
+
      - `/MRI/T2/` for T2-weighted MRI images.
+
      - `/MRI/DCE/` for DCE (Dynamic Contrast Enhanced) MRI images.
    
 **Example Folder Structure** for NIFTI files:
 
-  /CT
-     /patient_01
-        patient_01_ct_001.nii,
-        patient_01_ct_002.nii
-  /MRI
-     /T1
-        patient_01_t1_001.nii,
-        patient_01_t1_002.nii
-     /T2
-        patient_01_t2_001.nii,
-        patient_01_t2_002.nii
-     /DCE
-        patient_01_dce_001.nii,
-        patient_01_dce_002.nii
+/CT
+  /patient_01
+     patient_01_ct_001.nii,
+     patient_01_ct_002.nii
+/MRI
+  /T1
+     patient_01_t1_001.nii,
+     patient_01_t1_002.nii
+  /T2
+     patient_01_t2_001.nii,
+     patient_01_t2_002.nii
+  /DCE
+     patient_01_dce_001.nii,
+     patient_01_dce_002.nii
 
 **Important Note**: NIFTI files must be organized in specific **modality-based subfolders** like `/MRI/T1/` or `/MRI/T2/`.
 
