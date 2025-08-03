@@ -90,6 +90,7 @@ Radiuma allows you to import **DICOM files** organized by **patient-specific sub
            patient_01_dce_001.nii,
            patient_01_dce_002.nii
      ```
+
      **Important**: Radiuma **does not support importing NIFTI files** from a single directory. NIFTI files must be organized in specific **modality-based subfolders** like `/MRI/T1/` or `/MRI/T2/`.
 
 ### 4. **Handling Mixed Modalities in a Single Folder**
