@@ -154,7 +154,7 @@ Radiuma supports importing a variety of medical image formats, including:
             patient_01_t2_001.nii,
             patient_01_t2_002.nii
 
- **.. important::
+** important::
 
    - For all formats, proper DICOM metadata or NIFTI header information must be present
    - Uncommon variants or proprietary formats may require conversion before import
