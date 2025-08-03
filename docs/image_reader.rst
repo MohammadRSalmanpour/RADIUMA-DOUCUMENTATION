@@ -28,7 +28,7 @@ You can import your images either from a **folder** containing multiple files or
    :width: 100%
 
 
-- **Folder Import**: Choose **Folder** if your data is organized in directories, such as when images are grouped by patient or modality (e.g., CT, MRI). You will select the main directory, and Radiuma will automatically detect and import all the relevant files from its subfolders.
+- **Folder Import**: Choose Folder if your data is organized in directories, such as when images are grouped by patient or modality (e.g., CT, MRI). You will select the main directory, and Radiuma will automatically detect and import all the relevant files from its subfolders.
 
 
 
@@ -58,7 +58,7 @@ Radiuma allows you to import **DICOM files** organized by **patient-specific sub
         patient_02_ct_001.dcm
         patient_02_ct_002.dcm
 
-     In this case, Radiuma will process the DICOM files inside each patient's subfolder (e.g., `/patient_01/` and `/patient_02/`). If your data is structured like this, **select the main folder** (e.g., `/CT`) and Radiuma will automatically organize and import the files.
+In this case, Radiuma will process the DICOM files inside each patient's subfolder (e.g., `/patient_01/` and `/patient_02/`). If your data is structured like this, **select the main folder** (e.g., `/CT`) and Radiuma will automatically organize and import the files.
 
    **Important Note**:  
    Radiuma **only supports DICOM images inside subfolders**. Each patient should have their own folder (e.g., `/patient_01/`) containing their corresponding DICOM files. 
