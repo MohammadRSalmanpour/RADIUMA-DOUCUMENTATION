@@ -37,8 +37,7 @@ You can import your images either from a **folder** containing multiple files or
    :width: 100%
 
 
-- **Single File Import**: Choose **Single File** if you're importing one image, like a specific `.nii`, `.dcm`, or `.nrrd` file.
-
+**Single File Import**: Select **Single File** to import an individual image file, such as a single `.dcm` (DICOM), `.nii` or `.nii.gz` (NIFTI), or `.nrrd` file.
 
 
 2. **Importing Multi-DICOM Images for Multiple Patients**
