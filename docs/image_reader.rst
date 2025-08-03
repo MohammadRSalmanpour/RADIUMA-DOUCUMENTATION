@@ -74,7 +74,9 @@ Radiuma allows you to import **DICOM files** organized by **patient-specific sub
      - `/MRI/DCE/` for DCE (Dynamic Contrast Enhanced) MRI images.
    
      **Example Folder Structure** for NIFTI files:
+
      ```plaintext
+
      /CT
         /patient_01
            patient_01_ct_001.nii,
@@ -89,6 +91,7 @@ Radiuma allows you to import **DICOM files** organized by **patient-specific sub
         /DCE
            patient_01_dce_001.nii,
            patient_01_dce_002.nii
+
      ```
 
      **Important**: Radiuma **does not support importing NIFTI files** from a single directory. NIFTI files must be organized in specific **modality-based subfolders** like `/MRI/T1/` or `/MRI/T2/`.
