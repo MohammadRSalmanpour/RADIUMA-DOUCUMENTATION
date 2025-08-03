@@ -51,13 +51,15 @@ Radiuma allows you to import **DICOM files** organized by **patient-specific sub
 **Example Folder Structure for DICOM images**:
 
 ```
+
 /CT
-    /patient_01
-        patient_01_ct_001.dcm
-        patient_01_ct_002.dcm
-    /patient_02
-        patient_02_ct_001.dcm
-        patient_02_ct_002.dcm
+ /patient_01
+     patient_01_ct_001.dcm
+     patient_01_ct_002.dcm
+ /patient_02
+     patient_02_ct_001.dcm
+     patient_02_ct_002.dcm
+
 ```
 
 In this case, Radiuma will process the DICOM files inside each patient's subfolder (e.g., `/patient_01/` and `/patient_02/`). If your data is structured like this, **select the main folder** (e.g., `/CT`) and Radiuma will automatically organize and import the files.
