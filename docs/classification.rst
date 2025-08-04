@@ -10,6 +10,12 @@ Overview
 
 The Classification tool provides multiple algorithms for data analysis with customizable parameters through an intuitive user interface.
 
+.. image:: images/14.classification_KFold.png
+   :alt: Classification Imputation
+   :width: 100%
+
+
+
 .. image:: images/14.classification_imputation.png
    :alt: Classification Imputation
    :width: 100%
