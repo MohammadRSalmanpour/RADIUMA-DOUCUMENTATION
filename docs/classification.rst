@@ -125,7 +125,7 @@ Classifier Selection
 ^^^^^^^^^^^^^^^^^^^
 
 
-.. image:: images/classifier_alg.png
+.. image:: images/14.classification_classifier.png
    :alt: Classifier Alg
    :width: 100%
 
