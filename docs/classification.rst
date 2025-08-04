@@ -52,10 +52,10 @@ The imputation step addresses missing values in your dataset by replacing them w
 
 **Imputation Strategy:**
 
-   Mean: Replace with feature mean
-   Median: Replace with feature median
-   Most Frequent: Replace with most common value
-   Constant: Replace with user-specified value
+   * **Mean**: Replace with feature mean
+   * **Median**: Replace with feature median
+   * **Most Frequent**: Replace with most common value
+   * **Constant**: Replace with user-specified value
 
 
 2. **KNN Imputer:** Nearest-neighbor based imputation using feature similarity.
