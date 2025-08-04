@@ -17,7 +17,7 @@ Data Splitting
    :alt: Classification Imputation
    :width: 100%
 
-
+**Important Note :** 
 * **Data Requirement**: The first column of both the input data and the target data must contain identical sample IDs.
 
 **Data Splitting Options:**
