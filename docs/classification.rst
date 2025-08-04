@@ -29,11 +29,41 @@ Data Splitting
 * **K-fold**: Set the number of folds for cross-validation
 * **Perform Final Test**: Option to reserve data for final testing
 
+Imputation
+^^^^^^^^^^
+
 .. image:: images/14.classification_imputation.png
    :alt: Classification Imputation
    :width: 100%
 
 The imputation step addresses missing values in your dataset by replacing them with calculated values. Options include mean, median, or mode imputation for categorical data, ensuring your classification models have complete datasets for accurate predictions.
+
+
+1. **Simple Imputer:** Basic replacement strategies for quick handling of missing data.
+
+.. image:: images/14.classification_imputation_strategy.png
+   :alt: Classification Imputation
+   :width: 100%
+
+**Imputation Options:**
+
+* **Continuous Missing Value**: Strategy for handling missing numerical values
+  - Mean: Replace with feature mean
+  - Median: Replace with feature median
+  - Most Frequent: Replace with most common value
+
+* **Categorical Missing Value**: Strategy for handling missing categorical values
+
+  - Mode: Replace with most frequent category
+  - Constant: Replace with user-specified value
+
+2. **KNN Imputer:** Nearest-neighbor based imputation using feature similarity.
+
+
+
+
+Scaling
+^^^^^^^
 
 .. image:: images/14.classification_scaling.png
    :alt: Classification Scaling
@@ -41,17 +71,31 @@ The imputation step addresses missing values in your dataset by replacing them w
 
 Feature scaling transforms your features to a common scale, which is essential for many classification algorithms that are sensitive to feature magnitudes. Methods like StandardScaler, MinMaxScaler, and RobustScaler help improve model convergence and performance.
 
+
+Dimention Reduction
+^^^^^^^^^^^^^^^^^
+
+
 .. image:: images/14.classification_dimention.png
    :alt: Classification Feature Selection
    :width: 100%
 
 Feature selection identifies the most informative variables for your classification task, reducing dimensionality and computational complexity. This process helps eliminate noise, prevent overfitting, and improve model accuracy by focusing on truly relevant features.
 
+
+Hyperparameter Tuning
+^^^^^^^^^^^^^^^^^^^^
+
 .. image:: images/14.classification_hyperparameter_tuning.png
    :alt: Classification Hyperparameter Tuning
    :width: 100%
 
 Hyperparameter tuning systematically searches for the optimal model configuration to maximize classification performance. Using methods like grid search or random search, this step fine-tunes algorithm-specific parameters that cannot be learned directly from the data.
+
+
+Classifier Selection
+^^^^^^^^^^^^^^^^^^^
+
 
 .. image:: images/classifier_alg.png
    :alt: Classifier Alg
