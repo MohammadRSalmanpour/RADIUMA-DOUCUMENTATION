@@ -76,13 +76,15 @@ The imputation step addresses missing values in your dataset by replacing them w
 
 * **Key Parameters**:
 
+* **Estimator**:
+
 
 .. image:: images/14.classification_imputation_iterative_stimator.png
    :alt: Classification Imputation
    :width: 100%
 
-* **Key Parameters**:
 
+* **Imputation Order**:
 
 .. image:: images/14.classification_imputation_iterative_order.png
    :alt: Classification Imputation
@@ -97,7 +99,7 @@ Scaling
    :alt: Classification Scaling
    :width: 100%
 
-Feature scaling transforms your features to a common scale, which is essential for many classification algorithms that are sensitive to feature magnitudes. Methods like StandardScaler, MinMaxScaler, and RobustScaler help improve model convergence and performance.
+Feature scaling transforms your features to a common scale, which is essential for many classification algorithms that are sensitive to feature magnitudes. Methods like StandardScaler, MinMaxScaler,Max abs Scaler,Normalizer and RobustScaler help improve model convergence and performance.
 
 
 Dimention Reduction
