@@ -48,18 +48,27 @@ The imputation step addresses missing values in your dataset by replacing them w
 **Imputation Options:**
 
 * **Continuous Missing Value**: Strategy for handling missing numerical values
+* **Categorical Missing Value**: Strategy for handling missing categorical values
+
+**Imputation Strategy: **
+
   - Mean: Replace with feature mean
   - Median: Replace with feature median
   - Most Frequent: Replace with most common value
-
-* **Categorical Missing Value**: Strategy for handling missing categorical values
-
-  - Mode: Replace with most frequent category
   - Constant: Replace with user-specified value
+
 
 2. **KNN Imputer:** Nearest-neighbor based imputation using feature similarity.
 
+.. image:: images/14.classification_imputation_KNN.png
+   :alt: Classification Imputation
+   :width: 100%
 
+3. **Iterative Imputer: ** Advanced method that models each feature with missing values as a function of other features.
+
+.. image:: images/14.classification_imputation_iterative.png
+   :alt: Classification Imputation
+   :width: 100%
 
 
 Scaling
