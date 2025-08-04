@@ -71,6 +71,17 @@ The imputation step addresses missing values in your dataset by replacing them w
    :width: 100%
 
 
+.. image:: images/14.classification_imputation_iterative_stimator.png
+   :alt: Classification Imputation
+   :width: 100%
+
+
+.. image:: images/14.classification_imputation_iterative_order.png
+   :alt: Classification Imputation
+   :width: 100%
+
+
+
 Scaling
 ^^^^^^^
 
