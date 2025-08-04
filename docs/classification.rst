@@ -10,11 +10,23 @@ Overview
 
 The Classification tool provides multiple algorithms for data analysis with customizable parameters through an intuitive user interface.
 
+Data Splitting
+^^^^^^^^^^^^^^
+
 .. image:: images/14.classification_KFold.png
    :alt: Classification Imputation
    :width: 100%
 
 
+* **Data Requirement**: The first column of both the input data and the target data must contain identical sample IDs.
+
+**Data Splitting Options:**
+
+* **Shuffle**: Enable shuffling to randomize the data before splitting
+* **Split**: Choose between percentage split or K-fold cross-validation
+* **Percentage**: Specify training data percentage (e.g., 80%)
+* **K-fold**: Set the number of folds for cross-validation
+* **Perform Final Test**: Option to reserve data for final testing
 
 .. image:: images/14.classification_imputation.png
    :alt: Classification Imputation
