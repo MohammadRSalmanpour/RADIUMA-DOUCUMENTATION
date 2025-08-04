@@ -36,7 +36,7 @@ Imputation
    :alt: Classification Imputation
    :width: 100%
 
-The imputation step addresses missing values in your dataset by replacing them with calculated values using three advanced strategies: Simple Imputer, KNN Imputer, and Iterative Imputer. Options include mean, median, or mode imputation for categorical data, ensuring your classification models have complete datasets for accurate predictions.
+The imputation step addresses missing values in your dataset by replacing them with calculated values using three advanced strategies: **Simple Imputer, KNN Imputer, and Iterative Imputer**. Options include mean, median, or mode imputation for categorical data, ensuring your classification models have complete datasets for accurate predictions.
 
 
 1. **Simple Imputer:** Basic replacement strategies for quick handling of missing data.
