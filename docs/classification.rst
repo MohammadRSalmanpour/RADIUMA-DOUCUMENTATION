@@ -64,6 +64,9 @@ The imputation step addresses missing values in your dataset by replacing them w
    :alt: Classification Imputation
    :width: 100%
 
+* **Key Parameters**:
+
+
 
 3. **Iterative Imputer:** Advanced method that models each feature with missing values as a function of other features.
 
@@ -71,10 +74,14 @@ The imputation step addresses missing values in your dataset by replacing them w
    :alt: Classification Imputation
    :width: 100%
 
+* **Key Parameters**:
+
 
 .. image:: images/14.classification_imputation_iterative_stimator.png
    :alt: Classification Imputation
    :width: 100%
+
+* **Key Parameters**:
 
 
 .. image:: images/14.classification_imputation_iterative_order.png
