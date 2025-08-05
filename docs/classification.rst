@@ -175,15 +175,57 @@ A linear model for classification that predicts class probabilities.
 
 * **Class Weight**: Balance classes by weights (None or 'balanced')
 
-**2. K-Nearest Neighbors Classifier**
+**2.Bagging Classifier**
+
+.. image:: images/14.classification_Bagging.png
+   :alt: Classification
+   :width: 100%
+
+
+Ensemble using base classifiers on random data subsets.
+
+**Key Parameters:**
+
+.. image:: images/14.classification_Bagging_Estimator.png
+   :alt: Classification
+   :width: 100%
+
+* **Base Estimator**: Base estimator type (DecisionTreeClassifier, SVC, etc.)
+* **Number of Estimators**: Number of base estimators (default: 10)
+* **Max Samples**: Samples per base estimator (default: 1.0)
+* **Max Features**: Features per base estimator (default: 1.0)
+* **Bootstrap**: Whether to sample with replacement (True/False)
+* **Random State**: Seed for reproducibility
+
+
+**3.K-Nearest Neighbors Classifier**
+
+.. image:: images/14.classification_K-Nearest.png
+   :alt: Classification
+   :width: 100%
 
 Non-parametric method using closest training examples.
 
 **Key Parameters:**
 
 * **Number of Neighbors**: K value for nearest neighbors
+
+.. image:: images/14.classification_K-Nearest_Weights.png
+   :alt: Classification
+   :width: 100%
+
 * **Weights**: How to weight neighbors (Uniform, Distance)
+
+.. image:: images/14.classification_K-Nearest_metric.png
+   :alt: Classification
+   :width: 100%
+
 * **Distance Metric**: Method for calculating distances (euclidean, manhattan, etc.)
+
+.. image:: images/14.classification_K-Nearest_Algorithm.png
+   :alt: Classification
+   :width: 100%
+
 * **Algorithm**: Search method (Auto, Ball_tree, Kd_tree, Brute)
 
 **3. Decision Tree Classifier**
@@ -224,18 +266,7 @@ Ensemble method using weak classifiers on modified data versions.
 * **Algorithm**: Boosting algorithm (SAMME, SAMME.R)
 * **Random State**: Seed for reproducibility
 
-**6. Bagging Classifier**
-
-Ensemble using base classifiers on random data subsets.
-
-**Key Parameters:**
-
-* **Base Estimator**: Base estimator type (DecisionTreeClassifier, SVC, etc.)
-* **Number of Estimators**: Number of base estimators (default: 10)
-* **Max Samples**: Samples per base estimator (default: 1.0)
-* **Max Features**: Features per base estimator (default: 1.0)
-* **Bootstrap**: Whether to sample with replacement (True/False)
-* **Random State**: Seed for reproducibility
+**6. 
 
 **7. Naive Bayes (GaussianNB)**
 
