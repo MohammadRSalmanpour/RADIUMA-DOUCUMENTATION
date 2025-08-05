@@ -105,12 +105,53 @@ Feature scaling transforms your features to a common scale, which is essential f
 Dimention Reduction
 ^^^^^^^^^^^^^^^^^
 
-
 .. image:: images/14.classification_dimention.png
    :alt: Classification Feature Selection
    :width: 100%
 
-Feature selection identifies the most informative variables for your classification task, reducing dimensionality and computational complexity. This process helps eliminate noise, prevent overfitting, and improve model accuracy by focusing on truly relevant features.
+Dimension reduction techniques optimize your dataset by identifying and retaining only the most valuable features. These methods serve two primary purposes:
+
+1. **Attribute Extraction**: Transforms features into a more compact representation while preserving essential patterns
+2. **Feature Selection**: Identifies and keeps only the most informative original features
+
+Key Benefits:
+
+* Reduces computational requirements and training time
+* Improves model performance by eliminating noise
+* Helps prevent overfitting
+* Enhances interpretability of results
+
+* **1. Attribute Extraction Algorithms**
+
+Transform features into a lower-dimensional space while retaining patterns:
+
+.. image:: images/14.classification_dimention_attribute.png
+   :alt: Classification Feature Selection
+   :width: 100%
+
+* **Available Methods**:
+
+* **PCA (Principal Component Analysis)**: Linear dimensionality reduction via orthogonal transformation
+* **Kernel PCA**: Non-linear extension of PCA using kernel functions
+* **Factor Analysis**: Models observed variables as linear combinations of latent factors
+* **FastICA**: Independent Component Analysis for signal separation
+* **Incremental PCA**: Efficient PCA for large, streaming datasets
+
+
+* **2. Feature Selection Algorithms**
+
+Select the most relevant features without transformation:
+
+.. image:: images/14.classification_dimention_featureselection.png
+   :alt: Classification Feature Selection
+   :width: 100%
+
+* **Available Methods**:
+
+* **K-Best(ANOVA)**: Select top k features based on statistical tests 
+* **Select Percentile**: Keep top features above a specified percentile
+* **ReliefF**: Weight-based feature selection for multi-class problems
+* **Variance Threshold**: Remove low-variance features (user-defined threshold)
 
 
 Hyperparameter Tuning
