@@ -345,7 +345,30 @@ Classification Pipeline
 
 The Classification tool guides you through a complete machine learning workflow:
 
-* **Data Requirement**: The first column of both the input data and the target data must contain identical sample IDs.
+* **Important Requirements**: 
+
+
+1.Both tables must contain sample IDs in their first column
+
+2.The sample IDs must match exactly between the feature and target tables
+
+3.Ensure your target variable is in categorical format for classification
+
+
+* **Data Import**: Use the **Table Reader** to import both your feature data and target variables.
+
+
+.. image:: images/14.classification_input_Data.png
+   :alt: Classification
+   :width: 80%
+
+Select your main data table containing all features/predictors.
+
+.. image:: images/14.classification_Input_target.png
+   :alt: Classification
+   :width: 80%
+
+Select your target table containing the classification labels.
 
 **1. Data Splitting**
 
