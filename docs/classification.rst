@@ -219,6 +219,10 @@ Applies Bayes' theorem with feature independence assumption.
 Classification Workflow
 ^^^^^^^^^^^^^^^^^^^^^^^
 
+.. image:: images/14.classification_workflow.png
+   :alt: Classification
+   :width: 100%
+
 1. Select and configure algorithms
 2. Apply preprocessing steps
 3. Train models
