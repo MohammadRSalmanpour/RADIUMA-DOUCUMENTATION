@@ -387,7 +387,7 @@ Select your target table containing the classification labels.
 
 * **Standard Scaling**: Normalize data to mean of 0 and standard deviation of 1
 
-**4. Feature Selection**
+**4. Dimention Reduction**
 
 * **PCA**: Reduce features using Principal Component Analysis
 * **K Best (ANOVA)**: Select top K features based on statistical tests
