@@ -116,7 +116,7 @@ Feature selection identifies the most informative variables for your classificat
 Hyperparameter Tuning
 ^^^^^^^^^^^^^^^^^^^^
 
-.. image:: images/14.classification_hyperparameter_tuning.png
+.. image:: images/14.classification_hyper_parameter_tuning.png
    :alt: Classification Hyperparameter Tuning
    :width: 100%
 
