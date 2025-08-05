@@ -255,17 +255,41 @@ Creates a model predicting targets by learning decision rules.
 * **Class Weight**: Class weights (None, 'balanced')
 * **Random State**: Seed for reproducibility (default: 43)
 
-**4. Support Vector Machines (SVM)**
+**5. Support Vector Machines (SVM)**
+
+
+.. image:: images/14.classification_SVM.png
+   :alt: Classification
+   :width: 100%
 
 Finds optimal hyperplane to separate classes.
 
 **Key Parameters:**
 
+.. image:: images/14.classification_SVM_Kernel.png
+   :alt: Classification
+   :width: 100%
+
 * **Kernel**: Kernel type (linear, poly, rbf, sigmoid)
 * **Regularization Parameter (C)**: Regularization strength (default: 1.0)
+
+.. image:: images/14.classification_SVM_Gamma.png
+   :alt: Classification
+   :width: 100%
+
 * **Gamma**: Kernel coefficient for 'rbf', 'poly' and 'sigmoid' (scale, auto)
 * **Degree**: Degree for poly kernel
+
+.. image:: images/14.classification_SVM_Decision.png
+   :alt: Classification
+   :width: 100%
+
 * **Decision Function Shape**: Shape of decision function (ovr, ovo)
+
+.. image:: images/14.classification_SVM_class_weight.png
+   :alt: Classification
+   :width: 100%
+
 * **Class Weight**: Class weights (None, 'balanced')
 
 **5. AdaBoost Classifier**
