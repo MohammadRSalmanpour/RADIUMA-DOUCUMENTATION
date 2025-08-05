@@ -139,7 +139,7 @@ Supported Algorithms
 **1. Logistic Regression Classifier**
 
 
-.. image:: images/14.classification_Logistic Regression.png
+.. image:: images/14.classification_Logistic_Regression.png
    :alt: Classification
    :width: 100%
 
@@ -148,20 +148,20 @@ A linear model for classification that predicts class probabilities.
 
 **Key Parameters:**
 
-.. image:: images/14.classification_Logistic Regression_Penalty.png
+.. image:: images/14.classification_Logistic_Regression_Penalty.png
    :alt: Classification
    :width: 100%
 
 * **Penalty**: Regularization type (L1, L2, Elasticnet, None)
 * **Regularization Strength (C)**: Inverse of regularization strength (default: 1.0)
 
-.. image:: images/14.classification_Logistic Regression_Solver.png
+.. image:: images/14.classification_Logistic_Regression_Solver.png
    :alt: Classification
    :width: 100%
 
 * **Solver**: Algorithm for optimization (lbfgs, liblinear, newton-cg, sag, saga)
 
-.. image:: images/14.classification_Logistic Regression_Multi-class.png
+.. image:: images/14.classification_Logistic_Regression_Multi-class.png
    :alt: Classification
    :width: 100%
 
@@ -169,7 +169,7 @@ A linear model for classification that predicts class probabilities.
 * **Max Iterations**: Maximum iterations for solver (default: 100)
 * **Random State**: Seed for reproducibility (default: 43)
 
-.. image:: images/14.classification_Logistic Regression_Class_Weight.png
+.. image:: images/14.classification_Logistic_Regression_Class_Weight.png
    :alt: Classification
    :width: 100%
 
