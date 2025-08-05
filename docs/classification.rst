@@ -320,6 +320,11 @@ Ensemble method using weak classifiers on modified data versions.
 
 **7. Naive Bayes (GaussianNB)**
 
+.. image:: images/14.classification_Naive_Bayes.png
+   :alt: Classification
+   :width: 100%
+
+
 Applies Bayes' theorem with feature independence assumption.
 
 Classification Workflow
