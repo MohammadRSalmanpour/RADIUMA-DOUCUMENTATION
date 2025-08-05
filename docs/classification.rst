@@ -228,16 +228,30 @@ Non-parametric method using closest training examples.
 
 * **Algorithm**: Search method (Auto, Ball_tree, Kd_tree, Brute)
 
-**3. Decision Tree Classifier**
+**4. Decision Tree Classifier**
+
+.. image:: images/14.classification_Decision_Tree.png
+   :alt: Classification
+   :width: 100%
+
 
 Creates a model predicting targets by learning decision rules. 
 
 **Key Parameters:**
 
+.. image:: images/14.classification_Decision_Tree_Criterion.png
+   :alt: Classification
+   :width: 100%
+
 * **Criterion**: Function to measure split quality (gini, entropy, log_loss)
 * **Max Depth**: Maximum depth of the tree
 * **Min Samples Split**: Minimum samples required to split node
 * **Min Samples Leaf**: Minimum samples required at leaf node
+
+.. image:: images/14.classification_Decision_Tree_Class_Weight.png
+   :alt: Classification
+   :width: 100%
+
 * **Class Weight**: Class weights (None, 'balanced')
 * **Random State**: Seed for reproducibility (default: 43)
 
