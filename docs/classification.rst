@@ -292,19 +292,31 @@ Finds optimal hyperplane to separate classes.
 
 * **Class Weight**: Class weights (None, 'balanced')
 
-**5. AdaBoost Classifier**
+**6. AdaBoost Classifier**
+
+.. image:: images/14.classification_AdaBoost.png
+   :alt: Classification
+   :width: 100%
 
 Ensemble method using weak classifiers on modified data versions.
 
 **Key Parameters:**
 
+.. image:: images/14.classification_AdaBoost_Estimator.png
+   :alt: Classification
+   :width: 100%
+
 * **Base Estimator**: Base estimator type (DecisionTreeClassifier, SVC, etc.)
 * **Number of Estimators**: Boosting iterations (default: 50)
 * **Learning Rate**: Weight applied to each classifier (default: 1.0)
+
+.. image:: images/14.classification_AdaBoost_Algorithm.png
+   :alt: Classification
+   :width: 100%
+
 * **Algorithm**: Boosting algorithm (SAMME, SAMME.R)
 * **Random State**: Seed for reproducibility
 
-**6. 
 
 **7. Naive Bayes (GaussianNB)**
 
