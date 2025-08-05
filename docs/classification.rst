@@ -306,7 +306,7 @@ Ensemble method using weak classifiers on modified data versions.
    :alt: Classification
    :width: 100%
 
-* **Base Estimator**: Base estimator type (DecisionTreeClassifier, SVC, etc.)
+* **Base Estimator**: Base estimator type (DecisionTreeClassifier,KNeighborsClassifier,LogisticRegression, SVC, None.)
 * **Number of Estimators**: Boosting iterations (default: 50)
 * **Learning Rate**: Weight applied to each classifier (default: 1.0)
 
