@@ -116,10 +116,11 @@ Dimension reduction techniques optimize your dataset by identifying and retainin
 
 Key Benefits:
 
-* Reduces computational requirements and training time
-* Improves model performance by eliminating noise
-* Helps prevent overfitting
-* Enhances interpretability of results
+   * Reduces computational requirements and training time
+   * Improves model performance by eliminating noise
+   * Helps prevent overfitting
+   * Enhances interpretability of results
+
 
 * **1. Attribute Extraction Algorithms**
 
@@ -131,11 +132,11 @@ Transform features into a lower-dimensional space while retaining patterns:
 
 * **Available Methods**:
 
-* **PCA (Principal Component Analysis)**: Linear dimensionality reduction via orthogonal transformation
-* **Kernel PCA**: Non-linear extension of PCA using kernel functions
-* **Factor Analysis**: Models observed variables as linear combinations of latent factors
-* **FastICA**: Independent Component Analysis for signal separation
-* **Incremental PCA**: Efficient PCA for large, streaming datasets
+   * **PCA (Principal Component Analysis)**: Linear dimensionality reduction via orthogonal transformation
+   * **Kernel PCA**: Non-linear extension of PCA using kernel functions
+   * **Factor Analysis**: Models observed variables as linear combinations of latent factors
+   * **FastICA**: Independent Component Analysis for signal separation
+   * **Incremental PCA**: Efficient PCA for large, streaming datasets
 
 
 * **2. Feature Selection Algorithms**
@@ -148,10 +149,10 @@ Select the most relevant features without transformation:
 
 * **Available Methods**:
 
-* **K-Best(ANOVA)**: Select top k features based on statistical tests 
-* **Select Percentile**: Keep top features above a specified percentile
-* **ReliefF**: Weight-based feature selection for multi-class problems
-* **Variance Threshold**: Remove low-variance features (user-defined threshold)
+   * **K-Best(ANOVA)**: Select top k features based on statistical tests 
+   * **Select Percentile**: Keep top features above a specified percentile
+   * **ReliefF**: Weight-based feature selection for multi-class problems
+   * **Variance Threshold**: Remove low-variance features (user-defined threshold)
 
 
 Hyperparameter Tuning
