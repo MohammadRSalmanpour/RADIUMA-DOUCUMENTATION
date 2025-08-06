@@ -9,6 +9,12 @@ Overview
    :width: 100%
 
 The Classification tool provides multiple algorithms for data analysis with customizable parameters through an intuitive user interface.
+Complete machine learning pipeline with:
+
+* 7+ classification algorithms
+* Automated data preprocessing
+* Hyperparameter optimization
+* Comprehensive model evaluation
 
 Data Splitting
 ^^^^^^^^^^^^^^
@@ -315,7 +321,6 @@ Creates a model predicting targets by learning decision rules.
 
 **5. Support Vector Machines (SVM)**
 
-
 .. image:: images/14.classification_SVM.png
    :alt: Classification
    :width: 100%
@@ -359,29 +364,27 @@ Finds optimal hyperplane to separate classes.
 Ensemble method using weak classifiers on modified data versions.
 
 **Key Parameters:**
+* **Base Estimator**: Base estimator type (DecisionTreeClassifier,KNeighborsClassifier,LogisticRegression, SVC, None.)
 
 .. image:: images/14.classification_AdaBoost_Estimator.png
    :alt: Classification
    :width: 100%
 
-* **Base Estimator**: Base estimator type (DecisionTreeClassifier,KNeighborsClassifier,LogisticRegression, SVC, None.)
-* **Number of Estimators**: Boosting iterations (default: 50)
-* **Learning Rate**: Weight applied to each classifier (default: 1.0)
+* **Algorithm**: Boosting algorithm (SAMME, SAMME.R)
 
 .. image:: images/14.classification_AdaBoost_Algorithm.png
    :alt: Classification
    :width: 100%
 
-* **Algorithm**: Boosting algorithm (SAMME, SAMME.R)
+* **Number of Estimators**: Boosting iterations (default: 50)
+* **Learning Rate**: Weight applied to each classifier (default: 1.0)
 * **Random State**: Seed for reproducibility
-
 
 **7. Naive Bayes (GaussianNB)**
 
 .. image:: images/14.classification_Naive_Bayes.png
    :alt: Classification
    :width: 100%
-
 
 Applies Bayes' theorem with feature independence assumption.
 
