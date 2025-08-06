@@ -457,36 +457,6 @@ Classification Workflow
    
 8. Compare models and select the best one.
 
-
-Classification Pipeline
-^^^^^^^^^^^^^^^^^^^^^^^
-
-The Classification tool guides you through a complete machine learning workflow:
-
-* **Important Requirements**: 
-
-
-1.Both feature (input) and target tables must have identical sample IDs in their first column.
-
-2.The sample IDs must match exactly between the feature and target tables. (e.g., Patient_001 in features = Patient_001 in targets).
-
-3.Ensure your target variable is in categorical format for classification. (e.g., class labels like "High"/"Low" or 0/1).
-
-
-* **Data Import**: Use the **Table Reader** to load your datasets:
-
-.. image:: images/14.classification_input_Data.png
-   :alt: Classification
-   :width: 80%
-
-Select your main data table containing all features/predictors.Preview the table to verify structure.
-
-.. image:: images/14.classification_Input_target.png
-   :alt: Classification
-   :width: 80%
-
-Select your target table containing only **sample IDs** and **class labels**. Preview the table to verify structure.
-
 Classification Pipeline
 ^^^^^^^^^^^^^^^^^^^^^^^
 
