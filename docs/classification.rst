@@ -65,7 +65,9 @@ The imputation step addresses missing values in your dataset by replacing them w
    :width: 100%
 
 * **Key Parameters**:
-
+* **n_neighbors** (default: 5) – Number of neighbors used to impute missing values
+* **metric** – Distance function non-euclidean, 
+* **weights** – uniform or distance (distance gives more weight to closer neighbors)
 
 
 3. **Iterative Imputer:** Advanced method that models each feature with missing values as a function of other features.
@@ -76,20 +78,34 @@ The imputation step addresses missing values in your dataset by replacing them w
 
 * **Key Parameters**:
 
-* **Estimator**:
+* **Estimator**  
+  Algorithm used to predict missing values for each feature.  
 
+  Common options include:
+
+  - **BayesianRidge** *(default)* – Performs regularized linear regression using Bayesian principles  
+  - **GaussianProcessRegressor** – Models non-linear relationships with probabilistic output  
+  - **KernelRidge** – Combines ridge regression with kernel tricks for non-linear features  
+  - **KNeighborsRegressor** – Uses neighboring samples to estimate missing values  
+  - **LinearRegression** – Basic linear approach for imputation  
+  - **Lasso / Ridge / ElasticNet** – Regularized linear models for better generalization
 
 .. image:: images/14.classification_imputation_iterative_stimator.png
    :alt: Classification Imputation
    :width: 100%
 
+* **Imputation Order**  
+  Determines the sequence in which features are imputed:
 
-* **Imputation Order**:
+  - **Ascending** *(default)* – Start from features with fewest missing values  
+  - **Descending** – Start from features with most missing values  
+  - **Random** – Random order for each iteration  
+  - **Roman** – Left-to-right (fixed order)
+
 
 .. image:: images/14.classification_imputation_iterative_order.png
    :alt: Classification Imputation
    :width: 100%
-
 
 
 Scaling
