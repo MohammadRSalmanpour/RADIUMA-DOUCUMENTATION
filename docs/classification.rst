@@ -16,6 +16,40 @@ Complete machine learning pipeline with:
 * Hyperparameter optimization
 * Comprehensive model evaluation
 
+Data Import
+^^^^^^^^^^^
+
+Before splitting or processing your data, ensure it is **properly structured**.
+
+.. note::
+   Both **feature** and **target** tables must follow these requirements:
+
+   1. **Identical Sample IDs** in the first column of both tables.
+   2. Sample IDs must **match exactly**.  
+      e.g., `Patient_001` in the feature table = `Patient_001` in the target table.
+   3. Target column must be **categorical** for classification tasks (e.g., `High` / `Low` or `0` / `1`).
+
+**Data Import Steps:**
+
+1. **Import Feature Table**
+
+   .. image:: images/14.classification_input_Data.png
+      :alt: Import Feature Table
+      :width: 80%
+
+   Select your main data table containing all **features/predictors**.  
+   Preview the table to verify structure.
+
+2. **Import Target Table**
+
+   .. image:: images/14.classification_Input_target.png
+      :alt: Import Target Table
+      :width: 80%
+
+   Select your target table containing only **Sample IDs** and **Class Labels**.  
+   Preview the table to verify structure.
+
+
 Data Splitting
 ^^^^^^^^^^^^^^
 
@@ -409,6 +443,8 @@ Classification Workflow
    :alt: Classification
    :width: 80%
 
+**Quick Workflow Summary:**
+
 1. Import data using **Table Reader**.
 2. Verify sample IDs match between feature and target tables.
 3. Apply **Data Splitting** (shuffle, percentage, or K-fold).
@@ -451,28 +487,13 @@ Select your main data table containing all features/predictors.Preview the table
 
 Select your target table containing only **sample IDs** and **class labels**. Preview the table to verify structure.
 
-**1. Data Splitting**
+Classification Pipeline
+^^^^^^^^^^^^^^^^^^^^^^^
 
-* **Shuffle**: Enable shuffling to randomize the data before splitting
-* **Split**: Choose between percentage split or K-fold cross-validation
-* **Percentage**: Specify training data percentage (e.g., 80%)
-* **K-fold**: Set the number of folds for cross-validation
-* **Perform Final Test**: Option to reserve data for final testing
+The Classification module guides you through a complete machine learning pipeline:
 
-**2. Imputation**
-
-* **Continuous Missing Value**: Strategy for handling missing numerical values
-* **Categorical Missing Value**: Strategy for handling missing categorical values
-
-**3. Scaling**
-
-* **Standard Scaling**: Normalize data to mean of 0 and standard deviation of 1
-
-**4. Dimention Reduction**
-
-* **PCA**: Reduce features using Principal Component Analysis
-* **K Best (ANOVA)**: Select top K features based on statistical tests
-
-**5. Hyperparameter Tuning**
-
-* **Grid Search**: Exhaustively search parameter combinations
+* **Data Import** – Features + Targets with identical Sample IDs  
+* **Data Preprocessing** – Splitting, Imputation, Scaling  
+* **Feature Optimization** – Dimension reduction and selection  
+* **Modeling** – Choose and tune classifiers  
+* **Evaluation & Comparison** – Select the optimal algorithm
