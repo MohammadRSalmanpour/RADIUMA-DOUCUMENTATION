@@ -369,6 +369,19 @@ Ensemble method using weak classifiers on modified data versions.
 
 Applies Bayes' theorem with feature independence assumption.
 
+
+Evaluation Metrics
+^^^^^^^^^^^^^^^^^^
+
+After training, Radiuma automatically computes standard classification metrics:
+
+* **Accuracy**: Proportion of correctly classified samples.
+* **Precision**: Proportion of positive predictions that are correct.
+* **Recall (Sensitivity)**: Proportion of true positives detected.
+* **F1 Score**: Harmonic mean of precision and recall.
+* **Misclassification Rate**: Proportion of samples that are incorrectly classified (1 − Accuracy).
+
+
 Classification Workflow
 ^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -376,11 +389,18 @@ Classification Workflow
    :alt: Classification
    :width: 80%
 
-1. Select and configure algorithms
-2. Apply preprocessing steps
-3. Train models
-4. Evaluate using standard metrics
-5. Compare algorithm performance
+1. Import data using **Table Reader**.
+2. Verify sample IDs match between feature and target tables.
+3. Apply **Data Splitting** (shuffle, percentage, or K-fold).
+4. Handle missing values using **Imputation**.
+5. Apply **Scaling** and **Dimension Reduction** if needed.
+6. Choose a **Classifier** and optionally perform **Hyperparameter Tuning**.
+7. Evaluate using:
+   
+   * Accuracy, Precision, Recall, F1 Score
+   
+8. Compare models and select the best one.
+
 
 Classification Pipeline
 ^^^^^^^^^^^^^^^^^^^^^^^
