@@ -71,7 +71,7 @@ The imputation step addresses missing values in your dataset by replacing them w
    :width: 100%
 
 * **Key Parameters**:
-
+   
 * **n_neighbors** (default: 5) – Number of neighbors used to impute missing values
 * **metric** – Distance function non-euclidean, 
 * **weights** – uniform or distance (distance gives more weight to closer neighbors)
