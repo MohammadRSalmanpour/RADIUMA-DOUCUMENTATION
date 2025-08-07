@@ -51,7 +51,7 @@ Before splitting or processing your data, ensure it is **properly structured**.
 Data Splitting
 ^^^^^^^^^^^^^^
 
-.. image:: images/14._KFold.png
+.. image:: images/15.regression_kfold.png
    :alt: Classification Imputation
    :width: 100%
 
@@ -71,7 +71,7 @@ Data Splitting
 Imputation
 ^^^^^^^^^^
 
-.. image:: images/14._imputation.png
+.. image:: images/15.regression_imputation.png
    :alt: Classification Imputation
    :width: 100%
 
@@ -80,7 +80,7 @@ The imputation step addresses missing values in your dataset by replacing them w
 
 1. **Simple Imputer:** Basic replacement strategies for quick handling of missing data.
 
-.. image:: images/14._imputation_strategy.png
+.. image:: images/15.regression_imputation_strategy.png
    :alt: Classification Imputation
    :width: 100%
 
@@ -99,7 +99,7 @@ The imputation step addresses missing values in your dataset by replacing them w
 
 2. **KNN Imputer:** Nearest-neighbor based imputation using feature similarity.
 
-.. image:: images/14._imputation_KNN.png
+.. image:: images/15.regression_knnimputer.png
    :alt: Classification Imputation
    :width: 100%
 
@@ -130,7 +130,7 @@ The imputation step addresses missing values in your dataset by replacing them w
   - **LinearRegression** – Basic linear approach for imputation  
   - **Lasso / Ridge / ElasticNet** – Regularized linear models for better generalization
 
-.. image:: images/14.imputation_iterative_stimator.png
+.. image:: images/15.regression_iterativeEstimator.png
    :alt: Classification Imputation
    :width: 100%
 
@@ -143,7 +143,7 @@ The imputation step addresses missing values in your dataset by replacing them w
   - **Roman** – Left-to-right (fixed order)
 
 
-.. image:: images/14_imputation_iterative_order.png
+.. image:: images/15.regression_iterative_order.png
    :alt: Classification Imputation
    :width: 100%
 
@@ -161,7 +161,7 @@ Feature scaling transforms your features to a common scale, which is essential f
 Dimention Reduction
 ^^^^^^^^^^^^^^^^^
 
-.. image:: images/14._dimention.png
+.. image:: images/15.regression_dimention.png
    :alt: Classification Feature Selection
    :width: 100%
 
@@ -182,7 +182,7 @@ Key Benefits:
 
 Transform features into a lower-dimensional space while retaining patterns:
 
-.. image:: images/14.classification_dimention_attribute.png
+.. image:: images/15.regression_dimention_attribute.png
    :alt: Classification Feature Selection
    :width: 100%
 
@@ -199,7 +199,7 @@ Transform features into a lower-dimensional space while retaining patterns:
 
 Select the most relevant features without transformation:
 
-.. image:: images/14.classification_dimention_featureselection.png
+.. image:: images/15.regression_dimention_featureselection.png
    :alt: Classification Feature Selection
    :width: 100%
 
@@ -214,7 +214,7 @@ Select the most relevant features without transformation:
 Hyperparameter Tuning
 ^^^^^^^^^^^^^^^^^^^^
 
-.. image:: images/14._hyper_parameter_tuning.png
+.. image:: images/15.regression_hyper_parameter_tuning.png
    :alt: Classification Hyperparameter Tuning
    :width: 100%
 
