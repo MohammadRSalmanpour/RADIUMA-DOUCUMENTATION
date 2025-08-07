@@ -8,31 +8,218 @@ Overview
    :alt: Regression
    :width: 100%
 
-The Regression tool provides multiple algorithms for predicting continuous target variables.
+The Regression tool provides a complete predictive modeling pipeline for continuous target variables with:
 
-.. image:: images/15.regression_imputation.png
-   :alt: Regression Imputation
+* 6+ regression algorithms
+* Automated data preprocessing
+* Hyperparameter optimization
+* Comprehensive model evaluation
+
+Data Import
+^^^^^^^^^^^
+
+Before splitting or processing your data, ensure it is **properly structured**.
+
+.. note::
+   Both **feature** and **target** tables must follow these requirements:
+
+   1. **Identical Sample IDs** in the first column of both tables.
+   2. Sample IDs must **match exactly**.  
+      e.g., `Patient_001` in the feature table = `Patient_001` in the target table.
+   3. Target column must be **categorical** for classification tasks (e.g., `High` / `Low` or `0` / `1`).
+
+**Data Import Steps:**
+
+1. **Import Feature Table**
+
+   .. image:: images/14._input_Data.png
+      :alt: Import Feature Table
+      :width: 80%
+
+   Select your main data table containing all **features/predictors**.  
+   Preview the table to verify structure.
+
+2. **Import Target Table**
+
+   .. image:: images/14._Input_target.png
+      :alt: Import Target Table
+      :width: 80%
+
+   Select your target table containing only **Sample IDs** and **Class Labels**.  
+   Preview the table to verify structure.
+
+Data Splitting
+^^^^^^^^^^^^^^
+
+.. image:: images/14._KFold.png
+   :alt: Classification Imputation
    :width: 100%
 
-The imputation step handles missing values in your dataset by replacing them with substituted values. Options include mean, median, or constant value imputation, ensuring your regression models can process complete datasets without gaps.
+**Important Note :** 
 
-.. image:: images/15.regression_scaling.png
-   :alt: Regression Scaling
+* **Data Requirement**: The first column of both the input data and the target data must contain identical sample IDs.
+
+**Data Splitting Options:**
+
+* **Shuffle**: Enable shuffling to randomize the data before splitting
+* **Split**: Choose between percentage split or K-fold cross-validation
+* **Percentage**: Specify training data percentage (e.g., 80%)
+* **K-fold**: Set the number of folds for cross-validation
+* **Perform Final Test**: Option to reserve data for final testing
+
+
+Imputation
+^^^^^^^^^^
+
+.. image:: images/14._imputation.png
+   :alt: Classification Imputation
    :width: 100%
 
-Feature scaling normalizes your data features to a similar range, improving model convergence and performance. Available methods include StandardScaler, MinMaxScaler, and RobustScaler, each optimized for different data distributions.
+The imputation step addresses missing values in your dataset by replacing them with calculated values using three advanced strategies: **Simple Imputer, KNN Imputer, and Iterative Imputer**. Options include mean, median, or mode imputation for categorical data, ensuring your classification models have complete datasets for accurate predictions.
 
-.. image:: images/15.regression_feature_selection.png
-   :alt: Regression Feature Selection
+
+1. **Simple Imputer:** Basic replacement strategies for quick handling of missing data.
+
+.. image:: images/14._imputation_strategy.png
+   :alt: Classification Imputation
    :width: 100%
 
-Feature selection identifies and retains the most relevant variables for your regression task. This reduces dimensionality, prevents overfitting, and improves model interpretability by eliminating redundant or irrelevant features.
+**Imputation Options:**
 
-.. image:: images/15.regression_hyper_parameter_tuning.png
-   :alt: Regression Hyperparameter Tuning
+* **Continuous Missing Value**: Strategy for handling missing numerical values
+* **Categorical Missing Value**: Strategy for handling missing categorical values
+
+**Imputation Strategy:**
+
+* **Mean**: Replace with feature mean
+* **Median**: Replace with feature median
+* **Most Frequent**: Replace with most common value
+* **Constant**: Replace with user-specified value
+
+
+2. **KNN Imputer:** Nearest-neighbor based imputation using feature similarity.
+
+.. image:: images/14._imputation_KNN.png
+   :alt: Classification Imputation
    :width: 100%
 
-Hyperparameter tuning optimizes model parameters that cannot be learned from the data directly. Using techniques like grid search or random search, this process systematically identifies the best configuration for maximum predictive performance.
+* **Key Parameters**:
+   
+* **n_neighbors** (default: 5) – Number of neighbors used to impute missing values
+* **metric** – Distance function non-euclidean, 
+* **weights** – uniform or distance (distance gives more weight to closer neighbors)
+
+
+3. **Iterative Imputer:** Advanced method that models each feature with missing values as a function of other features.
+
+.. image:: images/14._imputation_iterative.png
+   :alt: Classification Imputation
+   :width: 100%
+
+* **Key Parameters**:
+
+* **Estimator**  
+  Algorithm used to predict missing values for each feature.  
+
+  Common options include:
+
+  - **BayesianRidge** *(default)* – Performs regularized linear regression using Bayesian principles  
+  - **GaussianProcessRegressor** – Models non-linear relationships with probabilistic output  
+  - **KernelRidge** – Combines ridge regression with kernel tricks for non-linear features  
+  - **KNeighborsRegressor** – Uses neighboring samples to estimate missing values  
+  - **LinearRegression** – Basic linear approach for imputation  
+  - **Lasso / Ridge / ElasticNet** – Regularized linear models for better generalization
+
+.. image:: images/14.imputation_iterative_stimator.png
+   :alt: Classification Imputation
+   :width: 100%
+
+* **Imputation Order**  
+  Determines the sequence in which features are imputed:
+
+  - **Ascending** *(default)* – Start from features with fewest missing values  
+  - **Descending** – Start from features with most missing values  
+  - **Random** – Random order for each iteration  
+  - **Roman** – Left-to-right (fixed order)
+
+
+.. image:: images/14_imputation_iterative_order.png
+   :alt: Classification Imputation
+   :width: 100%
+
+
+Scaling
+^^^^^^^
+
+.. image:: images/14._scaling.png
+   :alt: Classification Scaling
+   :width: 100%
+
+Feature scaling transforms your features to a common scale, which is essential for many classification algorithms that are sensitive to feature magnitudes. Methods like StandardScaler, MinMaxScaler,Max abs Scaler,Normalizer and RobustScaler help improve model convergence and performance.
+
+
+Dimention Reduction
+^^^^^^^^^^^^^^^^^
+
+.. image:: images/14._dimention.png
+   :alt: Classification Feature Selection
+   :width: 100%
+
+Dimension reduction techniques optimize your dataset by identifying and retaining only the most valuable features. These methods serve two primary purposes:
+
+1. **Attribute Extraction**: Transforms features into a more compact representation while preserving essential patterns
+2. **Feature Selection**: Identifies and keeps only the most informative original features
+
+Key Benefits:
+
+   * Reduces computational requirements and training time
+   * Improves model performance by eliminating noise
+   * Helps prevent overfitting
+   * Enhances interpretability of results
+
+
+* **1. Attribute Extraction Algorithms**
+
+Transform features into a lower-dimensional space while retaining patterns:
+
+.. image:: images/14.classification_dimention_attribute.png
+   :alt: Classification Feature Selection
+   :width: 100%
+
+* **Available Methods**:
+
+   * **PCA (Principal Component Analysis)**: Linear dimensionality reduction via orthogonal transformation
+   * **Kernel PCA**: Non-linear extension of PCA using kernel functions
+   * **Factor Analysis**: Models observed variables as linear combinations of latent factors
+   * **FastICA**: Independent Component Analysis for signal separation
+   * **Incremental PCA**: Efficient PCA for large, streaming datasets
+
+
+* **2. Feature Selection Algorithms**
+
+Select the most relevant features without transformation:
+
+.. image:: images/14.classification_dimention_featureselection.png
+   :alt: Classification Feature Selection
+   :width: 100%
+
+* **Available Methods**:
+
+   * **K-Best(ANOVA)**: Select top k features based on statistical tests 
+   * **Select Percentile**: Keep top features above a specified percentile
+   * **ReliefF**: Weight-based feature selection for multi-class problems
+   * **Variance Threshold**: Remove low-variance features (user-defined threshold)
+
+
+Hyperparameter Tuning
+^^^^^^^^^^^^^^^^^^^^
+
+.. image:: images/14._hyper_parameter_tuning.png
+   :alt: Classification Hyperparameter Tuning
+   :width: 100%
+
+Hyperparameter tuning systematically searches for the optimal model configuration to maximize classification performance. Using methods like grid search or random search, this step fine-tunes algorithm-specific parameters that cannot be learned directly from the data.
+
 
 .. image:: images/regressor_alg.png
    :alt: Regressor Alg
@@ -118,11 +305,35 @@ Ensemble method aggregating predictions from multiple models.
 
 Evaluation Metrics
 ^^^^^^^^^^^^^^^^^^
+After training, Radiuma automatically computes standard Regression metrics:
 
 * **Mean Absolute Error (MAE)**: Average of absolute differences between predictions and actual values
 * **Root Mean Squared Error (RMSE)**: Square root of average squared differences
 * **R-squared Score**: Proportion of variance explained by the model
 * **Median Absolute Error**: Median of absolute differences between predictions and actual values
+
+
+Regression Workflow
+^^^^^^^^^^^^^^^^^^^
+
+.. image:: images/14.Regression_workflow.png
+   :alt: Classification
+   :width: 80%
+
+**Quick Workflow Summary:**
+
+1. Import data using **Table Reader**.
+2. Verify sample IDs match between feature and target tables.
+3. Apply **Data Splitting** (shuffle, percentage, or K-fold).
+4. Handle missing values using **Imputation**.
+5. Apply **Scaling** and **Dimension Reduction** if needed.
+6. Choose a **Regressor** and optionally perform **Hyperparameter Tuning**.
+7. Evaluate using:
+   
+   * MAE,RMSE,R-squared Score,Median Absolute Error
+   
+8. Compare models and select the best one.
+
 
 Regression Pipeline
 ^^^^^^^^^^^^^^^^^^^
