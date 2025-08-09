@@ -10,29 +10,158 @@ Overview
 
 The Clustering tool provides algorithms for grouping similar data points without labeled training data.
 
+Data Import
+^^^^^^^^^^^
+
+Before splitting or processing your data, ensure it is **properly structured**.
+
+**Important Note :** 
+
+* **Data Requirement**: The first column of the input data data must contain unique sample IDs.
+
+
+Data Splitting
+^^^^^^^^^^^^^^
+
+**Data Splitting Options:**
+
+* **Shuffle**: Enable shuffling to randomize the data before splitting
+* **Split**: Choose between percentage split or K-fold cross-validation
+* **Percentage**: Specify training data percentage (e.g., 80%)
+* **K-fold**: Set the number of folds for cross-validation
+* **Perform Final Test**: Option to reserve data for final testing
+
+Imputation
+^^^^^^^^^^
+
 .. image:: images/16.clustering_imputation.png
-   :alt: Clustering Imputation
+   :alt: clustering Imputation
    :width: 100%
 
-The imputation step replaces missing values in your dataset with estimated values, ensuring clustering algorithms can process complete data. Methods include mean, median, or constant value imputation for numerical data and mode imputation for categorical variables.
+The imputation step addresses missing values in your dataset by replacing them with calculated values using three advanced strategies: **Simple Imputer, KNN Imputer, and Iterative Imputer**. Options include mean, median, or mode imputation for categorical data, ensuring your classification models have complete datasets for accurate predictions.
+
+
+1. **Simple Imputer:** Basic replacement strategies for quick handling of missing data.
+
+**Imputation Options:**
+
+* **Continuous Missing Value**: Strategy for handling missing numerical values
+* **Categorical Missing Value**: Strategy for handling missing categorical values
+
+**Imputation Strategy:**
+
+* **Mean**: Replace with feature mean
+* **Median**: Replace with feature median
+* **Most Frequent**: Replace with most common value
+* **Constant**: Replace with user-specified value
+
+
+2. **KNN Imputer:** Nearest-neighbor based imputation using feature similarity.
+
+* **Key Parameters**:
+   
+* **n_neighbors** (default: 5) – Number of neighbors used to impute missing values
+* **metric** – Distance function non-euclidean, 
+* **weights** – uniform or distance (distance gives more weight to closer neighbors)
+
+
+3. **Iterative Imputer:** Advanced method that models each feature with missing values as a function of other features.
+
+
+* **Key Parameters**:
+
+* **Estimator**  
+  Algorithm used to predict missing values for each feature.  
+
+  Common options include:
+
+  - **BayesianRidge** *(default)* – Performs regularized linear regression using Bayesian principles  
+  - **GaussianProcessRegressor** – Models non-linear relationships with probabilistic output  
+  - **KernelRidge** – Combines ridge regression with kernel tricks for non-linear features  
+  - **KNeighborsRegressor** – Uses neighboring samples to estimate missing values  
+  - **LinearRegression** – Basic linear approach for imputation  
+  - **Lasso / Ridge / ElasticNet** – Regularized linear models for better generalization
+
+* **Imputation Order**  
+  Determines the sequence in which features are imputed:
+
+  - **Ascending** *(default)* – Start from features with fewest missing values  
+  - **Descending** – Start from features with most missing values  
+  - **Random** – Random order for each iteration  
+  - **Roman** – Left-to-right (fixed order)
+
+Scaling
+^^^^^^^
 
 .. image:: images/16.clustering_scaling.png
    :alt: Clustering Scaling
    :width: 100%
 
-Feature scaling standardizes your data features to equivalent ranges, which is crucial for distance-based clustering algorithms. Techniques like StandardScaler, MinMaxScaler, and RobustScaler ensure features contribute equally to similarity calculations regardless of their original scales.
 
-.. image:: images/16.clustering_feature_selection.png
-   :alt: Clustering Feature Selection
+Dimention Reduction
+^^^^^^^^^^^^^^^^^
+
+.. image:: images/16.clustering_dimension.png
+   :alt: Clustering 
    :width: 100%
 
-Feature selection reduces dimensionality by identifying the most relevant attributes for cluster formation. This step improves computational efficiency, reduces noise, and enhances cluster definition by eliminating redundant or irrelevant variables that may obscure natural groupings.
+Dimension reduction techniques optimize your dataset by identifying and retaining only the most valuable features. These methods serve two primary purposes:
+
+1. **Attribute Extraction**: Transforms features into a more compact representation while preserving essential patterns
+2. **Feature Selection**: Identifies and keeps only the most informative original features
+
+Key Benefits:
+
+   * Reduces computational requirements and training time
+   * Improves model performance by eliminating noise
+   * Helps prevent overfitting
+   * Enhances interpretability of results
+
+
+* **1. Attribute Extraction Algorithms**
+
+Transform features into a lower-dimensional space while retaining patterns:
+
+.. image:: images/16.clustering_attribute.png
+   :alt: Clustering 
+   :width: 100%
+
+* **Available Methods**:
+
+   * **PCA (Principal Component Analysis)**: Linear dimensionality reduction via orthogonal transformation
+   * **Kernel PCA**: Non-linear extension of PCA using kernel functions
+   * **Factor Analysis**: Models observed variables as linear combinations of latent factors
+   * **FastICA**: Independent Component Analysis for signal separation
+   * **Incremental PCA**: Efficient PCA for large, streaming datasets
+
+
+* **2. Feature Selection Algorithms**
+
+Select the most relevant features without transformation:
+
+.. image:: images/16.clustering_featureselection.png
+   :alt: Clustering 
+   :width: 100%
+
+* **Available Methods**:
+
+   * **K-Best(ANOVA)**: Select top k features based on statistical tests 
+   * **Select Percentile**: Keep top features above a specified percentile
+   * **ReliefF**: Weight-based feature selection for multi-class problems
+   * **Variance Threshold**: Remove low-variance features (user-defined threshold)
+
+
+Hyperparameter Tuning
+^^^^^^^^^^^^^^^^^^^^
 
 .. image:: images/16.clustering_hyperparameter_tuning.png
    :alt: Clustering Hyperparameter Tuning
    :width: 100%
 
 Hyperparameter tuning optimizes algorithm-specific parameters like number of clusters, convergence thresholds, or distance metrics. This systematic search identifies the configuration that produces the most coherent and well-separated clusters for your specific dataset.
+
+clustering Selection
+^^^^^^^^^^^^^^^^^^^
 
 .. image:: images/16.clustering_alg.png
    :alt: Clustering Alg
@@ -146,8 +275,6 @@ Clustering Pipeline
 ^^^^^^^^^^^^^^^^^^^
 
 The Clustering tool guides you through a complete workflow:
-
-**   Data Requirement: The first column of the input data must contain unique sample IDs.
 
 **1. Data Preprocessing**
 
