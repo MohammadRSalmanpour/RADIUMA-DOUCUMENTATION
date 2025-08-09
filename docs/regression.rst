@@ -32,7 +32,7 @@ Before splitting or processing your data, ensure it is **properly structured**.
 
 1. **Import Feature Table**
 
-   .. image:: images/14._input_Data.png
+   .. image:: images/15.regression_input_data.png
       :alt: Import Feature Table
       :width: 80%
 
@@ -41,7 +41,7 @@ Before splitting or processing your data, ensure it is **properly structured**.
 
 2. **Import Target Table**
 
-   .. image:: images/14._Input_target.png
+   .. image:: images/15.regression_target.png
       :alt: Import Target Table
       :width: 80%
 
