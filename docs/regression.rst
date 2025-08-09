@@ -112,7 +112,7 @@ The imputation step addresses missing values in your dataset by replacing them w
 
 3. **Iterative Imputer:** Advanced method that models each feature with missing values as a function of other features.
 
-.. image:: images/14._imputation_iterative.png
+.. image:: images/15.regression_iterative.png
    :alt: Classification Imputation
    :width: 100%
 
