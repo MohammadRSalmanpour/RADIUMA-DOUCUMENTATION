@@ -52,7 +52,7 @@ Data Splitting
 ^^^^^^^^^^^^^^
 
 .. image:: images/15.regression_kfold.png
-   :alt: Classification Imputation
+   :alt: Regression Imputation
    :width: 100%
 
 **Important Note :** 
@@ -72,7 +72,7 @@ Imputation
 ^^^^^^^^^^
 
 .. image:: images/15.regression_imputation.png
-   :alt: Classification Imputation
+   :alt: RegressionImputation
    :width: 100%
 
 The imputation step addresses missing values in your dataset by replacing them with calculated values using three advanced strategies: **Simple Imputer, KNN Imputer, and Iterative Imputer**. Options include mean, median, or mode imputation for categorical data, ensuring your classification models have complete datasets for accurate predictions.
@@ -81,7 +81,7 @@ The imputation step addresses missing values in your dataset by replacing them w
 1. **Simple Imputer:** Basic replacement strategies for quick handling of missing data.
 
 .. image:: images/15.regression_simpleimputer.png
-   :alt: Classification Imputation
+   :alt: Regression Imputation
    :width: 100%
 
 **Imputation Options:**
@@ -100,7 +100,7 @@ The imputation step addresses missing values in your dataset by replacing them w
 2. **KNN Imputer:** Nearest-neighbor based imputation using feature similarity.
 
 .. image:: images/15.regression_knnimputer.png
-   :alt: Classification Imputation
+   :alt: Regression Imputation
    :width: 100%
 
 * **Key Parameters**:
@@ -113,7 +113,7 @@ The imputation step addresses missing values in your dataset by replacing them w
 3. **Iterative Imputer:** Advanced method that models each feature with missing values as a function of other features.
 
 .. image:: images/15.regression_iterative.png
-   :alt: Classification Imputation
+   :alt: Regression Imputation
    :width: 100%
 
 * **Key Parameters**:
@@ -131,7 +131,7 @@ The imputation step addresses missing values in your dataset by replacing them w
   - **Lasso / Ridge / ElasticNet** – Regularized linear models for better generalization
 
 .. image:: images/15.regression_iterativeEstimator.png
-   :alt: Classification Imputation
+   :alt: Regression Imputation
    :width: 100%
 
 * **Imputation Order**  
@@ -144,7 +144,7 @@ The imputation step addresses missing values in your dataset by replacing them w
 
 
 .. image:: images/15.regression_iterative_order.png
-   :alt: Classification Imputation
+   :alt: Regression Imputation
    :width: 100%
 
 
@@ -152,7 +152,7 @@ Scaling
 ^^^^^^^
 
 .. image:: images/14._scaling.png
-   :alt: Classification Scaling
+   :alt: Regression Scaling
    :width: 100%
 
 Feature scaling transforms your features to a common scale, which is essential for many classification algorithms that are sensitive to feature magnitudes. Methods like StandardScaler, MinMaxScaler,Max abs Scaler,Normalizer and RobustScaler help improve model convergence and performance.
@@ -162,7 +162,7 @@ Dimention Reduction
 ^^^^^^^^^^^^^^^^^
 
 .. image:: images/15.regression_dimention.png
-   :alt: Classification Feature Selection
+   :alt: Regression Feature Selection
    :width: 100%
 
 Dimension reduction techniques optimize your dataset by identifying and retaining only the most valuable features. These methods serve two primary purposes:
@@ -183,7 +183,7 @@ Key Benefits:
 Transform features into a lower-dimensional space while retaining patterns:
 
 .. image:: images/15.regression_dimention_attribute.png
-   :alt: Classification Feature Selection
+   :alt: Regression Feature Selection
    :width: 100%
 
 * **Available Methods**:
@@ -200,7 +200,7 @@ Transform features into a lower-dimensional space while retaining patterns:
 Select the most relevant features without transformation:
 
 .. image:: images/15.regression_dimention_featureselection.png
-   :alt: Classification Feature Selection
+   :alt: Regression Feature Selection
    :width: 100%
 
 * **Available Methods**:
@@ -215,7 +215,7 @@ Hyperparameter Tuning
 ^^^^^^^^^^^^^^^^^^^^
 
 .. image:: images/15.regression_hyper_parameter_tuning.png
-   :alt: Classification Hyperparameter Tuning
+   :alt: Regression Hyperparameter Tuning
    :width: 100%
 
 Hyperparameter tuning systematically searches for the optimal model configuration to maximize classification performance. Using methods like grid search or random search, this step fine-tunes algorithm-specific parameters that cannot be learned directly from the data.
@@ -317,7 +317,7 @@ Regression Workflow
 ^^^^^^^^^^^^^^^^^^^
 
 .. image:: images/15.regression_workflow.png
-   :alt: Classification
+   :alt: Regression
    :width: 80%
 
 **Quick Workflow Summary:**
