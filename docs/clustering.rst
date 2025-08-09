@@ -276,6 +276,7 @@ Clustering Workflow
    :width: 80%
 
 **Quick Workflow Summary:**
+
 1. Import and prepare data
 2. Handle missing values
 3. Scale and optionally reduce dimensions
