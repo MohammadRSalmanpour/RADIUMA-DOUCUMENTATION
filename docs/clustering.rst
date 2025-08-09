@@ -4,7 +4,7 @@ Clustering
 Overview
 ^^^^^^^^
 
-.. image:: images/16.clustering.png    16.clustering_data
+.. image:: images/16.clustering.png 
    :alt: Clustering
    :width: 100%
 
