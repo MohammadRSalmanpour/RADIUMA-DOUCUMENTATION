@@ -4,7 +4,7 @@ Clustering
 Overview
 ^^^^^^^^
 
-.. image:: images/16.clustering.png
+.. image:: images/16.clustering.png    16.clustering_data
    :alt: Clustering
    :width: 100%
 
@@ -18,6 +18,10 @@ Before splitting or processing your data, ensure it is **properly structured**.
 **Important Note :** 
 
 * **Data Requirement**: The first column of the input data data must contain unique sample IDs.
+
+.. image:: images/16.clustering_data.png    
+   :alt: Clustering
+   :width: 100%
 
 
 Data Splitting
