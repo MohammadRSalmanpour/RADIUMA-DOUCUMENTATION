@@ -80,7 +80,7 @@ The imputation step addresses missing values in your dataset by replacing them w
 
 1. **Simple Imputer:** Basic replacement strategies for quick handling of missing data.
 
-.. image:: images/15.regression_imputation_strategy.png
+.. image:: images/15.regression_simpleimputer.png
    :alt: Classification Imputation
    :width: 100%
 
@@ -316,7 +316,7 @@ After training, Radiuma automatically computes standard Regression metrics:
 Regression Workflow
 ^^^^^^^^^^^^^^^^^^^
 
-.. image:: images/14.Regression_workflow.png
+.. image:: images/15.regression_workflow.png
    :alt: Classification
    :width: 80%
 
