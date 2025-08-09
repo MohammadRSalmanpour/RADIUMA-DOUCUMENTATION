@@ -275,6 +275,15 @@ Clustering Workflow
    :alt: Classification
    :width: 80%
 
+**Quick Workflow Summary:**
+1. Import and prepare data
+2. Handle missing values
+3. Scale and optionally reduce dimensions
+4. Select clustering algorithm
+5. Tune hyperparameters
+6. Evaluate clusters
+
+
 Clustering Pipeline
 ^^^^^^^^^^^^^^^^^^^
 
