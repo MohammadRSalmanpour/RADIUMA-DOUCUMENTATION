@@ -34,7 +34,7 @@ Feature selection reduces dimensionality by identifying the most relevant attrib
 
 Hyperparameter tuning optimizes algorithm-specific parameters like number of clusters, convergence thresholds, or distance metrics. This systematic search identifies the configuration that produces the most coherent and well-separated clusters for your specific dataset.
 
-.. image:: images/clustering_alg.png
+.. image:: images/16.clustering_alg.png
    :alt: Clustering Alg
    :width: 100%
 
@@ -128,10 +128,19 @@ Finds clusters by passing messages between data points.
 Clustering Evaluation Metrics
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+After training, Radiuma automatically computes standard clustering metrics:
+
 * **Silhouette Score**: Measure of how similar objects are to their own cluster compared to other clusters
 * **Davies-Bouldin Index**: Average similarity of each cluster with its most similar cluster
 * **Calinski-Harabasz Index**: Ratio of between-cluster dispersion to within-cluster dispersion
 * **Inertia**: Sum of squared distances of samples to their closest cluster center
+
+Clustering Workflow
+^^^^^^^^^^^^^^^^^^^
+
+.. image:: images/16.clustering_workflow.png
+   :alt: Classification
+   :width: 80%
 
 Clustering Pipeline
 ^^^^^^^^^^^^^^^^^^^
