@@ -252,18 +252,30 @@ Probabilistic model assuming data from Gaussian distributions mixture.
 
 **5. K-Medoids Clustering**
 
-Specialized for categorical data.
+Partitions observations into k clusters using actual data points as cluster centers (medoids), making it more robust to outliers than K-Means.
 
 **Key Parameters:**
 
 * **Number of Clusters**: Number of clusters to form (default: 8)
 
-.. image:: images/16.clustering-k-mode.png
+.. image:: images/16.clustering-k-medoids_initialization.png
    :alt: Clustering Alg
    :width: 100%
 
-* **Initialization Method**: Method for initial centroids (cao, random, Huang)
+* **Initialization Method**: Method for initial centroids. ( random, first, build )
 * **Number of Initializations**: Number of times to run with different initializations (default: 10)
+
+.. image:: images/16.clustering-k-medoids_method.png
+   :alt: Clustering Alg
+   :width: 100%
+
+* **Method**: Algorithm variant (alternate , pam)
+
+.. image:: images/16.clustering-k-medoids_metric.png
+   :alt: Clustering Alg
+   :width: 100%
+
+* **Metric**: Distance Metrics (eclidian, cosine, manhattan, percomputed)
 * **Max Iterations**: Maximum iterations for a single run (default: 100)
 * **Random State**: Seed for reproducible results (default: 42)
 
