@@ -7,6 +7,25 @@ Image Fusion
 
 Advanced capabilities for combining information from multiple imaging modalities.
 
+* **important:**
+
+   Each fusion method contains a **Normalization** tab that must be configured before processing. 
+   Proper normalization ensures correct fusion results by matching intensity ranges between images.
+
+.. image:: images/12.image_fusion_normalizer.png
+   :alt: Image Fusion
+   :width: 100%
+
+Before applying any fusion method, normalization is required to ensure proper scaling and comparable intensity ranges between input images.
+
+**Key Parameters**
+
+* **Normalization Method**:
+
+  - `MinMax`: Scales data to a specified range (default: [0, 1])
+  - `ZScore`: Standardizes data to have zero mean and unit variance
+
+
 Weighted Fusion
 ^^^^^^^^^^^^^^^
 
