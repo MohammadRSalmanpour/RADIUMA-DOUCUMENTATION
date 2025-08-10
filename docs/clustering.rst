@@ -183,6 +183,11 @@ Partitions observations into k clusters with nearest mean.
 **Key Parameters:**
 
 * **Number of Clusters**: Number of clusters to form (default: 8)
+
+.. image:: images/16.clustering_knn.png
+   :alt: Clustering Alg
+   :width: 100%
+
 * **Initialization Method**: Method for initialization (k-means++, random)
 * **Number of Initializations**: Number of times to run with different initializations (default: 10)
 * **Max Iterations**: Maximum iterations for a single run (default: 300)
@@ -196,6 +201,11 @@ Hierarchical approach building nested clusters.
 
 * **Number of Clusters**: Number of clusters to find (default: 2)
 * **Linkage**: Method for calculating distances between clusters (ward, complete, average, single)
+
+.. image:: images/16.clustering-Agglomerative.png
+   :alt: Clustering Alg
+   :width: 100%
+
 * **Distance Metric**: Metric for calculating distances (euclidean, manhattan, etc.)
 * **Compute Distances**: Whether to compute distances for visualization (default: False)
 
@@ -206,6 +216,11 @@ Specialized for categorical data.
 **Key Parameters:**
 
 * **Number of Clusters**: Number of clusters to form (default: 8)
+
+.. image:: images/16.clustering-k-mode.png
+   :alt: Clustering Alg
+   :width: 100%
+
 * **Initialization Method**: Method for initial centroids (cao, random, Huang)
 * **Number of Initializations**: Number of times to run with different initializations (default: 10)
 * **Max Iterations**: Maximum iterations for a single run (default: 100)
@@ -218,12 +233,40 @@ Probabilistic model assuming data from Gaussian distributions mixture.
 **Key Parameters:**
 
 * **Number of Components**: Number of mixture components (default: 1)
+
+.. image:: images/16.clustering-Gaussian-covarience.png
+   :alt: Clustering Alg
+   :width: 100%
+
 * **Covariance Type**: Type of covariance parameters (full, tied, diag, spherical)
 * **Number of Initializations**: Number of times to run with different initializations (default: 1)
 * **Max Iterations**: Maximum number of EM iterations (default: 100)
-* **Initialization Parameters**: Method for initialization (kmeans, random)
+
+.. image:: images/16.clustering-Gaussian.png
+   :alt: Clustering Alg
+   :width: 100%
+
+* **Initialization Parameters**: Method for initialization (kmeans, kmeans++, random, random_from_data)
 * **Tolerance**: Convergence threshold (default: 0.01)
 * **Random State**: Seed for reproducible results (default: 42)
+
+**3. K-Medoids Clustering**
+
+Specialized for categorical data.
+
+**Key Parameters:**
+
+* **Number of Clusters**: Number of clusters to form (default: 8)
+
+.. image:: images/16.clustering-k-mode.png
+   :alt: Clustering Alg
+   :width: 100%
+
+* **Initialization Method**: Method for initial centroids (cao, random, Huang)
+* **Number of Initializations**: Number of times to run with different initializations (default: 10)
+* **Max Iterations**: Maximum iterations for a single run (default: 100)
+* **Random State**: Seed for reproducible results (default: 42)
+
 
 **5. Spectral Clustering**
 
