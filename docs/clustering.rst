@@ -250,7 +250,7 @@ Probabilistic model assuming data from Gaussian distributions mixture.
 * **Tolerance**: Convergence threshold (default: 0.01)
 * **Random State**: Seed for reproducible results (default: 42)
 
-**3. K-Medoids Clustering**
+**5. K-Medoids Clustering**
 
 Specialized for categorical data.
 
@@ -267,39 +267,6 @@ Specialized for categorical data.
 * **Max Iterations**: Maximum iterations for a single run (default: 100)
 * **Random State**: Seed for reproducible results (default: 42)
 
-
-**5. Spectral Clustering**
-
-Uses eigenvalues of similarity matrix to reduce dimensions before clustering.
-
-**Key Parameters:**
-
-* **Number of Clusters**: Number of clusters to form (default: 8)
-* **Eigen Solver**: Method for computing eigenvectors (arpack, lobpcg, amg)
-* **Number of Components**: Number of eigenvectors to use
-* **Number of Initializations**: Number of times k-means will be run (default: 10)
-* **Gamma**: Kernel coefficient for rbf kernel
-* **Number of Neighbors**: Number of neighbors for nearest neighbors graph
-* **Assign Labels**: Method for assigning labels (kmeans, discretize)
-
-**6. Mean Shift**
-
-Non-parametric technique that finds dense areas of data points.
-
-**Key Parameters:**
-
-* **Max Iterations**: Maximum number of iterations (default: 300)
-
-**7. Affinity Propagation**
-
-Finds clusters by passing messages between data points.
-
-**Key Parameters:**
-
-* **Damping**: Damping factor to avoid numerical oscillations (default: 0.5)
-* **Convergence Iterations**: Number of iterations with no change before convergence (default: 15)
-* **Max Iterations**: Maximum number of iterations (default: 200)
-* **Affinity**: Metric used to compute affinity between points (euclidean, precomputed)
 
 Clustering Evaluation Metrics
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
