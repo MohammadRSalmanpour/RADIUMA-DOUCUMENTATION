@@ -248,16 +248,20 @@ Standard approach estimating linear relationships between variables.
 
 **2. Ridge Regression**
 
-.. image:: images/regressor_--.png
+.. image:: images/15.regression_Ridge.png
    :alt: Regressor Alg
    :width: 100%
-
 
 Linear model with L2 regularization to reduce overfitting.
 
 **Key Parameters:**
 
 * **Alpha**: Regularization strength (default: 1.0)
+
+.. image:: images/15.regression_Ridge-solver.png
+   :alt: Regressor Alg
+   :width: 100%
+
 * **Solver**: Method for computation (auto, svd, cholesky, lsqr, sparse_cg, etc.)
 * **Fit Intercept**: Whether to calculate the intercept (default: True)
 * **Max Iterations**: Maximum iterations for solver (default: 500)
@@ -266,10 +270,9 @@ Linear model with L2 regularization to reduce overfitting.
 
 **3. Lasso Regression**
 
-.. image:: images/regressor--.png
+.. image:: images/15.regression_Lasso.png
    :alt: Regressor Alg
    :width: 100%
-
 
 Linear model with L1 regularization promoting sparse coefficients.
 
@@ -279,6 +282,11 @@ Linear model with L1 regularization promoting sparse coefficients.
 * **Fit Intercept**: Whether to calculate the intercept (default: True)
 * **Max Iterations**: Maximum iterations for solver (default: 1000)
 * **Tolerance**: Precision of the solution (default: 0.0001)
+
+.. image:: images/15.regression_Lasso_selection.png
+   :alt: Regressor Alg
+   :width: 100%
+
 * **Selection**: Feature selection method (cyclic, random)
 * **Random State**: Seed for reproducibility (default: 43)
 
@@ -316,7 +324,7 @@ Adapts logistic regression for regression tasks.
 
 **5. AdaBoost Regression**
 
-.. image:: images/regressor_.png
+.. image:: images/15.regression_Adaboost.png
    :alt: Regressor Alg
    :width: 100%
 
@@ -324,9 +332,18 @@ Ensemble method using weak regressors.
 
 **Key Parameters:**
 
+.. image:: images/15.regression_Adaboost_Estimator.png
+   :alt: Regressor Alg
+   :width: 100%
+
 * **Base Estimator**: Type of weak regressor (DecisionTreeRegressor, etc.)
 * **Number of Estimators**: Number of boosting stages (default: 50)
 * **Learning Rate**: Weight applied to each regressor (default: 1.0)
+
+.. image:: images/15.regression_Adaboost_loss.png
+   :alt: Regressor Alg
+   :width: 100%
+
 * **Loss**: Loss function (linear, square, exponential)
 * **Random State**: Seed for reproducibility (default: 43)
 
