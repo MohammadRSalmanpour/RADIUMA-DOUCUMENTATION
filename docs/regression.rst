@@ -349,7 +349,7 @@ Ensemble method using weak regressors.
 
 **6. Bagging Regression**
 
-.. image:: images/regressor_.png
+.. image:: images/15.regression-Bagging.png
    :alt: Regressor Alg
    :width: 100%
 
@@ -357,6 +357,10 @@ Ensemble method using weak regressors.
 Ensemble method aggregating predictions from multiple models.
 
 **Key Parameters:**
+
+.. image:: images/15.regression-Bagging-Estimator.png
+   :alt: Regressor Alg
+   :width: 100%
 
 * **Base Estimator**: Base regressor type (DecisionTreeRegressor, SVR, etc.)
 * **Number of Estimators**: Number of base estimators (default: 10)
