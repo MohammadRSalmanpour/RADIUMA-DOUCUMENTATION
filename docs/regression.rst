@@ -221,6 +221,9 @@ Hyperparameter Tuning
 Hyperparameter tuning systematically searches for the optimal model configuration to maximize classification performance. Using methods like grid search or random search, this step fine-tunes algorithm-specific parameters that cannot be learned directly from the data.
 
 
+Regressor Selection
+^^^^^^^^^^^^^^^^^^^
+
 .. image:: images/regressor_alg.png
    :alt: Regressor Alg
    :width: 100%
@@ -232,6 +235,10 @@ Supported Algorithms
 
 **1. Linear Regression**
 
+.. image:: images/15.regression_Linear.png
+   :alt: Regressor Alg
+   :width: 100%
+
 Standard approach estimating linear relationships between variables.
 
 **Key Parameters:**
@@ -240,6 +247,11 @@ Standard approach estimating linear relationships between variables.
 * **Positive**: Force coefficients to be positive (default: False)
 
 **2. Ridge Regression**
+
+.. image:: images/regressor_--.png
+   :alt: Regressor Alg
+   :width: 100%
+
 
 Linear model with L2 regularization to reduce overfitting.
 
@@ -254,6 +266,11 @@ Linear model with L2 regularization to reduce overfitting.
 
 **3. Lasso Regression**
 
+.. image:: images/regressor--.png
+   :alt: Regressor Alg
+   :width: 100%
+
+
 Linear model with L1 regularization promoting sparse coefficients.
 
 **Key Parameters:**
@@ -267,18 +284,41 @@ Linear model with L1 regularization promoting sparse coefficients.
 
 **4. Logistic Regression for Regression**
 
+.. image:: images/15.regression_Regressors.png
+   :alt: Regressor Alg
+   :width: 100%
+
 Adapts logistic regression for regression tasks.
 
 **Key Parameters:**
 
+.. image:: images/15.regression_Logistic-Regression-penalty.png
+   :alt: Regressor Alg
+   :width: 100%
+
 * **Penalty**: Regularization type (L1, L2, Elasticnet, None)
 * **Regularization Strength (C)**: Inverse of regularization strength (default: 1.0)
+
+.. image:: images/15.regression_Logistic-Regression-solver.png
+   :alt: Regressor Alg
+   :width: 100%
+
 * **Solver**: Algorithm for optimization (lbfgs, liblinear, newton-cg, sag, saga)
+
+.. image:: images/15.regression_Logestic-Regression-multiclass.png
+   :alt: Regressor Alg
+   :width: 100%
+
+* **Multi-class Option**: How to handle multi-class data (auto, ovr, multinomial)
 * **Max Iterations**: Maximum iterations for solver (default: 100)
 * **L1 Ratio**: Mixing parameter for elasticnet penalty (default: 1.0)
 * **Random State**: Seed for reproducibility (default: 43)
 
 **5. AdaBoost Regression**
+
+.. image:: images/regressor_.png
+   :alt: Regressor Alg
+   :width: 100%
 
 Ensemble method using weak regressors.
 
@@ -291,6 +331,11 @@ Ensemble method using weak regressors.
 * **Random State**: Seed for reproducibility (default: 43)
 
 **6. Bagging Regression**
+
+.. image:: images/regressor_.png
+   :alt: Regressor Alg
+   :width: 100%
+
 
 Ensemble method aggregating predictions from multiple models.
 
