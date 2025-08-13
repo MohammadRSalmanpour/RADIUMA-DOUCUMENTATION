@@ -30,7 +30,7 @@ Weighted Fusion
 ^^^^^^^^^^^^^^^
 
 .. image:: images/12.image_fusion.png
-   :alt: Weighted Fusion
+   :alt: Weighted Fusion 
    :width: 100%
 
 Combines input images using a linear weighted sum. Ideal for blending anatomical and functional images with controlled emphasis.
