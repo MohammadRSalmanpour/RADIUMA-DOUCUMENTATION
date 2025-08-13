@@ -91,7 +91,7 @@ Applies Principal Component Analysis to extract dominant patterns from multiple 
 * **Number of Components**: Number of components used for image reconstruction. Options: Int, Float, None (default: Int)  
 
 .. image:: images/12.image_fusion_pca_component.png
-   :alt: PCA Fusion
+   :alt: PCA Fusion 
    :width: 100%
 
 * **SVD Solver**: Algorithm used for Singular Value Decomposition. Options: `Auto`, `Full`, `Arpack`, `Randomize` .(default: Auto)  
