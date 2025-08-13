@@ -41,7 +41,7 @@ Combines input images using a linear weighted sum. Ideal for blending anatomical
 * **Weight 2**: Weight for the second input image (range: 0–1)  
 * **Interpolation**: Method for interpolating between images (`Linear`, `Area` ,`Nearest` , `Cubic`, `Lanzos`.)(default: `Nearest`) 
 
-.. image:: images/12.image_fusion_interpolation.png
+.. image:: images/12.image_fusion_Weighted.png
    :alt: Weighted Fusion
    :width: 100% 
 
