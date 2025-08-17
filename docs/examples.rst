@@ -28,6 +28,11 @@ How It Works
 Workflow Integration
 ^^^^^^^^^^^^^^^^^^^^
 
+.. image:: images/17.Example_image_reader.png
+   :alt: Image Reader
+   :width: 100%
+
+
 To convert images:
 
 1. Add an Image Reader tool to your workflow
