@@ -55,6 +55,7 @@ How It Works
 1. **RT Struct Reader Tool**: Begin by loading your radiation therapy structure set
 
    * Requires both a main image and corresponding structure set labels
+   * The name of RTSTRUCT single dicom file  must exactly match the name of the corresponding image folder.
    * RT Label Directory: Path to the RT structure set file
    * RT Main Image Directory: Path to the corresponding image data
    * Automatically extracts contours and segmentation information
@@ -67,6 +68,10 @@ How It Works
 
 Workflow Integration
 ^^^^^^^^^^^^^^^^^^^^
+
+.. image:: images/17.Example_rt_reader.png 
+   :alt: RT Struct Reader
+   :width: 100%
 
 To process RT Struct files:
 
