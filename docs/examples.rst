@@ -139,7 +139,7 @@ To filter medical images:
 
 .. image:: images/17.Example_image_filter.png
    :alt: Image Filtering Workflow
-   :width: 600px
+   :width: 80%
 
 For example, we can apply a Mean filter to the image to smooth the image. We set params to this:
 
