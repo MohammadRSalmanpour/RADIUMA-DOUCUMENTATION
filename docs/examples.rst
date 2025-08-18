@@ -137,7 +137,7 @@ To filter medical images:
 9. Run the workflow to apply the filter and save the results
 
 
-.. image:: images/Screenshot_2025-04-26_at_19.22.48.png
+.. image:: images/17.Example_image_filter.png
    :alt: Image Filtering Workflow
    :width: 600px
 
