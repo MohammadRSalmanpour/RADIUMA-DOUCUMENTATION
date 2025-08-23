@@ -1,7 +1,7 @@
 Image Viewer
 ------------
 
-.. image:: images/5.image_viewer.png
+.. image:: images/5.Image_viewer1.png
    :alt: Image Viewer
    :width: 100%
 
@@ -34,7 +34,7 @@ File Support
 Toolbar Functions
 ^^^^^^^^^^^^^^^^^
 
-.. image:: images/image_viewer_buttons.png
+.. image:: images/5.Image_viewer_toolbar.png
    :alt: Image Viewer Buttons
    :width: 100%
 
