@@ -330,7 +330,7 @@ How It Works
 Workflow Integration
 ^^^^^^^^^^^^^^^^^^^^
 
-.. image:: images/Screenshot_2025-04-26_at_19.13.43.png
+.. image:: images/17.Example_image_Registration_Fusion.png
    :alt: PET/CT Registration and Fusion Workflow
    :width: 600px
 
@@ -422,7 +422,7 @@ How It Works
 Workflow Integration
 ^^^^^^^^^^^^^^^^^^^^
 
-.. image:: images/Screenshot_2025-04-26_at_20.00.20.png
+.. image:: images/17.Example_image_Registration_Filter.png
    :alt: PET/CT Registration and Filtering Workflow
    :width: 600px
 
