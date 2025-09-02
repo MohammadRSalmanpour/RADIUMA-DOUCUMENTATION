@@ -272,7 +272,7 @@ How It Works
 Workflow Integration
 ^^^^^^^^^^^^^^^^^^^^
 
-.. image:: images/Screenshot_2025-04-26_at_19.59.03.png
+.. image:: images/17.Example_image_Registration.png
    :alt: Image Registration for AutoPET Workflow
    :width: 600px
 
