@@ -174,6 +174,20 @@ How It Works
    * You'll need two separate Image Reader tools, one for each input image
    * Both images should have compatible dimensions for proper fusion
 
+* **important:**
+
+   Each fusion method contains a **Normalization** tab that must be configured before processing. 
+   Proper normalization ensures correct fusion results by matching intensity ranges between images.
+
+Before applying any fusion method, normalization is required to ensure proper scaling and comparable intensity ranges between input images.
+
+**Key Parameters**
+
+* **Normalization Method**:
+
+  - `MinMax`: Scales data to a specified range (default: [0, 1])
+  - `ZScore`: Standardizes data to have zero mean and unit variance
+
 2. **Image Fusion Tool**: Combine the images using one of three fusion methods
 
    * **Weighted Fusion**: Linear combination of input images
@@ -212,7 +226,7 @@ To fuse medical images:
 8. Configure the Writer with your desired output location and format
 9. Run the workflow to perform the fusion and save the results
 
-.. image:: images/Screenshot_2025-04-26_at_19.30.27.png
+.. image:: images/17.Example_image_fusion.png
    :alt: Image Fusion Workflow
    :width: 600px
 
