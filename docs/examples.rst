@@ -71,7 +71,7 @@ Workflow Integration
 
 .. image:: images/17.Example_rt_reader.png 
    :alt: RT Struct Reader
-   :width: 100%
+   :width: 80%
 
 To process RT Struct files:
 
@@ -139,23 +139,23 @@ To filter medical images:
 
 .. image:: images/17.Example_image_filter.png
    :alt: Image Filtering Workflow
-   :width: 80%
+   :width: 70%
 
 For example, we can apply a Mean filter to the image to smooth the image. We set params to this:
 
-.. image:: images/filter_param.png
+.. image:: images/17.Example_image_filter_Mean.png
    :alt: Image Filter Parameters
    :width: 600px
 
 The image before filtering is:
 
-.. image:: images/filter_before.png
+.. image:: images/17.Example_image_filter_Mean_before.png
    :alt: Image Before Filtering
    :width: 600px
 
 The image after filtering is:
 
-.. image:: images/filter_after.png
+.. image:: images/17.Example_image_filter_Mean_after.png
    :alt: Image After Filtering
    :width: 600px
 
