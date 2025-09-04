@@ -516,6 +516,11 @@ How It Works
 Workflow Integration
 ^^^^^^^^^^^^^^^^^^^^
 
+.. image:: images/17.Example_filter_Radiomics_classification.png
+   :alt: Image Reader
+   :width: 100%
+
+
 To implement this radiomics and classification pipeline:
 
 1. Add an Image Reader tool to your workflow
