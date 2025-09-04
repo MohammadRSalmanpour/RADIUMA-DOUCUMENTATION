@@ -594,6 +594,11 @@ How It Works
 Workflow Integration
 ^^^^^^^^^^^^^^^^^^^^
 
+.. image:: images/17.Example_Registration_Fusion_Radiomics_Regression.png
+   :alt: Image Reader
+   :width: 100%
+
+
 To implement this multi-registration regression pipeline:
 
 1. Add three Image Reader tools to your workflow:
