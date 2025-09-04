@@ -674,6 +674,11 @@ How It Works
 Workflow Integration
 ^^^^^^^^^^^^^^^^^^^^
 
+.. image:: images/17.Example_Registration_Radiomics_clustering.png
+   :alt: Image Reader
+   :width: 100%
+
+
 To implement this radiomics-based clustering pipeline:
 
 1. Add an Image Registration tool to your workflow
