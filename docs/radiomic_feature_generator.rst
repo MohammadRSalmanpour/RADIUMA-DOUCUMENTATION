@@ -40,6 +40,38 @@ Key Parameters
 This parameter ensures that modality-specific preprocessing and intensity interpretation are applied correctly before feature extraction.
 
 
+.. image:: images/13.radiomic_roi_selection.png
+   :alt: Radiomic Feature Generator Deep
+   :width: 100%
+
+**ROI Selection Mode: ROI selection strategy**
+
+ Determines how regions of interest (ROIs) are selected for feature extraction.
+
+- **"per_Img"** (default): Selects the top roi_num ROIs per image based on size, regardless of label category.
+
+  - Suitable for single or dominant lesions per scan.
+  - Preserves original spatial relationships.
+
+- **"per_region"**: Selects up to roi_num ROIs separately for each label category, ensuring balanced representation across regions.
+
+  - Useful in multi-lesion, multi-label, or longitudinal studies.
+  - Requires consistent ROI labeling across datasets.
+
+.. image:: images/13.radiomic_featurevalue_mode.png
+   :alt: Radiomic Feature Generator Deep
+   :width: 100%
+
+
+**Feature Value Mode: Strategy for handling NaN values**
+
+ Controls how missing or invalid feature values are handled during extraction.
+
+- **"REAL_VALUE"** (default): Keeps NaN values whenever feature extraction fails (e.g., small ROI, numerical instability), preserving the raw outcome without substitution.
+
+- **"APPROXIMATE_VALUE"**: Replaces NaN features with substitutes (e.g., very small constants like 1e-30 or synthetic masks) to maintain pipeline continuity.
+
+
 .. image:: images/13.radiomic_discretization.png
    :alt: Radiomic Feature Generator
    :width: 100%
