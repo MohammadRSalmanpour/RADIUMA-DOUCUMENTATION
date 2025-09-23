@@ -111,3 +111,8 @@ Workflow Integration
 * Takes two input images
 * Combines information according to selected method
 * Outputs a single fused image
+
+
+.. image:: images/12.image_fusion_output.png
+   :alt: Image Fusion
+   :width: 100%
