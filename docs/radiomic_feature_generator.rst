@@ -11,7 +11,7 @@ Core tool for extracting standardized quantitative features from medical images 
    :alt: Radiomic Feature Generator Deep
    :width: 100%
    
-This tool can extract deep features using pre-trained CNNs: ResNet50, VGG16, and DenseNet121.
+This tool can extract deep features using pre-trained CNNs: **ResNet50**, **VGG16**, and **DenseNet121**. 
 
 Feature Types
 ^^^^^^^^^^^^^
