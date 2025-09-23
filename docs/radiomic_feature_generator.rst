@@ -20,6 +20,7 @@ Feature Types
 * **Shape-based Features**: Morphological characteristics
 * **Texture Features**: Spatial patterns (GLCM, GLRLM, etc.)
 * **Wavelet Features**: Multi-resolution analysis
+* **Deep Features**: CNN-based embeddings from ResNet50, VGG16, or DenseNet121
 
 
 Key Parameters
@@ -112,6 +113,27 @@ This parameter ensures that modality-specific preprocessing and intensity interp
 * **ROIs per Image**: Number of ROIs to process when not set to Maximum
 * **Combine ROIs**: Whether to combine ROIs for analysis (0: disabled, 1: enabled)
 * **Features to Output**: Which feature set to calculate (options from 487 total features)
+
+Available Feature Sets
+^^^^^^^^^^^^^^^^^^^^^^
+
+.. image:: images/13.radiomic_feature_set.png
+   :alt: Radiomic Feature Generator
+   :width: 100%
+
+You can select from different pre-defined feature sets depending on study needs:
+
+- **487 feats: ['1st', '2D', '2.5D', '3D']** – All IBSI features (full set)
+- **215 feats: ['1st', '3D', '2.5D']** – *Default option* (1st+3D+2.5D)
+- **351 feats: ['1st', '2D', '2.5D']** – 2D slice analysis
+- **351 feats: ['1st', '3D', 'selected2D', '2.5D']** – 3D + selected 2D + 2.5D
+- **497 feats: ['1st', '2D', '2.5D', '3D', 'Moment']** – All features + Moment
+- **133 feats: ['1st', '2.5D']** – 1st + 2.5D
+- **79 feats: ['1st']** – 1st order only
+- **164 feats: ['2D']** – 2D only
+- **54 feats: ['2.5D']** – 2.5D only
+- **82 feats: ['3D']** – 3D only
+- **10 feats: ['Moment']** – Moment features only
 
 Workflow Integration
 ^^^^^^^^^^^^^^^^^^^^
