@@ -369,19 +369,19 @@ This integrated workflow creates comprehensive visualizations that preserve the 
 
 This is the PET image:
 
-.. image:: images/filter_before.png
+.. image:: images/12.image_fusion_PET.png
    :alt: PET Image
    :width: 600px
 
 This is the CT image:
 
-.. image:: images/ct.png
+.. image:: images/12.image_fusion_CT.png
    :alt: CT Image
    :width: 600px
 
 This is the fusion of the Registered PET and CT images:
 
-.. image:: images/after_fusion.png
+.. image:: images/12.image_fusion_Afterfusion.png
    :alt: Image Fusion
    :width: 600px
 
