@@ -58,7 +58,7 @@ Uses wavelet transform to perform multi-resolution decomposition and fusion of i
 
 * **Wavelet**: Wavelet family to use (e.g., `Haar`, `Db`,`Sym`, `Coif`, `Bior`, `Rbio`, `Dmey`.)(default: `Haar`) 
 
-.. image:: images/12.image_fusion_wavelet_left.png
+.. image:: images/12.image_fusion_wavelet_left-new.png
    :alt: Wavelet Fusion 
    :width: 100%
 
