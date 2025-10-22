@@ -166,7 +166,7 @@ Segmentation Tools
 
 .. image:: images/5.image_viewer_segmentation.png
    :alt: Segmentation Tools
-   :width: 100%
+   :width: 100%    
 
 Create anatomical or pathological segmentations using manual and semi-automated tools. The segmentation interface provides brush and drawing options for precise delineation of structures.
 
