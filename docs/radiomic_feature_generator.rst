@@ -12,6 +12,12 @@ Core tool for extracting standardized quantitative features from medical images 
    :width: 100%
    
 This tool can extract deep features using pre-trained CNNs: **ResNet50**, **VGG16**, and **DenseNet121**.
+Deep learning features are output as high-dimensional vectors with: 
+
+- Model-specific feature dimensions (511-2047 features)
+- Feature names derived from the network architecture
+- Compatible format with traditional radiomic feature tables
+- Ready for machine learning and statistical analysis
 
 **Deep Learning Features:**
 - **2047 feats: ['resnet50']** – ResNet50 deep features
@@ -48,7 +54,7 @@ This parameter ensures that modality-specific preprocessing and intensity interp
 
 
 .. image:: images/13.radiomic_roi_selection.png
-   :alt: Radiomic Feature Generator Deep
+   :alt: Radiomic Feature Generator 
    :width: 100%
 
 **ROI Selection Mode: ROI selection strategy**
@@ -66,7 +72,7 @@ This parameter ensures that modality-specific preprocessing and intensity interp
   - Requires consistent ROI labeling across datasets.
 
 .. image:: images/13.radiomic_featurevalue_mode.png
-   :alt: Radiomic Feature Generator Deep
+   :alt: Radiomic Feature Generator
    :width: 100%
 
 
@@ -78,9 +84,16 @@ This parameter ensures that modality-specific preprocessing and intensity interp
 
 - **"APPROXIMATE_VALUE"**: Replaces NaN features with substitutes (e.g., very small constants like 1e-30 or synthetic masks) to maintain pipeline continuity.
 
+.. image:: images/13.radiomic-num-roi.png
+   :alt: Radiomic Feature Generator 
+   :width: 100%
+
+* **ROIs per Image**: Number of ROIs to process when not set to Maximum
+
+  Controls the maximum number of regions of interest to analyze per image when not using the "Maximum" option.(Default: 2 ROIs)
 
 .. image:: images/13.radiomic-aggregation-lesion.png
-   :alt: Radiomic Feature Generator Deep
+   :alt: Radiomic Feature Generator 
    :width: 100%
 
 **Aggregation Lesion: Multi-ROI feature aggregation**
@@ -116,6 +129,7 @@ Feature aggregation is conducted on a per-feature basis using specialized approa
 - **Missing Values**: Excluded from the aggregation process
 
 **Use Cases:**
+
 - Multi-focal disease analysis
 - Longitudinal studies with multiple time points
 - Whole-organ or multi-region characterization
@@ -160,8 +174,6 @@ Feature aggregation is conducted on a per-feature basis using specialized approa
 * **IVH Discretization Type**: Discrete or Continuous (0,1, 2, 3)
 * **IVH Bin Size**: Bin size for IVH discretization
 * **Maximum ROIs**: Number of regions to analyze per image (Maximum or specific number)
-* **ROIs per Image**: Number of ROIs to process when not set to Maximum
-* **Combine ROIs**: Whether to combine ROIs for analysis (0: disabled, 1: enabled)
 * **Features to Output**: Which feature set to calculate (options from 487 total features)
 
 Available Feature Sets
@@ -211,22 +223,16 @@ Workflow Integration
 
 * Takes both image and mask inputs
 * Extracts features according to standardized definitions
-* Outputs tabular data with all calculated features
+
+Feature Output Example
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. image:: images/13.radiomic_output.png
    :alt: Radiomic Feature Generator Deep
    :width: 100%
 
-Feature Output Example
-^^^^^^^^^^^^^^^^^^^^^^^^
+Outputs tabular data with all calculated features
 
-.. image:: images/13.radiomic_deep_output.png
-   :alt: Deep Learning Feature Output
-   :width: 100%
 
-Deep learning features are output as high-dimensional vectors with:
-- Model-specific feature dimensions (511-2047 features)
-- Feature names derived from the network architecture
-- Compatible format with traditional radiomic feature tables
-- Ready for machine learning and statistical analysis
+
 
