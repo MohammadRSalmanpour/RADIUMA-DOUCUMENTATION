@@ -11,7 +11,13 @@ Core tool for extracting standardized quantitative features from medical images 
    :alt: Radiomic Feature Generator Deep
    :width: 100%
    
-This tool can extract deep features using pre-trained CNNs: **ResNet50**, **VGG16**, and **DenseNet121**. 
+This tool can extract deep features using pre-trained CNNs: **ResNet50**, **VGG16**, and **DenseNet121**.
+
+**Deep Learning Features:**
+- **2047 feats: ['resnet50']** – ResNet50 deep features
+- **511 feats: ['vgg16']** – VGG16 deep features  
+- **1023 feats: ['densenet121']** – DenseNet121 deep features
+
 
 Feature Types
 ^^^^^^^^^^^^^
@@ -73,6 +79,50 @@ This parameter ensures that modality-specific preprocessing and intensity interp
 - **"APPROXIMATE_VALUE"**: Replaces NaN features with substitutes (e.g., very small constants like 1e-30 or synthetic masks) to maintain pipeline continuity.
 
 
+.. image:: images/13.radiomic-aggregation-lesion.png
+   :alt: Radiomic Feature Generator Deep
+   :width: 100%
+
+**Aggregation Lesion: Multi-ROI feature aggregation**
+
+When enabled, this parameter performs lesion-level feature aggregation across ROIs belonging to the same image or anatomical region, depending on the roi_selection_mode setting.
+
+- **False** (default): Features extracted for each ROI individually
+
+- **True**: Features aggregated across related ROIs using specialized methods
+
+**Grouping Strategy:**
+
+- When **roi_selection_mode="per_Img"**: Aggregation performed by PatientID
+- When **roi_selection_mode="per_region"**: Grouping based on both PatientID and label ID
+
+**Feature Aggregation Methods:**
+
+Feature aggregation is conducted on a per-feature basis using specialized approaches:
+
+- **Deep Features** (`extraction_mode="deep_feature"`): All features are averaged across ROIs
+- **Morphological Descriptors**: Weighted average based on `morph_volume_mesh` for:
+
+  - `morph_volume_mesh`
+  - `morph_volume_count` 
+  - `morph_surface_area`
+  - `morph_max_3d_diameter`
+  - `morph_major_axis_length`
+  - `morph_minor_axis_length`
+  - `morph_least_axis_length`
+
+- **Diagnostic Features**: Selected from the largest lesion (based on volume)
+- **All Remaining Features**: Summed across ROIs
+- **Missing Values**: Excluded from the aggregation process
+
+**Use Cases:**
+- Multi-focal disease analysis
+- Longitudinal studies with multiple time points
+- Whole-organ or multi-region characterization
+- Comparative analysis across lesion populations
+
+
+
 .. image:: images/13.radiomic_discretization.png
    :alt: Radiomic Feature Generator
    :width: 100%
@@ -117,23 +167,40 @@ This parameter ensures that modality-specific preprocessing and intensity interp
 Available Feature Sets
 ^^^^^^^^^^^^^^^^^^^^^^
 
-.. image:: images/13.radiomic_feature_set.png
+.. image:: images/13.radiomic-categories.png
    :alt: Radiomic Feature Generator
    :width: 100%
 
-You can select from different pre-defined feature sets depending on study needs:
+**Feature Categories: Types of radiomic features to extract**
 
-- **487 feats: ['1st', '2D', '2.5D', '3D']** – All IBSI features (full set)
-- **215 feats: ['1st', '3D', '2.5D']** – *Default option* (1st+3D+2.5D)
-- **351 feats: ['1st', '2D', '2.5D']** – 2D slice analysis
-- **351 feats: ['1st', '3D', 'selected2D', '2.5D']** – 3D + selected 2D + 2.5D
-- **497 feats: ['1st', '2D', '2.5D', '3D', 'Moment']** – All features + Moment
-- **133 feats: ['1st', '2.5D']** – 1st + 2.5D
-- **79 feats: ['1st']** – 1st order only
-- **164 feats: ['2D']** – 2D only
-- **54 feats: ['2.5D']** – 2.5D only
-- **82 feats: ['3D']** – 3D only
-- **10 feats: ['Moment']** – Moment features only
+ Comprehensive selection of feature categories following IBSI standards.
+
+- **"diag"**: Diagnostic features - basic ROI statistics and quality metrics
+- **"morph"**: Morphological/shape features - 3D shape descriptors of ROIs
+- **"ip"**: Intensity peak features - peak intensity characteristics
+- **"stat"**: First-order statistical features - intensity distribution statistics
+- **"ih"**: Intensity histogram features - histogram-based intensity analysis
+- **"ivh"**: Intensity-volume histogram features - volume-intensity relationships
+- **"glcm"**: Gray-Level Co-occurrence Matrix - texture patterns from co-occurrence
+- **"glrlm"**: Gray-Level Run Length Matrix - texture patterns from run lengths
+- **"glszm"**: Gray-Level Size Zone Matrix - texture patterns from zone sizes
+- **"gldzm"**: Gray-Level Distance Zone Matrix - texture patterns from zone distances
+- **"ngtdm"**: Neighboring Gray-Tone Difference Matrix - local intensity differences
+- **"ngldm"**: Neighboring Gray-Level Dependence Matrix - intensity dependencies
+- **"mi"**: Moment-invariant features - rotation and scale invariant moments
+
+.. image:: images/13.radiomic-dimension.png
+   :alt: Radiomic Feature Generator
+   :width: 100%
+
+**Dimensions: Spatial dimensions for feature extraction**
+
+ Defines the spatial context for feature calculation.
+
+- **"1st"**: First-order intensity-based features (non-spatial)
+- **"2D"**: Features extracted per 2D slice (slice-wise analysis)
+- **"2_5D"**: Features aggregated across slices with limited inter-slice context
+- **"3D"**: Fully volumetric features across entire ROI (3D spatial analysis)
 
 Workflow Integration
 ^^^^^^^^^^^^^^^^^^^^
@@ -149,3 +216,17 @@ Workflow Integration
 .. image:: images/13.radiomic_output.png
    :alt: Radiomic Feature Generator Deep
    :width: 100%
+
+Feature Output Example
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. image:: images/13.radiomic_deep_output.png
+   :alt: Deep Learning Feature Output
+   :width: 100%
+
+Deep learning features are output as high-dimensional vectors with:
+- Model-specific feature dimensions (511-2047 features)
+- Feature names derived from the network architecture
+- Compatible format with traditional radiomic feature tables
+- Ready for machine learning and statistical analysis
+
