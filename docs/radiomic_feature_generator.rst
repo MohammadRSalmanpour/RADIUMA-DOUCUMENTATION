@@ -152,7 +152,7 @@ Feature aggregation is conducted on a per-feature basis using specialized approa
 
 * **Image Interpolation**: Method for resampling images (Nearest, Linear, Cubic)
 
-.. image:: images/13.radiomic_roi.png
+.. image:: images/13.radiomic_roi-interpolation.png
    :alt: Radiomic Feature Generator
    :width: 100%
 
