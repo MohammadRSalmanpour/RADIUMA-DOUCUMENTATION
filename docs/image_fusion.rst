@@ -17,8 +17,8 @@ Image Fusion
 
 * **important Note:**
 
-   Each fusion method contains a **Normalization** tab that must be configured before processing. 
-   Proper normalization ensures correct fusion results by matching intensity ranges between images.
+Each fusion method contains a **Normalization** tab that must be configured before processing. 
+Proper normalization ensures correct fusion results by matching intensity ranges between images.
 
 .. image:: images/12.image_fusion_normalizer.png
    :alt: Image Fusion
