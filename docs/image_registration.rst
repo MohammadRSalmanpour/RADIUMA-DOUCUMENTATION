@@ -5,8 +5,7 @@ Image Registration
    :alt: Image Registration
    :width: 100%
 
-Tools for spatial alignment of images from different modalities or time points.  
-Supports rigid and deformable registration techniques for anatomical consistency across time or modality.
+**Image Registration** performs Spatial Alignment and aligns images from different modalities, time points, or viewing angles into a common coordinate system. This essential preprocessing step enables direct comparison and integration of imaging data by correcting for spatial differences, ensuring anatomical consistency across diverse imaging scenarios. Align complementary imaging types (CT, MRI, PET) for fused visualization and analysis. Supports rigid and deformable registration techniques for anatomical consistency across time or modality.
 
 Rigid Registration
 ^^^^^^^^^^^^^^^^^^
