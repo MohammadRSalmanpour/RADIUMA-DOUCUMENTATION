@@ -6,9 +6,7 @@ Image Fusion
    :width: 100%
 
 
-**Multi-Modality Integration for Enhanced Analysis**
-
-Image Fusion combines information from multiple imaging modalities to create comprehensive representations that leverage the strengths of each input. This powerful technique addresses key clinical and research challenges by integrating complementary data sources, enabling more accurate analysis and interpretation.
+**Image Fusion** is a Multi-Modality Integration for Enhanced Analysis. It combines information from multiple imaging modalities to create comprehensive representations that leverage the strengths of each input. This powerful technique addresses key clinical and research challenges by integrating complementary data sources, enabling more accurate analysis and interpretation.
 
 **Key Benefits:**
 
