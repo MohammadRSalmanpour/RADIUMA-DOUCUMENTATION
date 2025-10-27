@@ -5,9 +5,19 @@ Image Fusion
    :alt: Image Fusion
    :width: 100%
 
-Advanced capabilities for combining information from multiple imaging modalities.
 
-* **important:**
+**Multi-Modality Integration for Enhanced Analysis**
+
+Image Fusion combines information from multiple imaging modalities to create comprehensive representations that leverage the strengths of each input. This powerful technique addresses key clinical and research challenges by integrating complementary data sources, enabling more accurate analysis and interpretation.
+
+**Key Benefits:**
+
+* **Enhanced Diagnosis**: Fuse anatomical (CT/MRI) with functional (PET) data for precise lesion analysis
+* **Complete Visualization**: View structural, metabolic and functional information in unified images  
+* **Better Treatment Planning**: Improve target delineation for radiotherapy and surgery
+* **Comprehensive Data**: Overcome individual modality limitations through integration
+
+* **important Note:**
 
    Each fusion method contains a **Normalization** tab that must be configured before processing. 
    Proper normalization ensures correct fusion results by matching intensity ranges between images.
