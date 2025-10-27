@@ -5,8 +5,7 @@ Image Filter
    :alt: Image Filter 
    :width: 100%
    
-Comprehensive set of image filtering options for enhancing features, reducing noise, and preparing images for feature extraction.  
-Supports 2D or 3D filtering modes with customizable boundary conditions (e.g.,  Zero, Mirror, Nearest, Reflect, Priodic).
+**Image Filter** provides comprehensive filtering operations for enhancing features, reducing noise, and preparing medical images for analysis. These filters transform raw image data to highlight specific characteristics, improve image quality, and extract meaningful patterns essential for quantitative analysis and computer-aided diagnosis.Supports 2D or 3D filtering modes with customizable boundary conditions (e.g.,  Zero, Mirror, Nearest, Reflect, Priodic).
 
 
 .. image:: images/11.image_filter_boundary.png
