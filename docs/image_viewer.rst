@@ -5,7 +5,7 @@ Image Viewer
    :alt: Image Viewer
    :width: 100%
 
-The Medical Image Viewer is a comprehensive tool designed for advanced medical image visualization and analysis, providing tools for detailed examination, segmentation, and analysis of medical imaging data.
+The Image Viewer module provides a sophisticated visualization interface within Radiuma for detailed examination, segmentation, and analysis of medical imaging data across multiple planes and dimensions. This comprehensive tool enables clinicians and researchers to navigate complex medical images through axial, sagittal, coronal, and 3D volumetric views while offering advanced functionality for image manipulation, measurement, and segmentation. With support for multiple file formats including DICOM studies, NIFTI files, and segmentation data, the viewer integrates essential tools for real-time coordinate tracking, intensity analysis, contrast adjustment, filtering, cropping, and distance measurement—all within an intuitive interface that facilitates precise anatomical localization, treatment planning, and quantitative analysis for both clinical diagnostics and research applications.
 
 View Types
 ^^^^^^^^^^
