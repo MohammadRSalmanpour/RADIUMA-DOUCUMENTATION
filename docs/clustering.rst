@@ -8,7 +8,14 @@ Overview
    :alt: Clustering
    :width: 100%
 
-The Clustering module provides a streamlined, step-by-step workflow within the application for discovering natural groupings and patterns in medical data without predefined labels. Starting with structured data import, the interface automatically validates your feature table format before proceeding to analysis. Through an organized sequence of configurable panels, you can systematically handle missing values using advanced imputation techniques, normalize features with multiple scaling options, and optimize your dataset through dimension reduction methods tailored for unsupervised learning. The module then presents a comprehensive selection of clustering algorithms with customizable parameters, enabling you to explore different grouping strategies and compare cluster quality metrics. The system culminates with detailed evaluation scores and visualization capabilities, providing you with the tools to identify meaningful patient subtypes, disease patterns, or biomarker clusters—all within a unified, user-friendly environment designed for both data scientists and clinical researchers exploring unsupervised learning applications.
+The **Clustering module** provides a streamlined, step-by-step workflow within the application for discovering natural groupings and patterns in medical data without predefined labels. Starting with structured data import, the interface automatically validates your feature table format before proceeding to analysis. Through an organized sequence of configurable panels, you can systematically handle missing values using advanced imputation techniques, normalize features with multiple scaling options, and optimize your dataset through dimension reduction methods tailored for unsupervised learning. The module then presents a comprehensive selection of clustering algorithms with customizable parameters, enabling you to explore different grouping strategies and compare cluster quality metrics. The system culminates with detailed evaluation scores and visualization capabilities, providing you with the tools to identify meaningful patient subtypes, disease patterns, or biomarker clusters—all within a unified, user-friendly environment designed for both data scientists and clinical researchers exploring unsupervised learning applications.
+
+The clustering tool provides a complete unsupervised learning pipeline with:
+
+* 5 clustering algorithms
+* Automated data preprocessing
+* Hyperparameter optimization
+* Comprehensive model evaluation
 
 Data Import
 ^^^^^^^^^^^
