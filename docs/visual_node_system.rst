@@ -44,7 +44,6 @@ Each tool explicitly defines which other tools can connect to its inputs and out
 * **RT Struct Reader**: Outputs to Radiomic Feature Generator and Image Writer tools
 * **Image Filter**: Takes image input, outputs to multiple imaging tools
 * **Radiomic Feature Generator**: Takes image and mask inputs, outputs to data analysis tools
-* **Preprocessing**: Takes feature data, connects to machine learning tools
 * **Classification/Regression/Clustering**: Take preprocessed data as input, connect to visualization
 
 Example Workflows
