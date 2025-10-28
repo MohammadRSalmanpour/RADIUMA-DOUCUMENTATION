@@ -5,7 +5,7 @@ Image Filter
    :alt: Image Filter 
    :width: 100%
    
-**Image Filter** provides comprehensive filtering operations for enhancing features, reducing noise, and preparing medical images for analysis. These filters transform raw image data to highlight specific characteristics, improve image quality, and extract meaningful patterns essential for quantitative analysis and computer-aided diagnosis.Supports 2D or 3D filtering modes with customizable boundary conditions (e.g.,  Zero, Mirror, Nearest, Reflect, Priodic).
+The **Image Filter** module provides an extensive suite of filtering operations within Radiuma for enhancing features, reducing noise, and preparing medical images for advanced analysis. This versatile tool enables clinicians and researchers to transform raw image data through multiple specialized filters that highlight specific characteristics, improve image quality, and extract meaningful patterns essential for quantitative analysis and computer-aided diagnosis. Supporting both 2D and 3D filtering modes with customizable boundary conditions, the module offers a range of algorithms including Mean Filter for noise reduction while preserving edges, LoG Filter for edge and rapid intensity change detection, Laws Filter for texture feature extraction, Gabor Filter for multi-orientation texture analysis, and Wavelet Filter for multi-scale decomposition—all accessible through an intuitive interface that ensures optimal parameter configuration for diverse clinical and research applications in medical imaging.
 
 
 .. image:: images/11.image_filter_boundary.png
