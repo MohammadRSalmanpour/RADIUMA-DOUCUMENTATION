@@ -5,7 +5,7 @@ Image Registration
    :alt: Image Registration
    :width: 100%
 
-**Image Registration** performs Spatial Alignment and aligns images from different modalities, time points, or viewing angles into a common coordinate system. This essential preprocessing step enables direct comparison and integration of imaging data by correcting for spatial differences, ensuring anatomical consistency across diverse imaging scenarios. Align complementary imaging types (CT, MRI, PET) for fused visualization and analysis. Supports rigid and deformable registration techniques for anatomical consistency across time or modality.
+The **Image Registration** module provides a comprehensive spatial alignment interface within Radiuma for precisely aligning images from different modalities, time points, or viewing angles into a common coordinate system. This essential preprocessing tool enables direct comparison and integration of imaging data by correcting spatial differences and ensuring anatomical consistency across diverse imaging scenarios. Through an intuitive workflow, users can align complementary imaging types (CT, MRI, PET) for fused visualization and analysis, supporting both rigid registration for maintaining shape and size through rotation and translation, and deformable registration techniques for local tissue adjustments—making it indispensable for multi-modal studies, longitudinal tracking, treatment response assessment, and surgical planning applications in clinical and research settings.
 
 Rigid Registration
 ^^^^^^^^^^^^^^^^^^
