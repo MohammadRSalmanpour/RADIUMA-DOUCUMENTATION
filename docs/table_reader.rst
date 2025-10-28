@@ -5,7 +5,7 @@ Table Reader
    :alt: Table Reader
    :width: 100%
 
-This tool is used for importing tabular data in various formats. The row concatenation feature allows users to combine multiple data tables vertically by appending rows from one table to another. This is particularly useful when merging data sets that share the same column structure.
+The **Table Reader** module provides a flexible data import interface within Radiuma for loading and integrating tabular data from various sources and formats. This essential tool enables researchers and clinicians to efficiently import structured data including CSV files, Excel spreadsheets, and analysis exports while offering powerful data integration capabilities through row concatenation for vertical table merging and column merging for horizontal data combination. With automatic format detection and intuitive parameter configuration, the module streamlines the process of creating comprehensive datasets from multiple sources, making it ideal for combining feature tables, clinical data, and analysis results into unified formats ready for machine learning, statistical analysis, and research applications across diverse medical and scientific workflows.
 
 .. image:: images/8.table_reader_column.png
    :alt: Table Reader Column
