@@ -5,7 +5,7 @@ Image/Table Writer
    :alt: Writer
    :width: 100%
 
-Tools for exporting tabular and image data in various formats.
+The **Image/Table Writer** module provides a versatile export interface within Radiuma for saving processed medical images, analysis results, and tabular data in various standardized formats. This essential output tool enables researchers and clinicians to efficiently export their processed data for further analysis, reporting, or integration with other systems, supporting multiple file formats including Excel spreadsheets for comprehensive tabular data, CSV files for lightweight data exchange, DICOM files for clinical compatibility, NIFTI files for neuroimaging applications, and NRRD files for specialized medical image processing. Through an intuitive interface with configurable export parameters, users can seamlessly save single files or batch exports, ensuring data preservation and interoperability across different platforms and analysis workflows in both clinical and research environments.
 
 Writer Parameters
 ^^^^^^^^^^^^^^^^^
