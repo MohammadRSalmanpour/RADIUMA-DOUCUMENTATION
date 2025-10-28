@@ -6,14 +6,7 @@ Image Fusion
    :width: 100%
 
 
-**Image Fusion** is a Multi-Modality Integration for Enhanced Analysis. It combines information from multiple imaging modalities to create comprehensive representations that leverage the strengths of each input. This powerful technique addresses key clinical and research challenges by integrating complementary data sources, enabling more accurate analysis and interpretation.
-
-**Key Benefits:**
-
-* **Enhanced Diagnosis**: Fuse anatomical (CT/MRI) with functional (PET) data for precise lesion analysis
-* **Complete Visualization**: View structural, metabolic and functional information in unified images  
-* **Better Treatment Planning**: Improve target delineation for radiotherapy and surgery
-* **Comprehensive Data**: Overcome individual modality limitations through integration
+The **Image Fusion** module provides a sophisticated yet intuitive interface within Radiuma for combining complementary information from multiple imaging modalities into unified, diagnostically enriched representations. This powerful tool enables clinicians and researchers to seamlessly integrate anatomical, functional, and metabolic data through multiple fusion algorithms, addressing key clinical and research challenges by creating comprehensive images that leverage the unique strengths of each input modality. Through a structured workflow with configurable normalization and fusion parameters, users can enhance diagnosis by fusing anatomical (CT/MRI) with functional (PET) data for precise lesion analysis, achieve complete visualization of structural, metabolic and functional information in unified images, improve treatment planning through better target delineation for radiotherapy and surgery, and overcome individual modality limitations by integrating complementary data sources—all while ensuring proper intensity normalization, algorithm selection, and parameter optimization for improved analytical outcomes.
 
 * **important Note:**
 
