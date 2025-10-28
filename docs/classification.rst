@@ -8,7 +8,8 @@ Overview
    :alt: Classification
    :width: 100%
 
-The Classification tool provides multiple algorithms for data analysis with customizable parameters through an intuitive user interface.
+The Classification module provides a user-friendly, step-by-step interface that guides you through the entire machine learning process within the application. Starting with data import, the module automatically validates your feature and target tables to ensure proper formatting before proceeding to the analysis phase. Through a structured workflow of configurable panels, you can sequentially apply data splitting strategies, handle missing values with advanced imputation methods, normalize features using multiple scaling techniques, and optimize your dataset through dimension reduction. The interface then presents a comprehensive selection of classification algorithms with customizable parameters, allowing you to train and compare multiple models simultaneously. Finally, the system generates detailed performance metrics and visualizations, enabling you to select the optimal model for your specific clinical or research needs—all within a single, integrated environment designed for both machine learning experts and clinical researchers.
+
 Complete machine learning pipeline with:
 
 * 7+ classification algorithms
