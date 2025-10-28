@@ -91,7 +91,7 @@ This parameter ensures that modality-specific preprocessing and intensity interp
    :alt: Radiomic Feature Generator 
    :width: 100%
 
-* **ROIs per Image**: Number of ROIs to process when not set to Maximum
+* **ROIs per Image/Region**: Number of ROIs to process when not set to Maximum
 
   Controls the maximum number of regions of interest to analyze per image when not using the "Maximum" option.(Default: 2 ROIs)
 
