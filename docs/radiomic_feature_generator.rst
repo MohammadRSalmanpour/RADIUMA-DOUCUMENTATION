@@ -5,7 +5,9 @@ Radiomic Feature Generator
    :alt: Radiomic Feature Generator
    :width: 100%
 
-Core tool for extracting standardized quantitative features from medical images following IBSI guidelines. 
+The **Radiomic Feature Generator** module provides an advanced interface within Radiuma for extracting standardized quantitative features from medical images, powered by the **PySERA** (Python-Based Standardized Extraction for Radiomics Analysis) engine that ensures full **IBSI 1 & 2** (Image Biomarker Standardisation Initiative) compliance. This sophisticated tool enables researchers and clinicians to extract both traditional **handcrafted radiomic features** and **deep learning-based features** through a unified workflow, supporting 557 total features including 487 IBSI-compliant features, 60 diagnostic metrics, and 10 moment-invariant descriptors across multiple spatial dimensions (1st order, 2D, 2.5D, 3D). With configurable parameters for modality-specific preprocessing, ROI selection strategies, feature aggregation, and advanced extraction modes, the module delivers comprehensive quantitative imaging biomarkers for disease characterization, treatment response assessment, and predictive modeling—all while maintaining standardization, reproducibility, and clinical interpretability through its integrated PySERA computational backend.
+
+* **PySERA Repository**: `https://github.com/MohammadRSalmanpour/PySERA <https://github.com/MohammadRSalmanpour/PySERA>`_
 
 .. image:: images/13.radiomic_deep.png
    :alt: Radiomic Feature Generator Deep
