@@ -22,9 +22,10 @@ Deep learning features are output as high-dimensional vectors with:
 - Ready for machine learning and statistical analysis
 
 **Deep Learning Features:**
-- **2047 feats: ['resnet50']** – ResNet50 deep features
-- **511 feats: ['vgg16']** – VGG16 deep features  
-- **1023 feats: ['densenet121']** – DenseNet121 deep features
+
+-  ResNet50 deep features : **2047 feats: ['resnet50']**
+-  VGG16 deep features  : **511 feats: ['vgg16']**
+-  DenseNet121 deep features : **1023 feats: ['densenet121']**
 
 
 Feature Types
