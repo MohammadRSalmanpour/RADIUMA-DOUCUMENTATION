@@ -78,6 +78,11 @@ Workflow Integration
 
 To process RT Struct files:
 
+- **Example Workflow**: `Download the RTSTRUCT Reader workflow <https://github.com/MohammadRSalmanpour/RADIUMA-DOUCUMENTATION/blob/main/Examples/Workflows/RTSTRUCT_Reader.radiuma>`_
+- **Sample Data**: `Use this RT-STRUCT dataset <https://github.com/MohammadRSalmanpour/RADIUMA-DOUCUMENTATION/tree/main/Examples/Data/RT-STRUCT>`_
+  - Use the **CT folder** as the main image
+  - Use the **RT-Dicom folder** as the RT masks
+
 1. Add an RT Struct Reader tool to your workflow
 2. Configure the RT Struct Reader with paths to both your main image and structure set labels
 3. Add a Writer tool to your workflow
