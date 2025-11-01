@@ -35,6 +35,9 @@ Workflow Integration
 
 To convert images:
 
+- **Example Workflow**: `Download the Image Conversion workflow <https://github.com/MohammadRSalmanpour/RADIUMA-DOUCUMENTATION/blob/main/Examples/Workflows/Image_Conversion.radiuma>`_
+- **Sample Data**: `Use this multi-DICOM CT dataset <https://github.com/MohammadRSalmanpour/RADIUMA-DOUCUMENTATION/tree/main/Examples/Data/CT-Multi-Dicom>`_ as a multi-DICOM series to convert into other formats.
+
 1. Add an Image Reader tool to your workflow
 2. Configure the Image Reader to load your source image(s)
 3. Add a Writer tool to your workflow
