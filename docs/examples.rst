@@ -134,6 +134,9 @@ Workflow Integration
 
 To filter medical images:
 
+- **Example Workflow**: `Download the Image Filtering workflow <https://github.com/MohammadRSalmanpour/RADIUMA-DOUCUMENTATION/blob/main/Examples/Workflows/Image_Filtering.radiuma>`_
+- **Sample Data**: `Use images from different modalities in the Data folder <https://github.com/MohammadRSalmanpour/RADIUMA-DOUCUMENTATION/tree/main/Examples/Data>`_ as input for the filtering module (MRI, CT, PET)
+
 1. Add an Image Reader tool to your workflow
 2. Configure the Image Reader to load your source image
 3. Add a Filter tool to your workflow
