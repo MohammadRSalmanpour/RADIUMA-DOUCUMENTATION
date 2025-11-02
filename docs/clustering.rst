@@ -306,12 +306,23 @@ Clustering Workflow
 
 **Quick Workflow Summary:**
 
+- **Example Workflow**: `Download the Clustering workflow <https://github.com/MohammadRSalmanpour/RADIUMA-DOUCUMENTATION/blob/main/Examples/Workflows/Clustering.radiuma>`_
+
 1. Import and prepare data
 2. Handle missing values
 3. Scale and optionally reduce dimensions
 4. Select clustering algorithm
 5. Tune hyperparameters
 6. Evaluate clusters
+
+Clustering Output
+^^^^^^^^^^^^^^^^^
+
+.. image:: images/16.clustering-output.png
+   :alt: Clustering Output Results
+   :width: 100%
+
+The Clustering module provides comprehensive output including cluster assignments, visualization plots, performance metrics, and detailed evaluation results to help you identify natural groupings and patterns in your data.
 
 
 Clustering Pipeline
