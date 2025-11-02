@@ -353,6 +353,10 @@ Workflow Integration
 
 To implement this PET/CT registration and fusion pipeline:
 
+- **Example Workflow**: `Download the PET/CT Registration & Fusion workflow <https://github.com/MohammadRSalmanpour/RADIUMA-DOUCUMENTATION/blob/main/Examples/Workflows/PET_CT_Registration_Fusion.radiuma>`_
+- **Sample Data**: `Use CT and PET images from the Data folder <https://github.com/MohammadRSalmanpour/RADIUMA-DOUCUMENTATION/tree/main/Examples/Data>`_
+
+
 1. Add two Image Reader tools to your workflow:
    * One for the CT image
    * One for the PET image
@@ -444,6 +448,9 @@ Workflow Integration
    :width: 600px
 
 To implement this PET/CT registration and filtering pipeline:
+
+- **Example Workflow**: `Download the PET/CT Registration & Filtering workflow <https://github.com/MohammadRSalmanpour/RADIUMA-DOUCUMENTATION/blob/main/Examples/Workflows/PET_CT_Registration_Filter.radiuma>`_
+- **Sample Data**: `Use CT and PET images from the Data folder <https://github.com/MohammadRSalmanpour/RADIUMA-DOUCUMENTATION/tree/main/Examples/Data>`_
 
 1. Add two Image Reader tools to your workflow:
    * One for the CT image
