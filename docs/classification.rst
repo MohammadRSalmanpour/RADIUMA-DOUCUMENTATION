@@ -446,6 +446,8 @@ Classification Workflow
 
 **Quick Workflow Summary:**
 
+- **Example Workflow**: `Download the Classification workflow <https://github.com/MohammadRSalmanpour/RADIUMA-DOUCUMENTATION/blob/main/Examples/Workflows/Classification.radiuma>`_
+
 1. Import data using **Table Reader**.
 2. Verify sample IDs match between feature and target tables.
 3. Apply **Data Splitting** (shuffle, percentage, or K-fold).
