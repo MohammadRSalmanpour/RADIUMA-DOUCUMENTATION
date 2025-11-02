@@ -729,6 +729,10 @@ Workflow Integration
 
 To implement this radiomics-based clustering pipeline:
 
+- **Example Workflow**: `Download the Registration & Clustering workflow <https://github.com/MohammadRSalmanpour/RADIUMA-DOUCUMENTATION/blob/main/Examples/Workflows/Registration_Clustering.radiuma>`_
+- **Sample Data**: `Use CT, PET, and mask data from the Data folder <https://github.com/MohammadRSalmanpour/RADIUMA-DOUCUMENTATION/tree/main/Examples/Data>`_
+
+
 1. Add an Image Registration tool to your workflow
    * Configure the tool with appropriate fixed and moving images
    * Set registration parameters based on your specific application
