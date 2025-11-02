@@ -301,7 +301,7 @@ Clustering Workflow
 ^^^^^^^^^^^^^^^^^^^
 
 .. image:: images/16.clustering_workflow.png
-   :alt: Classification
+   :alt: Clustering 
    :width: 80%
 
 **Quick Workflow Summary:**
@@ -319,7 +319,7 @@ Clustering Output
 ^^^^^^^^^^^^^^^^^
 
 .. image:: images/16.clustering-ouputt.png
-   :alt: Clustering 
+   :alt: Clustering Alg
    :width: 100%
 
 The Clustering module provides comprehensive output including cluster assignments, visualization plots, performance metrics, and detailed evaluation results to help you identify natural groupings and patterns in your data.
