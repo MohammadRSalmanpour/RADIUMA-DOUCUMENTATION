@@ -458,6 +458,15 @@ Classification Workflow
    
 8. Compare models and select the best one.
 
+Classification Output
+^^^^^^^^^^^^^^^^^^^^^
+
+.. image:: images/14.classification_output.png
+   :alt: Classification Output Results
+   :width: 100%
+
+The Classification module provides comprehensive output including performance metrics, model comparisons, and detailed evaluation results to help you select the optimal model for your specific application.
+
 Classification Pipeline
 ^^^^^^^^^^^^^^^^^^^^^^^
 
