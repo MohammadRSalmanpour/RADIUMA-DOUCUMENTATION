@@ -228,6 +228,8 @@ Workflow Integration
 * Takes both image and mask inputs
 * Extracts features according to standardized definitions
 
+- **Example Workflow**: `Download the Radiomic Feature Extraction workflow <https://github.com/MohammadRSalmanpour/RADIUMA-DOUCUMENTATION/blob/main/Examples/Workflows/Radiomic_Feature.radiuma>`_
+
 Feature Output Example
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
