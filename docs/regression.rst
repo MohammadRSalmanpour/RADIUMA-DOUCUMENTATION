@@ -390,6 +390,8 @@ Regression Workflow
 
 **Quick Workflow Summary:**
 
+- **Example Workflow**: `Download the Regression workflow <https://github.com/MohammadRSalmanpour/RADIUMA-DOUCUMENTATION/blob/main/Examples/Workflows/Regression.radiuma>`_
+
 1. Import data using **Table Reader**.
 2. Verify sample IDs match between feature and target tables.
 3. Apply **Data Splitting** (shuffle, percentage, or K-fold).
@@ -401,6 +403,16 @@ Regression Workflow
    * MAE,RMSE,R-squared Score,Median Absolute Error
    
 8. Compare models and select the best one.
+
+Regression Output
+^^^^^^^^^^^^^^^^^
+
+.. image:: images/15.regression-output.png
+   :alt: Regression Output Results
+   :width: 100%
+
+The Regression module provides comprehensive output including performance metrics, model comparisons, prediction visualizations, and detailed evaluation results to help you select the optimal regression model for your predictive modeling tasks.
+
 
 
 Regression Pipeline
