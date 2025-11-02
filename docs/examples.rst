@@ -549,6 +549,14 @@ Workflow Integration
 
 To implement this radiomics and classification pipeline:
 
+- **Example Workflow**: `Download the Radiomics & Classification workflow <https://github.com/MohammadRSalmanpour/RADIUMA-DOUCUMENTATION/blob/main/Examples/Workflows/Radiomic_Classification.radiuma>`_
+- **Sample Data**: `Use sample images and masks from the Data folder <https://github.com/MohammadRSalmanpour/RADIUMA-DOUCUMENTATION/tree/main/Examples/Data>`_
+
+**Note on Classification**: For demonstration purposes, this example focuses on radiomic feature extraction. To perform actual classification with meaningful results, you'll need to:
+- Use your own dataset with multiple samples and labeled outcomes
+- Ensure sufficient sample size for training and validation
+- Replace the sample data with your clinical dataset including images, masks, and corresponding labels
+
 1. Add an Image Reader tool to your workflow
    * Configure it to load your medical image
 
