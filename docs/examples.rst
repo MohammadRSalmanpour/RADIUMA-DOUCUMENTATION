@@ -227,6 +227,9 @@ Workflow Integration
 
 To fuse medical images:
 
+- **Example Workflow**: `Download the Image Fusion workflow <https://github.com/MohammadRSalmanpour/RADIUMA-DOUCUMENTATION/blob/main/Examples/Workflows/Image_Fusion.radiuma>`_
+- **Sample Data**: `Use CT and PET images from the Data folder <https://github.com/MohammadRSalmanpour/RADIUMA-DOUCUMENTATION/tree/main/Examples/Data>`_ as input for fusion
+
 1. Add two Image Reader tools to your workflow
 2. Configure each Image Reader to load one of your source images
 3. Add an Image Fusion tool to your workflow
@@ -288,6 +291,9 @@ Workflow Integration
    :width: 600px
 
 To register AutoPET images:
+
+- **Example Workflow**: `Download the Image Registration workflow <https://github.com/MohammadRSalmanpour/RADIUMA-DOUCUMENTATION/blob/main/Examples/Workflows/Image_Registration.radiuma>`_
+- **Sample Data**: `Use PET and CT images from the Data folder <https://github.com/MohammadRSalmanpour/RADIUMA-DOUCUMENTATION/tree/main/Examples/Data>`_
 
 1. Add an Image Reader tool for the fixed (CT) image
 2. Configure the first Image Reader to load your CT image
