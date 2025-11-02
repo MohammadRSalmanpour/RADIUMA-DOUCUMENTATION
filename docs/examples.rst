@@ -641,6 +641,9 @@ Workflow Integration
 
 To implement this multi-registration regression pipeline:
 
+- **Example Workflow**: `Download the Multi-Registration Regression workflow <https://github.com/MohammadRSalmanpour/RADIUMA-DOUCUMENTATION/blob/main/Examples/Workflows/Registration_Regression.radiuma>`_
+- **Sample Data**: `Use CT, PET, and mask data from the Data folder <https://github.com/MohammadRSalmanpour/RADIUMA-DOUCUMENTATION/tree/main/Examples/Data>`_
+
 1. Add three Image Reader tools to your workflow:
    * One for the fixed reference image
    * One for the first moving image
