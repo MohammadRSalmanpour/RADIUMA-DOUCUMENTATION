@@ -553,6 +553,7 @@ To implement this radiomics and classification pipeline:
 - **Sample Data**: `Use sample images and masks from the Data folder <https://github.com/MohammadRSalmanpour/RADIUMA-DOUCUMENTATION/tree/main/Examples/Data>`_
 
 **Note on Classification**: For demonstration purposes, this example focuses on radiomic feature extraction. To perform actual classification with meaningful results, you'll need to:
+
 - Use your own dataset with multiple samples and labeled outcomes
 - Ensure sufficient sample size for training and validation
 - Replace the sample data with your clinical dataset including images, masks, and corresponding labels
