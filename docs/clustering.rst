@@ -318,7 +318,7 @@ Clustering Workflow
 Clustering Output
 ^^^^^^^^^^^^^^^^^
 
-.. image:: docs/images/16.clustering-ouput.png
+.. image:: images/16.clustering-ouput2.png
    :alt: Clustering Output Results
    :width: 100%
 
