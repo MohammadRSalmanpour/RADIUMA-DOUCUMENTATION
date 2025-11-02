@@ -474,6 +474,8 @@ Reading a DICOM Series
 
 Medical images are often stored in the DICOM format, which can be easily imported into Radiuma for analysis:
 
+- **Sample Data**: `Use DICOM multi-series CT images from the Data folder <https://github.com/MohammadRSalmanpour/RADIUMA-DOUCUMENTATION/tree/main/Examples/Data/CT-Multi-Dicom>`_
+
 1. **Add Image Reader Tool**
    - Double-click on the "Image Reader" tool in the left panel
    - A new node will appear in the workspace
