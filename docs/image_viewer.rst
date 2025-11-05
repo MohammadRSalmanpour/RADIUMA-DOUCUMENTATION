@@ -170,6 +170,42 @@ Segmentation Tools
 
 Create anatomical or pathological segmentations using manual and semi-automated tools. The segmentation interface provides brush and drawing options for precise delineation of structures.
 
+Add Label 
+""""""""""""""""""""""""
+
+.. image:: images/5.image_viewer_Add_Label.png
+   :alt: Segmentation Tools
+   :width: 100%  
+
+
+The **Add Label** feature allows users to create new segmentation labels manually directly within the segmentation panel.
+
+* Click **“Add Label”** to generate a new label entry.
+* Assign a name and color to the label for clear differentiation then click **“Apply”**.
+* Once created, the new label can be selected and used for drawing or threshold-based segmentation.
+
+This functionality supports multi-label segmentation workflows for complex anatomical or pathological structures, enabling efficient management and visualization of multiple ROIs.
+
+
+
+Eraser Tool
+"""""""""""""""""
+
+.. image:: images/5.image_viewer_Eraser.png
+   :alt: Segmentation Tools
+   :width: 100%   
+
+
+The **Eraser Tool** enables users to modify existing segmentations by removing unwanted regions from the current label or ROI.
+
+* Activate the eraser mode from the segmentation toolbar.
+* Adjust the brush size to control the precision of the erasing action.
+* The erased regions are dynamically updated in all orthogonal views (Axial, Sagittal, and Coronal).
+
+This tool provides flexible post-editing capabilities to refine segmentation boundaries without restarting the segmentation process.
+
+
+
 Volume Mask Toggle
 """"""""""""""""""""""""""""""
 
