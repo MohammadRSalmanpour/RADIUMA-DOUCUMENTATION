@@ -1,7 +1,6 @@
 # Radiuma
 
-**Radiuma** is a comprehensive toolkit for advanced medical image analysis and machine learning.  
-It integrates a broad suite of processing tools and algorithms into standardized, end-to-end workflows—enabling reproducible research and seamless interoperability within a unified framework.
+**Radiuma** is a comprehensive toolkit for advanced medical image analysis and machine learning.It integrates a broad suite of processing tools and algorithms into standardized, end-to-end workflows—enabling reproducible research and seamless interoperability within a unified framework.
 
 ## Key Features
 
