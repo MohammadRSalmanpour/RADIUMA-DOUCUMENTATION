@@ -133,7 +133,7 @@ Contrast Adjustment
    :width: 100%
 
 Fine-tune window/level settings to optimize image contrast for specific tissues or pathologies. This essential tool allows users to visualize structures with different density or intensity characteristics.
-
+By holding the left mouse button and moving the mouse up, down, left, or right, you can change the window and level of the image, thereby adjusting the contrast.
 Image Rotation
 """""""""""""
 
