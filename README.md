@@ -5,36 +5,36 @@ Key Features
 
 🔬 Standardized Radiomics Analysis
 
-    Fully compliant with IBSI 1.0 standards for reproducible feature extraction.
+Fully compliant with IBSI 1.0 standards for reproducible feature extraction.
 
 🎛️ Advanced Image Filtering
 
-    Includes a wide range of filters standardized against IBSI 2.0.
+Includes a wide range of filters standardized against IBSI 2.0.
 
 🔗 End-to-End Workflows
 
-    Connect and manage diverse imaging, preprocessing, and analysis modules seamlessly.
+ Connect and manage diverse imaging, preprocessing, and analysis modules seamlessly.
 
 🤝 Collaborative Research Support
 
-    Ensures consistent, comparable results across multi-institutional or multi-study settings.
+Ensures consistent, comparable results across multi-institutional or multi-study settings.
 
 🧑‍⚕️ User-Friendly Interface
     Designed for users across different domains, including:
     
-      Radiation oncologists
-      Radiologists
-      Medical physicists
-      Data scientists
+Radiation oncologists
+Radiologists
+Medical physicists
+Data scientists
 
 🤖 Comprehensive Machine Learning Tools
 
-    Built-in modules for classification, regression, and clustering tasks.
+Built-in modules for classification, regression, and clustering tasks.
   
 🗂️ Multi-Tab Workflow Management
 
-    Run several independent workflows in parallel without interference.
+ Run several independent workflows in parallel without interference.
 
 🎛️ Workflow Control System
 
-    Fine-grained execution control: stop workflows at the node level or globally.
+Fine-grained execution control: stop workflows at the node level or globally.
