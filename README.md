@@ -1,40 +1,37 @@
-Radiuma is a comprehensive toolkit for advanced medical image analysis and machine learning. 
+# Radiuma
+
+**Radiuma** is a comprehensive toolkit for advanced medical image analysis and machine learning.  
 It integrates a broad suite of processing tools and algorithms into standardized, end-to-end workflows—enabling reproducible research and seamless interoperability within a unified framework.
 
-Key Features
+## Key Features
 
-🔬 Standardized Radiomics Analysis
+### 🔬 Standardized Radiomics Analysis
+- Compliant with **IBSI 1.0** standards for reproducible feature extraction.
 
-Fully compliant with IBSI 1.0 standards for reproducible feature extraction.
+### 🎛️ Advanced Image Filtering
+- Standardized against **IBSI 2.0**.
+- Supports multiple filter options.
 
-🎛️ Advanced Image Filtering
+### 🔗 End-to-End Workflows
+- Connects various imaging, preprocessing, and analysis tools into complete pipelines.
 
-Includes a wide range of filters standardized against IBSI 2.0.
+### 🤝 Collaborative Research Support
+- Ensures consistency and comparability across different studies and institutions.
 
-🔗 End-to-End Workflows
+### 🧑‍⚕️ User-Friendly Interface
+Designed for a wide range of users, including:
+- Radiation oncologists  
+- Radiologists  
+- Medical physicists  
+- Data scientists  
 
- Connect and manage diverse imaging, preprocessing, and analysis modules seamlessly.
+### 🤖 Comprehensive Machine Learning Tools
+- Built-in tools for **classification**, **regression**, and **clustering**.
 
-🤝 Collaborative Research Support
+### 🗂️ Multi-Tab Workflow Support
+- Run multiple independent workflows simultaneously without interference.
 
-Ensures consistent, comparable results across multi-institutional or multi-study settings.
-
-🧑‍⚕️ User-Friendly Interface
-    Designed for users across different domains, including:
-    
-Radiation oncologists
-Radiologists
-Medical physicists
-Data scientists
-
-🤖 Comprehensive Machine Learning Tools
-
-Built-in modules for classification, regression, and clustering tasks.
-  
-🗂️ Multi-Tab Workflow Management
-
- Run several independent workflows in parallel without interference.
-
-🎛️ Workflow Control System
-
-Fine-grained execution control: stop workflows at the node level or globally.
+### 🎚️ Workflow Control System
+- Granular control over workflow execution:
+  - Node-level stopping
+  - Global workflow stopping
